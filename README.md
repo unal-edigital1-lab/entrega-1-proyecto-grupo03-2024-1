@@ -6,7 +6,7 @@
   - [Contenido](#contenido)
   - [Integrantes](#integrantes)
   - [Diseño de Interfaz y Transiciones ✏️](#diseño-de-interfaz-y-transiciones-️)
-  - [Maquina de estados finitos](#máquina-de_estados-finitos)
+  - [Maquina de estados finitos](#Máquina-de-estados-finitos)
 
 ## Integrantes
 
