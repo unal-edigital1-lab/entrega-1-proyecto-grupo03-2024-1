@@ -37,17 +37,38 @@ En cuento a la forma de operación del dispositivo, inicialmente se contaran con
 
   - Principal
 
-En este estado el usuario unicamente podra visualizar la mascota virtual y mediante indicadores en pantalla las necesidades insatisfechas
+En este estado el usuario podra visualizar su mascota virtual y mediante pequeños indicadores conocer las necesidades insatisfechas.
 
   - Necesidades
+
+En este estado el usuario podra visualizar su mascota virtual y alternar entre los diferentes indicadores para posteriormente seleccionarlos.
+
   - Alimentar
+
+En este estado el usuario podra alimentar a su mascota virtual, esto con el objetivo de borrar el indicador respectivo mediante un incremento en su peso.
+    
   - Sanar
+
+En este estado el usuario podra sanar a su mascota virtual, esto con el objetivo de eliminar el indicador respectivo mediante un incremento en su salud.
+
   - Descansar
+
+En este estado el usuario le permitira descansar a su mascota, esto con el objetivo de eliminar el indicador respectivo mediante un incremento en su energia.
+
   - Jugar
+
+En este estado el usuario puede elegir/iniciar alguna de los juegos disponibles para subir los niveles e deviersión de su mascota. 
+
   - Juego1
+
+En este estado el usuario podra jugar con su mascota virtual, esto con el objetivo de eliminar el indicador respectivo mediante un incremento en su diversion.
+
   - Morir
 
-![FSM drawio](https://github.com/unal-edigital1-lab/entrega-1-proyecto-grupo03-2024-1/assets/95363361/2aeaf67b-04e4-43fa-a417-649aacc81902)
+En este estado la mascota virtual muere debido a que alguna de las necesides llego a un valor de 0, dejandole al usuario como unica opción reiniciar la partida.
+
+![FSM drawio](https://github.com/unal-edigital1-lab/entrega-1-proyecto-grupo03-2024-1/assets/95363361/ca14c3b0-b480-45b0-8f7b-a5e73a0e037d)
+
 
 
 
