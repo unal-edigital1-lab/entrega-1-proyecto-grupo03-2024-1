@@ -33,9 +33,12 @@ Otras características adicionales que podrían incluirse en la interfaz son ani
 
 ## Máquina de estados finitos
 
-En cuento al funcionamiento del dispositivo, inicialmente se contaran con 8 estados, los cuales son:
+En cuento a la forma de operación del dispositivo, inicialmente se contaran con 8 estados, los cuales son:
 
   - Principal
+
+En este estado el usuario unicamente podra visualizar la mascota virtual y mediante indicadores en pantalla las necesidades insatisfechas
+
   - Necesidades
   - Alimentar
   - Sanar
