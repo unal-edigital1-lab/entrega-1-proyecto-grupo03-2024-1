@@ -44,8 +44,6 @@ En cuento al funcionamiento del dispositivo, inicialmente se contaran con 8 esta
   - Juego1
   - Morir
 
-  ![FSM drawio](https://github.com/unal-edigital1-lab/entrega-1-proyecto-grupo03-2024-1/assets/95363361/2d621e58-6b53-485f-9fda-103526692cee)
-
 
 
 
