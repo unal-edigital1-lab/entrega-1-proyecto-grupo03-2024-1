@@ -30,3 +30,13 @@ Otras características adicionales que podrían incluirse en la interfaz son ani
 <p align="center">
   <img src="https://i.ytimg.com/vi/S9QTScMz8w4/maxresdefault.jpg" alt="A beautiful sunset" width="640" height="360">
 </p>
+
+## Maquina de estados finita
+
+![FSM drawio](https://github.com/unal-edigital1-lab/entrega-1-proyecto-grupo03-2024-1/assets/95363361/2e2e79eb-e1d3-4382-9e42-c2914ae5cc80)
+
+
+
+
+
+
