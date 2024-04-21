@@ -33,7 +33,18 @@ Otras características adicionales que podrían incluirse en la interfaz son ani
 
 ## Máquina de estados finitos
 
-![FSM drawio](https://github.com/unal-edigital1-lab/entrega-1-proyecto-grupo03-2024-1/assets/95363361/2e2e79eb-e1d3-4382-9e42-c2914ae5cc80)
+En cuento al funcionamiento del dispositivo, inicialmente se contaran con 8 estados, los cuales son:
+
+  - Principal
+  - Necesidades
+  - Alimentar
+  - Sanar
+  - Descansar
+  - Jugar
+  - Juego1
+  - Morir
+
+  ![FSM drawio](https://github.com/unal-edigital1-lab/entrega-1-proyecto-grupo03-2024-1/assets/95363361/2d621e58-6b53-485f-9fda-103526692cee)
 
 
 
