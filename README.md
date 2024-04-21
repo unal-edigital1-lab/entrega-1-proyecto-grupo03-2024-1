@@ -54,7 +54,7 @@ En cuento a la forma de operación del dispositivo, inicialmente se contaran con
 
 <p align="center">
   <img src="https://github.com/unal-edigital1-lab/entrega-1-proyecto-grupo03-2024-1/assets/95363361/ca14c3b0-b480-45b0-8f7b-a5e73a0e037d" alt="A beautiful sunset" width="640" height="360">
-  ![FSM drawio](https://github.com/unal-edigital1-lab/entrega-1-proyecto-grupo03-2024-1/assets/95363361/ca14c3b0-b480-45b0-8f7b-a5e73a0e037d)
+  <!-- ![FSM drawio](https://github.com/unal-edigital1-lab/entrega-1-proyecto-grupo03-2024-1/assets/95363361/ca14c3b0-b480-45b0-8f7b-a5e73a0e037d) -->
 <\p>
 
 
