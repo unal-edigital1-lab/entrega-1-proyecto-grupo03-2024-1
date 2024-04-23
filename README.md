@@ -40,15 +40,15 @@ En cuento a la forma de operación del dispositivo, inicialmente se contaran con
 
   - **Necesidades**: En este estado el usuario podra visualizar su mascota, alternar entre los diferentes indicadores y seleccionar a cual quiere acceder.
 
-  - **Alimentar**: En este estado el usuario podra alimentar a su mascota, esto con el objetivo de borrar el indicador respectivo mediante un incremento en su peso.
+  - **Alimentar**: En este estado el usuario podra alimentar a su mascota, esto con el objetivo de contrarestar el indicador de "Hambre" mediante un incremento en su peso.
     
-  - **Sanar**: En este estado el usuario podra sanar a su mascota, esto con el objetivo de eliminar el indicador respectivo mediante un incremento en su salud.
+  - **Sanar**: En este estado el usuario podra sanar a su mascota, esto con el objetivo de contrarestar el indicador de "Enfermedad" mediante un incremento en su salud.
 
-  - **Descansar**: En este estado el usuario le permitira descansar a su mascota, esto con el objetivo de eliminar el indicador respectivo mediante un incremento en su energia.
+  - **Descansar**: En este estado el usuario le permitira descansar a su mascota, esto con el objetivo de contrarestar el indicador de "Cansancio" mediante un incremento en su energia.
 
   - **Jugar**: En este estado el usuario puede elegir/iniciar alguno de los juegos disponibles, esto con el objetivo de incrementar el nivel de diversión de su mascota. 
 
-  - **Juego1**: En este estado el usuario jugara con su mascota mediante el sensor de movimiento, esto con el objetivo de eliminar el indicador respectivo mediante un incremento en su diversion.
+  - **Juego1**: En este estado el usuario jugara con su mascota mediante el sensor de movimiento, esto con el objetivo de contrarestar el indicador de "Aburrimiento" mediante un incremento en su diversion.
 
   - **Morir**: En este estado la mascota muere debido a que alguna de las necesides llego a un valor de 0, dejandole al usuario como unica opción reiniciar la partida.
 
