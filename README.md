@@ -46,7 +46,7 @@ En cuento a la forma de operación del dispositivo, inicialmente se contaran con
 
   - **Descansar**: En este estado el usuario le permitira descansar a su mascota, esto con el objetivo de eliminar el indicador respectivo mediante un incremento en su energia.
 
-  - **Jugar**: En este estado el usuario puede elegir/iniciar alguna de los juegos disponibles para subir el nivel de diversión de su mascota. 
+  - **Jugar**: En este estado el usuario puede elegir/iniciar alguno de los juegos disponibles para subir el nivel de diversión de su mascota. 
 
   - **Juego1**: En este estado el usuario podra jugar con su mascota, esto con el objetivo de eliminar el indicador respectivo mediante un incremento en su diversion.
 
