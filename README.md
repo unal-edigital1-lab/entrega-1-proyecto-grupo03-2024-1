@@ -38,7 +38,7 @@ En cuento a la forma de operación del dispositivo, inicialmente se contaran con
 
   - **Principal**: En este estado el usuario podra visualizar su mascota y mediante pequeños indicadores conocer las necesidades insatisfechas.
 
-  - **Necesidades**: En este estado el usuario podra visualizar su mascota y alternar entre los diferentes indicadores para posteriormente seleccionarlos.
+  - **Necesidades**: En este estado el usuario podra visualizar su mascota, alternar entre los diferentes indicadores y seleccionarlos según las necesidades de la mascota.
 
   - **Alimentar**: En este estado el usuario podra alimentar a su mascota, esto con el objetivo de borrar el indicador respectivo mediante un incremento en su peso.
     
