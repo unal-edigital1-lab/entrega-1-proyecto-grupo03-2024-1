@@ -48,7 +48,7 @@ En cuento a la forma de operación del dispositivo, inicialmente se contaran con
 
   - **Jugar**: En este estado el usuario puede elegir/iniciar alguno de los juegos disponibles, esto con el objetivo de incrementar el nivel de diversión de su mascota. 
 
-  - **Juego1**: En este estado el usuario podra jugar con su mascota, esto con el objetivo de eliminar el indicador respectivo mediante un incremento en su diversion.
+  - **Juego1**: En este estado el usuario jugara con su mascota mediante el sensor de movimiento, esto con el objetivo de eliminar el indicador respectivo mediante un incremento en su diversion.
 
   - **Morir**: En este estado la mascota muere debido a que alguna de las necesides llego a un valor de 0, dejandole al usuario como unica opción reiniciar la partida.
 
