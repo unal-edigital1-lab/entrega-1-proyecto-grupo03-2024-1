@@ -54,7 +54,7 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
   
   Para integrar al Tamagotchi con el entorno real y enriquecer la experiencia de interacción, se incorporará al menos un sensor que modifique el comportamiento de la mascota virtual en respuesta a estímulos externos. Los sensores permitirán simular condiciones ambientales y actividades que afecten directamente el bienestar de la mascota.
   
-  **1. Acelerometro**: Permitira al usuario luego de seleccionar el modo de juego activarlo mediante la agitación del tamagochi.
+  - **Acelerometro**: Permitira al usuario luego de seleccionar el modo de juego activarlo mediante la agitación del tamagochi.
   
   ### c. Sistema de visualización
   
