@@ -96,7 +96,7 @@ En cuento a la forma de operación del dispositivo, inicialmente se contaran con
   - **Morir**: En este estado la mascota muere debido a que alguna de las necesides llego a un valor de 0, dejandole al usuario como unica opción reiniciar la partida.
 
 <p align="center">
-  <img src="https://github.com/unal-edigital1-lab/entrega-1-proyecto-grupo03-2024-1/assets/95363361/ca14c3b0-b480-45b0-8f7b-a5e73a0e037d" alt="A beautiful sunset" width="740" height="460">
+  <img src="https://github.com/unal-edigital1-lab/entrega-1-proyecto-grupo03-2024-1/assets/95363361/b8c41d67-a801-4663-9f79-0d0ce968b0f3" alt="A beautiful sunset" width="740" height="460">
   <!-- ![FSM drawio](https://github.com/unal-edigital1-lab/entrega-1-proyecto-grupo03-2024-1/assets/95363361/ca14c3b0-b480-45b0-8f7b-a5e73a0e037d) -->
 </p>
 
