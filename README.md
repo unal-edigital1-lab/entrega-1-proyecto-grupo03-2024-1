@@ -43,7 +43,7 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
 La interacción usuario-sistema se realizará mediante los siguientes botones configurados:
 
 1. Reset: Reestablece el Tamagotchi a un estado inicial conocido al mantener pulsado el botón durante al menos 5 segundos. Este estado inicial simula el despertar de la mascota con salud óptima.
-2. Test: Activa el modo de prueba al mantener pulsado por al menos 5 segundos, permitiendo al usuario navegar entre los diferentes estados del Tamagotchi con cada pulsación.
+2. Test: Activa el modo de prueba al mantenerlo pulsado por al menos 5 segundos, permitiendo al usuario navegar entre los diferentes estados del Tamagotchi con cada pulsación.
 3. Dedice: Permite al usuario luego de desplazarse por los indicadores decidir cual de las acciones realizar o repetir.
 4. Cancel: Permite al usuario retornar a estados más generales, su función es semejante a un botón return.
 
