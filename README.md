@@ -7,6 +7,7 @@
   - [Integrantes](#integrantes)
   - [Diseño de Interfaz y Transiciones ✏️](#diseño-de-interfaz-y-transiciones-️)
   - [Maquina de estados finitos](#máquina-de-estados-finitos)
+  - [Descripción del Hardware](#descripción-de-Hardware)
 
 ## Integrantes
 
