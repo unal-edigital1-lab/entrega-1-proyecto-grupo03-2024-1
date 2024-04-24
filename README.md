@@ -101,9 +101,11 @@ En cuento a la forma de operación del dispositivo, inicialmente se contaran con
 
 ## Descripción de Hardware
 
-![Opera Instantánea_2024-04-23_232014_docs google com](https://github.com/unal-edigital1-lab/entrega-1-proyecto-grupo03-2024-1/assets/95363516/7c63ccbd-8e56-4a1e-b47f-3d938221d923)
+<p align="center">
+  <img src="https://github.com/unal-edigital1-lab/entrega-1-proyecto-grupo03-2024-1/assets/95363516/7c63ccbd-8e56-4a1e-b47f-3d938221d923" alt="A beautiful sunset" width="740" height="460">
+</p>
 
-## Diagrama Hardware
+## Diagrama del sistema
 
 ![Blank diagram](https://github.com/unal-edigital1-lab/entrega-1-proyecto-grupo03-2024-1/assets/95363516/a02495bc-3718-42d4-a847-87f133cebe88)
 
