@@ -32,7 +32,22 @@ Otras características adicionales que podrían incluirse en la interfaz son ani
   <img src="https://i.ytimg.com/vi/S9QTScMz8w4/maxresdefault.jpg" alt="A beautiful sunset" width="640" height="360">
 </p>
 
+## Especificaciones
+
+La FPGA está programada para simular distintos estados de la mascota, basándose en el comportamiento y la interacción con el usuario a través de al menos tres sistemas principales:
+
 ## Máquina de estados finitos
+
+### Sistema de botones
+
+La interacción usuario-sistema se realizará mediante los siguientes botones configurados:
+
+1. Reset: Reestablece el Tamagotchi a un estado inicial conocido al mantener pulsado el botón durante al menos 5 segundos. Este estado inicial simula el despertar de la mascota con salud óptima.
+2. Test: Activa el modo de prueba al mantener pulsado por al menos 5 segundos, permitiendo al usuario navegar entre los diferentes estados del Tamagotchi con cada pulsación.
+3. Dedice: Permite al usuario luego de desplazarse por los indicadores decidir cual de las acciones realizar o repetir.
+4. Cancel: Permite al usuario retornar a estados más generales, su función es semejante a un botón return.
+
+## Máquina de estados
 
 En cuento a la forma de operación del dispositivo, inicialmente se contaran con 8 estados, los cuales son:
 
