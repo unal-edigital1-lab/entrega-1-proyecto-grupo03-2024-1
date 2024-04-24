@@ -66,7 +66,9 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
 
   ### Manejo de necesidades
 
-  | **Atributos** | **Niveles** |
+  La macota virtual tendra una serie de atributos los cuales estaran asociados a diferentes valores, y según dichos valores se definiran las necesidades de la mascota. 
+
+  | **Atributos** | **Valores** |
   |---------------|-------------|
   | Peso          | 7-0         |
   | Salud         | 7-0         |
