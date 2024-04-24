@@ -38,7 +38,7 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
 
 ## Máquina de estados finitos
 
-  ### Sistema de botones
+  ### a. Sistema de botones
   
   La interacción usuario-sistema se realizará mediante los siguientes botones configurados:
   
@@ -50,13 +50,13 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
   
   **4. Cancel**: Permite al usuario retornar a estados más generales, su función es semejante a un botón return.
   
-  ### Sistema de sensado
+  ### b. Sistema de sensado
   
   Para integrar al Tamagotchi con el entorno real y enriquecer la experiencia de interacción, se incorporará al menos un sensor que modifique el comportamiento de la mascota virtual en respuesta a estímulos externos. Los sensores permitirán simular condiciones ambientales y actividades que afecten directamente el bienestar de la mascota.
   
   **1. Acelerometro**: Permitira al usuario luego de seleccionar el modo de juego activarlo mediante la agitación del tamagochi.
   
-  ### Sistema de visualización
+  ### c. Sistema de visualización
   
   Para visualizar todas las interacciones y estados del dispositivo se utilizara unicamente un módulo display LCD OLED SPI
 
