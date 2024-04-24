@@ -64,7 +64,7 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
   - Controlador: SH1106 (Compatible con SSD1306)
   - Resolución: 128 x 64
 
-  ### Manejo de necesidades
+  ### Manejo de necesidades e indicadores
 
   Se tendra una serie de atributos los cuales estaran asociados a diferentes valores, y según dichos valores y algún limite establecido se definiran las necesidades de la mascota. 
 
@@ -74,6 +74,13 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
   | Salud         | 7-0         |
   | Energia       | 7-0         |
   | Diversión     | 7-0         |
+
+  |  **Indicador**  | **Necesidad** |
+  |:---------------:|:-------------:|
+  |       Pan       |     Hambre    |
+  | Bate de beisbol |  Aburrimiento |
+  |    Bostesando   |   Cansancio   |
+  |       Cruz      |   Enfermedad  |
 
 ## Máquina de estados
 
