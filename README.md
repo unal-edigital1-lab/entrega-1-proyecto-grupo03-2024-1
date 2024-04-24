@@ -64,6 +64,15 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
   - Controlador: SH1106 (Compatible con SSD1306)
   - Resolución: 128 x 64
 
+  ### Manejo de necesidades
+
+  | **Atributos** | **Niveles** |
+  |---------------|-------------|
+  | Peso          | 7-0         |
+  | Salud         | 7-0         |
+  | Energia       | 7-0         |
+  | Diversión     | 7-0         |
+
 ## Máquina de estados
 
 En cuento a la forma de operación del dispositivo, inicialmente se contaran con 8 estados, los cuales son:
