@@ -97,7 +97,6 @@ En cuento a la forma de operación del dispositivo, inicialmente se contaran con
 
 <p align="center">
   <img src="https://github.com/unal-edigital1-lab/entrega-1-proyecto-grupo03-2024-1/assets/95363361/6d4e7cbd-2121-4d44-8c8f-06a5ea6d2911" alt="A beautiful sunset" width="740" height="460">
-  <!-- ![FSM drawio](https://github.com/unal-edigital1-lab/entrega-1-proyecto-grupo03-2024-1/assets/95363361/ca14c3b0-b480-45b0-8f7b-a5e73a0e037d) -->
 </p>
 
 ## Descripción de Hardware
