@@ -69,7 +69,7 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
   Se tendra una serie de atributos los cuales estaran asociados a diferentes valores, y según dichos valores y algún limite establecido se definiran las necesidades de la mascota. 
 
   | **Atributos** | **Valores** |
-  |---------------|-------------|
+  |:-------------:|:-----------:|
   | Peso          | 7-0         |
   | Salud         | 7-0         |
   | Energia       | 7-0         |
