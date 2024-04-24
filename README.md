@@ -42,16 +42,20 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
 
 La interacción usuario-sistema se realizará mediante los siguientes botones configurados:
 
-1. **Reset**: Reestablece el Tamagotchi a un estado inicial conocido al mantener pulsado el botón durante al menos 5 segundos. Este estado inicial simula el despertar de la mascota con salud óptima.
-2. **Test**: Activa el modo de prueba al mantenerlo pulsado por al menos 5 segundos, permitiendo al usuario navegar entre los diferentes estados del Tamagotchi con cada pulsación.
-3. **Dedice**: Permite al usuario luego de desplazarse por los indicadores decidir cual de las acciones realizar o repetir.
-4. **Cancel**: Permite al usuario retornar a estados más generales, su función es semejante a un botón return.
+**1. Reset**: Reestablece el Tamagotchi a un estado inicial conocido al mantener pulsado el botón durante al menos 5 segundos. Este estado inicial simula el despertar de la mascota con salud óptima.
+**2. Test**: Activa el modo de prueba al mantenerlo pulsado por al menos 5 segundos, permitiendo al usuario navegar entre los diferentes estados del Tamagotchi con cada pulsación.
+**3. Dedice**: Permite al usuario luego de desplazarse por los indicadores decidir cual de las acciones realizar o repetir.
+**4. Cancel**: Permite al usuario retornar a estados más generales, su función es semejante a un botón return.
 
 ### Sistema de sensado
 
 Para integrar al Tamagotchi con el entorno real y enriquecer la experiencia de interacción, se incorporará al menos un sensor que modifique el comportamiento de la mascota virtual en respuesta a estímulos externos. Los sensores permitirán simular condiciones ambientales y actividades que afecten directamente el bienestar de la mascota.
 
-1. **Acelerometro**: Permitira al usuario luego de seleccionar el modo de juego activarlo mediante la agitación del tamagochi.
+**1. Acelerometro**: Permitira al usuario luego de seleccionar el modo de juego activarlo mediante la agitación del tamagochi.
+
+### Sistema de visualización
+
+Para visualizar todas las interacciones y estados se utilizara un modulo display LCD OLED 128X64 1.3" SPI 
 
 ## Máquina de estados
 
