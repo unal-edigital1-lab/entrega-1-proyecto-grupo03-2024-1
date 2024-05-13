@@ -1,5 +1,5 @@
 Analysis & Synthesis report for code_matriz8x8
-Fri May  3 23:54:37 2024
+Sat May 11 18:07:44 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -31,12 +31,14 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
  23. altpll Parameter Settings by Entity Instance
  24. altsyncram Parameter Settings by Entity Instance
  25. Port Connectivity Checks: "max7219_display:max7219_display_inst|max7219_spi:max7219_spi_inst"
- 26. Port Connectivity Checks: "max7219_display:max7219_display_inst"
- 27. Port Connectivity Checks: "pll:pll_inst"
- 28. Post-Synthesis Netlist Statistics for Top Partition
- 29. Elapsed Time Per Partition
- 30. Analysis & Synthesis Messages
- 31. Analysis & Synthesis Suppressed Messages
+ 26. Port Connectivity Checks: "desp:desp4_inst"
+ 27. Port Connectivity Checks: "desp:desp3_inst"
+ 28. Port Connectivity Checks: "desp:desp2_inst"
+ 29. Port Connectivity Checks: "desp:desp1_inst"
+ 30. Port Connectivity Checks: "pll:pll_inst"
+ 31. Post-Synthesis Netlist Statistics for Top Partition
+ 32. Elapsed Time Per Partition
+ 33. Analysis & Synthesis Messages
 
 
 
@@ -63,15 +65,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May  3 23:54:37 2024          ;
+; Analysis & Synthesis Status        ; Successful - Sat May 11 18:07:44 2024          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; code_matriz8x8                                 ;
 ; Top-level Entity Name              ; top                                            ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 311                                            ;
-;     Total combinational functions  ; 294                                            ;
-;     Dedicated logic registers      ; 178                                            ;
-; Total registers                    ; 178                                            ;
+; Total logic elements               ; 627                                            ;
+;     Total combinational functions  ; 608                                            ;
+;     Dedicated logic registers      ; 405                                            ;
+; Total registers                    ; 405                                            ;
 ; Total pins                         ; 5                                              ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 8,192                                          ;
@@ -188,8 +190,9 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path         ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                                        ; Library ;
 +------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+---------+
+; desp.v                                   ; yes             ; User Verilog HDL File                                 ; C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/desp.v                                   ;         ;
 ; top.v                                    ; yes             ; Auto-Found Verilog HDL File                           ; C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v                                    ;         ;
-; icons.hex                                ; yes             ; Auto-Found Hexadecimal (Intel-Format) File            ; C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/icons.hex                                ;         ;
+; ascii.hex                                ; yes             ; Auto-Found Hexadecimal (Intel-Format) File            ; C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/ascii.hex                                ;         ;
 ; pll.v                                    ; yes             ; Auto-Found Wizard-Generated File                      ; C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/pll.v                                    ;         ;
 ; altpll.tdf                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altpll.tdf                                                                ;         ;
 ; aglobal231.inc                           ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc                                                            ;         ;
@@ -212,40 +215,40 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 311       ;
-;                                             ;           ;
-; Total combinational functions               ; 294       ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 146       ;
-;     -- 3 input functions                    ; 32        ;
-;     -- <=2 input functions                  ; 116       ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 268       ;
-;     -- arithmetic mode                      ; 26        ;
-;                                             ;           ;
-; Total registers                             ; 178       ;
-;     -- Dedicated logic registers            ; 178       ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 5         ;
-; Total memory bits                           ; 8192      ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Total PLLs                                  ; 1         ;
-;     -- PLLs                                 ; 1         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 181       ;
-; Total fan-out                               ; 2017      ;
-; Average fan-out                             ; 3.69      ;
-+---------------------------------------------+-----------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 627         ;
+;                                             ;             ;
+; Total combinational functions               ; 608         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 236         ;
+;     -- 3 input functions                    ; 54          ;
+;     -- <=2 input functions                  ; 318         ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 581         ;
+;     -- arithmetic mode                      ; 27          ;
+;                                             ;             ;
+; Total registers                             ; 405         ;
+;     -- Dedicated logic registers            ; 405         ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 5           ;
+; Total memory bits                           ; 8192        ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Total PLLs                                  ; 1           ;
+;     -- PLLs                                 ; 1           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; sync_reg[1] ;
+; Maximum fan-out                             ; 404         ;
+; Total fan-out                               ; 3632        ;
+; Average fan-out                             ; 3.34        ;
++---------------------------------------------+-------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -253,11 +256,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                    ; Entity Name     ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------+-----------------+--------------+
-; |top                                      ; 294 (163)           ; 178 (116)                 ; 8192        ; 0            ; 0       ; 0         ; 5    ; 0            ; |top                                                                   ; top             ; work         ;
+; |top                                      ; 608 (66)            ; 405 (52)                  ; 8192        ; 0            ; 0       ; 0         ; 5    ; 0            ; |top                                                                   ; top             ; work         ;
 ;    |altsyncram:mem_rtl_0|                 ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|altsyncram:mem_rtl_0                                              ; altsyncram      ; work         ;
 ;       |altsyncram_4171:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|altsyncram:mem_rtl_0|altsyncram_4171:auto_generated               ; altsyncram_4171 ; work         ;
-;    |max7219_display:max7219_display_inst| ; 131 (69)            ; 62 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|max7219_display:max7219_display_inst                              ; max7219_display ; work         ;
-;       |max7219_spi:max7219_spi_inst|      ; 62 (62)             ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|max7219_display:max7219_display_inst|max7219_spi:max7219_spi_inst ; max7219_spi     ; work         ;
+;    |desp:desp1_inst|                      ; 97 (97)             ; 64 (64)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|desp:desp1_inst                                                   ; desp            ; work         ;
+;    |desp:desp2_inst|                      ; 64 (64)             ; 64 (64)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|desp:desp2_inst                                                   ; desp            ; work         ;
+;    |desp:desp3_inst|                      ; 64 (64)             ; 64 (64)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|desp:desp3_inst                                                   ; desp            ; work         ;
+;    |desp:desp4_inst|                      ; 64 (64)             ; 64 (64)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|desp:desp4_inst                                                   ; desp            ; work         ;
+;    |max7219_display:max7219_display_inst| ; 253 (34)            ; 97 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|max7219_display:max7219_display_inst                              ; max7219_display ; work         ;
+;       |max7219_spi:max7219_spi_inst|      ; 219 (219)           ; 74 (74)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|max7219_display:max7219_display_inst|max7219_spi:max7219_spi_inst ; max7219_spi     ; work         ;
 ;    |pll:pll_inst|                         ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|pll:pll_inst                                                      ; pll             ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|pll:pll_inst|altpll:altpll_component                              ; altpll          ; work         ;
 ;          |pll_altpll:auto_generated|      ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated    ; pll_altpll      ; work         ;
@@ -344,91 +351,25 @@ Encoding Type:  One-Hot
 +--------------+--------------+------------+-------------+-------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                          ;
-+--------------------------------------------------------------------------------+----------------------------+
-; Register name                                                                  ; Reason for Removal         ;
-+--------------------------------------------------------------------------------+----------------------------+
-; pixels_SC2[39]                                                                 ; Merged with pixels_SC1[39] ;
-; pixels_SC2[31]                                                                 ; Merged with pixels_SC1[31] ;
-; pixels_SC2[23]                                                                 ; Merged with pixels_SC1[23] ;
-; pixels_SC2[15]                                                                 ; Merged with pixels_SC1[15] ;
-; pixels_SC2[7]                                                                  ; Merged with pixels_SC1[7]  ;
-; pixels_SC1[47]                                                                 ; Merged with pixels_SC2[47] ;
-; pixels_SC2[38]                                                                 ; Merged with pixels_SC1[38] ;
-; pixels_SC2[30]                                                                 ; Merged with pixels_SC1[30] ;
-; pixels_SC2[22]                                                                 ; Merged with pixels_SC1[22] ;
-; pixels_SC2[14]                                                                 ; Merged with pixels_SC1[14] ;
-; pixels_SC2[6]                                                                  ; Merged with pixels_SC1[6]  ;
-; pixels_SC1[55]                                                                 ; Merged with pixels_SC2[55] ;
-; pixels_SC2[46]                                                                 ; Merged with pixels_SC1[46] ;
-; pixels_SC2[45]                                                                 ; Merged with pixels_SC1[45] ;
-; pixels_SC2[37]                                                                 ; Merged with pixels_SC1[37] ;
-; pixels_SC2[29]                                                                 ; Merged with pixels_SC1[29] ;
-; pixels_SC2[21]                                                                 ; Merged with pixels_SC1[21] ;
-; pixels_SC2[13]                                                                 ; Merged with pixels_SC1[13] ;
-; pixels_SC2[5]                                                                  ; Merged with pixels_SC1[5]  ;
-; pixels_SC1[63]                                                                 ; Merged with pixels_SC2[63] ;
-; pixels_SC1[54]                                                                 ; Merged with pixels_SC2[54] ;
-; pixels_SC2[44]                                                                 ; Merged with pixels_SC1[44] ;
-; pixels_SC2[36]                                                                 ; Merged with pixels_SC1[36] ;
-; pixels_SC2[28]                                                                 ; Merged with pixels_SC1[28] ;
-; pixels_SC2[20]                                                                 ; Merged with pixels_SC1[20] ;
-; pixels_SC2[12]                                                                 ; Merged with pixels_SC1[12] ;
-; pixels_SC2[4]                                                                  ; Merged with pixels_SC1[4]  ;
-; pixels_SC1[62]                                                                 ; Merged with pixels_SC2[62] ;
-; pixels_SC1[53]                                                                 ; Merged with pixels_SC2[53] ;
-; pixels_SC2[43]                                                                 ; Merged with pixels_SC1[43] ;
-; pixels_SC2[35]                                                                 ; Merged with pixels_SC1[35] ;
-; pixels_SC2[27]                                                                 ; Merged with pixels_SC1[27] ;
-; pixels_SC2[19]                                                                 ; Merged with pixels_SC1[19] ;
-; pixels_SC2[11]                                                                 ; Merged with pixels_SC1[11] ;
-; pixels_SC2[3]                                                                  ; Merged with pixels_SC1[3]  ;
-; pixels_SC1[61]                                                                 ; Merged with pixels_SC2[61] ;
-; pixels_SC1[52]                                                                 ; Merged with pixels_SC2[52] ;
-; pixels_SC2[42]                                                                 ; Merged with pixels_SC1[42] ;
-; pixels_SC2[34]                                                                 ; Merged with pixels_SC1[34] ;
-; pixels_SC2[26]                                                                 ; Merged with pixels_SC1[26] ;
-; pixels_SC2[18]                                                                 ; Merged with pixels_SC1[18] ;
-; pixels_SC2[10]                                                                 ; Merged with pixels_SC1[10] ;
-; pixels_SC2[2]                                                                  ; Merged with pixels_SC1[2]  ;
-; pixels_SC1[60]                                                                 ; Merged with pixels_SC2[60] ;
-; pixels_SC1[51]                                                                 ; Merged with pixels_SC2[51] ;
-; pixels_SC2[41]                                                                 ; Merged with pixels_SC1[41] ;
-; pixels_SC2[33]                                                                 ; Merged with pixels_SC1[33] ;
-; pixels_SC2[25]                                                                 ; Merged with pixels_SC1[25] ;
-; pixels_SC2[17]                                                                 ; Merged with pixels_SC1[17] ;
-; pixels_SC2[9]                                                                  ; Merged with pixels_SC1[9]  ;
-; pixels_SC2[1]                                                                  ; Merged with pixels_SC1[1]  ;
-; pixels_SC1[59]                                                                 ; Merged with pixels_SC2[59] ;
-; pixels_SC1[50]                                                                 ; Merged with pixels_SC2[50] ;
-; pixels_SC2[40]                                                                 ; Merged with pixels_SC1[40] ;
-; pixels_SC2[0]                                                                  ; Merged with pixels_SC1[0]  ;
-; pixels_SC2[32]                                                                 ; Merged with pixels_SC1[32] ;
-; pixels_SC2[24]                                                                 ; Merged with pixels_SC1[24] ;
-; pixels_SC2[16]                                                                 ; Merged with pixels_SC1[16] ;
-; pixels_SC2[8]                                                                  ; Merged with pixels_SC1[8]  ;
-; pixels_SC1[58]                                                                 ; Merged with pixels_SC2[58] ;
-; pixels_SC1[49]                                                                 ; Merged with pixels_SC2[49] ;
-; pixels_SC1[57]                                                                 ; Merged with pixels_SC2[57] ;
-; pixels_SC1[48]                                                                 ; Merged with pixels_SC2[48] ;
-; pixels_SC1[56]                                                                 ; Merged with pixels_SC2[56] ;
-; max7219_display:max7219_display_inst|max7219_spi:max7219_spi_inst|state.IDLE   ; Lost fanout                ;
-; max7219_display:max7219_display_inst|max7219_spi:max7219_spi_inst|state.FINISH ; Lost fanout                ;
-; state~20                                                                       ; Lost fanout                ;
-; state~21                                                                       ; Lost fanout                ;
-; state~22                                                                       ; Lost fanout                ;
-; state~23                                                                       ; Lost fanout                ;
-; max7219_display:max7219_display_inst|state~4                                   ; Lost fanout                ;
-; max7219_display:max7219_display_inst|state~5                                   ; Lost fanout                ;
-; max7219_display:max7219_display_inst|state~6                                   ; Lost fanout                ;
-; max7219_display:max7219_display_inst|state~7                                   ; Lost fanout                ;
-; max7219_display:max7219_display_inst|state~8                                   ; Lost fanout                ;
-; max7219_display:max7219_display_inst|state~9                                   ; Lost fanout                ;
-; max7219_display:max7219_display_inst|max7219_spi:max7219_spi_inst|state~4      ; Lost fanout                ;
-; max7219_display:max7219_display_inst|max7219_spi:max7219_spi_inst|state~5      ; Lost fanout                ;
-; Total Number of Removed Registers = 78                                         ;                            ;
-+--------------------------------------------------------------------------------+----------------------------+
++------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                             ;
++---------------------------------------------------------------------------+--------------------+
+; Register name                                                             ; Reason for Removal ;
++---------------------------------------------------------------------------+--------------------+
+; state~20                                                                  ; Lost fanout        ;
+; state~21                                                                  ; Lost fanout        ;
+; state~22                                                                  ; Lost fanout        ;
+; state~23                                                                  ; Lost fanout        ;
+; max7219_display:max7219_display_inst|state~4                              ; Lost fanout        ;
+; max7219_display:max7219_display_inst|state~5                              ; Lost fanout        ;
+; max7219_display:max7219_display_inst|state~6                              ; Lost fanout        ;
+; max7219_display:max7219_display_inst|state~7                              ; Lost fanout        ;
+; max7219_display:max7219_display_inst|state~8                              ; Lost fanout        ;
+; max7219_display:max7219_display_inst|state~9                              ; Lost fanout        ;
+; max7219_display:max7219_display_inst|max7219_spi:max7219_spi_inst|state~4 ; Lost fanout        ;
+; max7219_display:max7219_display_inst|max7219_spi:max7219_spi_inst|state~5 ; Lost fanout        ;
+; Total Number of Removed Registers = 12                                    ;                    ;
++---------------------------------------------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -436,12 +377,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 178   ;
-; Number of registers using Synchronous Clear  ; 8     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 112   ;
+; Total registers                              ; 405   ;
+; Number of registers using Synchronous Clear  ; 14    ;
+; Number of registers using Synchronous Load   ; 31    ;
+; Number of registers using Asynchronous Clear ; 147   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 120   ;
+; Number of registers using Clock Enable       ; 350   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -471,18 +412,21 @@ Encoding Type:  One-Hot
 +---------------+--------------+---------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|max7219_display:max7219_display_inst|max7219_spi:max7219_spi_inst|buffer2[31] ;
-; 3:1                ; 23 bits   ; 46 LEs        ; 23 LEs               ; 23 LEs                 ; Yes        ; |top|max7219_display:max7219_display_inst|max7219_spi:max7219_spi_inst|buffer2[27] ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top|max7219_display:max7219_display_inst|max7219_spi:max7219_spi_inst|counter[3]  ;
-; 3:1                ; 56 bits   ; 112 LEs       ; 56 LEs               ; 56 LEs                 ; Yes        ; |top|pixels_SC1[27]                                                                ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |top|pixels_SC2[63]                                                                ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |top|max7219_display:max7219_display_inst|Selector0                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
+; 3:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |top|max7219_display:max7219_display_inst|max7219_spi:max7219_spi_inst|counter[1]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|max7219_display:max7219_display_inst|max7219_spi:max7219_spi_inst|buffer2[59]    ;
+; 3:1                ; 248 bits  ; 496 LEs       ; 248 LEs              ; 248 LEs                ; Yes        ; |top|desp:desp4_inst|pixels[1]                                                        ;
+; 10:1               ; 8 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |top|desp:desp1_inst|pixels[23]                                                       ;
+; 11:1               ; 20 bits   ; 140 LEs       ; 120 LEs              ; 20 LEs                 ; Yes        ; |top|max7219_display:max7219_display_inst|max7219_spi:max7219_spi_inst|buffer2[23]    ;
+; 12:1               ; 4 bits    ; 32 LEs        ; 28 LEs               ; 4 LEs                  ; Yes        ; |top|max7219_display:max7219_display_inst|max7219_spi:max7219_spi_inst|buffer2[50]    ;
+; 12:1               ; 4 bits    ; 32 LEs        ; 28 LEs               ; 4 LEs                  ; Yes        ; |top|max7219_display:max7219_display_inst|max7219_spi:max7219_spi_inst|buffer2[49]    ;
+; 12:1               ; 3 bits    ; 24 LEs        ; 21 LEs               ; 3 LEs                  ; Yes        ; |top|max7219_display:max7219_display_inst|max7219_spi:max7219_spi_inst|buffer2[32]    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|max7219_display:max7219_display_inst|max7219_spi:max7219_spi_inst|nextState.IDLE ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------+
@@ -502,9 +446,6 @@ Encoding Type:  One-Hot
 ; LENGTH         ; 128   ; Signed Integer                             ;
 ; WIDTH          ; 64    ; Signed Integer                             ;
 ; dir            ; 1     ; Unsigned Binary                            ;
-; DSIZE          ; 128   ; Signed Integer                             ;
-; ASIZE          ; 8     ; Signed Integer                             ;
-; I_WR           ; 1     ; Unsigned Binary                            ;
 +----------------+-------+--------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -888,7 +829,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                     ;
 +----------------+-------+----------------------------------------------------------+
-; SIZE           ; 2     ; Signed Integer                                           ;
+; SIZE           ; 4     ; Signed Integer                                           ;
 +----------------+-------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -898,7 +839,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                  ;
 +----------------+-------+---------------------------------------------------------------------------------------+
-; SIZE           ; 2     ; Signed Integer                                                                        ;
+; SIZE           ; 4     ; Signed Integer                                                                        ;
 +----------------+-------+---------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1006,19 +947,48 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------+-------+----------+----------------------------------------------------------+
 ; Port            ; Type  ; Severity ; Details                                                  ;
 +-----------------+-------+----------+----------------------------------------------------------+
+; address[31..28] ; Input ; Info     ; Stuck at GND                                             ;
+; address[23..20] ; Input ; Info     ; Stuck at GND                                             ;
 ; address[15..12] ; Input ; Info     ; Stuck at GND                                             ;
 ; address[7..4]   ; Input ; Info     ; Stuck at GND                                             ;
 +-----------------+-------+----------+----------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "max7219_display:max7219_display_inst"                                                  ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; enable  ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; started ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "desp:desp4_inst"                                                                                             ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                  ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; dir      ; Input  ; Info     ; Stuck at VCC                                                                                             ;
+; repl_col ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "desp:desp3_inst" ;
++------+-------+----------+-------------------+
+; Port ; Type  ; Severity ; Details           ;
++------+-------+----------+-------------------+
+; dir  ; Input ; Info     ; Stuck at VCC      ;
++------+-------+----------+-------------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "desp:desp2_inst" ;
++------+-------+----------+-------------------+
+; Port ; Type  ; Severity ; Details           ;
++------+-------+----------+-------------------+
+; dir  ; Input ; Info     ; Stuck at VCC      ;
++------+-------+----------+-------------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "desp:desp1_inst" ;
++------+-------+----------+-------------------+
+; Port ; Type  ; Severity ; Details           ;
++------+-------+----------+-------------------+
+; dir  ; Input ; Info     ; Stuck at VCC      ;
++------+-------+----------+-------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1037,25 +1007,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 5                           ;
-; cycloneiii_ff         ; 178                         ;
-;     CLR               ; 56                          ;
-;     ENA               ; 56                          ;
-;     ENA CLR           ; 56                          ;
+; cycloneiii_ff         ; 405                         ;
+;     CLR               ; 53                          ;
+;     ENA               ; 248                         ;
+;     ENA CLR           ; 57                          ;
+;     ENA CLR SCLR      ; 6                           ;
+;     ENA CLR SLD       ; 31                          ;
 ;     ENA SCLR          ; 8                           ;
 ;     plain             ; 2                           ;
-; cycloneiii_lcell_comb ; 295                         ;
-;     arith             ; 26                          ;
-;         2 data inputs ; 26                          ;
-;     normal            ; 269                         ;
+; cycloneiii_lcell_comb ; 609                         ;
+;     arith             ; 27                          ;
+;         2 data inputs ; 27                          ;
+;     normal            ; 582                         ;
 ;         1 data inputs ; 13                          ;
-;         2 data inputs ; 78                          ;
-;         3 data inputs ; 32                          ;
-;         4 data inputs ; 146                         ;
+;         2 data inputs ; 279                         ;
+;         3 data inputs ; 54                          ;
+;         4 data inputs ; 236                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 64                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.20                        ;
-; Average LUT depth     ; 2.54                        ;
+; Average LUT depth     ; 1.98                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1074,23 +1046,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Fri May  3 23:54:29 2024
+    Info: Processing started: Sat May 11 18:07:38 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off code_matriz8x8 -c code_matriz8x8
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file desp.v
+    Info (12023): Found entity 1: desp File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/desp.v Line: 1
+Warning (10275): Verilog HDL Module Instantiation warning at top.v(185): ignored dangling comma in List of Port Connections File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 185
+Warning (10275): Verilog HDL Module Instantiation warning at top.v(195): ignored dangling comma in List of Port Connections File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 195
+Warning (10275): Verilog HDL Module Instantiation warning at top.v(205): ignored dangling comma in List of Port Connections File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 205
+Warning (10275): Verilog HDL Module Instantiation warning at top.v(214): ignored dangling comma in List of Port Connections File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 214
 Warning (12125): Using design file top.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: top File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 1
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at top.v(9): object "rpixels" assigned a value but never read File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 9
-Warning (10036): Verilog HDL or VHDL warning at top.v(60): object "shifted_col" assigned a value but never read File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 60
-Warning (10858): Verilog HDL warning at top.v(269): object started used but never assigned File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 269
-Warning (10036): Verilog HDL or VHDL warning at top.v(277): object "afifo_not_empty" assigned a value but never read File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 277
-Warning (10030): Net "mem.data_a" at top.v(140) has no driver or initial value, using a default initial value '0' File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 140
-Warning (10030): Net "mem.waddr_a" at top.v(140) has no driver or initial value, using a default initial value '0' File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 140
-Warning (10030): Net "mem.we_a" at top.v(140) has no driver or initial value, using a default initial value '0' File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 140
+Warning (10030): Net "mem.data_a" at top.v(126) has no driver or initial value, using a default initial value '0' File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 126
+Warning (10030): Net "mem.waddr_a" at top.v(126) has no driver or initial value, using a default initial value '0' File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 126
+Warning (10030): Net "mem.we_a" at top.v(126) has no driver or initial value, using a default initial value '0' File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 126
 Warning (12125): Using design file pll.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: pll File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/pll.v Line: 40
-Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_inst" File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 31
+Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_inst" File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 26
 Info (12128): Elaborating entity "altpll" for hierarchy "pll:pll_inst|altpll:altpll_component" File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/pll.v Line: 104
 Info (12130): Elaborated megafunction instantiation "pll:pll_inst|altpll:altpll_component" File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/pll.v Line: 104
 Info (12133): Instantiated megafunction "pll:pll_inst|altpll:altpll_component" with the following parameter: File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/pll.v Line: 104
@@ -1152,13 +1126,14 @@ Info (12133): Instantiated megafunction "pll:pll_inst|altpll:altpll_component" w
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
     Info (12023): Found entity 1: pll_altpll File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/db/pll_altpll.v Line: 31
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altpll.tdf Line: 898
+Info (12128): Elaborating entity "desp" for hierarchy "desp:desp1_inst" File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 185
 Warning (12125): Using design file max7219_display.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: max7219_display File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/max7219_display.v Line: 1
-Info (12128): Elaborating entity "max7219_display" for hierarchy "max7219_display:max7219_display_inst" File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 406
+Info (12128): Elaborating entity "max7219_display" for hierarchy "max7219_display:max7219_display_inst" File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 225
 Warning (12125): Using design file max7219_spi.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: max7219_spi File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/max7219_spi.v Line: 1
-Warning (10222): Verilog HDL Parameter Declaration warning at max7219_spi.v(18): Parameter Declaration in module "max7219_spi" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/max7219_spi.v Line: 18
-Info (12128): Elaborating entity "max7219_spi" for hierarchy "max7219_display:max7219_display_inst|max7219_spi:max7219_spi_inst" File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/max7219_display.v Line: 46
+Warning (10037): Verilog HDL or VHDL warning at max7219_spi.v(86): conditional expression evaluates to a constant File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/max7219_spi.v Line: 86
+Info (12128): Elaborating entity "max7219_spi" for hierarchy "max7219_display:max7219_display_inst|max7219_spi:max7219_spi_inst" File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/max7219_display.v Line: 41
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "mem_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to ROM
@@ -1185,37 +1160,23 @@ Info (12133): Instantiated megafunction "altsyncram:mem_rtl_0" with the followin
     Info (12134): Parameter "INIT_FILE" = "db/code_matriz8x8.ram0_top_1fc36.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4171.tdf
     Info (12023): Found entity 1: altsyncram_4171 File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/db/altsyncram_4171.tdf Line: 28
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13000): Registers with preset signals will power-up high File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 103
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13000): Registers with preset signals will power-up high File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 92
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
-Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register address[0] will power up to High File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 103
-    Critical Warning (18010): Register address[1] will power up to High File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 103
-    Critical Warning (18010): Register address[2] will power up to High File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 103
-    Critical Warning (18010): Register address[3] will power up to High File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 103
-    Critical Warning (18010): Register address[4] will power up to High File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 103
-    Critical Warning (18010): Register address[6] will power up to High File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 103
-Info (17049): 14 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/code_matriz8x8.map.smsg
+Info (17049): 12 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 383 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 698 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 313 logic cells
+    Info (21061): Implemented 628 logic cells
     Info (21064): Implemented 64 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 4846 megabytes
-    Info: Processing ended: Fri May  3 23:54:37 2024
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:05
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/code_matriz8x8.map.smsg.
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
+    Info: Peak virtual memory: 4850 megabytes
+    Info: Processing ended: Sat May 11 18:07:44 2024
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:04
 
 
