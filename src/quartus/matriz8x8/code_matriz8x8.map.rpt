@@ -1,5 +1,5 @@
 Analysis & Synthesis report for code_matriz8x8
-Sat May 11 18:07:44 2024
+Thu May 23 14:11:49 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat May 11 18:07:44 2024          ;
+; Analysis & Synthesis Status        ; Successful - Thu May 23 14:11:49 2024          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; code_matriz8x8                                 ;
 ; Top-level Entity Name              ; top                                            ;
@@ -181,38 +181,39 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-12        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                             ;
-+------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path         ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                                        ; Library ;
-+------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+---------+
-; desp.v                                   ; yes             ; User Verilog HDL File                                 ; C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/desp.v                                   ;         ;
-; top.v                                    ; yes             ; Auto-Found Verilog HDL File                           ; C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v                                    ;         ;
-; ascii.hex                                ; yes             ; Auto-Found Hexadecimal (Intel-Format) File            ; C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/ascii.hex                                ;         ;
-; pll.v                                    ; yes             ; Auto-Found Wizard-Generated File                      ; C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/pll.v                                    ;         ;
-; altpll.tdf                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altpll.tdf                                                                ;         ;
-; aglobal231.inc                           ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc                                                            ;         ;
-; stratix_pll.inc                          ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratix_pll.inc                                                           ;         ;
-; stratixii_pll.inc                        ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratixii_pll.inc                                                         ;         ;
-; cycloneii_pll.inc                        ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/cycloneii_pll.inc                                                         ;         ;
-; db/pll_altpll.v                          ; yes             ; Auto-Generated Megafunction                           ; C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/db/pll_altpll.v                          ;         ;
-; max7219_display.v                        ; yes             ; Auto-Found Verilog HDL File                           ; C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/max7219_display.v                        ;         ;
-; max7219_spi.v                            ; yes             ; Auto-Found Verilog HDL File                           ; C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/max7219_spi.v                            ;         ;
-; altsyncram.tdf                           ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf                                                            ;         ;
-; stratix_ram_block.inc                    ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratix_ram_block.inc                                                     ;         ;
-; lpm_mux.inc                              ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_mux.inc                                                               ;         ;
-; lpm_decode.inc                           ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_decode.inc                                                            ;         ;
-; a_rdenreg.inc                            ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/a_rdenreg.inc                                                             ;         ;
-; altrom.inc                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altrom.inc                                                                ;         ;
-; altram.inc                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altram.inc                                                                ;         ;
-; altdpram.inc                             ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altdpram.inc                                                              ;         ;
-; db/altsyncram_4171.tdf                   ; yes             ; Auto-Generated Megafunction                           ; C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/db/altsyncram_4171.tdf                   ;         ;
-; db/code_matriz8x8.ram0_top_1fc36.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/db/code_matriz8x8.ram0_top_1fc36.hdl.mif ;         ;
-+------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                         ;
++------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path         ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                                                                    ; Library ;
++------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; desp.v                                   ; yes             ; User Verilog HDL File                                 ; D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/desp.v                                   ;         ;
+; top.v                                    ; yes             ; Auto-Found Verilog HDL File                           ; D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v                                    ;         ;
+; ascii.hex                                ; yes             ; Auto-Found Hexadecimal (Intel-Format) File            ; D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/ascii.hex                                ;         ;
+; pll.v                                    ; yes             ; Auto-Found Wizard-Generated File                      ; D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/pll.v                                    ;         ;
+; altpll.tdf                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altpll.tdf                                                                                            ;         ;
+; aglobal231.inc                           ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc                                                                                        ;         ;
+; stratix_pll.inc                          ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratix_pll.inc                                                                                       ;         ;
+; stratixii_pll.inc                        ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratixii_pll.inc                                                                                     ;         ;
+; cycloneii_pll.inc                        ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/cycloneii_pll.inc                                                                                     ;         ;
+; db/pll_altpll.v                          ; yes             ; Auto-Generated Megafunction                           ; D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/db/pll_altpll.v                          ;         ;
+; max7219_display.v                        ; yes             ; Auto-Found Verilog HDL File                           ; D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/max7219_display.v                        ;         ;
+; max7219_spi.v                            ; yes             ; Auto-Found Verilog HDL File                           ; D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/max7219_spi.v                            ;         ;
+; altsyncram.tdf                           ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf                                                                                        ;         ;
+; stratix_ram_block.inc                    ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                                 ;         ;
+; lpm_mux.inc                              ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_mux.inc                                                                                           ;         ;
+; lpm_decode.inc                           ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_decode.inc                                                                                        ;         ;
+; a_rdenreg.inc                            ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/a_rdenreg.inc                                                                                         ;         ;
+; altrom.inc                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altrom.inc                                                                                            ;         ;
+; altram.inc                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altram.inc                                                                                            ;         ;
+; altdpram.inc                             ; yes             ; Megafunction                                          ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altdpram.inc                                                                                          ;         ;
+; db/altsyncram_4171.tdf                   ; yes             ; Auto-Generated Megafunction                           ; D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/db/altsyncram_4171.tdf                   ;         ;
+; db/code_matriz8x8.ram0_top_1fc36.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/db/code_matriz8x8.ram0_top_1fc36.hdl.mif ;         ;
++------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -1046,28 +1047,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Sat May 11 18:07:38 2024
+    Info: Processing started: Thu May 23 14:11:42 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off code_matriz8x8 -c code_matriz8x8
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file desp.v
-    Info (12023): Found entity 1: desp File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/desp.v Line: 1
-Warning (10275): Verilog HDL Module Instantiation warning at top.v(185): ignored dangling comma in List of Port Connections File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 185
-Warning (10275): Verilog HDL Module Instantiation warning at top.v(195): ignored dangling comma in List of Port Connections File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 195
-Warning (10275): Verilog HDL Module Instantiation warning at top.v(205): ignored dangling comma in List of Port Connections File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 205
-Warning (10275): Verilog HDL Module Instantiation warning at top.v(214): ignored dangling comma in List of Port Connections File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 214
+    Info (12023): Found entity 1: desp File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/desp.v Line: 1
+Warning (10275): Verilog HDL Module Instantiation warning at top.v(185): ignored dangling comma in List of Port Connections File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 185
+Warning (10275): Verilog HDL Module Instantiation warning at top.v(195): ignored dangling comma in List of Port Connections File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 195
+Warning (10275): Verilog HDL Module Instantiation warning at top.v(205): ignored dangling comma in List of Port Connections File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 205
+Warning (10275): Verilog HDL Module Instantiation warning at top.v(214): ignored dangling comma in List of Port Connections File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 214
 Warning (12125): Using design file top.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: top File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 1
+    Info (12023): Found entity 1: top File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 1
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10030): Net "mem.data_a" at top.v(126) has no driver or initial value, using a default initial value '0' File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 126
-Warning (10030): Net "mem.waddr_a" at top.v(126) has no driver or initial value, using a default initial value '0' File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 126
-Warning (10030): Net "mem.we_a" at top.v(126) has no driver or initial value, using a default initial value '0' File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 126
+Warning (10030): Net "mem.data_a" at top.v(126) has no driver or initial value, using a default initial value '0' File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 126
+Warning (10030): Net "mem.waddr_a" at top.v(126) has no driver or initial value, using a default initial value '0' File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 126
+Warning (10030): Net "mem.we_a" at top.v(126) has no driver or initial value, using a default initial value '0' File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 126
 Warning (12125): Using design file pll.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: pll File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/pll.v Line: 40
-Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_inst" File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 26
-Info (12128): Elaborating entity "altpll" for hierarchy "pll:pll_inst|altpll:altpll_component" File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/pll.v Line: 104
-Info (12130): Elaborated megafunction instantiation "pll:pll_inst|altpll:altpll_component" File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/pll.v Line: 104
-Info (12133): Instantiated megafunction "pll:pll_inst|altpll:altpll_component" with the following parameter: File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/pll.v Line: 104
+    Info (12023): Found entity 1: pll File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/pll.v Line: 40
+Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_inst" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 26
+Info (12128): Elaborating entity "altpll" for hierarchy "pll:pll_inst|altpll:altpll_component" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/pll.v Line: 104
+Info (12130): Elaborated megafunction instantiation "pll:pll_inst|altpll:altpll_component" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/pll.v Line: 104
+Info (12133): Instantiated megafunction "pll:pll_inst|altpll:altpll_component" with the following parameter: File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/pll.v Line: 104
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "50"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1124,16 +1125,16 @@ Info (12133): Instantiated megafunction "pll:pll_inst|altpll:altpll_component" w
     Info (12134): Parameter "self_reset_on_loss_lock" = "OFF"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
-    Info (12023): Found entity 1: pll_altpll File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/db/pll_altpll.v Line: 31
+    Info (12023): Found entity 1: pll_altpll File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/db/pll_altpll.v Line: 31
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "desp" for hierarchy "desp:desp1_inst" File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 185
+Info (12128): Elaborating entity "desp" for hierarchy "desp:desp1_inst" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 185
 Warning (12125): Using design file max7219_display.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: max7219_display File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/max7219_display.v Line: 1
-Info (12128): Elaborating entity "max7219_display" for hierarchy "max7219_display:max7219_display_inst" File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 225
+    Info (12023): Found entity 1: max7219_display File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/max7219_display.v Line: 1
+Info (12128): Elaborating entity "max7219_display" for hierarchy "max7219_display:max7219_display_inst" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 227
 Warning (12125): Using design file max7219_spi.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: max7219_spi File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/max7219_spi.v Line: 1
-Warning (10037): Verilog HDL or VHDL warning at max7219_spi.v(86): conditional expression evaluates to a constant File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/max7219_spi.v Line: 86
-Info (12128): Elaborating entity "max7219_spi" for hierarchy "max7219_display:max7219_display_inst|max7219_spi:max7219_spi_inst" File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/max7219_display.v Line: 41
+    Info (12023): Found entity 1: max7219_spi File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/max7219_spi.v Line: 1
+Warning (10037): Verilog HDL or VHDL warning at max7219_spi.v(86): conditional expression evaluates to a constant File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/max7219_spi.v Line: 86
+Info (12128): Elaborating entity "max7219_spi" for hierarchy "max7219_display:max7219_display_inst|max7219_spi:max7219_spi_inst" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/max7219_display.v Line: 41
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "mem_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to ROM
@@ -1159,9 +1160,9 @@ Info (12133): Instantiated megafunction "altsyncram:mem_rtl_0" with the followin
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "INIT_FILE" = "db/code_matriz8x8.ram0_top_1fc36.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4171.tdf
-    Info (12023): Found entity 1: altsyncram_4171 File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/db/altsyncram_4171.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_4171 File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/db/altsyncram_4171.tdf Line: 28
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13000): Registers with preset signals will power-up high File: C:/Users/SANTIAGO/Documents/GITHUB/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 92
+Info (13000): Registers with preset signals will power-up high File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/matriz8x8/top.v Line: 92
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 12 registers lost all their fanouts during netlist optimizations.
@@ -1174,9 +1175,9 @@ Info (21057): Implemented 698 device resources after synthesis - the final resou
     Info (21064): Implemented 64 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 4850 megabytes
-    Info: Processing ended: Sat May 11 18:07:44 2024
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 4837 megabytes
+    Info: Processing ended: Thu May 23 14:11:49 2024
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:03
 
 

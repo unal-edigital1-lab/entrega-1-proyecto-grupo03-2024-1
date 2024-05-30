@@ -213,9 +213,11 @@ module top(
 		.out(pixels_SC4),
 	);
 	
-	wire [64*4-1:0] display = {pixels_SC1, pixels_SC2, pixels_SC3, pixels_SC4};
+	localparam SCREEN_NUM = 4;
 	
-	max7219_display #(.SIZE(4)) max7219_display_inst
+	wire [64*SCREEN_NUM-1:0] display = {pixels_SC1, pixels_SC2, pixels_SC3, pixels_SC4};
+	
+	max7219_display #(.SIZE(SCREEN_NUM)) max7219_display_inst
 	(
 		.clk(sck),
       .reset_n(reset_n),

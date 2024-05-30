@@ -1,9 +1,9 @@
 |top
 clk => clk.IN5
 rst => sync_reg[0].DATAIN
-sck << sck.DB_MAX_OUTPUT_PORT_TYPE
-din << max7219_display:max7219_display_inst.mosi
-cs << max7219_display:max7219_display_inst.cs
+sck <= sck.DB_MAX_OUTPUT_PORT_TYPE
+din <= max7219_display:max7219_display_inst.mosi
+cs <= max7219_display:max7219_display_inst.cs
 
 
 |top|pll:pll_inst
