@@ -21,7 +21,7 @@
 Se planea diseñar una interfaz de usuario y mostrar la información acerca de la mascota en una pantalla LCD, incluyendo su estado actual, necesidades y demás detalles.
 
 <p align="center">
-  <img src="https://www.researchgate.net/profile/Kc-Collins/publication/329045128/figure/fig1/AS:706662264483840@1545492821083/The-Tamaglitchi-website-mimicking-the-original-Tamagotchi-in-some-ways-3-button.png">
+  <img src="https://github.com/user-attachments/assets/5be8157f-a5f7-46c7-aeb2-2d29e8df4f79">
 </p>
 
 La interfaz de usuario del Tamagotchi será un componente esencial para la interacción efectiva entre el usuario y la mascota virtual. Por otro lado, incorporará botones físicos intuitivos para permitir al usuario navegar entre las opciones y modos del juego, como alimentación, limpieza y juego, así como seleccionar acciones específicas para cuidar de la mascota. También se puede agregar retroalimentación visual a través de luces LED y sonidos mediante un altavoz para alertar al usuario sobre las necesidades y actividades de la mascota, facilitando así una experiencia de juego envolvente y fácil de usar.
