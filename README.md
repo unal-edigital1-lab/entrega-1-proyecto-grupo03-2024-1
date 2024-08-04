@@ -40,6 +40,26 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
 
 ## Máquina de estados finitos
 
+- **_Necesidades_**:
+
+  - Hungry:
+ 
+  <p align="center">
+    <img src=https://github.com/user-attachments/assets/8fcfdf29-5f84-413b-b039-03f66fe6767d>
+  </p>
+
+  - Sadness:
+    
+  <p align="center">
+    <img src=https://github.com/user-attachments/assets/f411b84a-6bb9-4f6f-bb61-b4ac3158de2a>
+  </p>
+
+  - Fatigue:
+ 
+  <p align="center">
+    <img src=https://github.com/user-attachments/assets/d094b43a-279b-4b5c-be75-babe642f5d7f>
+  </p>
+
   ### a. Sistema de botones
   
   La interacción usuario-sistema se realizará mediante los siguientes botones configurados:
@@ -48,7 +68,7 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
   
   - **Test**: Activa el modo de prueba al mantenerlo pulsado por al menos 5 segundos, permitiendo al usuario navegar entre los diferentes estados del Tamagotchi con cada pulsación.
   
-  - **Dedice**: Permite al usuario luego de desplazarse por los indicadores decidir cual de las acciones realizar o repetir.
+  - **Decide**: Permite al usuario luego de desplazarse por los indicadores decidir cual de las acciones realizar o repetir.
   
   - **Cancel**: Permite al usuario retornar a estados más generales, su función es semejante a un botón return.
   
@@ -56,11 +76,11 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
   
   Para integrar al Tamagotchi con el entorno real y enriquecer la experiencia de interacción, se incorporará al menos un sensor que modifique el comportamiento de la mascota virtual en respuesta a estímulos externos. Los sensores permitirán simular condiciones ambientales y actividades que afecten directamente el bienestar de la mascota.
   
-  - **Acelerometro**: Permitira al usuario luego de seleccionar el modo de juego activarlo mediante la agitación del tamagochi.
+  - **Acelerómetro**: Permitirá al usuario luego de seleccionar el modo de juego activarlo mediante la agitación del tamagochi.
   
   ### c. Sistema de visualización
   
-  Para visualizar todas las interacciones y estados del dispositivo se utilizara unicamente un módulo display LCD OLED SPI
+  Para visualizar todas las interacciones y estados del dispositivo se utilizara únicamente un módulo display LCD OLED SPI
 
   - Voltaje de Operación DC: 3V ~ 5V
   - Controlador: SH1106 (Compatible con SSD1306)
@@ -68,7 +88,7 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
 
   ### Manejo de necesidades e indicadores
 
-  Se tendra una serie de atributos los cuales estaran asociados a diferentes valores, y según dichos valores y algún limite establecido se definiran las necesidades de la mascota. 
+  Se tendra una serie de atributos los cuales estaran asociados a diferentes valores, y según dichos valores y algún limite establecido se definirán las necesidades de la mascota. 
 
   | **Atributos** | **Valores** |
   |:-------------:|:-----------:|
