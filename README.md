@@ -94,7 +94,7 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
   - Hungry:
 
   <p align="center">
-    <img src=https://github.com/user-attachments/assets/af49c016-3f4e-40a1-9307-d28b70e1e94d width="600" height="460">
+    <img src=https://github.com/user-attachments/assets/af49c016-3f4e-40a1-9307-d28b70e1e94d>
   </p>
 
   - Sadness:
@@ -152,7 +152,7 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
 ## Diagrama del sistema
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d4aaa4b8-a69b-4f43-bcde-eee6af9c3386" alt="Comentario" width="1000" height="460">
+  <img src=https://github.com/user-attachments/assets/d4aaa4b8-a69b-4f43-bcde-eee6af9c3386>
 </p>
 
 
