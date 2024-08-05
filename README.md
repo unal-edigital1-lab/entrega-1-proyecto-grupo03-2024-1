@@ -92,7 +92,7 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
 - **_General_**:
 
   <p align="center">
-    <img src=https://github.com/user-attachments/assets/9487befe-e874-42e5-92e8-95769441083f>
+    <img src=https://github.com/user-attachments/assets/7e2f38d4-e526-45f2-9adb-b15c06d68c6b>
   </p>
 
 - **_Indicadores_**:
