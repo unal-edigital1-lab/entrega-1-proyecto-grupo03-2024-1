@@ -8,6 +8,7 @@
   - [Diseño de Interfaz y Transiciones ✏️](#diseño-de-interfaz-y-transiciones-️)
   - [Maquina de estados finitos](#máquina-de-estados-finitos)
   - [Descripción del Hardware](#descripción-de-Hardware)
+  - [Diagramas de Flujo](#diagramas-de-flujo)
   - [Diagrama del sistema](#diagrama-del-sistema)
 
 ## Integrantes
