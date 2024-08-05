@@ -38,48 +38,7 @@ Otras características adicionales que podrían incluirse en la interfaz son ani
 
 La FPGA está programada para simular distintos estados de la mascota, basándose en el comportamiento y la interacción con el usuario a través de al menos tres sistemas principales:
 
-## Máquina de estados finitos
-
-- **_Necesidades_**:
-
-  - Hungry:
- 
-  <p align="center">
-    <img src=https://github.com/user-attachments/assets/8fcfdf29-5f84-413b-b039-03f66fe6767d>
-  </p>
-
-  - Sadness:
-    
-  <p align="center">
-    <img src=https://github.com/user-attachments/assets/f411b84a-6bb9-4f6f-bb61-b4ac3158de2a>
-  </p>
-
-  - Fatigue:
- 
-  <p align="center">
-    <img src=https://github.com/user-attachments/assets/d094b43a-279b-4b5c-be75-babe642f5d7f>
-  </p>
-
-- **_Casos de interacción_**:
-- Heal:
-  
-![FSM HEAL drawio](https://github.com/user-attachments/assets/9b95d0d1-227c-42b9-8564-efe27ffefb82)
-
-- Feed:
-  
-![FSM FEED drawio](https://github.com/user-attachments/assets/fb8444c9-3259-409a-b078-e899e0c64850)
-
-- Rest:
-  
-![FSM rest drawio](https://github.com/user-attachments/assets/00490f80-3bb5-4e0c-818e-efb52796665e)
-
-- Fun:
-
- ![FSM FUN drawio](https://github.com/user-attachments/assets/32177f78-8a1b-4c0e-a901-3ef62578f27c)
-
-
-
-  ### a. Sistema de botones
+### a. Sistema de botones
   
   La interacción usuario-sistema se realizará mediante los siguientes botones configurados:
   
@@ -151,6 +110,44 @@ En cuento a la forma de operación del dispositivo, inicialmente se contaran con
 
 ![Opera Instantánea_2024-08-04_231251_docs google com](https://github.com/user-attachments/assets/f7974ce2-26d0-40d5-a00b-80fcbdf70a39)
 
+## Máquina de estados finitos
+
+- **_Necesidades_**:
+
+  - Hungry:
+ 
+  <p align="center">
+    <img src=https://github.com/user-attachments/assets/8fcfdf29-5f84-413b-b039-03f66fe6767d>
+  </p>
+
+  - Sadness:
+    
+  <p align="center">
+    <img src=https://github.com/user-attachments/assets/f411b84a-6bb9-4f6f-bb61-b4ac3158de2a>
+  </p>
+
+  - Fatigue:
+ 
+  <p align="center">
+    <img src=https://github.com/user-attachments/assets/d094b43a-279b-4b5c-be75-babe642f5d7f>
+  </p>
+
+- **_Casos de interacción_**:
+- Heal:
+  
+![FSM HEAL drawio](https://github.com/user-attachments/assets/9b95d0d1-227c-42b9-8564-efe27ffefb82)
+
+- Feed:
+  
+![FSM FEED drawio](https://github.com/user-attachments/assets/fb8444c9-3259-409a-b078-e899e0c64850)
+
+- Rest:
+  
+![FSM rest drawio](https://github.com/user-attachments/assets/00490f80-3bb5-4e0c-818e-efb52796665e)
+
+- Fun:
+
+ ![FSM FUN drawio](https://github.com/user-attachments/assets/32177f78-8a1b-4c0e-a901-3ef62578f27c)
 
 ## Diagrama del sistema
 
