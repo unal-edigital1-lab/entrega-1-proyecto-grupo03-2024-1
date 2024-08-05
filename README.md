@@ -153,8 +153,10 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
 
 ![Datapath drawio](https://github.com/user-attachments/assets/d4aaa4b8-a69b-4f43-bcde-eee6af9c3386)
 
+https://github.com/user-attachments/assets/d4aaa4b8-a69b-4f43-bcde-eee6af9c3386
+
 <p align="center">
-  <img src="https://github.com/unal-edigital1-lab/entrega-1-proyecto-grupo03-2024-1/assets/95363516/d4aaa4b8-a69b-4f43-bcde-eee6af9c3386" alt="Comentario" width="800" height="460">
+  <img src="https://github.com/user-attachments/assets/d4aaa4b8-a69b-4f43-bcde-eee6af9c3386" alt="Comentario" width="800" height="460">
 </p>
 
 
