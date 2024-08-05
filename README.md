@@ -75,17 +75,20 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
 
   | **Atributos** | **Valores** |
   |:-------------:|:-----------:|
-  | Peso          | 7-0         |
-  | Salud         | 7-0         |
-  | Energia       | 7-0         |
-  | Diversión     | 7-0         |
+  | Hambre        | 0 - 100     |
+  | Fatiga        | 0 - 100     |
+  | Tristeza      | 0 - 100     |
+  | Enfermedad    | 0 - 1       |
+  | Muerte        | 0 - 1       |
+  | Medicina      | 0 - 100     |
+  | Vida          | 0 - 100     |
 
   |  **Indicador**  | **Necesidad** |
   |:---------------:|:-------------:|
   |       Pan       |     Hambre    |
-  | Bate de beisbol |  Aburrimiento |
-  |    Bostesando   |   Cansancio   |
-  |       Cruz      |   Enfermedad  |
+  | Bate de beisbol |    Tristeza   |
+  |    Bostesando   |     Fatiga    |
+  |     Calavera    |   Enfermedad  |
 
 ## Descripción de Hardware
 
