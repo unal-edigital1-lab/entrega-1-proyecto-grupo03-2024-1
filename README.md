@@ -62,12 +62,15 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
 
 - **_Casos de interacción_**:
 - Heal:
+  
 ![FSM HEAL drawio](https://github.com/user-attachments/assets/9b95d0d1-227c-42b9-8564-efe27ffefb82)
 
 - Feed:
+  
 ![FSM FEED drawio](https://github.com/user-attachments/assets/fb8444c9-3259-409a-b078-e899e0c64850)
 
 - Rest:
+  
 ![FSM rest drawio](https://github.com/user-attachments/assets/00490f80-3bb5-4e0c-818e-efb52796665e)
 
 - Fun:
