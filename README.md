@@ -82,30 +82,6 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
   |    Bostesando   |   Cansancio   |
   |       Cruz      |   Enfermedad  |
 
-## Máquina de estados
-
-En cuento a la forma de operación del dispositivo, inicialmente se contaran con 8 estados, los cuales son:
-
-  - **Principal**: En este estado el usuario podra visualizar su mascota y mediante pequeños indicadores conocer las necesidades insatisfechas.
-
-  - **Necesidades**: En este estado el usuario podra visualizar su mascota, alternar entre los diferentes indicadores y seleccionar a cual quiere acceder.
-
-  - **Alimentar**: En este estado el usuario podra alimentar a su mascota, esto con el objetivo de mitigar el indicador de "Hambre" mediante un incremento en su peso.
-    
-  - **Sanar**: En este estado el usuario podra sanar a su mascota, esto con el objetivo de mitigar el indicador de "Enfermedad" mediante un incremento en su salud.
-
-  - **Descansar**: En este estado el usuario le permitira descansar a su mascota, esto con el objetivo de mitigar el indicador de "Cansancio" mediante un incremento en su energia.
-
-  - **Jugar**: En este estado el usuario puede elegir/iniciar alguno de los juegos disponibles, esto con el objetivo de incrementar el nivel de diversión de su mascota. 
-
-  - **Juego1**: En este estado el usuario jugara con su mascota mediante el sensor de movimiento, esto con el objetivo de mitigar el indicador de "Aburrimiento" mediante un incremento en su diversion.
-
-  - **Morir**: En este estado la mascota muere debido a que alguna de las necesides llego a un valor de 0, dejandole al usuario como unica opción reiniciar la partida.
-
-<p align="center">
-  <img src="https://github.com/unal-edigital1-lab/entrega-1-proyecto-grupo03-2024-1/assets/95363361/6d4e7cbd-2121-4d44-8c8f-06a5ea6d2911" alt="A beautiful sunset" width="740" height="460">
-</p>
-
 ## Descripción de Hardware
 
 ![Opera Instantánea_2024-08-04_231251_docs google com](https://github.com/user-attachments/assets/f7974ce2-26d0-40d5-a00b-80fcbdf70a39)
