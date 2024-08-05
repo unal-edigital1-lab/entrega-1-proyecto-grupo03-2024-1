@@ -85,7 +85,9 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
 
 ## Descripción de Hardware
 
-![Opera Instantánea_2024-08-04_231251_docs google com](https://github.com/user-attachments/assets/f7974ce2-26d0-40d5-a00b-80fcbdf70a39)
+<p align="center">
+    <img src=https://github.com/user-attachments/assets/f7974ce2-26d0-40d5-a00b-80fcbdf70a39>
+</p>
 
 ## Diagramas de flujo
 
