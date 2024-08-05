@@ -19,7 +19,7 @@
 
 ## Diseño de Interfaz y Transiciones ✏️
 
-Se planea diseñar una interfaz de usuario y mostrar la información acerca de la mascota en una pantalla LCD, incluyendo su estado actual, necesidades y demás detalles.
+Se planea diseñar una interfaz de usuario y mostrar la información acerca del tamagochi en una pantalla OLED, incluyendo su estado actual, necesidades y demás detalles.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/5be8157f-a5f7-46c7-aeb2-2d29e8df4f79">
