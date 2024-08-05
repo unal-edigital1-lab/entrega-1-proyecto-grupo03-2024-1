@@ -95,7 +95,7 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
   |     Calavera    |   Enfermedad  |
 
   <p align="center">
-    <img src=https://github.com/user-attachments/assets/7a5ef0f4-ab13-4f3d-933e-77acfc9b5c2a width="600" height="100">
+    <img src=https://github.com/user-attachments/assets/7a5ef0f4-ab13-4f3d-933e-77acfc9b5c2a width="500" height="100">
   </p>
 
 
