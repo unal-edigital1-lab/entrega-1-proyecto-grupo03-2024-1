@@ -139,6 +139,25 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
   <p align="center">
     <img src=https://github.com/user-attachments/assets/eca3294f-3177-4347-add5-e9ff4e2e4641>
   </p>
+ - **_Casos de interacción_**:
+  - Heal:
+
+![diagrama base, heal drawio (1)](https://github.com/user-attachments/assets/421e729a-14e2-4d26-a697-44cfc3ad2a26)
+
+  - Feed:
+
+![diagrama feed drawio](https://github.com/user-attachments/assets/9e91d889-d7e1-44a3-b621-c4f044939f1b)
+
+
+  - Rest:
+
+![DIAGRAMA rest drawio](https://github.com/user-attachments/assets/ec6fb1d5-8c69-4f53-a8d6-bfdf28c7f16d)
+
+  
+  - Fun:
+
+![JUGAR drawio](https://github.com/user-attachments/assets/41cc9234-9be6-427f-9d0f-47a14367f266)
+
 
 ## Máquina de estados finitos
 
