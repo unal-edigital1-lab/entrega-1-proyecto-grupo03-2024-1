@@ -73,7 +73,7 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
   - Controlador: SSD1306
   - Resolución: 128 x 32
 
-  ### Manejo de necesidades e indicadores
+  ### d.  Manejo de necesidades e indicadores
 
   Se tendra una serie de atributos los cuales estaran asociados a diferentes valores, y según dichos valores y algún limite establecido se definirán las necesidades de la mascota. 
 
