@@ -86,6 +86,8 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
 
 ![Opera Instantánea_2024-08-04_231251_docs google com](https://github.com/user-attachments/assets/f7974ce2-26d0-40d5-a00b-80fcbdf70a39)
 
+## Diagramas de flujo
+
 ## Máquina de estados finitos
 
 - **_Necesidades_**:
