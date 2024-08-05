@@ -66,8 +66,8 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
   Para visualizar todas las interacciones y estados del dispositivo se utilizara únicamente un módulo display LCD OLED SPI
 
   - Voltaje de Operación DC: 3V ~ 5V
-  - Controlador: SH1106 (Compatible con SSD1306)
-  - Resolución: 128 x 64
+  - Controlador: SSD1306
+  - Resolución: 128 x 32
 
   ### Manejo de necesidades e indicadores
 
