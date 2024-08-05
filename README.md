@@ -88,6 +88,26 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
 
 ## Diagramas de flujo
 
+- **_Necesidades_**:
+
+  - Hungry:
+
+  <p align="center">
+    <img src=https://github.com/user-attachments/assets/af49c016-3f4e-40a1-9307-d28b70e1e94d>
+  </p>
+
+  - Sadness:
+    
+  <p align="center">
+    <img src=https://github.com/user-attachments/assets/0e12d205-7ec6-4831-8b12-de2cc9f72591>
+  </p>
+
+  - Fatigue:
+  
+  <p align="center">
+    <img src=https://github.com/user-attachments/assets/eca3294f-3177-4347-add5-e9ff4e2e4641>
+  </p>
+
 ## Máquina de estados finitos
 
 - **_Necesidades_**:
