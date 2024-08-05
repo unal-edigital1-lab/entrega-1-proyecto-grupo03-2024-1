@@ -25,7 +25,7 @@ Se planea diseñar una interfaz de usuario y mostrar la información acerca del 
   <img src="https://github.com/user-attachments/assets/5be8157f-a5f7-46c7-aeb2-2d29e8df4f79">
 </p>
 
-La interfaz de usuario del Tamagotchi será un componente esencial para la interacción efectiva entre el usuario y la mascota virtual. Por otro lado, incorporará botones físicos intuitivos para permitir al usuario navegar entre las opciones y modos del juego, como alimentación, dormir, curar y juego, así como seleccionar acciones específicas para cuidar de la mascota. También se puede agregar retroalimentación visual a través de luces LED y sonidos mediante un altavoz para alertar al usuario sobre las necesidades y actividades de la mascota, facilitando así una experiencia de juego envolvente y fácil de usar.
+La interfaz de usuario del Tamagotchi será un componente esencial para la interacción efectiva entre el usuario y la mascota virtual. Por otro lado, incorporará botones físicos intuitivos para permitir al usuario navegar entre las opciones y modos de interacción, como alimentación, dormir, curar y juego, así como seleccionar acciones específicas para cuidar de la mascota. También se puede agregar retroalimentación visual a través de luces LED y sonidos mediante un altavoz para alertar al usuario sobre las necesidades y actividades de la mascota, facilitando así una experiencia de juego envolvente y fácil de usar.
 
 Asimismo, en la pantalla OLED se podrá mostrar gráficos simples y amigables, así como iconos o símbolos que representen las distintas acciones o estados de la mascota, facilitando la comprensión del usuario.
 
@@ -46,10 +46,12 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
   - **Reset**: Reestablece el Tamagotchi a un estado inicial conocido al mantener pulsado el botón durante al menos 5 segundos. Este estado inicial simula el despertar de la mascota con salud óptima.
   
   - **Test**: Activa el modo de prueba al mantenerlo pulsado por al menos 5 segundos, permitiendo al usuario navegar entre los diferentes estados del Tamagotchi con cada pulsación.
+
+  - **Select**: Permite al usuario desplezarse por los diferentes indicadores del modo de interacción.
   
-  - **Decide**: Permite al usuario luego de desplazarse por los indicadores decidir cual de las acciones realizar o repetir.
+  - **Action**: Permite al usuario luego de desplazarse por los indicadores decidir cual de las acciones realizar o repetir.
   
-  - **Cancel**: Permite al usuario retornar a estados más generales, su función es semejante a un botón return.
+  - **Cancel**: Permite al usuario salir de las opciones y modos de interacción, retornandolo al menu principal.
   
   ### b. Sistema de sensado
   
