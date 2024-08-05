@@ -131,8 +131,9 @@ En cuento a la forma de operación del dispositivo, inicialmente se contaran con
 ## Descripción de Hardware
 
 <p align="center">
-  <img src="https://github.com/unal-edigital1-lab/entrega-1-proyecto-grupo03-2024-1/assets/95363516/7c63ccbd-8e56-4a1e-b47f-3d938221d923" alt="A beautiful sunset" width="740" height="460">
+  <img src="[https://github.com/unal-edigital1-lab/entrega-1-proyecto-grupo03-2024-1/assets/95363516/7c63ccbd-8e56-4a1e-b47f-3d938221d923](https://github.com/user-attachments/assets/fed175eb-1593-4b07-9cec-a7e400884b8a)" alt="A beautiful sunset" width="740" height="460">
 </p>
+![image](https://github.com/user-attachments/assets/fed175eb-1593-4b07-9cec-a7e400884b8a)
 
 ## Diagrama del sistema
 
