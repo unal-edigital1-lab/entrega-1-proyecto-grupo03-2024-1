@@ -94,6 +94,11 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
   |    Bostesando   |     Fatiga    |
   |     Calavera    |   Enfermedad  |
 
+  <p align="center">
+    <img src=https://github.com/user-attachments/assets/7a5ef0f4-ab13-4f3d-933e-77acfc9b5c2a>
+  </p>
+
+
 ## Descripción de Hardware
 
 <p align="center">
