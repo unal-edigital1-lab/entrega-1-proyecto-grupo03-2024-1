@@ -89,6 +89,18 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
 
 ## Diagramas de flujo
 
+- **_General_**:
+
+  <p align="center">
+    <img src=https://github.com/user-attachments/assets/9487befe-e874-42e5-92e8-95769441083f>
+  </p>
+
+- **_Indicadores_**:
+
+  <p align="center">
+    <img src=https://github.com/user-attachments/assets/e127bd8d-2397-4231-8100-e8da54c9553f>
+  </p>
+
 - **_Necesidades_**:
 
   - Hungry:
