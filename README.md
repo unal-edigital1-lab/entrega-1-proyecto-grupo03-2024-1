@@ -40,6 +40,10 @@ Otras características adicionales que podrían incluirse en la interfaz son ani
 La FPGA está programada para simular distintos estados de la mascota, basándose en el comportamiento y la interacción con el usuario a través de al menos tres sistemas principales:
 
 ### a. Sistema de botones
+
+  <p align="center">
+  <img src=https://github.com/user-attachments/assets/ea9448ff-4409-41b4-9fad-5d8205707f64>
+  </p>
   
   La interacción usuario-sistema se realizará mediante los siguientes botones configurados:
   
