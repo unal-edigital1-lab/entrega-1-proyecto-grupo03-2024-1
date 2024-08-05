@@ -42,7 +42,7 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
 ### a. Sistema de botones
 
   <p align="center">
-  <img src=https://github.com/user-attachments/assets/ea9448ff-4409-41b4-9fad-5d8205707f64>
+  <img src=https://github.com/user-attachments/assets/df2bc187-9325-41dd-9f97-f9d2674e0a2d>
   </p>
   
   La interacción usuario-sistema se realizará mediante los siguientes botones configurados:
