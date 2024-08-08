@@ -49,6 +49,11 @@ module i2c_controller_tb;
 	end
 
 	initial begin
+
+		$dumpfile("i2c_controller_tb.vcd");
+		$dumpvars(-1, master);
+		$dumpvars(-1, slave);
+
 		// Initialize Inputs
 		clk = 0;
 		rst = 1;
@@ -68,5 +73,6 @@ module i2c_controller_tb;
 		#500
 		$finish;
 		
-	end      
+	end
+
 endmodule
