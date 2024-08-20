@@ -1,0 +1,1181 @@
+Timing Analyzer report for oled_i2c_128x32
+Thu Aug 15 12:22:16 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'clk'
+ 13. Slow 1200mV 85C Model Hold: 'clk'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'clk'
+ 22. Slow 1200mV 0C Model Hold: 'clk'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'clk'
+ 30. Fast 1200mV 0C Model Hold: 'clk'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Input Ports
+ 45. Unconstrained Output Ports
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++--------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                        ;
++-----------------------+--------------------------------------------------------+
+; Quartus Prime Version ; Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                                 ;
+; Revision Name         ; oled_i2c_128x32                                        ;
+; Device Family         ; Cyclone IV E                                           ;
+; Device Name           ; EP4CE6E22C8                                            ;
+; Timing Models         ; Final                                                  ;
+; Delay Model           ; Combined                                               ;
+; Rise/Fall Delays      ; Enabled                                                ;
++-----------------------+--------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.09        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-12        ;   0.8%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 201.57 MHz ; 201.57 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; -3.961 ; -174.533           ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.452 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -3.000 ; -89.246                          ;
++-------+--------+----------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                                                    ;
++--------+---------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                       ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.961 ; master_i2c:i2c|data_counter[7]  ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.407      ; 5.369      ;
+; -3.927 ; master_i2c:i2c|data_counter[6]  ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.407      ; 5.335      ;
+; -3.748 ; master_i2c:i2c|data_counter[5]  ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.407      ; 5.156      ;
+; -3.691 ; master_i2c:i2c|data_counter[1]  ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.410      ; 5.102      ;
+; -3.676 ; master_i2c:i2c|data_counter[7]  ; ssd1306_master:setup|data_byte_in[5] ; clk          ; clk         ; 1.000        ; 0.410      ; 5.087      ;
+; -3.666 ; master_i2c:i2c|data_counter[1]  ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.407      ; 5.074      ;
+; -3.656 ; master_i2c:i2c|data_counter[2]  ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.407      ; 5.064      ;
+; -3.642 ; master_i2c:i2c|data_counter[6]  ; ssd1306_master:setup|data_byte_in[5] ; clk          ; clk         ; 1.000        ; 0.410      ; 5.053      ;
+; -3.641 ; master_i2c:i2c|data_counter[4]  ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.407      ; 5.049      ;
+; -3.603 ; master_i2c:i2c|data_counter[7]  ; ssd1306_master:setup|data_byte_in[4] ; clk          ; clk         ; 1.000        ; 0.410      ; 5.014      ;
+; -3.603 ; master_i2c:i2c|data_counter[7]  ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.410      ; 5.014      ;
+; -3.593 ; master_i2c:i2c|data_counter[8]  ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.407      ; 5.001      ;
+; -3.575 ; master_i2c:i2c|data_counter[1]  ; ssd1306_master:setup|data_byte_in[4] ; clk          ; clk         ; 1.000        ; 0.410      ; 4.986      ;
+; -3.569 ; master_i2c:i2c|data_counter[6]  ; ssd1306_master:setup|data_byte_in[4] ; clk          ; clk         ; 1.000        ; 0.410      ; 4.980      ;
+; -3.569 ; master_i2c:i2c|data_counter[6]  ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.410      ; 4.980      ;
+; -3.559 ; master_i2c:i2c|bit_counter[0]   ; master_i2c:i2c|sda_high              ; clk          ; clk         ; 1.000        ; -0.082     ; 4.478      ;
+; -3.543 ; master_i2c:i2c|data_counter[1]  ; ssd1306_master:setup|data_byte_in[5] ; clk          ; clk         ; 1.000        ; 0.410      ; 4.954      ;
+; -3.515 ; master_i2c:i2c|data_counter[1]  ; ssd1306_master:setup|data_byte_in[3] ; clk          ; clk         ; 1.000        ; 0.407      ; 4.923      ;
+; -3.510 ; master_i2c:i2c|data_counter[7]  ; ssd1306_master:setup|data_byte_in[0] ; clk          ; clk         ; 1.000        ; 0.407      ; 4.918      ;
+; -3.506 ; master_i2c:i2c|data_counter[3]  ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.393      ; 4.900      ;
+; -3.495 ; master_i2c:i2c|data_counter[0]  ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.407      ; 4.903      ;
+; -3.476 ; master_i2c:i2c|data_counter[6]  ; ssd1306_master:setup|data_byte_in[0] ; clk          ; clk         ; 1.000        ; 0.407      ; 4.884      ;
+; -3.463 ; master_i2c:i2c|data_counter[5]  ; ssd1306_master:setup|data_byte_in[5] ; clk          ; clk         ; 1.000        ; 0.410      ; 4.874      ;
+; -3.449 ; master_i2c:i2c|timer[4]         ; master_i2c:i2c|data_counter[0]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.366      ;
+; -3.449 ; master_i2c:i2c|timer[4]         ; master_i2c:i2c|data_counter[1]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.366      ;
+; -3.449 ; master_i2c:i2c|timer[4]         ; master_i2c:i2c|data_counter[8]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.366      ;
+; -3.449 ; master_i2c:i2c|timer[4]         ; master_i2c:i2c|data_counter[2]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.366      ;
+; -3.449 ; master_i2c:i2c|timer[4]         ; master_i2c:i2c|data_counter[5]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.366      ;
+; -3.449 ; master_i2c:i2c|timer[4]         ; master_i2c:i2c|data_counter[6]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.366      ;
+; -3.449 ; master_i2c:i2c|timer[4]         ; master_i2c:i2c|data_counter[7]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.366      ;
+; -3.449 ; master_i2c:i2c|timer[4]         ; master_i2c:i2c|data_counter[9]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.366      ;
+; -3.448 ; master_i2c:i2c|timer[1]         ; master_i2c:i2c|data_counter[0]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.365      ;
+; -3.448 ; master_i2c:i2c|timer[1]         ; master_i2c:i2c|data_counter[1]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.365      ;
+; -3.448 ; master_i2c:i2c|timer[1]         ; master_i2c:i2c|data_counter[8]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.365      ;
+; -3.448 ; master_i2c:i2c|timer[1]         ; master_i2c:i2c|data_counter[2]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.365      ;
+; -3.448 ; master_i2c:i2c|timer[1]         ; master_i2c:i2c|data_counter[5]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.365      ;
+; -3.448 ; master_i2c:i2c|timer[1]         ; master_i2c:i2c|data_counter[6]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.365      ;
+; -3.448 ; master_i2c:i2c|timer[1]         ; master_i2c:i2c|data_counter[7]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.365      ;
+; -3.448 ; master_i2c:i2c|timer[1]         ; master_i2c:i2c|data_counter[9]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.365      ;
+; -3.427 ; master_i2c:i2c|data_counter[5]  ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.410      ; 4.838      ;
+; -3.421 ; master_i2c:i2c|data_counter[0]  ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.410      ; 4.832      ;
+; -3.409 ; master_i2c:i2c|bit_counter[0]   ; master_i2c:i2c|state[0]              ; clk          ; clk         ; 1.000        ; -0.094     ; 4.316      ;
+; -3.408 ; master_i2c:i2c|data_counter[7]  ; ssd1306_master:setup|data_byte_in[1] ; clk          ; clk         ; 1.000        ; 0.445      ; 4.854      ;
+; -3.398 ; master_i2c:i2c|data_counter[4]  ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.410      ; 4.809      ;
+; -3.390 ; master_i2c:i2c|data_counter[5]  ; ssd1306_master:setup|data_byte_in[4] ; clk          ; clk         ; 1.000        ; 0.410      ; 4.801      ;
+; -3.375 ; master_i2c:i2c|bit_counter[0]   ; master_i2c:i2c|bit_counter[0]        ; clk          ; clk         ; 1.000        ; -0.082     ; 4.294      ;
+; -3.374 ; master_i2c:i2c|bit_counter[0]   ; master_i2c:i2c|bit_counter[1]        ; clk          ; clk         ; 1.000        ; -0.082     ; 4.293      ;
+; -3.374 ; master_i2c:i2c|data_counter[6]  ; ssd1306_master:setup|data_byte_in[1] ; clk          ; clk         ; 1.000        ; 0.445      ; 4.820      ;
+; -3.372 ; master_i2c:i2c|bit_counter[0]   ; master_i2c:i2c|bit_counter[2]        ; clk          ; clk         ; 1.000        ; -0.080     ; 4.293      ;
+; -3.369 ; master_i2c:i2c|bit_counter[0]   ; master_i2c:i2c|bit_counter[3]        ; clk          ; clk         ; 1.000        ; -0.080     ; 4.290      ;
+; -3.369 ; master_i2c:i2c|bit_counter[0]   ; master_i2c:i2c|bit_counter[4]        ; clk          ; clk         ; 1.000        ; -0.080     ; 4.290      ;
+; -3.363 ; master_i2c:i2c|timer[4]         ; master_i2c:i2c|data_counter[4]       ; clk          ; clk         ; 1.000        ; -0.083     ; 4.281      ;
+; -3.363 ; master_i2c:i2c|timer[2]         ; master_i2c:i2c|data_counter[0]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.280      ;
+; -3.363 ; master_i2c:i2c|timer[2]         ; master_i2c:i2c|data_counter[1]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.280      ;
+; -3.363 ; master_i2c:i2c|timer[2]         ; master_i2c:i2c|data_counter[8]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.280      ;
+; -3.363 ; master_i2c:i2c|timer[2]         ; master_i2c:i2c|data_counter[2]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.280      ;
+; -3.363 ; master_i2c:i2c|timer[2]         ; master_i2c:i2c|data_counter[5]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.280      ;
+; -3.363 ; master_i2c:i2c|timer[2]         ; master_i2c:i2c|data_counter[6]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.280      ;
+; -3.363 ; master_i2c:i2c|timer[2]         ; master_i2c:i2c|data_counter[7]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.280      ;
+; -3.363 ; master_i2c:i2c|timer[2]         ; master_i2c:i2c|data_counter[9]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.280      ;
+; -3.362 ; master_i2c:i2c|timer[1]         ; master_i2c:i2c|data_counter[4]       ; clk          ; clk         ; 1.000        ; -0.083     ; 4.280      ;
+; -3.359 ; master_i2c:i2c|data_counter[2]  ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.410      ; 4.770      ;
+; -3.336 ; master_i2c:i2c|data_counter[3]  ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.396      ; 4.733      ;
+; -3.327 ; master_i2c:i2c|data_counter[2]  ; ssd1306_master:setup|data_byte_in[4] ; clk          ; clk         ; 1.000        ; 0.410      ; 4.738      ;
+; -3.327 ; master_i2c:i2c|bit_counter[1]   ; master_i2c:i2c|sda_high              ; clk          ; clk         ; 1.000        ; -0.082     ; 4.246      ;
+; -3.325 ; master_i2c:i2c|data_counter[7]  ; ssd1306_master:setup|data_byte_in[2] ; clk          ; clk         ; 1.000        ; 0.407      ; 4.733      ;
+; -3.308 ; master_i2c:i2c|data_counter[8]  ; ssd1306_master:setup|data_byte_in[5] ; clk          ; clk         ; 1.000        ; 0.410      ; 4.719      ;
+; -3.297 ; master_i2c:i2c|data_counter[5]  ; ssd1306_master:setup|data_byte_in[0] ; clk          ; clk         ; 1.000        ; 0.407      ; 4.705      ;
+; -3.296 ; master_i2c:i2c|data_counter[0]  ; ssd1306_master:setup|data_byte_in[1] ; clk          ; clk         ; 1.000        ; 0.445      ; 4.742      ;
+; -3.291 ; master_i2c:i2c|data_counter[6]  ; ssd1306_master:setup|data_byte_in[2] ; clk          ; clk         ; 1.000        ; 0.407      ; 4.699      ;
+; -3.290 ; master_i2c:i2c|data_counter[7]  ; ssd1306_master:setup|data_byte_in[3] ; clk          ; clk         ; 1.000        ; 0.407      ; 4.698      ;
+; -3.290 ; master_i2c:i2c|data_counter[4]  ; ssd1306_master:setup|data_byte_in[4] ; clk          ; clk         ; 1.000        ; 0.410      ; 4.701      ;
+; -3.277 ; master_i2c:i2c|timer[4]         ; master_i2c:i2c|data_counter[3]       ; clk          ; clk         ; 1.000        ; -0.070     ; 4.208      ;
+; -3.277 ; master_i2c:i2c|bus_timing.11    ; master_i2c:i2c|state[0]              ; clk          ; clk         ; 1.000        ; -0.095     ; 4.183      ;
+; -3.277 ; master_i2c:i2c|timer[2]         ; master_i2c:i2c|data_counter[4]       ; clk          ; clk         ; 1.000        ; -0.083     ; 4.195      ;
+; -3.276 ; master_i2c:i2c|timer[1]         ; master_i2c:i2c|data_counter[3]       ; clk          ; clk         ; 1.000        ; -0.070     ; 4.207      ;
+; -3.270 ; master_i2c:i2c|data_byte_out[3] ; master_i2c:i2c|sda_high              ; clk          ; clk         ; 1.000        ; -0.082     ; 4.189      ;
+; -3.256 ; master_i2c:i2c|data_counter[6]  ; ssd1306_master:setup|data_byte_in[3] ; clk          ; clk         ; 1.000        ; 0.407      ; 4.664      ;
+; -3.235 ; master_i2c:i2c|data_counter[8]  ; ssd1306_master:setup|data_byte_in[4] ; clk          ; clk         ; 1.000        ; 0.410      ; 4.646      ;
+; -3.235 ; master_i2c:i2c|data_counter[8]  ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.410      ; 4.646      ;
+; -3.216 ; master_i2c:i2c|timer[4]         ; master_i2c:i2c|next_state[1]         ; clk          ; clk         ; 1.000        ; 0.378      ; 4.595      ;
+; -3.216 ; master_i2c:i2c|timer[4]         ; master_i2c:i2c|next_state[3]         ; clk          ; clk         ; 1.000        ; 0.378      ; 4.595      ;
+; -3.215 ; master_i2c:i2c|data_counter[1]  ; ssd1306_master:setup|data_byte_in[0] ; clk          ; clk         ; 1.000        ; 0.407      ; 4.623      ;
+; -3.215 ; master_i2c:i2c|timer[1]         ; master_i2c:i2c|next_state[1]         ; clk          ; clk         ; 1.000        ; 0.378      ; 4.594      ;
+; -3.215 ; master_i2c:i2c|timer[1]         ; master_i2c:i2c|next_state[3]         ; clk          ; clk         ; 1.000        ; 0.378      ; 4.594      ;
+; -3.205 ; master_i2c:i2c|data_counter[2]  ; ssd1306_master:setup|data_byte_in[0] ; clk          ; clk         ; 1.000        ; 0.407      ; 4.613      ;
+; -3.201 ; master_i2c:i2c|data_counter[0]  ; ssd1306_master:setup|data_byte_in[5] ; clk          ; clk         ; 1.000        ; 0.410      ; 4.612      ;
+; -3.198 ; master_i2c:i2c|timer[3]         ; master_i2c:i2c|data_counter[0]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.115      ;
+; -3.198 ; master_i2c:i2c|timer[3]         ; master_i2c:i2c|data_counter[1]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.115      ;
+; -3.198 ; master_i2c:i2c|timer[3]         ; master_i2c:i2c|data_counter[8]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.115      ;
+; -3.198 ; master_i2c:i2c|timer[3]         ; master_i2c:i2c|data_counter[2]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.115      ;
+; -3.198 ; master_i2c:i2c|timer[3]         ; master_i2c:i2c|data_counter[5]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.115      ;
+; -3.198 ; master_i2c:i2c|timer[3]         ; master_i2c:i2c|data_counter[6]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.115      ;
+; -3.198 ; master_i2c:i2c|timer[3]         ; master_i2c:i2c|data_counter[7]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.115      ;
+; -3.198 ; master_i2c:i2c|timer[3]         ; master_i2c:i2c|data_counter[9]       ; clk          ; clk         ; 1.000        ; -0.084     ; 4.115      ;
+; -3.195 ; master_i2c:i2c|data_counter[5]  ; ssd1306_master:setup|data_byte_in[1] ; clk          ; clk         ; 1.000        ; 0.445      ; 4.641      ;
+; -3.194 ; master_i2c:i2c|data_counter[9]  ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.407      ; 4.602      ;
+; -3.193 ; master_i2c:i2c|data_counter[9]  ; ssd1306_master:setup|data_byte_in[5] ; clk          ; clk         ; 1.000        ; 0.410      ; 4.604      ;
+; -3.191 ; master_i2c:i2c|timer[2]         ; master_i2c:i2c|data_counter[3]       ; clk          ; clk         ; 1.000        ; -0.070     ; 4.122      ;
+; -3.190 ; master_i2c:i2c|data_counter[4]  ; ssd1306_master:setup|data_byte_in[0] ; clk          ; clk         ; 1.000        ; 0.407      ; 4.598      ;
++--------+---------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                                                               ;
++-------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                               ; To Node                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.452 ; master_i2c:i2c|sda_high                 ; master_i2c:i2c|sda_high                 ; clk          ; clk         ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; master_i2c:i2c|bit_counter[0]           ; master_i2c:i2c|bit_counter[0]           ; clk          ; clk         ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; master_i2c:i2c|bit_counter[1]           ; master_i2c:i2c|bit_counter[1]           ; clk          ; clk         ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; master_i2c:i2c|state[0]                 ; master_i2c:i2c|state[0]                 ; clk          ; clk         ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; master_i2c:i2c|state[3]                 ; master_i2c:i2c|state[3]                 ; clk          ; clk         ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; master_i2c:i2c|ack                      ; master_i2c:i2c|ack                      ; clk          ; clk         ; 0.000        ; 0.082      ; 0.746      ;
+; 0.453 ; master_i2c:i2c|scl_high                 ; master_i2c:i2c|scl_high                 ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; master_i2c:i2c|next_state[0]            ; master_i2c:i2c|next_state[0]            ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; master_i2c:i2c|bit_counter[2]           ; master_i2c:i2c|bit_counter[2]           ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; master_i2c:i2c|bit_counter[3]           ; master_i2c:i2c|bit_counter[3]           ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; master_i2c:i2c|bit_counter[4]           ; master_i2c:i2c|bit_counter[4]           ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; master_i2c:i2c|bus_timing.10            ; master_i2c:i2c|bus_timing.10            ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; master_i2c:i2c|bus_timing.01            ; master_i2c:i2c|bus_timing.01            ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.706 ; master_i2c:i2c|data_counter[9]          ; ssd1306_master:setup|control_byte_in[6] ; clk          ; clk         ; 0.000        ; 0.082      ; 1.000      ;
+; 0.734 ; master_i2c:i2c|state[2]                 ; master_i2c:i2c|next_state[1]            ; clk          ; clk         ; 0.000        ; 0.547      ; 1.493      ;
+; 0.745 ; master_i2c:i2c|timer[1]                 ; master_i2c:i2c|timer[1]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.038      ;
+; 0.747 ; master_i2c:i2c|timer[3]                 ; master_i2c:i2c|timer[3]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.040      ;
+; 0.749 ; master_i2c:i2c|timer[4]                 ; master_i2c:i2c|timer[4]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.042      ;
+; 0.755 ; master_i2c:i2c|timer[5]                 ; master_i2c:i2c|timer[5]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.048      ;
+; 0.756 ; master_i2c:i2c|timer[6]                 ; master_i2c:i2c|timer[6]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.049      ;
+; 0.771 ; master_i2c:i2c|timer[0]                 ; master_i2c:i2c|timer[0]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.064      ;
+; 0.771 ; master_i2c:i2c|sda_high                 ; master_i2c:i2c|next_state[1]            ; clk          ; clk         ; 0.000        ; 0.548      ; 1.531      ;
+; 0.786 ; master_i2c:i2c|data_counter[2]          ; master_i2c:i2c|data_counter[2]          ; clk          ; clk         ; 0.000        ; 0.082      ; 1.080      ;
+; 0.818 ; master_i2c:i2c|data_counter[0]          ; master_i2c:i2c|data_counter[0]          ; clk          ; clk         ; 0.000        ; 0.082      ; 1.112      ;
+; 0.881 ; ssd1306_master:setup|continue_bit       ; master_i2c:i2c|next_state[3]            ; clk          ; clk         ; 0.000        ; 0.561      ; 1.654      ;
+; 0.946 ; master_i2c:i2c|data_counter[8]          ; ssd1306_master:setup|control_byte_in[6] ; clk          ; clk         ; 0.000        ; 0.082      ; 1.240      ;
+; 0.970 ; master_i2c:i2c|timer[2]                 ; master_i2c:i2c|timer[2]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.263      ;
+; 0.998 ; master_i2c:i2c|data_counter[7]          ; master_i2c:i2c|data_counter[7]          ; clk          ; clk         ; 0.000        ; 0.082      ; 1.292      ;
+; 1.012 ; master_i2c:i2c|bus_timing.11            ; master_i2c:i2c|bus_timing.00            ; clk          ; clk         ; 0.000        ; 0.082      ; 1.306      ;
+; 1.015 ; master_i2c:i2c|state[3]                 ; master_i2c:i2c|state[0]                 ; clk          ; clk         ; 0.000        ; 0.082      ; 1.309      ;
+; 1.023 ; master_i2c:i2c|state[2]                 ; master_i2c:i2c|next_state[3]            ; clk          ; clk         ; 0.000        ; 0.547      ; 1.782      ;
+; 1.069 ; master_i2c:i2c|state[1]                 ; master_i2c:i2c|next_state[3]            ; clk          ; clk         ; 0.000        ; 0.560      ; 1.841      ;
+; 1.093 ; master_i2c:i2c|state[3]                 ; master_i2c:i2c|ack                      ; clk          ; clk         ; 0.000        ; 0.082      ; 1.387      ;
+; 1.100 ; master_i2c:i2c|timer[1]                 ; master_i2c:i2c|timer[2]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.393      ;
+; 1.101 ; master_i2c:i2c|timer[3]                 ; master_i2c:i2c|timer[4]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.394      ;
+; 1.106 ; master_i2c:i2c|data_counter[5]          ; ssd1306_master:setup|control_byte_in[6] ; clk          ; clk         ; 0.000        ; 0.082      ; 1.400      ;
+; 1.109 ; master_i2c:i2c|timer[5]                 ; master_i2c:i2c|timer[6]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.402      ;
+; 1.110 ; master_i2c:i2c|timer[4]                 ; master_i2c:i2c|timer[5]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.403      ;
+; 1.115 ; master_i2c:i2c|timer[0]                 ; master_i2c:i2c|timer[1]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.408      ;
+; 1.119 ; master_i2c:i2c|timer[4]                 ; master_i2c:i2c|timer[6]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.412      ;
+; 1.124 ; master_i2c:i2c|timer[0]                 ; master_i2c:i2c|timer[2]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.417      ;
+; 1.143 ; master_i2c:i2c|wdata_context            ; master_i2c:i2c|wdata_context            ; clk          ; clk         ; 0.000        ; 0.082      ; 1.437      ;
+; 1.148 ; master_i2c:i2c|data_counter[1]          ; master_i2c:i2c|data_counter[2]          ; clk          ; clk         ; 0.000        ; 0.082      ; 1.442      ;
+; 1.160 ; master_i2c:i2c|data_counter[7]          ; ssd1306_master:setup|continue_bit       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.454      ;
+; 1.165 ; master_i2c:i2c|data_counter[0]          ; master_i2c:i2c|data_counter[2]          ; clk          ; clk         ; 0.000        ; 0.082      ; 1.459      ;
+; 1.166 ; master_i2c:i2c|data_counter[6]          ; ssd1306_master:setup|continue_bit       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.460      ;
+; 1.173 ; master_i2c:i2c|data_counter[5]          ; ssd1306_master:setup|continue_bit       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.467      ;
+; 1.184 ; ssd1306_master:setup|control_byte_in[6] ; master_i2c:i2c|control_byte_out[6]      ; clk          ; clk         ; 0.000        ; 0.557      ; 1.953      ;
+; 1.188 ; master_i2c:i2c|state[1]                 ; master_i2c:i2c|ack                      ; clk          ; clk         ; 0.000        ; 0.082      ; 1.482      ;
+; 1.196 ; master_i2c:i2c|data_counter[8]          ; master_i2c:i2c|data_counter[8]          ; clk          ; clk         ; 0.000        ; 0.082      ; 1.490      ;
+; 1.231 ; master_i2c:i2c|timer[1]                 ; master_i2c:i2c|timer[3]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.524      ;
+; 1.232 ; master_i2c:i2c|timer[3]                 ; master_i2c:i2c|timer[5]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.525      ;
+; 1.235 ; master_i2c:i2c|state[0]                 ; master_i2c:i2c|next_state[1]            ; clk          ; clk         ; 0.000        ; 0.560      ; 2.007      ;
+; 1.235 ; master_i2c:i2c|state[0]                 ; master_i2c:i2c|next_state[3]            ; clk          ; clk         ; 0.000        ; 0.560      ; 2.007      ;
+; 1.236 ; master_i2c:i2c|data_counter[6]          ; master_i2c:i2c|data_counter[6]          ; clk          ; clk         ; 0.000        ; 0.082      ; 1.530      ;
+; 1.240 ; master_i2c:i2c|timer[1]                 ; master_i2c:i2c|timer[4]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.533      ;
+; 1.241 ; master_i2c:i2c|timer[3]                 ; master_i2c:i2c|timer[6]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.534      ;
+; 1.244 ; master_i2c:i2c|bit_counter[0]           ; master_i2c:i2c|bit_counter[1]           ; clk          ; clk         ; 0.000        ; 0.082      ; 1.538      ;
+; 1.255 ; master_i2c:i2c|timer[0]                 ; master_i2c:i2c|timer[3]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.548      ;
+; 1.264 ; master_i2c:i2c|timer[0]                 ; master_i2c:i2c|timer[4]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.557      ;
+; 1.296 ; master_i2c:i2c|data_counter[2]          ; master_i2c:i2c|data_counter[6]          ; clk          ; clk         ; 0.000        ; 0.082      ; 1.590      ;
+; 1.303 ; master_i2c:i2c|data_counter[6]          ; ssd1306_master:setup|control_byte_in[6] ; clk          ; clk         ; 0.000        ; 0.082      ; 1.597      ;
+; 1.304 ; master_i2c:i2c|bus_timing.10            ; master_i2c:i2c|bus_timing.11            ; clk          ; clk         ; 0.000        ; 0.094      ; 1.610      ;
+; 1.308 ; master_i2c:i2c|timer[2]                 ; master_i2c:i2c|timer[3]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.601      ;
+; 1.321 ; master_i2c:i2c|timer[5]                 ; master_i2c:i2c|timer[1]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.614      ;
+; 1.321 ; master_i2c:i2c|timer[5]                 ; master_i2c:i2c|timer[0]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.614      ;
+; 1.321 ; master_i2c:i2c|timer[5]                 ; master_i2c:i2c|timer[2]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.614      ;
+; 1.321 ; master_i2c:i2c|timer[5]                 ; master_i2c:i2c|timer[3]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.614      ;
+; 1.321 ; master_i2c:i2c|timer[5]                 ; master_i2c:i2c|timer[4]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.614      ;
+; 1.326 ; master_i2c:i2c|data_counter[7]          ; ssd1306_master:setup|control_byte_in[6] ; clk          ; clk         ; 0.000        ; 0.082      ; 1.620      ;
+; 1.336 ; master_i2c:i2c|data_counter[9]          ; master_i2c:i2c|data_counter[9]          ; clk          ; clk         ; 0.000        ; 0.082      ; 1.630      ;
+; 1.340 ; master_i2c:i2c|bus_timing.11            ; master_i2c:i2c|state[1]                 ; clk          ; clk         ; 0.000        ; 0.069      ; 1.621      ;
+; 1.340 ; master_i2c:i2c|timer[2]                 ; master_i2c:i2c|timer[4]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.633      ;
+; 1.348 ; master_i2c:i2c|next_state[2]            ; master_i2c:i2c|next_state[2]            ; clk          ; clk         ; 0.000        ; 0.102      ; 1.662      ;
+; 1.348 ; master_i2c:i2c|data_counter[4]          ; master_i2c:i2c|data_counter[6]          ; clk          ; clk         ; 0.000        ; 0.081      ; 1.641      ;
+; 1.352 ; master_i2c:i2c|data_counter[7]          ; master_i2c:i2c|data_counter[8]          ; clk          ; clk         ; 0.000        ; 0.082      ; 1.646      ;
+; 1.362 ; master_i2c:i2c|data_counter[5]          ; master_i2c:i2c|data_counter[6]          ; clk          ; clk         ; 0.000        ; 0.082      ; 1.656      ;
+; 1.365 ; master_i2c:i2c|bit_counter[2]           ; master_i2c:i2c|bit_counter[4]           ; clk          ; clk         ; 0.000        ; 0.081      ; 1.658      ;
+; 1.371 ; master_i2c:i2c|timer[1]                 ; master_i2c:i2c|timer[5]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.664      ;
+; 1.380 ; master_i2c:i2c|timer[1]                 ; master_i2c:i2c|timer[6]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.673      ;
+; 1.386 ; master_i2c:i2c|state[3]                 ; master_i2c:i2c|state[1]                 ; clk          ; clk         ; 0.000        ; 0.082      ; 1.680      ;
+; 1.395 ; master_i2c:i2c|timer[0]                 ; master_i2c:i2c|timer[5]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.688      ;
+; 1.397 ; master_i2c:i2c|state[2]                 ; master_i2c:i2c|sda_high                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.690      ;
+; 1.404 ; master_i2c:i2c|timer[0]                 ; master_i2c:i2c|timer[6]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.697      ;
+; 1.406 ; master_i2c:i2c|data_counter[5]          ; master_i2c:i2c|data_counter[5]          ; clk          ; clk         ; 0.000        ; 0.082      ; 1.700      ;
+; 1.412 ; master_i2c:i2c|state[0]                 ; master_i2c:i2c|next_state[0]            ; clk          ; clk         ; 0.000        ; 0.095      ; 1.719      ;
+; 1.418 ; master_i2c:i2c|bus_timing.01            ; master_i2c:i2c|bus_timing.10            ; clk          ; clk         ; 0.000        ; 0.081      ; 1.711      ;
+; 1.422 ; master_i2c:i2c|state[3]                 ; master_i2c:i2c|bus_timing.01            ; clk          ; clk         ; 0.000        ; 0.082      ; 1.716      ;
+; 1.427 ; master_i2c:i2c|data_counter[2]          ; master_i2c:i2c|data_counter[7]          ; clk          ; clk         ; 0.000        ; 0.082      ; 1.721      ;
+; 1.428 ; master_i2c:i2c|data_counter[1]          ; master_i2c:i2c|data_counter[6]          ; clk          ; clk         ; 0.000        ; 0.082      ; 1.722      ;
+; 1.429 ; master_i2c:i2c|state[2]                 ; master_i2c:i2c|next_state[0]            ; clk          ; clk         ; 0.000        ; 0.082      ; 1.723      ;
+; 1.431 ; ssd1306_master:setup|data_byte_in[7]    ; master_i2c:i2c|data_byte_out[7]         ; clk          ; clk         ; 0.000        ; -0.393     ; 1.250      ;
+; 1.432 ; master_i2c:i2c|data_counter[1]          ; master_i2c:i2c|data_counter[1]          ; clk          ; clk         ; 0.000        ; 0.082      ; 1.726      ;
+; 1.436 ; master_i2c:i2c|data_counter[2]          ; master_i2c:i2c|data_counter[8]          ; clk          ; clk         ; 0.000        ; 0.082      ; 1.730      ;
+; 1.445 ; master_i2c:i2c|data_counter[0]          ; master_i2c:i2c|data_counter[6]          ; clk          ; clk         ; 0.000        ; 0.082      ; 1.739      ;
+; 1.446 ; master_i2c:i2c|data_counter[4]          ; master_i2c:i2c|data_counter[7]          ; clk          ; clk         ; 0.000        ; 0.081      ; 1.739      ;
+; 1.448 ; master_i2c:i2c|timer[2]                 ; master_i2c:i2c|timer[5]                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.741      ;
+; 1.451 ; master_i2c:i2c|bus_timing.11            ; master_i2c:i2c|next_state[2]            ; clk          ; clk         ; 0.000        ; 0.592      ; 2.255      ;
+; 1.458 ; master_i2c:i2c|state[1]                 ; master_i2c:i2c|state[1]                 ; clk          ; clk         ; 0.000        ; 0.082      ; 1.752      ;
+; 1.460 ; master_i2c:i2c|data_counter[5]          ; master_i2c:i2c|data_counter[7]          ; clk          ; clk         ; 0.000        ; 0.082      ; 1.754      ;
++-------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 218.15 MHz ; 218.15 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -3.584 ; -160.104          ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.401 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -89.246                         ;
++-------+--------+---------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                                                    ;
++--------+--------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                      ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.584 ; master_i2c:i2c|data_counter[7] ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.386      ; 4.972      ;
+; -3.556 ; master_i2c:i2c|data_counter[6] ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.386      ; 4.944      ;
+; -3.406 ; master_i2c:i2c|data_counter[5] ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.386      ; 4.794      ;
+; -3.376 ; master_i2c:i2c|data_counter[7] ; ssd1306_master:setup|data_byte_in[5] ; clk          ; clk         ; 1.000        ; 0.388      ; 4.766      ;
+; -3.362 ; master_i2c:i2c|data_counter[1] ; ssd1306_master:setup|data_byte_in[4] ; clk          ; clk         ; 1.000        ; 0.388      ; 4.752      ;
+; -3.353 ; master_i2c:i2c|data_counter[1] ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.388      ; 4.743      ;
+; -3.348 ; master_i2c:i2c|data_counter[6] ; ssd1306_master:setup|data_byte_in[5] ; clk          ; clk         ; 1.000        ; 0.388      ; 4.738      ;
+; -3.302 ; master_i2c:i2c|data_counter[4] ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.386      ; 4.690      ;
+; -3.283 ; master_i2c:i2c|data_counter[1] ; ssd1306_master:setup|data_byte_in[5] ; clk          ; clk         ; 1.000        ; 0.388      ; 4.673      ;
+; -3.261 ; master_i2c:i2c|data_counter[8] ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.386      ; 4.649      ;
+; -3.258 ; master_i2c:i2c|data_counter[2] ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.386      ; 4.646      ;
+; -3.250 ; master_i2c:i2c|data_counter[1] ; ssd1306_master:setup|data_byte_in[3] ; clk          ; clk         ; 1.000        ; 0.385      ; 4.637      ;
+; -3.249 ; master_i2c:i2c|data_counter[7] ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.388      ; 4.639      ;
+; -3.248 ; master_i2c:i2c|data_counter[7] ; ssd1306_master:setup|data_byte_in[4] ; clk          ; clk         ; 1.000        ; 0.388      ; 4.638      ;
+; -3.238 ; master_i2c:i2c|data_counter[5] ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.388      ; 4.628      ;
+; -3.228 ; master_i2c:i2c|data_counter[1] ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.386      ; 4.616      ;
+; -3.226 ; master_i2c:i2c|data_counter[0] ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.386      ; 4.614      ;
+; -3.221 ; master_i2c:i2c|data_counter[6] ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.388      ; 4.611      ;
+; -3.220 ; master_i2c:i2c|data_counter[6] ; ssd1306_master:setup|data_byte_in[4] ; clk          ; clk         ; 1.000        ; 0.388      ; 4.610      ;
+; -3.216 ; master_i2c:i2c|timer[4]        ; master_i2c:i2c|data_counter[0]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.145      ;
+; -3.216 ; master_i2c:i2c|timer[4]        ; master_i2c:i2c|data_counter[1]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.145      ;
+; -3.216 ; master_i2c:i2c|timer[4]        ; master_i2c:i2c|data_counter[8]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.145      ;
+; -3.216 ; master_i2c:i2c|timer[4]        ; master_i2c:i2c|data_counter[2]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.145      ;
+; -3.216 ; master_i2c:i2c|timer[4]        ; master_i2c:i2c|data_counter[5]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.145      ;
+; -3.216 ; master_i2c:i2c|timer[4]        ; master_i2c:i2c|data_counter[6]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.145      ;
+; -3.216 ; master_i2c:i2c|timer[4]        ; master_i2c:i2c|data_counter[7]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.145      ;
+; -3.216 ; master_i2c:i2c|timer[4]        ; master_i2c:i2c|data_counter[9]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.145      ;
+; -3.215 ; master_i2c:i2c|timer[1]        ; master_i2c:i2c|data_counter[0]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.144      ;
+; -3.215 ; master_i2c:i2c|timer[1]        ; master_i2c:i2c|data_counter[1]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.144      ;
+; -3.215 ; master_i2c:i2c|timer[1]        ; master_i2c:i2c|data_counter[8]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.144      ;
+; -3.215 ; master_i2c:i2c|timer[1]        ; master_i2c:i2c|data_counter[2]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.144      ;
+; -3.215 ; master_i2c:i2c|timer[1]        ; master_i2c:i2c|data_counter[5]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.144      ;
+; -3.215 ; master_i2c:i2c|timer[1]        ; master_i2c:i2c|data_counter[6]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.144      ;
+; -3.215 ; master_i2c:i2c|timer[1]        ; master_i2c:i2c|data_counter[7]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.144      ;
+; -3.215 ; master_i2c:i2c|timer[1]        ; master_i2c:i2c|data_counter[9]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.144      ;
+; -3.206 ; master_i2c:i2c|data_counter[0] ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.388      ; 4.596      ;
+; -3.198 ; master_i2c:i2c|data_counter[5] ; ssd1306_master:setup|data_byte_in[5] ; clk          ; clk         ; 1.000        ; 0.388      ; 4.588      ;
+; -3.173 ; master_i2c:i2c|data_counter[7] ; ssd1306_master:setup|data_byte_in[0] ; clk          ; clk         ; 1.000        ; 0.385      ; 4.560      ;
+; -3.161 ; master_i2c:i2c|data_counter[4] ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.388      ; 4.551      ;
+; -3.160 ; master_i2c:i2c|data_counter[2] ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.388      ; 4.550      ;
+; -3.147 ; master_i2c:i2c|bit_counter[0]  ; master_i2c:i2c|sda_high              ; clk          ; clk         ; 1.000        ; -0.073     ; 4.076      ;
+; -3.145 ; master_i2c:i2c|data_counter[6] ; ssd1306_master:setup|data_byte_in[0] ; clk          ; clk         ; 1.000        ; 0.385      ; 4.532      ;
+; -3.138 ; master_i2c:i2c|data_counter[7] ; ssd1306_master:setup|data_byte_in[1] ; clk          ; clk         ; 1.000        ; 0.424      ; 4.564      ;
+; -3.133 ; master_i2c:i2c|timer[2]        ; master_i2c:i2c|data_counter[0]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.062      ;
+; -3.133 ; master_i2c:i2c|timer[2]        ; master_i2c:i2c|data_counter[1]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.062      ;
+; -3.133 ; master_i2c:i2c|timer[2]        ; master_i2c:i2c|data_counter[8]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.062      ;
+; -3.133 ; master_i2c:i2c|timer[2]        ; master_i2c:i2c|data_counter[2]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.062      ;
+; -3.133 ; master_i2c:i2c|timer[2]        ; master_i2c:i2c|data_counter[5]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.062      ;
+; -3.133 ; master_i2c:i2c|timer[2]        ; master_i2c:i2c|data_counter[6]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.062      ;
+; -3.133 ; master_i2c:i2c|timer[2]        ; master_i2c:i2c|data_counter[7]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.062      ;
+; -3.133 ; master_i2c:i2c|timer[2]        ; master_i2c:i2c|data_counter[9]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.062      ;
+; -3.132 ; master_i2c:i2c|timer[4]        ; master_i2c:i2c|data_counter[4]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.061      ;
+; -3.131 ; master_i2c:i2c|data_counter[2] ; ssd1306_master:setup|data_byte_in[4] ; clk          ; clk         ; 1.000        ; 0.388      ; 4.521      ;
+; -3.131 ; master_i2c:i2c|timer[1]        ; master_i2c:i2c|data_counter[4]       ; clk          ; clk         ; 1.000        ; -0.073     ; 4.060      ;
+; -3.118 ; master_i2c:i2c|bit_counter[0]  ; master_i2c:i2c|state[0]              ; clk          ; clk         ; 1.000        ; -0.086     ; 4.034      ;
+; -3.116 ; master_i2c:i2c|data_counter[3] ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.373      ; 4.491      ;
+; -3.116 ; master_i2c:i2c|data_counter[3] ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.375      ; 4.493      ;
+; -3.110 ; master_i2c:i2c|data_counter[6] ; ssd1306_master:setup|data_byte_in[1] ; clk          ; clk         ; 1.000        ; 0.424      ; 4.536      ;
+; -3.108 ; master_i2c:i2c|bit_counter[0]  ; master_i2c:i2c|bit_counter[0]        ; clk          ; clk         ; 1.000        ; -0.073     ; 4.037      ;
+; -3.107 ; master_i2c:i2c|bit_counter[0]  ; master_i2c:i2c|bit_counter[1]        ; clk          ; clk         ; 1.000        ; -0.073     ; 4.036      ;
+; -3.106 ; master_i2c:i2c|bit_counter[0]  ; master_i2c:i2c|bit_counter[2]        ; clk          ; clk         ; 1.000        ; -0.072     ; 4.036      ;
+; -3.104 ; master_i2c:i2c|bit_counter[0]  ; master_i2c:i2c|bit_counter[3]        ; clk          ; clk         ; 1.000        ; -0.072     ; 4.034      ;
+; -3.103 ; master_i2c:i2c|bit_counter[0]  ; master_i2c:i2c|bit_counter[4]        ; clk          ; clk         ; 1.000        ; -0.072     ; 4.033      ;
+; -3.070 ; master_i2c:i2c|data_counter[5] ; ssd1306_master:setup|data_byte_in[4] ; clk          ; clk         ; 1.000        ; 0.388      ; 4.460      ;
+; -3.053 ; master_i2c:i2c|data_counter[8] ; ssd1306_master:setup|data_byte_in[5] ; clk          ; clk         ; 1.000        ; 0.388      ; 4.443      ;
+; -3.049 ; master_i2c:i2c|timer[2]        ; master_i2c:i2c|data_counter[4]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.978      ;
+; -3.047 ; master_i2c:i2c|timer[4]        ; master_i2c:i2c|data_counter[3]       ; clk          ; clk         ; 1.000        ; -0.060     ; 3.989      ;
+; -3.046 ; master_i2c:i2c|timer[1]        ; master_i2c:i2c|data_counter[3]       ; clk          ; clk         ; 1.000        ; -0.060     ; 3.988      ;
+; -3.004 ; master_i2c:i2c|timer[4]        ; master_i2c:i2c|next_state[1]         ; clk          ; clk         ; 1.000        ; 0.355      ; 4.361      ;
+; -3.004 ; master_i2c:i2c|timer[4]        ; master_i2c:i2c|next_state[3]         ; clk          ; clk         ; 1.000        ; 0.355      ; 4.361      ;
+; -3.003 ; master_i2c:i2c|timer[1]        ; master_i2c:i2c|next_state[1]         ; clk          ; clk         ; 1.000        ; 0.355      ; 4.360      ;
+; -3.003 ; master_i2c:i2c|timer[1]        ; master_i2c:i2c|next_state[3]         ; clk          ; clk         ; 1.000        ; 0.355      ; 4.360      ;
+; -3.002 ; master_i2c:i2c|data_counter[7] ; ssd1306_master:setup|data_byte_in[2] ; clk          ; clk         ; 1.000        ; 0.386      ; 4.390      ;
+; -3.002 ; master_i2c:i2c|data_counter[7] ; ssd1306_master:setup|data_byte_in[3] ; clk          ; clk         ; 1.000        ; 0.385      ; 4.389      ;
+; -2.996 ; master_i2c:i2c|data_counter[0] ; ssd1306_master:setup|data_byte_in[1] ; clk          ; clk         ; 1.000        ; 0.424      ; 4.422      ;
+; -2.995 ; master_i2c:i2c|data_counter[5] ; ssd1306_master:setup|data_byte_in[0] ; clk          ; clk         ; 1.000        ; 0.385      ; 4.382      ;
+; -2.990 ; master_i2c:i2c|bit_counter[1]  ; master_i2c:i2c|sda_high              ; clk          ; clk         ; 1.000        ; -0.073     ; 3.919      ;
+; -2.989 ; master_i2c:i2c|bus_timing.11   ; master_i2c:i2c|state[0]              ; clk          ; clk         ; 1.000        ; -0.086     ; 3.905      ;
+; -2.985 ; master_i2c:i2c|timer[3]        ; master_i2c:i2c|data_counter[0]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.914      ;
+; -2.985 ; master_i2c:i2c|timer[3]        ; master_i2c:i2c|data_counter[1]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.914      ;
+; -2.985 ; master_i2c:i2c|timer[3]        ; master_i2c:i2c|data_counter[8]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.914      ;
+; -2.985 ; master_i2c:i2c|timer[3]        ; master_i2c:i2c|data_counter[2]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.914      ;
+; -2.985 ; master_i2c:i2c|timer[3]        ; master_i2c:i2c|data_counter[5]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.914      ;
+; -2.985 ; master_i2c:i2c|timer[3]        ; master_i2c:i2c|data_counter[6]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.914      ;
+; -2.985 ; master_i2c:i2c|timer[3]        ; master_i2c:i2c|data_counter[7]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.914      ;
+; -2.985 ; master_i2c:i2c|timer[3]        ; master_i2c:i2c|data_counter[9]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.914      ;
+; -2.985 ; master_i2c:i2c|data_counter[0] ; ssd1306_master:setup|data_byte_in[5] ; clk          ; clk         ; 1.000        ; 0.388      ; 4.375      ;
+; -2.982 ; master_i2c:i2c|data_counter[0] ; ssd1306_master:setup|data_byte_in[4] ; clk          ; clk         ; 1.000        ; 0.388      ; 4.372      ;
+; -2.977 ; master_i2c:i2c|data_counter[6] ; ssd1306_master:setup|data_byte_in[2] ; clk          ; clk         ; 1.000        ; 0.386      ; 4.365      ;
+; -2.974 ; master_i2c:i2c|data_counter[6] ; ssd1306_master:setup|data_byte_in[3] ; clk          ; clk         ; 1.000        ; 0.385      ; 4.361      ;
+; -2.966 ; master_i2c:i2c|data_counter[4] ; ssd1306_master:setup|data_byte_in[4] ; clk          ; clk         ; 1.000        ; 0.388      ; 4.356      ;
+; -2.964 ; master_i2c:i2c|timer[2]        ; master_i2c:i2c|data_counter[3]       ; clk          ; clk         ; 1.000        ; -0.060     ; 3.906      ;
+; -2.960 ; master_i2c:i2c|data_counter[5] ; ssd1306_master:setup|data_byte_in[1] ; clk          ; clk         ; 1.000        ; 0.424      ; 4.386      ;
+; -2.955 ; master_i2c:i2c|data_counter[1] ; ssd1306_master:setup|data_byte_in[2] ; clk          ; clk         ; 1.000        ; 0.386      ; 4.343      ;
+; -2.941 ; master_i2c:i2c|data_counter[0] ; ssd1306_master:setup|data_byte_in[2] ; clk          ; clk         ; 1.000        ; 0.386      ; 4.329      ;
+; -2.934 ; master_i2c:i2c|data_counter[2] ; ssd1306_master:setup|data_byte_in[2] ; clk          ; clk         ; 1.000        ; 0.386      ; 4.322      ;
+; -2.926 ; master_i2c:i2c|data_counter[8] ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.388      ; 4.316      ;
+; -2.925 ; master_i2c:i2c|data_counter[8] ; ssd1306_master:setup|data_byte_in[4] ; clk          ; clk         ; 1.000        ; 0.388      ; 4.315      ;
+; -2.922 ; master_i2c:i2c|data_counter[9] ; ssd1306_master:setup|data_byte_in[5] ; clk          ; clk         ; 1.000        ; 0.388      ; 4.312      ;
+; -2.921 ; master_i2c:i2c|timer[2]        ; master_i2c:i2c|next_state[1]         ; clk          ; clk         ; 1.000        ; 0.355      ; 4.278      ;
++--------+--------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                                                                ;
++-------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                               ; To Node                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.401 ; master_i2c:i2c|next_state[0]            ; master_i2c:i2c|next_state[0]            ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; master_i2c:i2c|sda_high                 ; master_i2c:i2c|sda_high                 ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; master_i2c:i2c|bit_counter[0]           ; master_i2c:i2c|bit_counter[0]           ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; master_i2c:i2c|bit_counter[2]           ; master_i2c:i2c|bit_counter[2]           ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; master_i2c:i2c|bit_counter[1]           ; master_i2c:i2c|bit_counter[1]           ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; master_i2c:i2c|bit_counter[3]           ; master_i2c:i2c|bit_counter[3]           ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; master_i2c:i2c|bit_counter[4]           ; master_i2c:i2c|bit_counter[4]           ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; master_i2c:i2c|state[0]                 ; master_i2c:i2c|state[0]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; master_i2c:i2c|state[3]                 ; master_i2c:i2c|state[3]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; master_i2c:i2c|ack                      ; master_i2c:i2c|ack                      ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.402 ; master_i2c:i2c|scl_high                 ; master_i2c:i2c|scl_high                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; master_i2c:i2c|bus_timing.10            ; master_i2c:i2c|bus_timing.10            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; master_i2c:i2c|bus_timing.01            ; master_i2c:i2c|bus_timing.01            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.661 ; master_i2c:i2c|data_counter[9]          ; ssd1306_master:setup|control_byte_in[6] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.929      ;
+; 0.671 ; master_i2c:i2c|state[2]                 ; master_i2c:i2c|next_state[1]            ; clk          ; clk         ; 0.000        ; 0.506      ; 1.372      ;
+; 0.675 ; master_i2c:i2c|sda_high                 ; master_i2c:i2c|next_state[1]            ; clk          ; clk         ; 0.000        ; 0.506      ; 1.376      ;
+; 0.693 ; master_i2c:i2c|timer[1]                 ; master_i2c:i2c|timer[1]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 0.961      ;
+; 0.695 ; master_i2c:i2c|timer[3]                 ; master_i2c:i2c|timer[3]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 0.963      ;
+; 0.699 ; master_i2c:i2c|timer[4]                 ; master_i2c:i2c|timer[4]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 0.967      ;
+; 0.702 ; master_i2c:i2c|timer[5]                 ; master_i2c:i2c|timer[5]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 0.970      ;
+; 0.703 ; master_i2c:i2c|timer[6]                 ; master_i2c:i2c|timer[6]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 0.971      ;
+; 0.725 ; master_i2c:i2c|timer[0]                 ; master_i2c:i2c|timer[0]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 0.993      ;
+; 0.729 ; master_i2c:i2c|data_counter[2]          ; master_i2c:i2c|data_counter[2]          ; clk          ; clk         ; 0.000        ; 0.073      ; 0.997      ;
+; 0.763 ; ssd1306_master:setup|continue_bit       ; master_i2c:i2c|next_state[3]            ; clk          ; clk         ; 0.000        ; 0.519      ; 1.477      ;
+; 0.764 ; master_i2c:i2c|data_counter[0]          ; master_i2c:i2c|data_counter[0]          ; clk          ; clk         ; 0.000        ; 0.073      ; 1.032      ;
+; 0.867 ; master_i2c:i2c|data_counter[8]          ; ssd1306_master:setup|control_byte_in[6] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.135      ;
+; 0.869 ; master_i2c:i2c|timer[2]                 ; master_i2c:i2c|timer[2]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.137      ;
+; 0.894 ; master_i2c:i2c|state[2]                 ; master_i2c:i2c|next_state[3]            ; clk          ; clk         ; 0.000        ; 0.506      ; 1.595      ;
+; 0.916 ; master_i2c:i2c|data_counter[7]          ; master_i2c:i2c|data_counter[7]          ; clk          ; clk         ; 0.000        ; 0.073      ; 1.184      ;
+; 0.919 ; master_i2c:i2c|state[3]                 ; master_i2c:i2c|state[0]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.187      ;
+; 0.927 ; master_i2c:i2c|bus_timing.11            ; master_i2c:i2c|bus_timing.00            ; clk          ; clk         ; 0.000        ; 0.073      ; 1.195      ;
+; 0.934 ; master_i2c:i2c|state[1]                 ; master_i2c:i2c|next_state[3]            ; clk          ; clk         ; 0.000        ; 0.519      ; 1.648      ;
+; 1.005 ; master_i2c:i2c|state[3]                 ; master_i2c:i2c|ack                      ; clk          ; clk         ; 0.000        ; 0.073      ; 1.273      ;
+; 1.015 ; master_i2c:i2c|data_counter[5]          ; ssd1306_master:setup|control_byte_in[6] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.283      ;
+; 1.015 ; master_i2c:i2c|timer[1]                 ; master_i2c:i2c|timer[2]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.283      ;
+; 1.018 ; master_i2c:i2c|timer[4]                 ; master_i2c:i2c|timer[5]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.286      ;
+; 1.019 ; master_i2c:i2c|timer[3]                 ; master_i2c:i2c|timer[4]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.287      ;
+; 1.023 ; master_i2c:i2c|timer[0]                 ; master_i2c:i2c|timer[1]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.291      ;
+; 1.026 ; master_i2c:i2c|timer[5]                 ; master_i2c:i2c|timer[6]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.294      ;
+; 1.033 ; master_i2c:i2c|timer[4]                 ; master_i2c:i2c|timer[6]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.301      ;
+; 1.038 ; master_i2c:i2c|timer[0]                 ; master_i2c:i2c|timer[2]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.306      ;
+; 1.039 ; master_i2c:i2c|data_counter[6]          ; ssd1306_master:setup|continue_bit       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.307      ;
+; 1.048 ; master_i2c:i2c|data_counter[7]          ; ssd1306_master:setup|continue_bit       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.316      ;
+; 1.050 ; ssd1306_master:setup|control_byte_in[6] ; master_i2c:i2c|control_byte_out[6]      ; clk          ; clk         ; 0.000        ; 0.516      ; 1.761      ;
+; 1.060 ; master_i2c:i2c|data_counter[5]          ; ssd1306_master:setup|continue_bit       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.328      ;
+; 1.063 ; master_i2c:i2c|data_counter[1]          ; master_i2c:i2c|data_counter[2]          ; clk          ; clk         ; 0.000        ; 0.073      ; 1.331      ;
+; 1.064 ; master_i2c:i2c|data_counter[8]          ; master_i2c:i2c|data_counter[8]          ; clk          ; clk         ; 0.000        ; 0.073      ; 1.332      ;
+; 1.072 ; master_i2c:i2c|wdata_context            ; master_i2c:i2c|wdata_context            ; clk          ; clk         ; 0.000        ; 0.073      ; 1.340      ;
+; 1.074 ; master_i2c:i2c|data_counter[0]          ; master_i2c:i2c|data_counter[2]          ; clk          ; clk         ; 0.000        ; 0.073      ; 1.342      ;
+; 1.092 ; master_i2c:i2c|data_counter[6]          ; master_i2c:i2c|data_counter[6]          ; clk          ; clk         ; 0.000        ; 0.073      ; 1.360      ;
+; 1.110 ; master_i2c:i2c|state[0]                 ; master_i2c:i2c|next_state[1]            ; clk          ; clk         ; 0.000        ; 0.519      ; 1.824      ;
+; 1.110 ; master_i2c:i2c|state[0]                 ; master_i2c:i2c|next_state[3]            ; clk          ; clk         ; 0.000        ; 0.519      ; 1.824      ;
+; 1.111 ; master_i2c:i2c|bit_counter[0]           ; master_i2c:i2c|bit_counter[1]           ; clk          ; clk         ; 0.000        ; 0.073      ; 1.379      ;
+; 1.112 ; master_i2c:i2c|timer[1]                 ; master_i2c:i2c|timer[3]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.380      ;
+; 1.113 ; master_i2c:i2c|state[1]                 ; master_i2c:i2c|ack                      ; clk          ; clk         ; 0.000        ; 0.073      ; 1.381      ;
+; 1.116 ; master_i2c:i2c|timer[3]                 ; master_i2c:i2c|timer[5]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.384      ;
+; 1.137 ; master_i2c:i2c|timer[1]                 ; master_i2c:i2c|timer[4]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.405      ;
+; 1.141 ; master_i2c:i2c|timer[3]                 ; master_i2c:i2c|timer[6]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.409      ;
+; 1.145 ; master_i2c:i2c|timer[0]                 ; master_i2c:i2c|timer[3]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.413      ;
+; 1.160 ; master_i2c:i2c|bus_timing.10            ; master_i2c:i2c|bus_timing.11            ; clk          ; clk         ; 0.000        ; 0.085      ; 1.440      ;
+; 1.160 ; master_i2c:i2c|timer[0]                 ; master_i2c:i2c|timer[4]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.428      ;
+; 1.173 ; master_i2c:i2c|timer[2]                 ; master_i2c:i2c|timer[3]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.441      ;
+; 1.185 ; master_i2c:i2c|data_counter[2]          ; master_i2c:i2c|data_counter[6]          ; clk          ; clk         ; 0.000        ; 0.073      ; 1.453      ;
+; 1.194 ; master_i2c:i2c|bus_timing.11            ; master_i2c:i2c|state[1]                 ; clk          ; clk         ; 0.000        ; 0.060      ; 1.449      ;
+; 1.194 ; master_i2c:i2c|data_counter[6]          ; ssd1306_master:setup|control_byte_in[6] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.462      ;
+; 1.202 ; master_i2c:i2c|next_state[2]            ; master_i2c:i2c|next_state[2]            ; clk          ; clk         ; 0.000        ; 0.092      ; 1.489      ;
+; 1.222 ; master_i2c:i2c|data_counter[7]          ; ssd1306_master:setup|control_byte_in[6] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.490      ;
+; 1.234 ; master_i2c:i2c|timer[1]                 ; master_i2c:i2c|timer[5]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.502      ;
+; 1.245 ; master_i2c:i2c|timer[5]                 ; master_i2c:i2c|timer[1]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.513      ;
+; 1.245 ; master_i2c:i2c|timer[5]                 ; master_i2c:i2c|timer[0]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.513      ;
+; 1.245 ; master_i2c:i2c|timer[5]                 ; master_i2c:i2c|timer[2]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.513      ;
+; 1.245 ; master_i2c:i2c|timer[5]                 ; master_i2c:i2c|timer[3]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.513      ;
+; 1.245 ; master_i2c:i2c|timer[5]                 ; master_i2c:i2c|timer[4]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.513      ;
+; 1.248 ; master_i2c:i2c|data_counter[9]          ; master_i2c:i2c|data_counter[9]          ; clk          ; clk         ; 0.000        ; 0.073      ; 1.516      ;
+; 1.250 ; master_i2c:i2c|timer[2]                 ; master_i2c:i2c|timer[4]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.518      ;
+; 1.256 ; master_i2c:i2c|state[0]                 ; master_i2c:i2c|next_state[0]            ; clk          ; clk         ; 0.000        ; 0.087      ; 1.538      ;
+; 1.259 ; master_i2c:i2c|timer[1]                 ; master_i2c:i2c|timer[6]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.527      ;
+; 1.260 ; master_i2c:i2c|data_counter[4]          ; master_i2c:i2c|data_counter[6]          ; clk          ; clk         ; 0.000        ; 0.073      ; 1.528      ;
+; 1.267 ; master_i2c:i2c|timer[0]                 ; master_i2c:i2c|timer[5]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.535      ;
+; 1.268 ; master_i2c:i2c|state[3]                 ; master_i2c:i2c|bus_timing.01            ; clk          ; clk         ; 0.000        ; 0.073      ; 1.536      ;
+; 1.269 ; master_i2c:i2c|data_counter[7]          ; master_i2c:i2c|data_counter[8]          ; clk          ; clk         ; 0.000        ; 0.073      ; 1.537      ;
+; 1.269 ; master_i2c:i2c|data_counter[5]          ; master_i2c:i2c|data_counter[6]          ; clk          ; clk         ; 0.000        ; 0.073      ; 1.537      ;
+; 1.275 ; master_i2c:i2c|state[2]                 ; master_i2c:i2c|sda_high                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.543      ;
+; 1.275 ; master_i2c:i2c|bus_timing.11            ; master_i2c:i2c|next_state[2]            ; clk          ; clk         ; 0.000        ; 0.554      ; 2.024      ;
+; 1.276 ; master_i2c:i2c|data_counter[5]          ; master_i2c:i2c|data_counter[5]          ; clk          ; clk         ; 0.000        ; 0.073      ; 1.544      ;
+; 1.277 ; master_i2c:i2c|bit_counter[2]           ; master_i2c:i2c|bit_counter[4]           ; clk          ; clk         ; 0.000        ; 0.073      ; 1.545      ;
+; 1.278 ; master_i2c:i2c|state[2]                 ; master_i2c:i2c|next_state[0]            ; clk          ; clk         ; 0.000        ; 0.074      ; 1.547      ;
+; 1.282 ; master_i2c:i2c|timer[0]                 ; master_i2c:i2c|timer[6]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.550      ;
+; 1.291 ; master_i2c:i2c|data_counter[4]          ; master_i2c:i2c|data_counter[7]          ; clk          ; clk         ; 0.000        ; 0.073      ; 1.559      ;
+; 1.292 ; master_i2c:i2c|data_counter[2]          ; master_i2c:i2c|data_counter[7]          ; clk          ; clk         ; 0.000        ; 0.073      ; 1.560      ;
+; 1.295 ; master_i2c:i2c|timer[2]                 ; master_i2c:i2c|timer[5]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.563      ;
+; 1.298 ; ssd1306_master:setup|data_byte_in[7]    ; master_i2c:i2c|data_byte_out[7]         ; clk          ; clk         ; 0.000        ; -0.373     ; 1.120      ;
+; 1.301 ; master_i2c:i2c|state[3]                 ; master_i2c:i2c|state[1]                 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.569      ;
+; 1.307 ; master_i2c:i2c|data_counter[1]          ; master_i2c:i2c|data_counter[6]          ; clk          ; clk         ; 0.000        ; 0.073      ; 1.575      ;
+; 1.307 ; master_i2c:i2c|data_counter[2]          ; master_i2c:i2c|data_counter[8]          ; clk          ; clk         ; 0.000        ; 0.073      ; 1.575      ;
+; 1.309 ; master_i2c:i2c|data_counter[5]          ; master_i2c:i2c|data_counter[7]          ; clk          ; clk         ; 0.000        ; 0.073      ; 1.577      ;
+; 1.318 ; master_i2c:i2c|data_counter[0]          ; master_i2c:i2c|data_counter[6]          ; clk          ; clk         ; 0.000        ; 0.073      ; 1.586      ;
+; 1.320 ; master_i2c:i2c|bus_timing.01            ; master_i2c:i2c|bus_timing.10            ; clk          ; clk         ; 0.000        ; 0.072      ; 1.587      ;
+; 1.324 ; master_i2c:i2c|data_counter[8]          ; ssd1306_master:setup|continue_bit       ; clk          ; clk         ; 0.000        ; 0.073      ; 1.592      ;
+; 1.336 ; master_i2c:i2c|data_counter[1]          ; master_i2c:i2c|data_counter[1]          ; clk          ; clk         ; 0.000        ; 0.073      ; 1.604      ;
++-------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -1.066 ; -43.402           ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.186 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -65.064                         ;
++-------+--------+---------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                                                     ;
++--------+---------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                       ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.066 ; master_i2c:i2c|data_counter[7]  ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.215      ;
+; -1.049 ; master_i2c:i2c|data_counter[6]  ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.198      ;
+; -1.040 ; master_i2c:i2c|data_counter[1]  ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.189      ;
+; -1.023 ; master_i2c:i2c|data_counter[1]  ; ssd1306_master:setup|data_byte_in[4] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.172      ;
+; -1.015 ; master_i2c:i2c|data_counter[2]  ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.164      ;
+; -1.013 ; master_i2c:i2c|data_counter[7]  ; ssd1306_master:setup|data_byte_in[5] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.162      ;
+; -1.001 ; master_i2c:i2c|data_counter[6]  ; ssd1306_master:setup|data_byte_in[5] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.150      ;
+; -1.000 ; master_i2c:i2c|data_counter[1]  ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.149      ;
+; -0.978 ; master_i2c:i2c|data_counter[1]  ; ssd1306_master:setup|data_byte_in[5] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.127      ;
+; -0.977 ; master_i2c:i2c|bit_counter[0]   ; master_i2c:i2c|sda_high              ; clk          ; clk         ; 1.000        ; -0.037     ; 1.927      ;
+; -0.967 ; master_i2c:i2c|data_counter[1]  ; ssd1306_master:setup|data_byte_in[3] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.116      ;
+; -0.962 ; master_i2c:i2c|timer[1]         ; master_i2c:i2c|data_counter[0]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.912      ;
+; -0.962 ; master_i2c:i2c|timer[1]         ; master_i2c:i2c|data_counter[1]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.912      ;
+; -0.962 ; master_i2c:i2c|timer[1]         ; master_i2c:i2c|data_counter[8]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.912      ;
+; -0.962 ; master_i2c:i2c|timer[1]         ; master_i2c:i2c|data_counter[2]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.912      ;
+; -0.962 ; master_i2c:i2c|timer[1]         ; master_i2c:i2c|data_counter[5]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.912      ;
+; -0.962 ; master_i2c:i2c|timer[1]         ; master_i2c:i2c|data_counter[6]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.912      ;
+; -0.962 ; master_i2c:i2c|timer[1]         ; master_i2c:i2c|data_counter[7]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.912      ;
+; -0.962 ; master_i2c:i2c|timer[1]         ; master_i2c:i2c|data_counter[9]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.912      ;
+; -0.960 ; master_i2c:i2c|data_counter[5]  ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.109      ;
+; -0.960 ; master_i2c:i2c|data_counter[4]  ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.161      ; 2.108      ;
+; -0.959 ; master_i2c:i2c|data_counter[5]  ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.108      ;
+; -0.958 ; master_i2c:i2c|timer[4]         ; master_i2c:i2c|data_counter[0]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.908      ;
+; -0.958 ; master_i2c:i2c|timer[4]         ; master_i2c:i2c|data_counter[1]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.908      ;
+; -0.958 ; master_i2c:i2c|timer[4]         ; master_i2c:i2c|data_counter[8]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.908      ;
+; -0.958 ; master_i2c:i2c|timer[4]         ; master_i2c:i2c|data_counter[2]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.908      ;
+; -0.958 ; master_i2c:i2c|timer[4]         ; master_i2c:i2c|data_counter[5]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.908      ;
+; -0.958 ; master_i2c:i2c|timer[4]         ; master_i2c:i2c|data_counter[6]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.908      ;
+; -0.958 ; master_i2c:i2c|timer[4]         ; master_i2c:i2c|data_counter[7]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.908      ;
+; -0.958 ; master_i2c:i2c|timer[4]         ; master_i2c:i2c|data_counter[9]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.908      ;
+; -0.955 ; master_i2c:i2c|data_counter[3]  ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.155      ; 2.097      ;
+; -0.954 ; master_i2c:i2c|data_counter[0]  ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.103      ;
+; -0.948 ; master_i2c:i2c|data_counter[0]  ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.097      ;
+; -0.937 ; master_i2c:i2c|data_counter[7]  ; ssd1306_master:setup|data_byte_in[4] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.086      ;
+; -0.937 ; master_i2c:i2c|data_counter[7]  ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.086      ;
+; -0.936 ; master_i2c:i2c|data_counter[2]  ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.085      ;
+; -0.929 ; master_i2c:i2c|data_counter[0]  ; ssd1306_master:setup|data_byte_in[1] ; clk          ; clk         ; 1.000        ; 0.174      ; 2.090      ;
+; -0.927 ; master_i2c:i2c|timer[1]         ; master_i2c:i2c|data_counter[4]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.877      ;
+; -0.924 ; master_i2c:i2c|data_counter[5]  ; ssd1306_master:setup|data_byte_in[5] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.073      ;
+; -0.923 ; master_i2c:i2c|timer[4]         ; master_i2c:i2c|data_counter[4]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.873      ;
+; -0.920 ; master_i2c:i2c|data_counter[6]  ; ssd1306_master:setup|data_byte_in[4] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.069      ;
+; -0.920 ; master_i2c:i2c|data_counter[6]  ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.069      ;
+; -0.916 ; master_i2c:i2c|bit_counter[0]   ; master_i2c:i2c|state[0]              ; clk          ; clk         ; 1.000        ; -0.043     ; 1.860      ;
+; -0.912 ; master_i2c:i2c|data_counter[2]  ; ssd1306_master:setup|data_byte_in[4] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.061      ;
+; -0.902 ; master_i2c:i2c|timer[2]         ; master_i2c:i2c|data_counter[0]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.852      ;
+; -0.902 ; master_i2c:i2c|timer[2]         ; master_i2c:i2c|data_counter[1]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.852      ;
+; -0.902 ; master_i2c:i2c|timer[2]         ; master_i2c:i2c|data_counter[8]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.852      ;
+; -0.902 ; master_i2c:i2c|timer[2]         ; master_i2c:i2c|data_counter[2]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.852      ;
+; -0.902 ; master_i2c:i2c|timer[2]         ; master_i2c:i2c|data_counter[5]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.852      ;
+; -0.902 ; master_i2c:i2c|timer[2]         ; master_i2c:i2c|data_counter[6]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.852      ;
+; -0.902 ; master_i2c:i2c|timer[2]         ; master_i2c:i2c|data_counter[7]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.852      ;
+; -0.902 ; master_i2c:i2c|timer[2]         ; master_i2c:i2c|data_counter[9]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.852      ;
+; -0.901 ; master_i2c:i2c|data_counter[8]  ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.050      ;
+; -0.899 ; master_i2c:i2c|data_counter[3]  ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.155      ; 2.041      ;
+; -0.889 ; master_i2c:i2c|timer[1]         ; master_i2c:i2c|data_counter[3]       ; clk          ; clk         ; 1.000        ; -0.031     ; 1.845      ;
+; -0.885 ; master_i2c:i2c|data_counter[4]  ; ssd1306_master:setup|data_byte_in[6] ; clk          ; clk         ; 1.000        ; 0.161      ; 2.033      ;
+; -0.885 ; master_i2c:i2c|timer[4]         ; master_i2c:i2c|data_counter[3]       ; clk          ; clk         ; 1.000        ; -0.031     ; 1.841      ;
+; -0.878 ; master_i2c:i2c|data_counter[7]  ; ssd1306_master:setup|data_byte_in[1] ; clk          ; clk         ; 1.000        ; 0.174      ; 2.039      ;
+; -0.876 ; master_i2c:i2c|data_counter[7]  ; ssd1306_master:setup|data_byte_in[0] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.025      ;
+; -0.869 ; master_i2c:i2c|data_counter[0]  ; ssd1306_master:setup|data_byte_in[5] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.018      ;
+; -0.867 ; master_i2c:i2c|timer[2]         ; master_i2c:i2c|data_counter[4]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.817      ;
+; -0.866 ; master_i2c:i2c|data_counter[6]  ; ssd1306_master:setup|data_byte_in[1] ; clk          ; clk         ; 1.000        ; 0.174      ; 2.027      ;
+; -0.865 ; master_i2c:i2c|data_counter[4]  ; ssd1306_master:setup|data_byte_in[4] ; clk          ; clk         ; 1.000        ; 0.161      ; 2.013      ;
+; -0.862 ; master_i2c:i2c|data_counter[7]  ; ssd1306_master:setup|data_byte_in[2] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.011      ;
+; -0.861 ; master_i2c:i2c|data_counter[6]  ; ssd1306_master:setup|data_byte_in[0] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.010      ;
+; -0.858 ; master_i2c:i2c|data_counter[2]  ; ssd1306_master:setup|data_byte_in[2] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.007      ;
+; -0.858 ; master_i2c:i2c|data_counter[8]  ; ssd1306_master:setup|data_byte_in[5] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.007      ;
+; -0.854 ; master_i2c:i2c|data_counter[2]  ; ssd1306_master:setup|data_byte_in[1] ; clk          ; clk         ; 1.000        ; 0.174      ; 2.015      ;
+; -0.851 ; master_i2c:i2c|data_counter[1]  ; ssd1306_master:setup|data_byte_in[2] ; clk          ; clk         ; 1.000        ; 0.162      ; 2.000      ;
+; -0.850 ; master_i2c:i2c|timer[1]         ; master_i2c:i2c|next_state[1]         ; clk          ; clk         ; 1.000        ; 0.153      ; 1.990      ;
+; -0.850 ; master_i2c:i2c|timer[1]         ; master_i2c:i2c|next_state[3]         ; clk          ; clk         ; 1.000        ; 0.153      ; 1.990      ;
+; -0.850 ; master_i2c:i2c|data_counter[1]  ; ssd1306_master:setup|data_byte_in[0] ; clk          ; clk         ; 1.000        ; 0.162      ; 1.999      ;
+; -0.847 ; master_i2c:i2c|data_counter[9]  ; ssd1306_master:setup|data_byte_in[7] ; clk          ; clk         ; 1.000        ; 0.162      ; 1.996      ;
+; -0.846 ; master_i2c:i2c|data_counter[7]  ; ssd1306_master:setup|data_byte_in[3] ; clk          ; clk         ; 1.000        ; 0.162      ; 1.995      ;
+; -0.846 ; master_i2c:i2c|timer[4]         ; master_i2c:i2c|next_state[1]         ; clk          ; clk         ; 1.000        ; 0.153      ; 1.986      ;
+; -0.846 ; master_i2c:i2c|timer[4]         ; master_i2c:i2c|next_state[3]         ; clk          ; clk         ; 1.000        ; 0.153      ; 1.986      ;
+; -0.845 ; master_i2c:i2c|data_counter[6]  ; ssd1306_master:setup|data_byte_in[2] ; clk          ; clk         ; 1.000        ; 0.162      ; 1.994      ;
+; -0.841 ; master_i2c:i2c|data_counter[0]  ; ssd1306_master:setup|data_byte_in[4] ; clk          ; clk         ; 1.000        ; 0.162      ; 1.990      ;
+; -0.833 ; master_i2c:i2c|data_byte_out[3] ; master_i2c:i2c|sda_high              ; clk          ; clk         ; 1.000        ; -0.037     ; 1.783      ;
+; -0.833 ; master_i2c:i2c|data_counter[2]  ; ssd1306_master:setup|data_byte_in[3] ; clk          ; clk         ; 1.000        ; 0.162      ; 1.982      ;
+; -0.831 ; master_i2c:i2c|data_counter[5]  ; ssd1306_master:setup|data_byte_in[4] ; clk          ; clk         ; 1.000        ; 0.162      ; 1.980      ;
+; -0.830 ; master_i2c:i2c|bit_counter[1]   ; master_i2c:i2c|sda_high              ; clk          ; clk         ; 1.000        ; -0.037     ; 1.780      ;
+; -0.829 ; master_i2c:i2c|timer[2]         ; master_i2c:i2c|data_counter[3]       ; clk          ; clk         ; 1.000        ; -0.031     ; 1.785      ;
+; -0.829 ; master_i2c:i2c|data_counter[6]  ; ssd1306_master:setup|data_byte_in[3] ; clk          ; clk         ; 1.000        ; 0.162      ; 1.978      ;
+; -0.828 ; master_i2c:i2c|data_counter[0]  ; ssd1306_master:setup|data_byte_in[2] ; clk          ; clk         ; 1.000        ; 0.162      ; 1.977      ;
+; -0.827 ; master_i2c:i2c|bus_timing.11    ; master_i2c:i2c|state[0]              ; clk          ; clk         ; 1.000        ; -0.044     ; 1.770      ;
+; -0.826 ; master_i2c:i2c|data_counter[3]  ; ssd1306_master:setup|data_byte_in[4] ; clk          ; clk         ; 1.000        ; 0.155      ; 1.968      ;
+; -0.825 ; master_i2c:i2c|bit_counter[0]   ; master_i2c:i2c|bit_counter[2]        ; clk          ; clk         ; 1.000        ; -0.036     ; 1.776      ;
+; -0.825 ; master_i2c:i2c|data_counter[2]  ; ssd1306_master:setup|data_byte_in[0] ; clk          ; clk         ; 1.000        ; 0.162      ; 1.974      ;
+; -0.823 ; master_i2c:i2c|timer[3]         ; master_i2c:i2c|data_counter[0]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.773      ;
+; -0.823 ; master_i2c:i2c|timer[3]         ; master_i2c:i2c|data_counter[1]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.773      ;
+; -0.823 ; master_i2c:i2c|timer[3]         ; master_i2c:i2c|data_counter[8]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.773      ;
+; -0.823 ; master_i2c:i2c|timer[3]         ; master_i2c:i2c|data_counter[2]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.773      ;
+; -0.823 ; master_i2c:i2c|timer[3]         ; master_i2c:i2c|data_counter[5]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.773      ;
+; -0.823 ; master_i2c:i2c|timer[3]         ; master_i2c:i2c|data_counter[6]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.773      ;
+; -0.823 ; master_i2c:i2c|timer[3]         ; master_i2c:i2c|data_counter[7]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.773      ;
+; -0.823 ; master_i2c:i2c|timer[3]         ; master_i2c:i2c|data_counter[9]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.773      ;
+; -0.822 ; master_i2c:i2c|bit_counter[0]   ; master_i2c:i2c|bit_counter[3]        ; clk          ; clk         ; 1.000        ; -0.036     ; 1.773      ;
+; -0.822 ; master_i2c:i2c|bit_counter[0]   ; master_i2c:i2c|bit_counter[4]        ; clk          ; clk         ; 1.000        ; -0.036     ; 1.773      ;
+; -0.819 ; master_i2c:i2c|data_counter[4]  ; ssd1306_master:setup|data_byte_in[0] ; clk          ; clk         ; 1.000        ; 0.161      ; 1.967      ;
++--------+---------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                                                                ;
++-------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                               ; To Node                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.186 ; master_i2c:i2c|scl_high                 ; master_i2c:i2c|scl_high                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; master_i2c:i2c|next_state[0]            ; master_i2c:i2c|next_state[0]            ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; master_i2c:i2c|sda_high                 ; master_i2c:i2c|sda_high                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; master_i2c:i2c|bit_counter[0]           ; master_i2c:i2c|bit_counter[0]           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; master_i2c:i2c|bit_counter[2]           ; master_i2c:i2c|bit_counter[2]           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; master_i2c:i2c|bit_counter[1]           ; master_i2c:i2c|bit_counter[1]           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; master_i2c:i2c|bit_counter[3]           ; master_i2c:i2c|bit_counter[3]           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; master_i2c:i2c|bit_counter[4]           ; master_i2c:i2c|bit_counter[4]           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; master_i2c:i2c|state[0]                 ; master_i2c:i2c|state[0]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; master_i2c:i2c|bus_timing.10            ; master_i2c:i2c|bus_timing.10            ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; master_i2c:i2c|state[3]                 ; master_i2c:i2c|state[3]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; master_i2c:i2c|bus_timing.01            ; master_i2c:i2c|bus_timing.01            ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; master_i2c:i2c|ack                      ; master_i2c:i2c|ack                      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.285 ; master_i2c:i2c|state[2]                 ; master_i2c:i2c|next_state[1]            ; clk          ; clk         ; 0.000        ; 0.228      ; 0.597      ;
+; 0.289 ; master_i2c:i2c|sda_high                 ; master_i2c:i2c|next_state[1]            ; clk          ; clk         ; 0.000        ; 0.229      ; 0.602      ;
+; 0.289 ; master_i2c:i2c|data_counter[9]          ; ssd1306_master:setup|control_byte_in[6] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.409      ;
+; 0.299 ; master_i2c:i2c|timer[1]                 ; master_i2c:i2c|timer[1]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; master_i2c:i2c|timer[3]                 ; master_i2c:i2c|timer[3]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.419      ;
+; 0.301 ; master_i2c:i2c|timer[4]                 ; master_i2c:i2c|timer[4]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.421      ;
+; 0.304 ; master_i2c:i2c|timer[5]                 ; master_i2c:i2c|timer[5]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.305 ; master_i2c:i2c|timer[6]                 ; master_i2c:i2c|timer[6]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.314 ; master_i2c:i2c|timer[0]                 ; master_i2c:i2c|timer[0]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.434      ;
+; 0.317 ; master_i2c:i2c|data_counter[2]          ; master_i2c:i2c|data_counter[2]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.437      ;
+; 0.334 ; master_i2c:i2c|data_counter[0]          ; master_i2c:i2c|data_counter[0]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.454      ;
+; 0.361 ; ssd1306_master:setup|continue_bit       ; master_i2c:i2c|next_state[3]            ; clk          ; clk         ; 0.000        ; 0.235      ; 0.680      ;
+; 0.374 ; master_i2c:i2c|timer[2]                 ; master_i2c:i2c|timer[2]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.494      ;
+; 0.394 ; master_i2c:i2c|data_counter[7]          ; master_i2c:i2c|data_counter[7]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.514      ;
+; 0.394 ; master_i2c:i2c|data_counter[8]          ; ssd1306_master:setup|control_byte_in[6] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.514      ;
+; 0.395 ; master_i2c:i2c|state[3]                 ; master_i2c:i2c|state[0]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.516      ;
+; 0.397 ; master_i2c:i2c|bus_timing.11            ; master_i2c:i2c|bus_timing.00            ; clk          ; clk         ; 0.000        ; 0.037      ; 0.518      ;
+; 0.398 ; master_i2c:i2c|state[2]                 ; master_i2c:i2c|next_state[3]            ; clk          ; clk         ; 0.000        ; 0.228      ; 0.710      ;
+; 0.427 ; master_i2c:i2c|state[1]                 ; master_i2c:i2c|next_state[3]            ; clk          ; clk         ; 0.000        ; 0.235      ; 0.746      ;
+; 0.448 ; master_i2c:i2c|timer[3]                 ; master_i2c:i2c|timer[4]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.568      ;
+; 0.448 ; master_i2c:i2c|timer[1]                 ; master_i2c:i2c|timer[2]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.568      ;
+; 0.450 ; master_i2c:i2c|wdata_context            ; master_i2c:i2c|wdata_context            ; clk          ; clk         ; 0.000        ; 0.037      ; 0.571      ;
+; 0.451 ; master_i2c:i2c|data_counter[6]          ; ssd1306_master:setup|continue_bit       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.572      ;
+; 0.453 ; master_i2c:i2c|timer[5]                 ; master_i2c:i2c|timer[6]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.573      ;
+; 0.456 ; master_i2c:i2c|data_counter[5]          ; ssd1306_master:setup|control_byte_in[6] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.576      ;
+; 0.456 ; master_i2c:i2c|data_counter[7]          ; ssd1306_master:setup|continue_bit       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.577      ;
+; 0.457 ; master_i2c:i2c|data_counter[5]          ; ssd1306_master:setup|continue_bit       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.578      ;
+; 0.459 ; master_i2c:i2c|timer[4]                 ; master_i2c:i2c|timer[5]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.579      ;
+; 0.462 ; master_i2c:i2c|state[3]                 ; master_i2c:i2c|ack                      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.583      ;
+; 0.462 ; master_i2c:i2c|timer[4]                 ; master_i2c:i2c|timer[6]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.582      ;
+; 0.463 ; master_i2c:i2c|timer[0]                 ; master_i2c:i2c|timer[1]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.583      ;
+; 0.466 ; master_i2c:i2c|timer[0]                 ; master_i2c:i2c|timer[2]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.586      ;
+; 0.472 ; master_i2c:i2c|data_counter[8]          ; master_i2c:i2c|data_counter[8]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.592      ;
+; 0.473 ; master_i2c:i2c|data_counter[1]          ; master_i2c:i2c|data_counter[2]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.593      ;
+; 0.484 ; master_i2c:i2c|data_counter[0]          ; master_i2c:i2c|data_counter[2]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.604      ;
+; 0.485 ; ssd1306_master:setup|control_byte_in[6] ; master_i2c:i2c|control_byte_out[6]      ; clk          ; clk         ; 0.000        ; 0.233      ; 0.802      ;
+; 0.488 ; master_i2c:i2c|state[1]                 ; master_i2c:i2c|ack                      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.609      ;
+; 0.489 ; master_i2c:i2c|bit_counter[0]           ; master_i2c:i2c|bit_counter[1]           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.610      ;
+; 0.491 ; master_i2c:i2c|data_counter[6]          ; master_i2c:i2c|data_counter[6]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.611      ;
+; 0.499 ; master_i2c:i2c|state[0]                 ; master_i2c:i2c|next_state[1]            ; clk          ; clk         ; 0.000        ; 0.235      ; 0.818      ;
+; 0.499 ; master_i2c:i2c|state[0]                 ; master_i2c:i2c|next_state[3]            ; clk          ; clk         ; 0.000        ; 0.235      ; 0.818      ;
+; 0.511 ; master_i2c:i2c|timer[1]                 ; master_i2c:i2c|timer[3]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.631      ;
+; 0.511 ; master_i2c:i2c|timer[3]                 ; master_i2c:i2c|timer[5]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.631      ;
+; 0.513 ; master_i2c:i2c|bus_timing.10            ; master_i2c:i2c|bus_timing.11            ; clk          ; clk         ; 0.000        ; 0.043      ; 0.640      ;
+; 0.514 ; master_i2c:i2c|timer[1]                 ; master_i2c:i2c|timer[4]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.634      ;
+; 0.514 ; master_i2c:i2c|timer[3]                 ; master_i2c:i2c|timer[6]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.634      ;
+; 0.515 ; master_i2c:i2c|timer[5]                 ; master_i2c:i2c|timer[1]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.635      ;
+; 0.515 ; master_i2c:i2c|timer[5]                 ; master_i2c:i2c|timer[0]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.635      ;
+; 0.515 ; master_i2c:i2c|timer[5]                 ; master_i2c:i2c|timer[2]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.635      ;
+; 0.515 ; master_i2c:i2c|timer[5]                 ; master_i2c:i2c|timer[3]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.635      ;
+; 0.515 ; master_i2c:i2c|timer[5]                 ; master_i2c:i2c|timer[4]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.635      ;
+; 0.522 ; master_i2c:i2c|next_state[2]            ; master_i2c:i2c|next_state[2]            ; clk          ; clk         ; 0.000        ; 0.045      ; 0.651      ;
+; 0.529 ; master_i2c:i2c|timer[0]                 ; master_i2c:i2c|timer[3]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.649      ;
+; 0.531 ; master_i2c:i2c|data_counter[6]          ; ssd1306_master:setup|control_byte_in[6] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.651      ;
+; 0.532 ; master_i2c:i2c|timer[2]                 ; master_i2c:i2c|timer[3]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.652      ;
+; 0.532 ; master_i2c:i2c|timer[0]                 ; master_i2c:i2c|timer[4]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.652      ;
+; 0.535 ; master_i2c:i2c|data_counter[9]          ; master_i2c:i2c|data_counter[9]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.655      ;
+; 0.535 ; master_i2c:i2c|timer[2]                 ; master_i2c:i2c|timer[4]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.655      ;
+; 0.542 ; master_i2c:i2c|data_counter[4]          ; master_i2c:i2c|data_counter[6]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.662      ;
+; 0.543 ; master_i2c:i2c|data_counter[7]          ; ssd1306_master:setup|control_byte_in[6] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.663      ;
+; 0.543 ; master_i2c:i2c|data_counter[7]          ; master_i2c:i2c|data_counter[8]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.663      ;
+; 0.544 ; master_i2c:i2c|data_counter[2]          ; master_i2c:i2c|data_counter[6]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.664      ;
+; 0.545 ; master_i2c:i2c|data_counter[5]          ; master_i2c:i2c|data_counter[6]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.665      ;
+; 0.549 ; master_i2c:i2c|bus_timing.11            ; master_i2c:i2c|state[1]                 ; clk          ; clk         ; 0.000        ; 0.030      ; 0.663      ;
+; 0.549 ; master_i2c:i2c|data_counter[5]          ; master_i2c:i2c|data_counter[5]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.669      ;
+; 0.549 ; master_i2c:i2c|bit_counter[2]           ; master_i2c:i2c|bit_counter[4]           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.670      ;
+; 0.558 ; master_i2c:i2c|bus_timing.11            ; master_i2c:i2c|next_state[2]            ; clk          ; clk         ; 0.000        ; 0.244      ; 0.886      ;
+; 0.558 ; master_i2c:i2c|state[3]                 ; master_i2c:i2c|state[1]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.679      ;
+; 0.561 ; master_i2c:i2c|state[3]                 ; master_i2c:i2c|bus_timing.01            ; clk          ; clk         ; 0.000        ; 0.038      ; 0.683      ;
+; 0.563 ; ssd1306_master:setup|data_byte_in[7]    ; master_i2c:i2c|data_byte_out[7]         ; clk          ; clk         ; 0.000        ; -0.155     ; 0.492      ;
+; 0.567 ; master_i2c:i2c|bus_timing.01            ; master_i2c:i2c|bus_timing.10            ; clk          ; clk         ; 0.000        ; 0.037      ; 0.688      ;
+; 0.571 ; master_i2c:i2c|state[2]                 ; master_i2c:i2c|next_state[0]            ; clk          ; clk         ; 0.000        ; 0.037      ; 0.692      ;
+; 0.573 ; master_i2c:i2c|state[0]                 ; master_i2c:i2c|next_state[0]            ; clk          ; clk         ; 0.000        ; 0.044      ; 0.701      ;
+; 0.576 ; master_i2c:i2c|timer[6]                 ; master_i2c:i2c|timer[1]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.696      ;
+; 0.576 ; master_i2c:i2c|timer[6]                 ; master_i2c:i2c|timer[5]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.696      ;
+; 0.576 ; master_i2c:i2c|timer[6]                 ; master_i2c:i2c|timer[0]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.696      ;
+; 0.576 ; master_i2c:i2c|timer[6]                 ; master_i2c:i2c|timer[2]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.696      ;
+; 0.576 ; master_i2c:i2c|timer[6]                 ; master_i2c:i2c|timer[3]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.696      ;
+; 0.576 ; master_i2c:i2c|timer[6]                 ; master_i2c:i2c|timer[4]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.696      ;
+; 0.577 ; master_i2c:i2c|timer[1]                 ; master_i2c:i2c|timer[5]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.697      ;
+; 0.578 ; master_i2c:i2c|data_counter[1]          ; master_i2c:i2c|data_counter[1]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.698      ;
+; 0.580 ; master_i2c:i2c|timer[1]                 ; master_i2c:i2c|timer[6]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.700      ;
+; 0.585 ; master_i2c:i2c|data_counter[8]          ; ssd1306_master:setup|continue_bit       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.706      ;
+; 0.588 ; master_i2c:i2c|state[1]                 ; master_i2c:i2c|state[1]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.709      ;
+; 0.590 ; master_i2c:i2c|state[2]                 ; master_i2c:i2c|sda_high                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.710      ;
+; 0.595 ; master_i2c:i2c|timer[0]                 ; master_i2c:i2c|timer[5]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.715      ;
+; 0.598 ; master_i2c:i2c|timer[2]                 ; master_i2c:i2c|timer[5]                 ; clk          ; clk         ; 0.000        ; 0.036      ; 0.718      ;
++-------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.961   ; 0.186 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -3.961   ; 0.186 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -174.533 ; 0.0   ; 0.0      ; 0.0     ; -89.246             ;
+;  clk             ; -174.533 ; 0.000 ; N/A      ; N/A     ; -89.246             ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; sda           ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; scl           ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; sda                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; scl                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; sda           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; scl           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.37 V              ; -0.0346 V           ; 0.198 V                              ; 0.094 V                              ; 3.14e-10 s                  ; 2.92e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.37 V             ; -0.0346 V          ; 0.198 V                             ; 0.094 V                             ; 3.14e-10 s                 ; 2.92e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.57e-09 V                   ; 2.37 V              ; -0.00683 V          ; 0.171 V                              ; 0.018 V                              ; 4.97e-10 s                  ; 6.66e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.57e-09 V                  ; 2.37 V             ; -0.00683 V         ; 0.171 V                             ; 0.018 V                             ; 4.97e-10 s                 ; 6.66e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; sda           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; scl           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.55e-07 V                   ; 2.35 V              ; -0.00221 V          ; 0.097 V                              ; 0.005 V                              ; 4.49e-10 s                  ; 3.85e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.55e-07 V                  ; 2.35 V             ; -0.00221 V         ; 0.097 V                             ; 0.005 V                             ; 4.49e-10 s                 ; 3.85e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.54e-07 V                   ; 2.34 V              ; -0.00774 V          ; 0.109 V                              ; 0.026 V                              ; 6.58e-10 s                  ; 8.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.54e-07 V                  ; 2.34 V             ; -0.00774 V         ; 0.109 V                             ; 0.026 V                             ; 6.58e-10 s                 ; 8.24e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; sda           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; scl           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 2295     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 2295     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 14    ; 14   ;
+; Unconstrained Output Ports      ; 2     ; 2    ;
+; Unconstrained Output Port Paths ; 10    ; 10   ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clk    ; clk   ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; scl        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sda        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; scl         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sda         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; scl        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sda        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; scl         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sda         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Thu Aug 15 12:22:15 2024
+Info: Command: quartus_sta oled_i2c_128x32 -c oled_i2c_128x32
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'oled_i2c_128x32.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.961
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.961            -174.533 clk 
+Info (332146): Worst-case hold slack is 0.452
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.452               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -89.246 clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.584
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.584            -160.104 clk 
+Info (332146): Worst-case hold slack is 0.401
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.401               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -89.246 clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.066
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.066             -43.402 clk 
+Info (332146): Worst-case hold slack is 0.186
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.186               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -65.064 clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4835 megabytes
+    Info: Processing ended: Thu Aug 15 12:22:16 2024
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

@@ -1,0 +1,197 @@
+`timescale 1ns / 1ps
+
+module master_i2c (
+    input CLK,
+    inout scl,
+    inout sda
+);
+
+    wire SCL_PULSE;
+    reg [6:0] timer = 0;
+
+    always @ (posedge CLK) begin
+        if (timer > 7'd30)
+            timer <= 7'd0;
+        else
+            timer <= timer + 1'b1;
+    end
+
+    assign SCL_PULSE = (timer == 30) ? 1'b1 : 1'b0; // ~400kHz
+
+    reg [3:0] state = 0;
+    reg [3:0] next_state = 0;
+
+    localparam IDLE = 4'd0;
+    localparam START = 4'd1;
+    localparam RECOGNITION = 4'd2;
+    localparam WRITE_CONTROL = 4'd3;
+    localparam WRITE_COMMAND = 4'd4;
+    localparam WRITE_DATA = 4'd5;
+    localparam READ = 4'd6;
+    localparam ACKNOWLEDGE = 4'd7;
+    localparam RECOGNITION_ACK = 4'd8;
+    localparam STOP = 4'd9;
+
+    wire scl_out_en;
+    wire sda_out_en; 
+
+    assign scl_out_en = (state != IDLE);
+    assign sda_out_en = (state != IDLE && state != READ && state != ACKNOWLEDGE);
+
+    reg scl_high;
+    reg sda_high;
+
+    assign scl = scl_out_en ? scl_high : 1'bz;    
+    assign sda = sda_out_en ? sda_high : 1'bz;
+
+    reg [7:0] slave_addr_out = 0;
+    reg [7:0] control_frame_out;
+    reg [7:0] command_write_out;
+    reg [7:0] data_write_out;
+
+    reg ack = 0;
+    reg [1:0] bus_timing = 0;
+    reg [4:0] bit_counter;
+
+    always @ (posedge CLK) begin
+        if(SCL_PULSE) begin
+            case(state)
+                IDLE: begin
+                    scl_high <= 1;
+                    sda_high <= 1;
+
+                    slave_addr_out <= 0;
+                    control_frame_out <= 0;
+                    command_write_out <= 0;
+                    data_write_out <= 0;
+
+                    bit_counter <= 8;
+                    bus_timing <= 0;
+                    state <= START;
+                end
+
+                START: begin
+                    case (bus_timing)
+                        0: begin
+                            sda_high <= 0;
+                            bit_counter <= 8;
+                            bus_timing <= 1;
+                        end
+                        1: begin
+                            scl_high <= 0;
+                            bus_timing <= 2;
+                        end
+                        2: begin
+                            bus_timing <= 3;
+                        end
+                        3: begin
+                            slave_addr_out <= 7'b01111000;
+                            bus_timing <= 0;
+                            state <= RECOGNITION;
+                        end
+                    endcase
+                end
+
+                RECOGNITION: begin
+                    case (bus_timing)
+                        0: begin
+                            sda_high <= slave_addr_out[bit_counter - 1'b1];
+                            bus_timing <= 1;
+                        end
+                        1: begin
+                            scl_high <= 1;
+                            bus_timing <= 2;
+                        end
+                        2: begin
+                            scl_high <= 0;
+                            bit_counter <= bit_counter - 1'b1;
+                            bus_timing <= 3;
+                        end
+                        3: begin
+                            if (bit_counter == 0) begin
+                                case (sda_high)
+                                    0: begin
+                                        bit_counter <= 8;
+                                        bus_timing <= 0;
+
+                                        state <= RECOGNITION_ACK;
+                                        next_state <= WRITE_CONTROL;
+                                    end
+                                    1: begin
+                                        bit_counter <= 8;
+                                        bus_timing <= 0;
+
+                                        state <= RECOGNITION_ACK;
+                                        next_state <= READ;
+                                    end
+                                endcase
+                            end
+                            else begin
+                                bus_timing <= 0;
+                            end
+                        end
+                    endcase
+                end
+
+                RECOGNITION_ACK: begin
+                    case (bus_timing)
+                    0: begin
+                        scl_high <= 1;
+                        bus_timing <= 1;
+                    end
+                    1: begin
+                        if (sda == 1) begin
+                            ack <= 0; // nack if high
+                            bus_timing <= 2;
+                        end
+                        else if (sda == 0) begin
+                            ack <= 1; // ack if low
+                            bus_timing <= 2;
+                        end
+                    end
+                    2: begin
+                        scl_high <= 0;
+                        bus_timing <= 3;
+                    end
+                    3: begin
+                        if (ack) begin
+                            ack <= 0;
+                            bus_timing <= 0;
+                            state <= next_state;
+                        end
+                        else begin
+                            bus_timing <= 0;
+                            state <= STOP; // <= IDLE
+                        end
+                    end
+                    endcase
+                end
+
+                STOP: begin
+                    case (bus_timing)
+                        0: begin
+                            scl_high <= 1;
+                            bus_timing <= 1;
+                        end
+                        1: begin
+                            if (scl == 1)
+                                bus_timing <= 2;
+                            else
+                                bus_timing <= 1;
+                        end
+                        2: begin
+                            sda_high <= 1;
+                            bus_timing <= 3;
+                        end
+                        3: begin
+                            bus_timing <= 0;
+                            state <= IDLE;
+                        end
+                    endcase
+                end
+
+            endcase
+        end
+    end
+
+endmodule

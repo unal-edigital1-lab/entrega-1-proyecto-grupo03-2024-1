@@ -1,0 +1,47 @@
+module desp(
+);
+
+	reg [63:0] pixels_SC1;
+	reg [63:0] next_out1;
+	
+	initial begin
+		pixels_SC1 = 0;
+		next_out1 = 0;
+	end
+
+	always @(posedge clk)
+		if (!reset_n)
+			pixels_SC1 <= 0;
+		else if (enable)
+			pixels_SC1 <= next_out1;
+
+	always @* begin
+		case (dir)
+			0: begin//Desplazamiento hacia la derecha
+				next_out1 = {{pixels_SC1[62:56], col[7]},
+								{pixels_SC1[54:48], col[6]},
+								{pixels_SC1[46:40], col[5]},
+								{pixels_SC1[38:32], col[4]},
+								{pixels_SC1[30:24], col[3]},
+								{pixels_SC1[22:16], col[2]},
+								{pixels_SC1[14:8],  col[1]},
+								{pixels_SC1[6:0],   col[0]}};
+				shifted_col = {pixels_SC1[63], pixels_SC1[55], pixels_SC1[47], pixels_SC1[39], 
+							   pixels_SC1[31], pixels_SC1[23], pixels_SC1[15], pixels_SC1[7]};
+			end
+         1: begin//Desplazamiento hacia la izquierda
+				next_out1 = {{col[7], pixels_SC1[63:57]},
+                        {col[6], pixels_SC1[55:49]},
+                        {col[5], pixels_SC1[47:41]},
+                        {col[4], pixels_SC1[39:33]},
+                        {col[3], pixels_SC1[31:25]},
+                        {col[2], pixels_SC1[23:17]},
+                        {col[1], pixels_SC1[15:9]},
+                        {col[0], pixels_SC1[7:1]}};
+				shifted_col = {pixels_SC1[56], pixels_SC1[48], pixels_SC1[40], pixels_SC1[32], 
+							   pixels_SC1[24], pixels_SC1[16], pixels_SC1[8], pixels_SC1[0]};
+			end
+		endcase
+	end
+
+	end module;

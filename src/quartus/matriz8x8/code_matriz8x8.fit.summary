@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu May 23 14:11:53 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : code_matriz8x8
+Top-level Entity Name : top
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 647 / 6,272 ( 10 % )
+    Total combinational functions : 611 / 6,272 ( 10 % )
+    Dedicated logic registers : 405 / 6,272 ( 6 % )
+Total registers : 405
+Total pins : 5 / 92 ( 5 % )
+Total virtual pins : 0
+Total memory bits : 8,192 / 276,480 ( 3 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 1 / 2 ( 50 % )
