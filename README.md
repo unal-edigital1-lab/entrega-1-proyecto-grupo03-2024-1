@@ -1,7 +1,7 @@
 # Entrega #1 - Proyecto Electrónica Digital I 👾
 
 ## Contenido
-
+ 
 - [Entrega #1 - Proyecto Electrónica Digital I 👾](#entrega-1---proyecto-electrónica-digital-i-)
   - [Contenido](#contenido)
   - [Integrantes](#integrantes)
