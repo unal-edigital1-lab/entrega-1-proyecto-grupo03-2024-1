@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at hcsr04.v(15): always construct contains both blocking and non-blocking assignments File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/ultrasonido/hcsr04.v Line: 15
+Warning (10268): Verilog HDL information at hcsr04.v(46): always construct contains both blocking and non-blocking assignments File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/ultrasonido/hcsr04.v Line: 46

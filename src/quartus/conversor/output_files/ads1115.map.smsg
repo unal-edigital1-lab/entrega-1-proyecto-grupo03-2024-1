@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at i2c_ads1115.v(72): always construct contains both blocking and non-blocking assignments File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/conversor/i2c_ads1115.v Line: 72
