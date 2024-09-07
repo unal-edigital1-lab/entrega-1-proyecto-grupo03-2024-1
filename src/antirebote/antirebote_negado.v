@@ -1,5 +1,4 @@
 module antirebote_boton_negado #(parameter COUNT_BOT=50000)(
-	input reset,
 	input clk,
 	input boton_in,
 	output reg boton_out
@@ -10,10 +9,6 @@ reg [$clog2(COUNT_BOT)-1:0] counter;
 //
 // Milesima de segundo count_bot
 always @(posedge clk) begin
-	if (~reset)begin
-		counter <=0;
-		boton_out<=~boton_in;
-	end else begin
 		if (boton_in==boton_out) begin
 			counter <= counter+1;			
 		end else begin
@@ -31,10 +26,7 @@ always @(posedge clk) begin
 				counter<=0;
 				
 		end
-	
-	end
 		
-
 end	
 
 
