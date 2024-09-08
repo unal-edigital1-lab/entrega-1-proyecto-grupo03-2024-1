@@ -67,6 +67,7 @@ localparam LIFE_PLUS = 7'd70;
 localparam LIFE_MINUS = 5'd30;
 
 reg [5:0] cont_food = 0;
+reg [5:0] cont_food2 = 5'd3;
 reg [5:0] cont_fun = 0;
 reg [5:0] cont_rest = 0;
 
@@ -198,8 +199,27 @@ always @(posedge clk) begin
         end
 
         EAT: begin
+            //corregir orden
+          if(clk_1s) begin
+             if(btn_reset) begin
+                state = START;
+             end
+             else if (btn_cancel)begin
+                   state = MAIN;
+                   end
+                   else if (cont_food2 == 5'd3)begin
+                     //pixels_oled = pantalla_eat_default
+                        if(btn_action) begin
+                        // pixels_oled = pantalla_eating
+                        food <= food + 1'd1;
+                        cont_food2 <= 0;
+                        end 
+                        else begin
+                          cont_food2 <= cont_food2 + 1'd1;
+                        end
+                    end
+          end
         end
-
         HEAL: begin
         end
 
