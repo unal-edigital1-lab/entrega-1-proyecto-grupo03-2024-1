@@ -1,15 +1,15 @@
-Fitter Status : Successful - Thu Sep  5 06:24:28 2024
+Fitter Status : Successful - Tue Sep 10 19:01:33 2024
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : ads1115
 Top-level Entity Name : top_ads1115
 Family : Cyclone IV E
 Device : EP4CE6E22C8
 Timing Models : Final
-Total logic elements : 302 / 6,272 ( 5 % )
+Total logic elements : 299 / 6,272 ( 5 % )
     Total combinational functions : 296 / 6,272 ( 5 % )
-    Dedicated logic registers : 87 / 6,272 ( 1 % )
-Total registers : 87
-Total pins : 6 / 92 ( 7 % )
+    Dedicated logic registers : 88 / 6,272 ( 1 % )
+Total registers : 88
+Total pins : 8 / 92 ( 9 % )
 Total virtual pins : 0
 Total memory bits : 0 / 276,480 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )

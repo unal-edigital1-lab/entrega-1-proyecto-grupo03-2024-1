@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ads1115
-Thu Sep  5 06:24:24 2024
+Tue Sep 10 19:01:29 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -49,16 +49,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Sep  5 06:24:24 2024          ;
+; Analysis & Synthesis Status        ; Successful - Tue Sep 10 19:01:29 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; ads1115                                        ;
 ; Top-level Entity Name              ; top_ads1115                                    ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 314                                            ;
+; Total logic elements               ; 315                                            ;
 ;     Total combinational functions  ; 295                                            ;
-;     Dedicated logic registers      ; 87                                             ;
-; Total registers                    ; 87                                             ;
-; Total pins                         ; 6                                              ;
+;     Dedicated logic registers      ; 88                                             ;
+; Total registers                    ; 88                                             ;
+; Total pins                         ; 8                                              ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -185,7 +185,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 314       ;
+; Estimated Total logic elements              ; 315       ;
 ;                                             ;           ;
 ; Total combinational functions               ; 295       ;
 ; Logic element usage by number of LUT inputs ;           ;
@@ -197,18 +197,18 @@ https://fpgasoftware.intel.com/eula.
 ;     -- normal mode                          ; 271       ;
 ;     -- arithmetic mode                      ; 24        ;
 ;                                             ;           ;
-; Total registers                             ; 87        ;
-;     -- Dedicated logic registers            ; 87        ;
+; Total registers                             ; 88        ;
+;     -- Dedicated logic registers            ; 88        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 6         ;
+; I/O pins                                    ; 8         ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 87        ;
-; Total fan-out                               ; 1270      ;
-; Average fan-out                             ; 3.21      ;
+; Maximum fan-out                             ; 88        ;
+; Total fan-out                               ; 1275      ;
+; Average fan-out                             ; 3.18      ;
 +---------------------------------------------+-----------+
 
 
@@ -217,7 +217,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                   ; Entity Name    ; Library Name ;
 +-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+----------------+--------------+
-; |top_ads1115                  ; 295 (16)            ; 87 (3)                    ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |top_ads1115                          ; top_ads1115    ; work         ;
+; |top_ads1115                  ; 295 (16)            ; 88 (4)                    ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |top_ads1115                          ; top_ads1115    ; work         ;
 ;    |ads1115_master:UUT_setup| ; 22 (22)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_ads1115|ads1115_master:UUT_setup ; ads1115_master ; work         ;
 ;    |i2c_ads1115:UTT_i2c|      ; 257 (257)           ; 77 (77)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_ads1115|i2c_ads1115:UTT_i2c      ; i2c_ads1115    ; work         ;
 +-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+----------------+--------------+
@@ -277,7 +277,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 87    ;
+; Total registers                              ; 88    ;
 ; Number of registers using Synchronous Clear  ; 7     ;
 ; Number of registers using Synchronous Load   ; 2     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -321,12 +321,12 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 6                           ;
-; cycloneiii_ff         ; 87                          ;
+; boundary_port         ; 8                           ;
+; cycloneiii_ff         ; 88                          ;
 ;     ENA               ; 50                          ;
 ;     ENA SLD           ; 2                           ;
 ;     SCLR              ; 7                           ;
-;     plain             ; 28                          ;
+;     plain             ; 29                          ;
 ; cycloneiii_io_obuf    ; 2                           ;
 ; cycloneiii_lcell_comb ; 295                         ;
 ;     arith             ; 24                          ;
@@ -338,7 +338,7 @@ Encoding Type:  One-Hot
 ;         4 data inputs ; 190                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 4.06                        ;
+; Average LUT depth     ; 4.04                        ;
 +-----------------------+-----------------------------+
 
 
@@ -357,37 +357,37 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Thu Sep  5 06:24:17 2024
+    Info: Processing started: Tue Sep 10 19:01:23 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ads1115 -c ads1115
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Warning (12125): Using design file top_ads1115.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: top_ads1115 File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/conversor/top_ads1115.v Line: 3
-Warning (10236): Verilog HDL Implicit Net warning at top_ads1115.v(49): created implicit net for "only_register" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/conversor/top_ads1115.v Line: 49
+Warning (10236): Verilog HDL Implicit Net warning at top_ads1115.v(53): created implicit net for "only_register" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/conversor/top_ads1115.v Line: 53
 Info (12127): Elaborating entity "top_ads1115" for the top level hierarchy
 Warning (12125): Using design file i2c_ads1115.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: i2c_ads1115 File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/conversor/i2c_ads1115.v Line: 3
-Info (12128): Elaborating entity "i2c_ads1115" for hierarchy "i2c_ads1115:UTT_i2c" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/conversor/top_ads1115.v Line: 53
+Info (12128): Elaborating entity "i2c_ads1115" for hierarchy "i2c_ads1115:UTT_i2c" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/conversor/top_ads1115.v Line: 57
 Warning (10036): Verilog HDL or VHDL warning at i2c_ads1115.v(70): object "band" assigned a value but never read File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/conversor/i2c_ads1115.v Line: 70
 Warning (12125): Using design file ads1115_master.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: ads1115_master File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/conversor/ads1115_master.v Line: 3
-Info (12128): Elaborating entity "ads1115_master" for hierarchy "ads1115_master:UUT_setup" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/conversor/top_ads1115.v Line: 65
+Info (12128): Elaborating entity "ads1115_master" for hierarchy "ads1115_master:UUT_setup" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/conversor/top_ads1115.v Line: 69
 Warning (10036): Verilog HDL or VHDL warning at ads1115_master.v(30): object "block_sep" assigned a value but never read File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/conversor/ads1115_master.v Line: 30
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/conversor/output_files/ads1115.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 321 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 3 output pins
+Info (21057): Implemented 324 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 4 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 315 logic cells
+    Info (21061): Implemented 316 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 4825 megabytes
-    Info: Processing ended: Thu Sep  5 06:24:24 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Processing ended: Tue Sep 10 19:01:29 2024
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +------------------------------------------+

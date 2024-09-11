@@ -67,12 +67,8 @@ localparam LIFE_PLUS = 7'd70;
 localparam LIFE_MINUS = 5'd30;
 
 reg [5:0] cont_food = 0;
-reg [27:0] cont_food2 = 28'd150000000;
 reg [5:0] cont_fun = 0;
-reg [27:0] cont_fun2 = 28'd150000000;
 reg [5:0] cont_rest = 0;
-reg [27:0] cont_rest2= 28'd150000000;
-reg [27:0] cont_heal2 = 28'd150000000;
 
 always @(negedge clk_1s) begin
     cont_food = cont_food + 1'b1;
@@ -196,70 +192,15 @@ always @(posedge clk) begin
         end
 
         PLAY: begin
-            
         end
 
         SLEEP: begin
-            if(btn_reset) begin
-                state = START;
-                end
-            else if(btn_cancel) begin
-                state = MAIN;
-                end
-            else if (cont_rest2 == 28'd150000000)begin
-                    //pixels_oled = pantalla_rest_default
-                    if(btn_action) begin
-                    // pixels_oled = pantalla_resting
-                        rest <= rest + 1'd1;
-                        cont_rest2 <= 0;
-                    end
-                end 
-            else begin
-                cont_rest2 <= cont_rest2 + 1'd1;
-            end
         end
 
         EAT: begin
-          if(btn_reset) begin
-                state = START;
-                end
-            else if(btn_cancel) begin
-                state = MAIN;
-                end
-            else if (cont_food2 == 28'd150000000)begin
-                    //pixels_oled = pantalla_eat_default
-                    if(btn_action) begin
-                    // pixels_oled = pantalla_eating
-                        food <= food + 1'd1;
-                        cont_food2 <= 0;
-                    end
-                end 
-            else begin
-                cont_food2 <= cont_food2 + 1'd1;
-            end
         end
+
         HEAL: begin
-            if(btn_reset) begin
-                state = START;
-                end
-            else if(btn_cancel) begin
-                state = MAIN;
-                end
-            else if (cont_heal2 == 28'd150000000)begin
-                    //pixels_oled = pantalla_heal_default
-                    if(btn_action && (medicines >= 7'd1)) begin
-                    // pixels_oled = pantalla_healing
-                        life <= life + 1'd20;
-                        cont_heal2 <= 0;
-                        medicines <= medicines - 1'd1;
-                    end
-                    else if(btn_action && (medicines == 0))begin
-                    // pixels_oled = pantalla_not_medicines    
-                    end
-                end 
-            else begin
-                cont_heal2 <= cont_heal2 + 1'd1;
-            end
         end
 
         DEATH: begin

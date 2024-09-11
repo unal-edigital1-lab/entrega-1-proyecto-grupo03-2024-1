@@ -1,5 +1,4 @@
 |hcsr04
-clk => level3~reg0.CLK
 clk => level2~reg0.CLK
 clk => level1~reg0.CLK
 clk => contEcho[0].CLK
@@ -63,12 +62,12 @@ echo => contEcho.OUTPUTSELECT
 echo => contEcho.OUTPUTSELECT
 echo => contEcho.OUTPUTSELECT
 echo => contEcho.OUTPUTSELECT
+echo => level1.OUTPUTSELECT
+echo => level2.OUTPUTSELECT
 enable => level1.OUTPUTSELECT
 enable => level2.OUTPUTSELECT
-enable => level3.OUTPUTSELECT
 trigger <= trigger~reg0.DB_MAX_OUTPUT_PORT_TYPE
 level1 <= level1~reg0.DB_MAX_OUTPUT_PORT_TYPE
 level2 <= level2~reg0.DB_MAX_OUTPUT_PORT_TYPE
-level3 <= level3~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

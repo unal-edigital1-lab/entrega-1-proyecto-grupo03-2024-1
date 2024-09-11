@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Tue Sep  3 04:29:04 2024
+Tue Sep 10 18:46:26 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -46,16 +46,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Sep  3 04:29:04 2024          ;
+; Analysis & Synthesis Status        ; Successful - Tue Sep 10 18:46:26 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; top                                            ;
 ; Top-level Entity Name              ; hcsr04                                         ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 78                                             ;
-;     Total combinational functions  ; 78                                             ;
-;     Dedicated logic registers      ; 44                                             ;
-; Total registers                    ; 44                                             ;
-; Total pins                         ; 7                                              ;
+; Total logic elements               ; 66                                             ;
+;     Total combinational functions  ; 66                                             ;
+;     Dedicated logic registers      ; 43                                             ;
+; Total registers                    ; 43                                             ;
+; Total pins                         ; 6                                              ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -180,30 +180,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 78        ;
+; Estimated Total logic elements              ; 66        ;
 ;                                             ;           ;
-; Total combinational functions               ; 78        ;
+; Total combinational functions               ; 66        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 25        ;
-;     -- 3 input functions                    ; 8         ;
-;     -- <=2 input functions                  ; 45        ;
+;     -- 4 input functions                    ; 21        ;
+;     -- 3 input functions                    ; 2         ;
+;     -- <=2 input functions                  ; 43        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 40        ;
+;     -- normal mode                          ; 28        ;
 ;     -- arithmetic mode                      ; 38        ;
 ;                                             ;           ;
-; Total registers                             ; 44        ;
-;     -- Dedicated logic registers            ; 44        ;
+; Total registers                             ; 43        ;
+;     -- Dedicated logic registers            ; 43        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 7         ;
+; I/O pins                                    ; 6         ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 44        ;
-; Total fan-out                               ; 354       ;
-; Average fan-out                             ; 2.60      ;
+; Maximum fan-out                             ; 43        ;
+; Total fan-out                               ; 311       ;
+; Average fan-out                             ; 2.57      ;
 +---------------------------------------------+-----------+
 
 
@@ -212,7 +212,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |hcsr04                    ; 78 (78)             ; 44 (44)                   ; 0           ; 0            ; 0       ; 0         ; 7    ; 0            ; |hcsr04             ; hcsr04      ; work         ;
+; |hcsr04                    ; 66 (66)             ; 43 (43)                   ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |hcsr04             ; hcsr04      ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -222,12 +222,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 44    ;
+; Total registers                              ; 43    ;
 ; Number of registers using Synchronous Clear  ; 40    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 3     ;
+; Number of registers using Clock Enable       ; 2     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -237,7 +237,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |hcsr04|level2~reg0        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |hcsr04|level1~reg0        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -246,12 +246,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+----------------------+--------------------------------+
 ; Parameter Name ; Value                ; Type                           ;
 +----------------+----------------------+--------------------------------+
-; pulseTrigger   ; 01111010000100100000 ; Unsigned Binary                ;
-; d1m            ; 00000000101110111000 ; Unsigned Binary                ;
-; d1             ; 00000111010100110000 ; Unsigned Binary                ;
-; d2m            ; 00000111010100110000 ; Unsigned Binary                ;
-; d2             ; 00001110101001100000 ; Unsigned Binary                ;
-; d3             ; 00001110101001100000 ; Unsigned Binary                ;
+; PULSE_TRIGGER  ; 01111010000100100000 ; Unsigned Binary                ;
+; DM             ; 00000000101110111000 ; Unsigned Binary                ;
+; D              ; 00000111010100110000 ; Unsigned Binary                ;
 +----------------+----------------------+--------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -261,22 +258,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 7                           ;
-; cycloneiii_ff         ; 44                          ;
-;     ENA               ; 3                           ;
+; boundary_port         ; 6                           ;
+; cycloneiii_ff         ; 43                          ;
+;     ENA               ; 2                           ;
 ;     SCLR              ; 40                          ;
 ;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 78                          ;
+; cycloneiii_lcell_comb ; 66                          ;
 ;     arith             ; 38                          ;
 ;         2 data inputs ; 38                          ;
-;     normal            ; 40                          ;
+;     normal            ; 28                          ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 8                           ;
-;         4 data inputs ; 25                          ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 21                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.27                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 2.87                        ;
 +-----------------------+-----------------------------+
 
 
@@ -295,26 +292,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Tue Sep  3 04:28:58 2024
+    Info: Processing started: Tue Sep 10 18:46:20 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off hcsr04 -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Warning (12125): Using design file hcsr04.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: hcsr04 File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/ultrasonido/hcsr04.v Line: 1
 Info (12127): Elaborating entity "hcsr04" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at hcsr04.v(17): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/ultrasonido/hcsr04.v Line: 17
-Warning (10230): Verilog HDL assignment warning at hcsr04.v(29): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/ultrasonido/hcsr04.v Line: 29
+Warning (10230): Verilog HDL assignment warning at hcsr04.v(19): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/ultrasonido/hcsr04.v Line: 19
+Warning (10230): Verilog HDL assignment warning at hcsr04.v(30): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/ultrasonido/hcsr04.v Line: 30
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/ultrasonido/top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 86 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 74 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 79 logic cells
+    Info (21059): Implemented 3 output pins
+    Info (21061): Implemented 68 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4829 megabytes
-    Info: Processing ended: Tue Sep  3 04:29:04 2024
+    Info: Peak virtual memory: 4822 megabytes
+    Info: Processing ended: Tue Sep 10 18:46:26 2024
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:03
 

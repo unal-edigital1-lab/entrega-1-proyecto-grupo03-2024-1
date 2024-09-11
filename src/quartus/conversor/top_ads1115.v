@@ -2,16 +2,20 @@
 
 module top_ads1115 (
     input clk,
+	 input wire sw,
     inout wire sda,
     inout wire scl,
 	 output reg led1 = 1,
 	 output reg led2 = 1,
-	 output reg led3 = 1
+	 output reg led3 = 1,
+	 output reg led4 = 1
 );
 
 	wire [15:0] read_bytesA0;
 
 	always @ (posedge clk) begin
+	
+		led4 <= sw;
 		if (read_bytesA0 < 15'h0FA0 ||read_bytesA0 > 15'h7D00) begin
 			led1 <= 0;
 			led2 <= 1;
