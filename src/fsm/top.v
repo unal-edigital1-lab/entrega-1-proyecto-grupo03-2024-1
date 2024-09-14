@@ -22,6 +22,7 @@ reg [6:0] food = 7'd50;
 reg [6:0] fun = 7'd50;
 reg [6:0] rest = 7'd50;
 reg [6:0] medicines = 0;
+reg [15:0] random_medicine = 0;
 reg disease = 0;
 reg death = 0;
 
@@ -128,6 +129,7 @@ end
 always @(posedge clk) begin 
     if (life <= 20) begin
         disease <= 1;
+        //TODO mostrar indicador de heal
     end
     else begin
         disease <= 0;
@@ -162,33 +164,377 @@ reg [3:0] ind_select = IND_PLAY;
 integer i;
 
 always @(posedge clk) begin
+    random_medicine = random_medicine + 1'd1;
     case (state)
         START: begin
         end
 
         MAIN: begin
-            for (i=128; i<256; i++) begin
+            // introducir la imagen principal, sin heal
+            for (i=128; i<256; i = i + 1) begin
                 pixels_oled[i][4] = 0;
+            end
+            if(fun> 7'd67 && fun <= 7'd100)begin
+                pixels_oled[10] = 8'h38;
+                pixels_oled[11] = 8'h44;
+                pixels_oled[12] = 8'h82;
+                pixels_oled[13] = 8'h82;
+                pixels_oled[14] = 8'h6D;
+                pixels_oled[15] = 8'h41; 
+                pixels_oled[16] = 8'h6D;
+                pixels_oled[17] = 8'h82;
+                pixels_oled[18] = 8'h82; 
+                pixels_oled[19] = 8'h44;
+                pixels_oled[20] = 8'h38;
+            end
+            if(fun> 7'd33 && fun <= 7'd67)begin
+
+                pixels_oled[14] = 8'h4D;
+                pixels_oled[15] = 8'h41; 
+                pixels_oled[16] = 8'h4D;
+            end
+            if(fun> 7'd0 && fun <= 7'd33)begin
+                pixels_oled[14] = 8'h6D;
+                pixels_oled[15] = 8'h21; 
+                pixels_oled[16] = 8'h6D;
+            end
+
+            if(rest> 7'd67 && rest <= 7'd100)begin
+                pixels_oled[67] = 8'h90;
+                pixels_oled[68] = 8'h50;
+                pixels_oled[69] = 8'h30;
+                pixels_oled[70] = 8'h0;
+                pixels_oled[71] = 8'h31;
+                pixels_oled[72] = 8'h29; 
+                pixels_oled[73] = 8'h25;
+                pixels_oled[74] = 8'h23;
+                pixels_oled[75] = 8'h0; 
+                pixels_oled[76] = 8'h0;
+                pixels_oled[77] = 8'h90;
+                pixels_oled[78] = 8'h50; 
+                pixels_oled[79] = 8'h30;
+                pixels_oled[80] = 8'h0;
+                pixels_oled[81] = 8'h31; 
+                pixels_oled[82] = 8'h29;
+                pixels_oled[83] = 8'h25;
+                pixels_oled[84] = 8'h23; 
+                pixels_oled[85] = 8'h0;
+                pixels_oled[86] = 8'h0;
+                pixels_oled[87] = 8'h90; 
+                pixels_oled[88] = 8'h50;
+                pixels_oled[89] = 8'h30;
+                pixels_oled[90] = 8'h0;  
+                pixels_oled[91] = 8'h31;
+                pixels_oled[92] = 8'h29;
+                pixels_oled[93] = 8'h25;  
+                pixels_oled[94] = 8'h23;
+                pixels_oled[195] = 8'h1;
+                pixels_oled[196] = 8'h1;
+                pixels_oled[197] = 8'h1;
+                pixels_oled[205] = 8'h1;
+                pixels_oled[206] = 8'h1;
+                pixels_oled[207] = 8'h1;
+                pixels_oled[215] = 8'h1;
+                pixels_oled[216] = 8'h1;
+                pixels_oled[217] = 8'h1;
+            end
+            else if(rest> 7'd33 && rest <= 7'd67)begin
+                pixels_oled[67] = 8'h90;
+                pixels_oled[68] = 8'h50;
+                pixels_oled[69] = 8'h30;
+                pixels_oled[70] = 8'h0;
+                pixels_oled[71] = 8'h31;
+                pixels_oled[72] = 8'h29; 
+                pixels_oled[73] = 8'h25;
+                pixels_oled[74] = 8'h23;
+                pixels_oled[75] = 8'h0; 
+                pixels_oled[76] = 8'h0;
+                pixels_oled[77] = 8'h90;
+                pixels_oled[78] = 8'h50; 
+                pixels_oled[79] = 8'h30;
+                pixels_oled[80] = 8'h0;
+                pixels_oled[81] = 8'h31; 
+                pixels_oled[82] = 8'h29;
+                pixels_oled[83] = 8'h25;
+                pixels_oled[84] = 8'h23; 
+                pixels_oled[85] = 8'h0;
+                pixels_oled[86] = 8'h0;
+                pixels_oled[87] = 8'h0; 
+                pixels_oled[88] = 8'h0;
+                pixels_oled[89] = 8'h0;
+                pixels_oled[90] = 8'h0;  
+                pixels_oled[91] = 8'h0;
+                pixels_oled[92] = 8'h0;
+                pixels_oled[93] = 8'h0;  
+                pixels_oled[94] = 8'h0;
+                pixels_oled[195] = 8'h1;
+                pixels_oled[196] = 8'h1;
+                pixels_oled[197] = 8'h1;
+                pixels_oled[205] = 8'h1;
+                pixels_oled[206] = 8'h1;
+                pixels_oled[207] = 8'h1;
+                pixels_oled[215] = 8'h0;
+                pixels_oled[216] = 8'h0;
+                pixels_oled[217] = 8'h0;
+            end
+            else if(rest> 7'd0 && rest <= 7'd33)begin
+                pixels_oled[67] = 8'h90;
+                pixels_oled[68] = 8'h50;
+                pixels_oled[69] = 8'h30;
+                pixels_oled[70] = 8'h0;
+                pixels_oled[71] = 8'h31;
+                pixels_oled[72] = 8'h29; 
+                pixels_oled[73] = 8'h25;
+                pixels_oled[74] = 8'h23;
+                pixels_oled[75] = 8'h0; 
+                pixels_oled[76] = 8'h0;
+                pixels_oled[77] = 8'h0;
+                pixels_oled[78] = 8'h0; 
+                pixels_oled[79] = 8'h0;
+                pixels_oled[80] = 8'h0;
+                pixels_oled[81] = 8'h0; 
+                pixels_oled[82] = 8'h0;
+                pixels_oled[83] = 8'h0;
+                pixels_oled[84] = 8'h0; 
+                pixels_oled[85] = 8'h0;
+                pixels_oled[86] = 8'h0;
+                pixels_oled[87] = 8'h0; 
+                pixels_oled[88] = 8'h0;
+                pixels_oled[89] = 8'h0;
+                pixels_oled[90] = 8'h0;  
+                pixels_oled[91] = 8'h0;
+                pixels_oled[92] = 8'h0;
+                pixels_oled[93] = 8'h0;  
+                pixels_oled[94] = 8'h0;
+                pixels_oled[195] = 8'h1;
+                pixels_oled[196] = 8'h1;
+                pixels_oled[197] = 8'h1;
+                pixels_oled[205] = 8'h0;
+                pixels_oled[206] = 8'h0;
+                pixels_oled[207] = 8'h0;
+                pixels_oled[215] = 8'h0;
+                pixels_oled[216] = 8'h0;
+                pixels_oled[217] = 8'h0;
+            end
+
+            if(food> 7'd67 && food <= 7'd100)begin
+                pixels_oled[31] = 8'h70;
+                pixels_oled[32] = 8'h88;
+                pixels_oled[33] = 8'h8;
+                pixels_oled[34] = 8'h6;
+                pixels_oled[35] = 8'hB;
+                pixels_oled[36] = 8'h89; 
+                pixels_oled[37] = 8'h70;
+                pixels_oled[38] = 8'h0;
+                pixels_oled[39] = 8'h0; 
+                pixels_oled[40] = 8'h0;
+                pixels_oled[41] = 8'h70;
+                pixels_oled[42] = 8'h88; 
+                pixels_oled[43] = 8'h8;
+                pixels_oled[44] = 8'h6;
+                pixels_oled[45] = 8'hB; 
+                pixels_oled[46] = 8'h89;
+                pixels_oled[47] = 8'h70;
+                pixels_oled[48] = 8'h0; 
+                pixels_oled[49] = 8'h0;
+                pixels_oled[50] = 8'h0;
+                pixels_oled[51] = 8'h70; 
+                pixels_oled[52] = 8'h88;
+                pixels_oled[53] = 8'h8;
+                pixels_oled[54] = 8'h6;  
+                pixels_oled[55] = 8'hB;
+                pixels_oled[56] = 8'h89;
+                pixels_oled[57] = 8'h70;
+                pixels_oled[161] = 8'h1;
+                pixels_oled[162] = 8'h1;
+                pixels_oled[163] = 8'h1;
+                pixels_oled[171] = 8'h1;
+                pixels_oled[172] = 8'h1;
+                pixels_oled[173] = 8'h1;
+                pixels_oled[181] = 8'h1;
+                pixels_oled[182] = 8'h1;
+                pixels_oled[183] = 8'h1;
+
+            end
+            else if (food> 7'd33 && food <= 7'd67)begin
+                pixels_oled[31] = 8'h70;
+                pixels_oled[32] = 8'h88;
+                pixels_oled[33] = 8'h8;
+                pixels_oled[34] = 8'h6;
+                pixels_oled[35] = 8'hB;
+                pixels_oled[36] = 8'h89; 
+                pixels_oled[37] = 8'h70;
+                pixels_oled[38] = 8'h0;
+                pixels_oled[39] = 8'h0; 
+                pixels_oled[40] = 8'h0;
+                pixels_oled[41] = 8'h70;
+                pixels_oled[42] = 8'h88; 
+                pixels_oled[43] = 8'h8;
+                pixels_oled[44] = 8'h6;
+                pixels_oled[45] = 8'hB; 
+                pixels_oled[46] = 8'h89;
+                pixels_oled[47] = 8'h70;
+                pixels_oled[48] = 8'h0; 
+                pixels_oled[49] = 8'h0;
+                pixels_oled[50] = 8'h0;
+                pixels_oled[51] = 8'h0; 
+                pixels_oled[52] = 8'h0;
+                pixels_oled[53] = 8'h0;
+                pixels_oled[54] = 8'h0;  
+                pixels_oled[55] = 8'h0;
+                pixels_oled[56] = 8'h0;
+                pixels_oled[57] = 8'h0;
+                pixels_oled[161] = 8'h1;
+                pixels_oled[162] = 8'h1;
+                pixels_oled[163] = 8'h1;
+                pixels_oled[171] = 8'h1;
+                pixels_oled[172] = 8'h1;
+                pixels_oled[173] = 8'h1;
+                pixels_oled[181] = 8'h0;
+                pixels_oled[182] = 8'h0;
+                pixels_oled[183] = 8'h0; 
+            end
+            else if (food> 7'd0 && food <= 7'd33)begin
+                pixels_oled[31] = 8'h70;
+                pixels_oled[32] = 8'h88;
+                pixels_oled[33] = 8'h8;
+                pixels_oled[34] = 8'h6;
+                pixels_oled[35] = 8'hB;
+                pixels_oled[36] = 8'h89; 
+                pixels_oled[37] = 8'h70;
+                pixels_oled[38] = 8'h0;
+                pixels_oled[39] = 8'h0; 
+                pixels_oled[40] = 8'h0;
+                pixels_oled[41] = 8'h0;
+                pixels_oled[42] = 8'h0; 
+                pixels_oled[43] = 8'h0;
+                pixels_oled[44] = 8'h0;
+                pixels_oled[45] = 8'h0; 
+                pixels_oled[46] = 8'h0;
+                pixels_oled[47] = 8'h0;
+                pixels_oled[48] = 8'h0; 
+                pixels_oled[49] = 8'h0;
+                pixels_oled[50] = 8'h0;
+                pixels_oled[51] = 8'h0; 
+                pixels_oled[52] = 8'h0;
+                pixels_oled[53] = 8'h0;
+                pixels_oled[54] = 8'h0;  
+                pixels_oled[55] = 8'h0;
+                pixels_oled[56] = 8'h0;
+                pixels_oled[57] = 8'h0;
+                pixels_oled[161] = 8'h1;
+                pixels_oled[162] = 8'h1;
+                pixels_oled[163] = 8'h1;
+                pixels_oled[171] = 8'h0;
+                pixels_oled[172] = 8'h0;
+                pixels_oled[173] = 8'h0;
+                pixels_oled[181] = 8'h0;
+                pixels_oled[182] = 8'h0;
+                pixels_oled[183] = 8'h0; 
+            end
+            
+
+            if(life> 7'd83 && life <= 7'd100)begin
+                pixels_oled[483] = 8'hE;pixels_oled[484] = 8'h1D;pixels_oled[485] = 8'h3F;pixels_oled[486] = 8'h7E;pixels_oled[487] = 8'h3F;pixels_oled[488] = 8'h1F;pixels_oled[489] = 8'hE;pixels_oled[490] = 8'h0;pixels_oled[491] = 8'h0;pixels_oled[492] = 8'hE;pixels_oled[493] = 8'h1D;pixels_oled[494] = 8'h3F;pixels_oled[495] = 8'h7E;pixels_oled[496] = 8'h3F;pixels_oled[497] = 8'h1F;pixels_oled[498] = 8'hE;pixels_oled[499] = 8'h0;pixels_oled[500] = 8'h0;pixels_oled[501] = 8'hE;pixels_oled[502] = 8'h1D;pixels_oled[503] = 8'h3F;pixels_oled[504] = 8'h7E;pixels_oled[505] = 8'h3F;pixels_oled[506] = 8'h1F;pixels_oled[507] = 8'hE;
+
+            end
+            else if(life> 7'd67 && life <= 7'd83)begin
+                pixels_oled[483] = 8'hE;pixels_oled[484] = 8'h1D;pixels_oled[485] = 8'h3F;pixels_oled[486] = 8'h7E;pixels_oled[487] = 8'h3F;pixels_oled[488] = 8'h1F;pixels_oled[489] = 8'hE;pixels_oled[490] = 8'h0;pixels_oled[491] = 8'h0;pixels_oled[492] = 8'hE;pixels_oled[493] = 8'h1D;pixels_oled[494] = 8'h3F;pixels_oled[495] = 8'h7E;pixels_oled[496] = 8'h3F;pixels_oled[497] = 8'h1F;pixels_oled[498] = 8'hE;pixels_oled[499] = 8'h0;pixels_oled[500] = 8'h0;pixels_oled[501] = 8'hE;pixels_oled[502] = 8'h1D;pixels_oled[503] = 8'h3F;pixels_oled[504] = 8'h7E;
+                pixels_oled[505] = 8'h0;
+                pixels_oled[506] = 8'h0;
+                pixels_oled[507] = 8'h0;    
+            end
+            else if(life> 7'd50 && life <= 7'd67)begin
+                pixels_oled[483] = 8'hE;pixels_oled[484] = 8'h1D;pixels_oled[485] = 8'h3F;pixels_oled[486] = 8'h7E;pixels_oled[487] = 8'h3F;pixels_oled[488] = 8'h1F;pixels_oled[489] = 8'hE;pixels_oled[490] = 8'h0;pixels_oled[491] = 8'h0;pixels_oled[492] = 8'hE;pixels_oled[493] = 8'h1D;pixels_oled[494] = 8'h3F;pixels_oled[495] = 8'h7E;pixels_oled[496] = 8'h3F;pixels_oled[497] = 8'h1F;pixels_oled[498] = 8'hE;
+                pixels_oled[499] = 8'h0;
+                pixels_oled[500] = 8'h0;
+                pixels_oled[501] = 8'h0;
+                pixels_oled[502] = 8'h0;
+                pixels_oled[503] = 8'h0;
+                pixels_oled[504] = 8'h0;
+                pixels_oled[505] = 8'h0;
+                pixels_oled[506] = 8'h0;
+                pixels_oled[507] = 8'h0; 
+            end
+            else if(life> 7'd33 && life <= 7'd50)begin
+                pixels_oled[483] = 8'hE;pixels_oled[484] = 8'h1D;pixels_oled[485] = 8'h3F;pixels_oled[486] = 8'h7E;pixels_oled[487] = 8'h3F;pixels_oled[488] = 8'h1F;pixels_oled[489] = 8'hE;pixels_oled[490] = 8'h0;pixels_oled[491] = 8'h0;pixels_oled[492] = 8'hE;pixels_oled[493] = 8'h1D;pixels_oled[494] = 8'h3F;pixels_oled[495] = 8'h7E;pixels_oled[496] = 8'h3F;pixels_oled[497] = 8'h1F;pixels_oled[498] = 8'hE;
+                pixels_oled[498] = 8'h0;
+                pixels_oled[497] = 8'h0;
+                pixels_oled[496] = 8'h0;
+                pixels_oled[499] = 8'h0;
+                pixels_oled[500] = 8'h0;
+                pixels_oled[501] = 8'h0;
+                pixels_oled[502] = 8'h0;
+                pixels_oled[503] = 8'h0;
+                pixels_oled[504] = 8'h0;
+                pixels_oled[505] = 8'h0;
+                pixels_oled[506] = 8'h0;
+                pixels_oled[507] = 8'h0; 
+            end
+            else if(life> 7'd16 && life <= 7'd33)begin
+                pixels_oled[483] = 8'hE;pixels_oled[484] = 8'h1D;pixels_oled[485] = 8'h3F;pixels_oled[486] = 8'h7E;pixels_oled[487] = 8'h3F;pixels_oled[488] = 8'h1F;pixels_oled[489] = 8'hE;pixels_oled[490] = 8'h0;
+                pixels_oled[495] = 8'h0;
+                pixels_oled[494] = 8'h0;
+                pixels_oled[493] = 8'h0;
+                pixels_oled[492] = 8'h0;
+                pixels_oled[491] = 8'h0;
+                pixels_oled[490] = 8'h0;
+                pixels_oled[498] = 8'h0;
+                pixels_oled[497] = 8'h0;
+                pixels_oled[496] = 8'h0;
+                pixels_oled[499] = 8'h0;
+                pixels_oled[500] = 8'h0;
+                pixels_oled[501] = 8'h0;
+                pixels_oled[502] = 8'h0;
+                pixels_oled[503] = 8'h0;
+                pixels_oled[504] = 8'h0;
+                pixels_oled[505] = 8'h0;
+                pixels_oled[506] = 8'h0;
+                pixels_oled[507] = 8'h0;
+            end
+            else if(life> 7'd0 && life <= 7'd16)begin
+                pixels_oled[483] = 8'hE;pixels_oled[484] = 8'h1D;pixels_oled[485] = 8'h3F;pixels_oled[486] = 8'h7E;
+                pixels_oled[489] = 8'h0;
+                pixels_oled[488] = 8'h0;
+                pixels_oled[487] = 8'h0;
+                pixels_oled[495] = 8'h0;
+                pixels_oled[494] = 8'h0;
+                pixels_oled[493] = 8'h0;
+                pixels_oled[492] = 8'h0;
+                pixels_oled[491] = 8'h0;
+                pixels_oled[490] = 8'h0;
+                pixels_oled[498] = 8'h0;
+                pixels_oled[497] = 8'h0;
+                pixels_oled[496] = 8'h0;
+                pixels_oled[499] = 8'h0;
+                pixels_oled[500] = 8'h0;
+                pixels_oled[501] = 8'h0;
+                pixels_oled[502] = 8'h0;
+                pixels_oled[503] = 8'h0;
+                pixels_oled[504] = 8'h0;
+                pixels_oled[505] = 8'h0;
+                pixels_oled[506] = 8'h0;
+                pixels_oled[507] = 8'h0;
             end
 
             case (ind_select) 
                 IND_PLAY: begin
-                    for (i=128; i<256; i++) begin
+                    for (i=128; i<256; i = i + 1) begin
                         pixels_oled[i][4] = 1;
                     end
                 end
                 IND_SLEEP: begin
-                    for (i=128; i<256; i++) begin
+                    for (i=128; i<256; i = i + 1) begin
                         pixels_oled[i][4] = 1;
                     end
                 end
                 IND_EAT: begin
-                    for (i=128; i<256; i++) begin
+                    for (i=128; i<256; i = i + 1) begin
                         pixels_oled[i][4] = 1;
                     end
                 end
                 IND_HEAL: begin
-                    for (i=128; i<256; i++) begin
+                    for (i=128; i<256; i = i + 1) begin
                         pixels_oled[i][4] = 1;
                     end
                 end
@@ -196,45 +542,63 @@ always @(posedge clk) begin
         end
 
         PLAY: begin
-            
-        end
-
-        SLEEP: begin
             if(btn_reset) begin
                 state = START;
                 end
             else if(btn_cancel) begin
                 state = MAIN;
                 end
-            else if (cont_rest2 == 28'd150000000)begin
+            else if (cont_fun2 == 28'd150000000)begin
                     //pixels_oled = pantalla_rest_default
                     if(btn_action) begin
-                    // pixels_oled = pantalla_resting
-                        rest <= rest + 1'd1;
-                        cont_rest2 <= 0;
+                        if(fun != 7'd100)begin
+                        // pixels_oled = pantalla_resting
+                        fun <= fun + 1'd1;
+                        cont_fun2 <= 0;
+                        if(random_medicine[7] == 1 || random_medicine[3] == 1)begin
+                            if(medicines != 7'd127)begin
+                            medicines = medicines + 1'd1;
+                            end
+                            else begin
+                                //medicinas llenas
+                            end
+                        end
+                      end
+                      else begin
+                    // todo mensaje de lleno
+                      end
                     end
                 end 
             else begin
-                cont_rest2 <= cont_rest2 + 1'd1;
+                cont_fun2 <= cont_fun2 + 1'd1;
             end
+        end
+
+        SLEEP: begin
+            
         end
 
         EAT: begin
           if(btn_reset) begin
                 state = START;
-                end
-            else if(btn_cancel) begin
+          end
+          else if(btn_cancel) begin
                 state = MAIN;
                 end
-            else if (cont_food2 == 28'd150000000)begin
+          else if (cont_food2 == 28'd150000000)begin
                     //pixels_oled = pantalla_eat_default
-                    if(btn_action) begin
+                    if(btn_action) begin    
+                        if(food != 7'd100)begin
                     // pixels_oled = pantalla_eating
                         food <= food + 1'd1;
                         cont_food2 <= 0;
+                        end
+                        else begin
+                     //TODO si algo ponerle una frase de que esta lleno       
+                        end
                     end
                 end 
-            else begin
+          else begin
                 cont_food2 <= cont_food2 + 1'd1;
             end
         end
@@ -249,7 +613,7 @@ always @(posedge clk) begin
                     //pixels_oled = pantalla_heal_default
                     if(btn_action && (medicines >= 7'd1)) begin
                     // pixels_oled = pantalla_healing
-                        life <= life + 1'd20;
+                        life <= life + 7'd20;
                         cont_heal2 <= 0;
                         medicines <= medicines - 1'd1;
                     end
@@ -268,6 +632,8 @@ always @(posedge clk) begin
 end
 
 reg enable_btn_joystick = 1;
+
+
 
 always @(posedge clk) begin
     if (state == MAIN) begin

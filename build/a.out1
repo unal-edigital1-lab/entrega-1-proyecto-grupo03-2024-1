@@ -1,0 +1,16 @@
+**** module/scope: antirebote
+     Flip-Flops   : 17
+     Logic Gates  : 390
+     ADDER[16]: 1 units
+     EQUALITY[32]: 4 units
+     MUX[2]: 49 slices
+     LOG[13]: 1 unaccounted
+     LOG[14]: 1 unaccounted
+**** TOTALS
+     Flip-Flops   : 17
+     Logic Gates  : 390
+     ADDER[16]: 1 units
+     EQUALITY[32]: 4 units
+     MUX[2]: 49 slices
+     LOG[13]: 1 unaccounted
+     LOG[14]: 1 unaccounted
