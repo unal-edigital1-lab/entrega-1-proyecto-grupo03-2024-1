@@ -14,7 +14,6 @@ module top_ads1115 (
 	wire [15:0] read_bytesA0;
 
 	always @ (posedge clk) begin
-	
 		led4 <= sw;
 		if (read_bytesA0 < 15'h0FA0 ||read_bytesA0 > 15'h7D00) begin
 			led1 <= 0;

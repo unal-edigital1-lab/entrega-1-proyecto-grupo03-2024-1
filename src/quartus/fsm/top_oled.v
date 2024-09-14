@@ -2,6 +2,8 @@
 
 module top_oled (
     input clk,
+	 input [3:0] screen_param,
+	 input [32:0] needs_values,
     inout wire sda,
     inout wire scl
 );
@@ -31,6 +33,8 @@ module top_oled (
         .clk(clk),
         .state(state),
 		.data_counter(data_counter),
+		.screen_param(screen_param),
+		.needs_values(needs_values),
         .addr_byte_in(addr_byte_in),
 		.read_write(read_write),
 		.control_byte_in(control_byte_in),
