@@ -398,9 +398,9 @@ module ssd1306_master (
 									SCREEN_MAIN[192] = 8'h80;
 									SCREEN_MAIN[193] = 8'h80;
 									SCREEN_MAIN[194] = 8'h80;
-									SCREEN_MAIN[195] = 8'h1;
-									SCREEN_MAIN[196] = 8'h1;
-									SCREEN_MAIN[197] = 8'h1;
+									SCREEN_MAIN[195] = 8'h0;
+									SCREEN_MAIN[196] = 8'h0;
+									SCREEN_MAIN[197] = 8'h0;
 									SCREEN_MAIN[198] = 8'h0;
 									SCREEN_MAIN[199] = 8'h0;
 									
@@ -454,9 +454,9 @@ module ssd1306_master (
 									SCREEN_MAIN[192] = 8'h0;
 									SCREEN_MAIN[193] = 8'h0;
 									SCREEN_MAIN[194] = 8'h0;
-									SCREEN_MAIN[195] = 8'h1;
-									SCREEN_MAIN[196] = 8'h1;
-									SCREEN_MAIN[197] = 8'h1;
+									SCREEN_MAIN[195] = 8'h0;
+									SCREEN_MAIN[196] = 8'h0;
+									SCREEN_MAIN[197] = 8'h0;
 									SCREEN_MAIN[198] = 8'h0;
 									SCREEN_MAIN[199] = 8'h0;
 									
@@ -655,54 +655,42 @@ module ssd1306_master (
 								if (food > 7'd67 && food <= 7'd100) begin
 									SCREEN_MAIN[31] = 8'h70;
 									SCREEN_MAIN[32] = 8'h88;
-									SCREEN_MAIN[33] = 8'h8;
-									SCREEN_MAIN[34] = 8'h6;
-									SCREEN_MAIN[35] = 8'hB;
+									SCREEN_MAIN[33] = 8'h88;
+									SCREEN_MAIN[34] = 8'h86;
+									SCREEN_MAIN[35] = 8'h8B;
 									SCREEN_MAIN[36] = 8'h89; 
 									SCREEN_MAIN[37] = 8'h70;
 
 									SCREEN_MAIN[41] = 8'h70;
 									SCREEN_MAIN[42] = 8'h88; 
-									SCREEN_MAIN[43] = 8'h8;
-									SCREEN_MAIN[44] = 8'h6;
-									SCREEN_MAIN[45] = 8'hB; 
+									SCREEN_MAIN[43] = 8'h88;
+									SCREEN_MAIN[44] = 8'h86;
+									SCREEN_MAIN[45] = 8'h8B; 
 									SCREEN_MAIN[46] = 8'h89;
 									SCREEN_MAIN[47] = 8'h70;
 
 									SCREEN_MAIN[51] = 8'h70; 
 									SCREEN_MAIN[52] = 8'h88;
-									SCREEN_MAIN[53] = 8'h8;
-									SCREEN_MAIN[54] = 8'h6;  
-									SCREEN_MAIN[55] = 8'hB;
+									SCREEN_MAIN[53] = 8'h88;
+									SCREEN_MAIN[54] = 8'h86;  
+									SCREEN_MAIN[55] = 8'h8B;
 									SCREEN_MAIN[56] = 8'h89;
 									SCREEN_MAIN[57] = 8'h70;
-									
-									SCREEN_MAIN[161] = 8'h1;
-									SCREEN_MAIN[162] = 8'h1;
-									SCREEN_MAIN[163] = 8'h1;
-									
-									SCREEN_MAIN[171] = 8'h1;
-									SCREEN_MAIN[172] = 8'h1;
-									SCREEN_MAIN[173] = 8'h1;
-									
-									SCREEN_MAIN[181] = 8'h1;
-									SCREEN_MAIN[182] = 8'h1;
-									SCREEN_MAIN[183] = 8'h1;
 								end
 								else if (food > 7'd33 && food <= 7'd67) begin
 									SCREEN_MAIN[31] = 8'h70;
 									SCREEN_MAIN[32] = 8'h88;
-									SCREEN_MAIN[33] = 8'h8;
-									SCREEN_MAIN[34] = 8'h6;
-									SCREEN_MAIN[35] = 8'hB;
+									SCREEN_MAIN[33] = 8'h88;
+									SCREEN_MAIN[34] = 8'h86;
+									SCREEN_MAIN[35] = 8'h8B;
 									SCREEN_MAIN[36] = 8'h89; 
 									SCREEN_MAIN[37] = 8'h70;
 
 									SCREEN_MAIN[41] = 8'h70;
 									SCREEN_MAIN[42] = 8'h88; 
-									SCREEN_MAIN[43] = 8'h8;
-									SCREEN_MAIN[44] = 8'h6;
-									SCREEN_MAIN[45] = 8'hB; 
+									SCREEN_MAIN[43] = 8'h88;
+									SCREEN_MAIN[44] = 8'h86;
+									SCREEN_MAIN[45] = 8'h8B; 
 									SCREEN_MAIN[46] = 8'h89;
 									SCREEN_MAIN[47] = 8'h70;
 
@@ -713,25 +701,13 @@ module ssd1306_master (
 									SCREEN_MAIN[55] = 8'h0;
 									SCREEN_MAIN[56] = 8'h0;
 									SCREEN_MAIN[57] = 8'h0;
-									
-									SCREEN_MAIN[161] = 8'h1;
-									SCREEN_MAIN[162] = 8'h1;
-									SCREEN_MAIN[163] = 8'h1;
-									
-									SCREEN_MAIN[171] = 8'h1;
-									SCREEN_MAIN[172] = 8'h1;
-									SCREEN_MAIN[173] = 8'h1;
-									
-									SCREEN_MAIN[181] = 8'h0;
-									SCREEN_MAIN[182] = 8'h0;
-									SCREEN_MAIN[183] = 8'h0; 
 								end
 								else if (food > 7'd0 && food <= 7'd33) begin
 									SCREEN_MAIN[31] = 8'h70;
 									SCREEN_MAIN[32] = 8'h88;
-									SCREEN_MAIN[33] = 8'h8;
-									SCREEN_MAIN[34] = 8'h6;
-									SCREEN_MAIN[35] = 8'hB;
+									SCREEN_MAIN[33] = 8'h88;
+									SCREEN_MAIN[34] = 8'h86;
+									SCREEN_MAIN[35] = 8'h8B;
 									SCREEN_MAIN[36] = 8'h89; 
 									SCREEN_MAIN[37] = 8'h70;
 									
@@ -750,117 +726,81 @@ module ssd1306_master (
 									SCREEN_MAIN[55] = 8'h0;
 									SCREEN_MAIN[56] = 8'h0;
 									SCREEN_MAIN[57] = 8'h0;
-									
-									SCREEN_MAIN[161] = 8'h1;
-									SCREEN_MAIN[162] = 8'h1;
-									SCREEN_MAIN[163] = 8'h1;
-									
-									SCREEN_MAIN[171] = 8'h0;
-									SCREEN_MAIN[172] = 8'h0;
-									SCREEN_MAIN[173] = 8'h0;
-									
-									SCREEN_MAIN[181] = 8'h0;
-									SCREEN_MAIN[182] = 8'h0;
-									SCREEN_MAIN[183] = 8'h0; 
 								end
 
 								//setting fun indicator
 
 								if (fun > 7'd67 && fun <= 7'd100) begin
-									SCREEN_MAIN[12] = 8'h60;
-									SCREEN_MAIN[13] = 8'h80;
-									SCREEN_MAIN[14] = 8'h1E;
-									SCREEN_MAIN[15] = 8'h0;
-									SCREEN_MAIN[16] = 8'h1E;
-									SCREEN_MAIN[17] = 8'h80;
-									SCREEN_MAIN[18] = 8'h60;
-									
-									SCREEN_MAIN[142] = 8'h1;
-									SCREEN_MAIN[143] = 8'h1;
-									SCREEN_MAIN[144] = 8'h1;
+									SCREEN_MAIN[12] = 8'h30;
+									SCREEN_MAIN[13] = 8'h40;
+									SCREEN_MAIN[14] = 8'h8F;
+									SCREEN_MAIN[15] = 8'h80;
+									SCREEN_MAIN[16] = 8'h8F;
+									SCREEN_MAIN[17] = 8'h40;
+									SCREEN_MAIN[18] = 8'h30;
 								end
 								if (fun > 7'd33 && fun <= 7'd67) begin
-									SCREEN_MAIN[12] = 8'h0;
-									SCREEN_MAIN[13] = 8'h80;
-									SCREEN_MAIN[14] = 8'h9E;
-									SCREEN_MAIN[15] = 8'h80;
-									SCREEN_MAIN[16] = 8'h9E;
-									SCREEN_MAIN[17] = 8'h80;
-									SCREEN_MAIN[18] = 8'h0;
-									
-									SCREEN_MAIN[142] = 8'h0;
-									SCREEN_MAIN[143] = 8'h0;
-									SCREEN_MAIN[144] = 8'h0;
+									SCREEN_MAIN[12] = 8'h40;
+									SCREEN_MAIN[13] = 8'h40;
+									SCREEN_MAIN[14] = 8'h4F;
+									SCREEN_MAIN[15] = 8'h40;
+									SCREEN_MAIN[16] = 8'h4F;
+									SCREEN_MAIN[17] = 8'h40;
+									SCREEN_MAIN[18] = 8'h40;
 								end
 								if (fun > 7'd0 && fun <= 7'd33) begin
-									SCREEN_MAIN[12] = 8'h0;
-									SCREEN_MAIN[13] = 8'h80;
-									SCREEN_MAIN[14] = 8'h5E;
-									SCREEN_MAIN[15] = 8'h40;
-									SCREEN_MAIN[16] = 8'h5E;
-									SCREEN_MAIN[17] = 8'h80;
-									SCREEN_MAIN[18] = 8'h0;
-									
-									SCREEN_MAIN[140] = 8'h1;
-									SCREEN_MAIN[142] = 8'h0;
-									SCREEN_MAIN[143] = 8'h0;
-									SCREEN_MAIN[144] = 8'h0;
-									SCREEN_MAIN[146] = 8'h1;
+									SCREEN_MAIN[12] = 8'hC0;
+									SCREEN_MAIN[13] = 8'h20;
+									SCREEN_MAIN[14] = 8'h2F;
+									SCREEN_MAIN[15] = 8'h20;
+									SCREEN_MAIN[16] = 8'h2F;
+									SCREEN_MAIN[17] = 8'h20;
+									SCREEN_MAIN[18] = 8'hC0;
 								end
 								
 								//setting rest indicator
 
 								if (rest > 7'd67 && rest <= 7'd100) begin
-									SCREEN_MAIN[67] = 8'h90;
-									SCREEN_MAIN[68] = 8'h50;
-									SCREEN_MAIN[69] = 8'h30;
+									SCREEN_MAIN[67] = 8'hC8;
+									SCREEN_MAIN[68] = 8'hA8;
+									SCREEN_MAIN[69] = 8'h98;
 									SCREEN_MAIN[70] = 8'h0;
 									SCREEN_MAIN[71] = 8'h31;
 									SCREEN_MAIN[72] = 8'h29; 
 									SCREEN_MAIN[73] = 8'h25;
 									SCREEN_MAIN[74] = 8'h23;
 
-									SCREEN_MAIN[77] = 8'h90;
-									SCREEN_MAIN[78] = 8'h50; 
-									SCREEN_MAIN[79] = 8'h30;
+									SCREEN_MAIN[77] = 8'hC8;
+									SCREEN_MAIN[78] = 8'hA8; 
+									SCREEN_MAIN[79] = 8'h98;
 									SCREEN_MAIN[80] = 8'h0;
 									SCREEN_MAIN[81] = 8'h31; 
 									SCREEN_MAIN[82] = 8'h29;
 									SCREEN_MAIN[83] = 8'h25;
 									SCREEN_MAIN[84] = 8'h23; 
 
-									SCREEN_MAIN[87] = 8'h90; 
-									SCREEN_MAIN[88] = 8'h50;
-									SCREEN_MAIN[89] = 8'h30;
+									SCREEN_MAIN[87] = 8'hC8; 
+									SCREEN_MAIN[88] = 8'hA8;
+									SCREEN_MAIN[89] = 8'h98;
 									SCREEN_MAIN[90] = 8'h0;  
 									SCREEN_MAIN[91] = 8'h31;
 									SCREEN_MAIN[92] = 8'h29;
 									SCREEN_MAIN[93] = 8'h25;  
 									SCREEN_MAIN[94] = 8'h23;
-									
-									SCREEN_MAIN[195] = 8'h1;
-									SCREEN_MAIN[196] = 8'h1;
-									SCREEN_MAIN[197] = 8'h1;
-									SCREEN_MAIN[205] = 8'h1;
-									SCREEN_MAIN[206] = 8'h1;
-									SCREEN_MAIN[207] = 8'h1;
-									SCREEN_MAIN[215] = 8'h1;
-									SCREEN_MAIN[216] = 8'h1;
-									SCREEN_MAIN[217] = 8'h1;
 								end
 								else if (rest > 7'd33 && rest <= 7'd67) begin
-									SCREEN_MAIN[67] = 8'h90;
-									SCREEN_MAIN[68] = 8'h50;
-									SCREEN_MAIN[69] = 8'h30;
+									SCREEN_MAIN[67] = 8'hC8;
+									SCREEN_MAIN[68] = 8'hA8;
+									SCREEN_MAIN[69] = 8'h98;
 									SCREEN_MAIN[70] = 8'h0;
 									SCREEN_MAIN[71] = 8'h31;
 									SCREEN_MAIN[72] = 8'h29; 
 									SCREEN_MAIN[73] = 8'h25;
 									SCREEN_MAIN[74] = 8'h23;
-									
-									SCREEN_MAIN[77] = 8'h90;
-									SCREEN_MAIN[78] = 8'h50; 
-									SCREEN_MAIN[79] = 8'h30;
+
+									SCREEN_MAIN[77] = 8'hC8;
+									SCREEN_MAIN[78] = 8'hA8; 
+									SCREEN_MAIN[79] = 8'h98;
 									SCREEN_MAIN[80] = 8'h0;
 									SCREEN_MAIN[81] = 8'h31; 
 									SCREEN_MAIN[82] = 8'h29;
@@ -875,21 +815,11 @@ module ssd1306_master (
 									SCREEN_MAIN[92] = 8'h0;
 									SCREEN_MAIN[93] = 8'h0;  
 									SCREEN_MAIN[94] = 8'h0;
-									
-									SCREEN_MAIN[195] = 8'h1;
-									SCREEN_MAIN[196] = 8'h1;
-									SCREEN_MAIN[197] = 8'h1;
-									SCREEN_MAIN[205] = 8'h1;
-									SCREEN_MAIN[206] = 8'h1;
-									SCREEN_MAIN[207] = 8'h1;
-									SCREEN_MAIN[215] = 8'h0;
-									SCREEN_MAIN[216] = 8'h0;
-									SCREEN_MAIN[217] = 8'h0;
 								end
 								else if (rest > 7'd0 && rest <= 7'd33) begin
-									SCREEN_MAIN[67] = 8'h90;
-									SCREEN_MAIN[68] = 8'h50;
-									SCREEN_MAIN[69] = 8'h30;
+									SCREEN_MAIN[67] = 8'hC8;
+									SCREEN_MAIN[68] = 8'hA8;
+									SCREEN_MAIN[69] = 8'h98;
 									SCREEN_MAIN[70] = 8'h0;
 									SCREEN_MAIN[71] = 8'h31;
 									SCREEN_MAIN[72] = 8'h29; 
@@ -913,42 +843,22 @@ module ssd1306_master (
 									SCREEN_MAIN[92] = 8'h0;
 									SCREEN_MAIN[93] = 8'h0;  
 									SCREEN_MAIN[94] = 8'h0;
-									
-									SCREEN_MAIN[195] = 8'h1;
-									SCREEN_MAIN[196] = 8'h1;
-									SCREEN_MAIN[197] = 8'h1;
-									SCREEN_MAIN[205] = 8'h0;
-									SCREEN_MAIN[206] = 8'h0;
-									SCREEN_MAIN[207] = 8'h0;
-									SCREEN_MAIN[215] = 8'h0;
-									SCREEN_MAIN[216] = 8'h0;
-									SCREEN_MAIN[217] = 8'h0;
 								end
 
 								//setting heal indicator
 
 								if (disease) begin
-									SCREEN_MAIN[106] = 8'hF8;
+									SCREEN_MAIN[106] = 8'h78;
 									SCREEN_MAIN[107] = 8'hFC;
 									SCREEN_MAIN[108] = 8'hFC;
 									SCREEN_MAIN[109] = 8'hFE;
-									SCREEN_MAIN[110] = 8'hDD;
-									SCREEN_MAIN[111] = 8'h8D;
-									SCREEN_MAIN[112] = 8'hDD;
+									SCREEN_MAIN[110] = 8'hED;
+									SCREEN_MAIN[111] = 8'hC5;
+									SCREEN_MAIN[112] = 8'hED;
 									SCREEN_MAIN[113] = 8'hFE;
 									SCREEN_MAIN[114] = 8'hFC;
 									SCREEN_MAIN[115] = 8'hFC;
 									SCREEN_MAIN[116] = 8'hF8;
-									
-									SCREEN_MAIN[235] = 8'h1;
-									SCREEN_MAIN[236] = 8'h1;
-									SCREEN_MAIN[237] = 8'h1;
-									SCREEN_MAIN[238] = 8'h1;
-									SCREEN_MAIN[239] = 8'h1;
-									SCREEN_MAIN[240] = 8'h1;
-									SCREEN_MAIN[241] = 8'h1;
-									SCREEN_MAIN[242] = 8'h1;
-									SCREEN_MAIN[243] = 8'h1;
 								end 
 								else begin
 									SCREEN_MAIN[106] = 8'h0;
@@ -962,65 +872,55 @@ module ssd1306_master (
 									SCREEN_MAIN[114] = 8'h0;
 									SCREEN_MAIN[115] = 8'h0;
 									SCREEN_MAIN[116] = 8'h0;
-									
-									SCREEN_MAIN[235] = 8'h0;
-									SCREEN_MAIN[236] = 8'h0;
-									SCREEN_MAIN[237] = 8'h0;
-									SCREEN_MAIN[238] = 8'h0;
-									SCREEN_MAIN[239] = 8'h0;
-									SCREEN_MAIN[240] = 8'h0;
-									SCREEN_MAIN[241] = 8'h0;
-									SCREEN_MAIN[242] = 8'h0;
-									SCREEN_MAIN[243] = 8'h0;
 								end
 
 								//setting ind select
 								case (needs_values[3:0]) 
 										0: begin
 										for (i=128; i<138; i=i+1) begin
-											SCREEN_MAIN[i][3] = 0;
+											SCREEN_MAIN[i][1] = 0;
 										end
 										for (i=138; i<149; i=i+1) begin
-											SCREEN_MAIN[i][3] = 1;
+											SCREEN_MAIN[i][1] = 1;
 										end
 										for (i=149; i<256; i=i+1) begin
-											SCREEN_MAIN[i][3] = 0;
+											SCREEN_MAIN[i][1] = 0;
 										end
 										end
 										
 										1: begin
 										for (i=128; i<159; i=i+1) begin
-											SCREEN_MAIN[i][3] = 0;
+											SCREEN_MAIN[i][1] = 0;
 										end
 										for (i=159; i<186; i=i+1) begin
-											SCREEN_MAIN[i][3] = 1;
+											SCREEN_MAIN[i][1] = 1;
 										end
 										for (i=186; i<256; i=i+1) begin
-											SCREEN_MAIN[i][3] = 0;
+											SCREEN_MAIN[i][1] = 0;
 										end
 										end
 										
 										2: begin
 										for (i=128; i<195; i=i+1) begin
-											SCREEN_MAIN[i][3] = 0;
+											SCREEN_MAIN[i][1] = 0;
 										end
 										for (i=195; i<223; i=i+1) begin
-											SCREEN_MAIN[i][3] = 1;
+											SCREEN_MAIN[i][1] = 1;
 										end
 										for (i=223; i<256; i=i+1) begin
-											SCREEN_MAIN[i][3] = 0;
+											SCREEN_MAIN[i][1] = 0;
 										end
 										end
 										
 										3: begin
 										for (i=128; i<234; i=i+1) begin
-											SCREEN_MAIN[i][3] = 0;
+											SCREEN_MAIN[i][1] = 0;
 										end
 										for (i=234; i<245; i=i+1) begin
-											SCREEN_MAIN[i][3] = 1;
+											SCREEN_MAIN[i][1] = 1;
 										end
 										for (i=245; i<256; i=i+1) begin
-											SCREEN_MAIN[i][3] = 0;
+											SCREEN_MAIN[i][1] = 0;
 										end
 										end
 								endcase
@@ -1030,6 +930,8 @@ module ssd1306_master (
 							end
 							else if (state_fsm == 3) begin
 								data_byte_in = SCREEN_SLEEP[data_counter-32];
+
+								//setting character aspect
 
 								if (act_sleep) begin
 									SCREEN_SLEEP[184] = 8'h0;

@@ -1,14 +1,14 @@
-Fitter Status : Successful - Wed Sep 18 01:31:36 2024
+Fitter Status : Successful - Wed Sep 18 16:54:38 2024
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : top_fsm
 Top-level Entity Name : top_fsm
 Family : Cyclone IV E
 Device : EP4CE6E22C8
 Timing Models : Final
-Total logic elements : 2,593 / 6,272 ( 41 % )
-    Total combinational functions : 2,569 / 6,272 ( 41 % )
-    Dedicated logic registers : 376 / 6,272 ( 6 % )
-Total registers : 376
+Total logic elements : 2,555 / 6,272 ( 41 % )
+    Total combinational functions : 2,534 / 6,272 ( 40 % )
+    Dedicated logic registers : 369 / 6,272 ( 6 % )
+Total registers : 369
 Total pins : 24 / 92 ( 26 % )
 Total virtual pins : 0
 Total memory bits : 0 / 276,480 ( 0 % )
