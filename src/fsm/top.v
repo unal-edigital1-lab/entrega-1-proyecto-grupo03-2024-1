@@ -175,28 +175,32 @@ always @(posedge clk) begin
                 pixels_oled[i][4] = 0;
             end
             if(fun> 7'd67 && fun <= 7'd100)begin
-                pixels_oled[10] = 8'h38;
-                pixels_oled[11] = 8'h44;
-                pixels_oled[12] = 8'h82;
-                pixels_oled[13] = 8'h82;
-                pixels_oled[14] = 8'h6D;
-                pixels_oled[15] = 8'h41; 
-                pixels_oled[16] = 8'h6D;
-                pixels_oled[17] = 8'h82;
-                pixels_oled[18] = 8'h82; 
-                pixels_oled[19] = 8'h44;
-                pixels_oled[20] = 8'h38;
+                pixels_oled[12] = 8'h30;
+                pixels_oled[13] = 8'h40;
+                pixels_oled[14] = 8'h8F;
+                pixels_oled[15] = 8'h80; 
+                pixels_oled[16] = 8'h8F;
+                pixels_oled[17] = 8'h40;
+                pixels_oled[18] = 8'h30;
             end
             if(fun> 7'd33 && fun <= 7'd67)begin
 
-                pixels_oled[14] = 8'h4D;
-                pixels_oled[15] = 8'h41; 
-                pixels_oled[16] = 8'h4D;
+                pixels_oled[12] = 8'h40;
+                pixels_oled[13] = 8'h40;
+                pixels_oled[14] = 8'h4F;
+                pixels_oled[15] = 8'h40; 
+                pixels_oled[16] = 8'h4F;
+                pixels_oled[17] = 8'h40;
+                pixels_oled[18] = 8'h40;
             end
             if(fun> 7'd0 && fun <= 7'd33)begin
-                pixels_oled[14] = 8'h6D;
-                pixels_oled[15] = 8'h21; 
-                pixels_oled[16] = 8'h6D;
+                pixels_oled[12] = 8'hC0;
+                pixels_oled[13] = 8'h20;
+                pixels_oled[14] = 8'h2F;
+                pixels_oled[15] = 8'h20; 
+                pixels_oled[16] = 8'h2F;
+                pixels_oled[17] = 8'h20;
+                pixels_oled[18] = 8'hC0;
             end
 
             if(rest> 7'd67 && rest <= 7'd100)begin
@@ -542,17 +546,10 @@ always @(posedge clk) begin
         end
 
         PLAY: begin
-            if(btn_reset) begin
-                state = START;
-                end
-            else if(btn_cancel) begin
-                state = MAIN;
-                end
-            else if (cont_fun2 == 28'd150000000)begin
-                    //pixels_oled = pantalla_rest_default
+             if (cont_fun2 == 28'd150000000)begin
                     if(btn_action) begin
                         if(fun != 7'd100)begin
-                        // pixels_oled = pantalla_resting
+                        act_play = 1;
                         fun <= fun + 1'd1;
                         cont_fun2 <= 0;
                         if(random_medicine[7] == 1 || random_medicine[3] == 1)begin
@@ -570,6 +567,7 @@ always @(posedge clk) begin
                     end
                 end 
             else begin
+                act_play= 0;
                 cont_fun2 <= cont_fun2 + 1'd1;
             end
         end
@@ -579,17 +577,12 @@ always @(posedge clk) begin
         end
 
         EAT: begin
-          if(btn_reset) begin
-                state = START;
-          end
-          else if(btn_cancel) begin
-                state = MAIN;
-                end
-          else if (cont_food2 == 28'd150000000)begin
+          if (cont_food2 == 28'd150000000)begin
                     //pixels_oled = pantalla_eat_default
                     if(btn_action) begin    
                         if(food != 7'd100)begin
                     // pixels_oled = pantalla_eating
+                        act_eat = 1;
                         food <= food + 1'd1;
                         cont_food2 <= 0;
                         end
@@ -599,19 +592,15 @@ always @(posedge clk) begin
                     end
                 end 
           else begin
+            act_eat= 0;
                 cont_food2 <= cont_food2 + 1'd1;
             end
         end
         HEAL: begin
-            if(btn_reset) begin
-                state = START;
-                end
-            else if(btn_cancel) begin
-                state = MAIN;
-                end
-            else if (cont_heal2 == 28'd150000000)begin
+            if (cont_heal2 == 28'd150000000)begin
                     //pixels_oled = pantalla_heal_default
                     if(btn_action && (medicines >= 7'd1)) begin
+                        act_heal= 1;
                     // pixels_oled = pantalla_healing
                         life <= life + 7'd20;
                         cont_heal2 <= 0;
@@ -622,6 +611,7 @@ always @(posedge clk) begin
                     end
                 end 
             else begin
+                act_heal=0;
                 cont_heal2 <= cont_heal2 + 1'd1;
             end
         end
