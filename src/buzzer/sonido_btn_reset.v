@@ -21,7 +21,7 @@ module sonido_btn_reset(clk, btn_reset, sonido_btn_reset);
 
     always @* begin
         if (btn_reset == 1'b1) begin
-            sonido_btn_reset = DO[19];
+            sonido_btn_reset = RE[19];
         end else begin
             sonido_btn_reset = 1'b0;
         end

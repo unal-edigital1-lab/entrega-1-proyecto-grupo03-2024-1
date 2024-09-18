@@ -21,7 +21,7 @@ module sonido_btn_cancel(clk, btn_reset, sonido_btn_reset);
 
     always @* begin
         if (btn_cancel == 1'b1) begin
-            sonido_btn_cancel = DO[19];
+            sonido_btn_cancel = FA[19];
         end else begin
             sonido_btn_cancel = 1'b0;
         end

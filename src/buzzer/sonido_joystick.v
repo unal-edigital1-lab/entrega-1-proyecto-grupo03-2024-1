@@ -22,7 +22,7 @@ module sonido_bjoystick(clk, joystick, sonido_joystick);
 
     always @* begin
         if (joystick_left == 1'b1 || joystick_right == 1'b1) begin
-            sonido_joystick = DO[19];
+            sonido_joystick = SI[19];
         end else begin
             sonido_joystick = 1'b0;
         end
