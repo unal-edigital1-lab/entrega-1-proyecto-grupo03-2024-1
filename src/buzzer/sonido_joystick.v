@@ -1,6 +1,7 @@
 module sonido_bjoystick(clk, joystick, sonido_joystick);
     input wire clk;
-    input wire joystick;         // Señal del botón
+    input wire joystick_left;
+    input wire joystick_right;
 	output reg sonido_joystick;  // Señal de salida al buzzer
 	
     // ------------------------------------ FRECUENCIA DE SONIDO ------------------------------------
@@ -20,7 +21,7 @@ module sonido_bjoystick(clk, joystick, sonido_joystick);
     // ------------------------------------ PROCESO JOYSTICK - SONIDO ------------------------------------
 
     always @* begin
-        if (joystick == 1'b1) begin
+        if (joystick_left == 1'b1 || joystick_right == 1'b1) begin
             sonido_joystick = DO[19];
         end else begin
             sonido_joystick = 1'b0;
