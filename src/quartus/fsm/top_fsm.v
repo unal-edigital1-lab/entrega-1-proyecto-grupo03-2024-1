@@ -62,7 +62,6 @@ reg [6:0] life = 7'd100;
 reg [6:0] food = 7'd100;
 reg [6:0] fun = 7'd100;
 reg [6:0] rest = 7'd100;
-reg [6:0] medicines = 0;
 reg disease = 0;
 reg death = 0;
 
@@ -116,10 +115,12 @@ localparam IND_HEAL = 4'd3;
 
 localparam DELAY_TIME_BUTTONS = 26'd25000000;
 localparam DELAY_SCREEN_PAUSE = 30'd100000000;
+localparam DELAY_5SEG = 30'd250000000;
 
 integer i;
 reg [3:0] ind_select = IND_PLAY;
 reg [29:0] cont_screen_pause = DELAY_SCREEN_PAUSE;
+reg [29:0] cont_reset = DELAY_5SEG; 
 
 reg [25:0] cont_pulse_1s = 0;
 reg pulse_1s = 0;
@@ -130,12 +131,6 @@ wire btn_right;
 
 reg enable_joystick = 1;
 reg [26:0] cont_enable_joystick = 0;
-
-reg enable_btn_action = 1;
-reg [26:0] cont_enable_btn_action = 0;
-
-reg enable_btn_cancel = 1;
-reg [26:0] cont_enable_btn_cancel = 0;
 
 reg [26:0] cont_actions = 0;
 
@@ -207,14 +202,38 @@ always @(posedge clk) begin
         end
     end
 	
-	if (btn_cancel == 1 && enable_btn_cancel) begin
+	if (btn_cancel == 1) begin
 		state <= MAIN;
+        cont_actions = 0;
 	end
+
+    if (btn_reset == 1) begin
+        if (cont_reset == 0) begin
+                state <= START;
+                life = 7'd100;
+                fun <= 7'd100;
+                rest <= 7'd100;
+                food <= 7'd100;
+                ind_select <=  IND_PLAY;
+            end
+            else begin
+                cont_reset <= cont_reset - 1'b1;
+            end
+        end
+    else begin
+        cont_reset = DELAY_5SEG;
+    end
+
+    if (life >= 30 && state == HEAL) begin
+        state <= MAIN;
+        ind_select <= IND_PLAY;
+    end
 
     case (state)
         START: begin
             if (cont_screen_pause == 0) begin
                 state <= MAIN;
+                cont_screen_pause = DELAY_SCREEN_PAUSE;
             end
             else begin
                 cont_screen_pause <= cont_screen_pause - 1'b1;
@@ -278,6 +297,27 @@ always @(posedge clk) begin
 			led_s1 = 1;
 			led_s2 = 1;
 			led_s3 = 0;
+
+            if (btn_action == 0) begin
+                act_play = 1;
+                if (cont_actions == 26'd50000000) begin
+                    cont_actions <= 0;
+
+                    if (fun + 7'd30 < 7'd100) begin
+                        fun <= fun + 7'd30;
+                    end
+                    else begin
+                        fun <= 7'd100;
+                    end
+                end
+                else begin
+                    cont_actions <= cont_actions + 1'd1;
+                end
+            end
+            else begin
+                cont_actions = 0;
+                act_play = 0;
+            end
 		end
 
         SLEEP: begin
@@ -285,11 +325,17 @@ always @(posedge clk) begin
 			led_s2 = 0;
 			led_s3 = 1;
 			
-			if (level1 == 0) begin
+			if (level2 == 0) begin
                 act_sleep = 1;
                 if (cont_actions == 26'd50000000) begin
                     cont_actions <= 0;
-                    rest <= 7'd100;
+
+                    if (rest + 7'd30 < 7'd100) begin
+                        rest <= rest + 7'd30;
+                    end
+                    else begin
+                        rest <= 7'd100;
+                    end
                 end
                 else begin
                     cont_actions <= cont_actions + 1'd1;
@@ -299,19 +345,58 @@ always @(posedge clk) begin
                 cont_actions = 0;
                 act_sleep = 0;
             end
-			
         end
 
         EAT: begin
 			led_s1 = 1;
 			led_s2 = 0;
 			led_s3 = 0;
+
+            if (btn_action == 0) begin
+                act_eat = 1;
+                if (cont_actions == 26'd50000000) begin
+                    cont_actions <= 0;
+
+                    if (food + 7'd30 < 7'd100) begin
+                        food <= food + 7'd30;
+                    end
+                    else begin
+                        food <= 7'd100;
+                    end
+                end
+                else begin
+                    cont_actions <= cont_actions + 1'd1;
+                end
+            end
+            else begin
+                cont_actions = 0;
+                act_eat = 0;
+            end
+
         end
 
         HEAL: begin
 			led_s1 = 0;
 			led_s2 = 1;
 			led_s3 = 0;
+
+            if (btn_action == 0) begin
+                act_heal = 1;
+                if (cont_actions == 26'd50000000) begin
+                    cont_actions <= 0;
+
+                    food <= 7'd100;
+                    fun <= 7'd100;
+                    rest <= 7'd100;
+                end
+                else begin
+                    cont_actions <= cont_actions + 1'd1;
+                end
+            end
+            else begin
+                cont_actions = 0;
+                act_heal = 0;
+            end
         end
 
         DEATH: begin
