@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_fsm
-Wed Sep 18 20:43:19 2024
+Wed Sep 18 22:30:34 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -21,10 +21,11 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
  13. Inverted Register Statistics
  14. Multiplexer Restructuring Statistics (Restructuring Performed)
  15. Parameter Settings for User Entity Instance: top_hcsr04:UTT_ultrasonido
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
- 19. Analysis & Synthesis Suppressed Messages
+ 16. Port Connectivity Checks: "buzzer:UTT_buzzer"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+ 20. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -51,16 +52,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Sep 18 20:43:19 2024          ;
+; Analysis & Synthesis Status        ; Successful - Wed Sep 18 22:30:34 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; top_fsm                                        ;
 ; Top-level Entity Name              ; top_fsm                                        ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 3,957                                          ;
-;     Total combinational functions  ; 3,875                                          ;
-;     Dedicated logic registers      ; 476                                            ;
-; Total registers                    ; 476                                            ;
-; Total pins                         ; 24                                             ;
+; Total logic elements               ; 3,938                                          ;
+;     Total combinational functions  ; 3,858                                          ;
+;     Dedicated logic registers      ; 494                                            ;
+; Total registers                    ; 494                                            ;
+; Total pins                         ; 25                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -162,7 +163,7 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
@@ -170,7 +171,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 2            ;   0.1%      ;
 ;     Processor 3            ;   0.1%      ;
 ;     Processor 4            ;   0.1%      ;
-;     Processor 5            ;   0.1%      ;
+;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
 ;     Processor 7            ;   0.0%      ;
 ;     Processor 8            ;   0.0%      ;
@@ -198,6 +199,7 @@ https://fpgasoftware.intel.com/eula.
 ; screen_eat.men                   ; yes             ; Auto-Found Unspecified File  ; D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/screen_eat.men    ;         ;
 ; screen_sleep.men                 ; yes             ; Auto-Found Unspecified File  ; D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/screen_sleep.men  ;         ;
 ; screen_main.men                  ; yes             ; Auto-Found Unspecified File  ; D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/screen_main.men   ;         ;
+; buzzer.v                         ; yes             ; Auto-Found Verilog HDL File  ; D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/buzzer.v          ;         ;
 +----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -206,30 +208,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------------------------------------------------+
 ; Resource                                    ; Usage                                                 ;
 +---------------------------------------------+-------------------------------------------------------+
-; Estimated Total logic elements              ; 3,957                                                 ;
+; Estimated Total logic elements              ; 3,938                                                 ;
 ;                                             ;                                                       ;
-; Total combinational functions               ; 3875                                                  ;
+; Total combinational functions               ; 3858                                                  ;
 ; Logic element usage by number of LUT inputs ;                                                       ;
-;     -- 4 input functions                    ; 2830                                                  ;
-;     -- 3 input functions                    ; 524                                                   ;
-;     -- <=2 input functions                  ; 521                                                   ;
+;     -- 4 input functions                    ; 2817                                                  ;
+;     -- 3 input functions                    ; 492                                                   ;
+;     -- <=2 input functions                  ; 549                                                   ;
 ;                                             ;                                                       ;
 ; Logic elements by mode                      ;                                                       ;
-;     -- normal mode                          ; 3606                                                  ;
-;     -- arithmetic mode                      ; 269                                                   ;
+;     -- normal mode                          ; 3570                                                  ;
+;     -- arithmetic mode                      ; 288                                                   ;
 ;                                             ;                                                       ;
-; Total registers                             ; 476                                                   ;
-;     -- Dedicated logic registers            ; 476                                                   ;
+; Total registers                             ; 494                                                   ;
+;     -- Dedicated logic registers            ; 494                                                   ;
 ;     -- I/O registers                        ; 0                                                     ;
 ;                                             ;                                                       ;
-; I/O pins                                    ; 24                                                    ;
+; I/O pins                                    ; 25                                                    ;
 ;                                             ;                                                       ;
 ; Embedded Multiplier 9-bit elements          ; 0                                                     ;
 ;                                             ;                                                       ;
 ; Maximum fan-out node                        ; top_oled:UUT_oled|master_i2c_oled:i2c|data_counter[5] ;
-; Maximum fan-out                             ; 906                                                   ;
-; Total fan-out                               ; 15231                                                 ;
-; Average fan-out                             ; 3.46                                                  ;
+; Maximum fan-out                             ; 890                                                   ;
+; Total fan-out                               ; 15175                                                 ;
+; Average fan-out                             ; 3.44                                                  ;
 +---------------------------------------------+-------------------------------------------------------+
 
 
@@ -238,14 +240,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                        ; Entity Name     ; Library Name ;
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------+-----------------+--------------+
-; |top_fsm                         ; 3875 (552)          ; 476 (203)                 ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |top_fsm                                                   ; top_fsm         ; work         ;
+; |top_fsm                         ; 3858 (551)          ; 494 (203)                 ; 0           ; 0            ; 0       ; 0         ; 25   ; 0            ; |top_fsm                                                   ; top_fsm         ; work         ;
+;    |buzzer:UTT_buzzer|           ; 38 (38)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_fsm|buzzer:UTT_buzzer                                 ; buzzer          ; work         ;
 ;    |top_ads1115:UTT_joystick|    ; 242 (15)            ; 87 (4)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_fsm|top_ads1115:UTT_joystick                          ; top_ads1115     ; work         ;
 ;       |ads1115_master:UUT_setup| ; 20 (20)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_fsm|top_ads1115:UTT_joystick|ads1115_master:UUT_setup ; ads1115_master  ; work         ;
 ;       |i2c_ads1115:UTT_i2c|      ; 207 (207)           ; 76 (76)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_fsm|top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c      ; i2c_ads1115     ; work         ;
 ;    |top_hcsr04:UTT_ultrasonido|  ; 63 (63)             ; 43 (43)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_fsm|top_hcsr04:UTT_ultrasonido                        ; top_hcsr04      ; work         ;
-;    |top_oled:UUT_oled|           ; 3018 (0)            ; 143 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_fsm|top_oled:UUT_oled                                 ; top_oled        ; work         ;
-;       |master_i2c_oled:i2c|      ; 124 (124)           ; 41 (41)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_fsm|top_oled:UUT_oled|master_i2c_oled:i2c             ; master_i2c_oled ; work         ;
-;       |ssd1306_master:setup|     ; 2894 (2894)         ; 102 (102)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup            ; ssd1306_master  ; work         ;
+;    |top_oled:UUT_oled|           ; 2964 (0)            ; 141 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_fsm|top_oled:UUT_oled                                 ; top_oled        ; work         ;
+;       |master_i2c_oled:i2c|      ; 125 (125)           ; 41 (41)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_fsm|top_oled:UUT_oled|master_i2c_oled:i2c             ; master_i2c_oled ; work         ;
+;       |ssd1306_master:setup|     ; 2839 (2839)         ; 100 (100)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup            ; ssd1306_master  ; work         ;
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -286,6 +289,23 @@ Encoding Type:  One-Hot
 ; top_oled:UUT_oled|ssd1306_master:setup|addr_byte_in[0,1]                 ; Stuck at GND due to stuck port data_in                                        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|addr_byte_in[2..5]                ; Stuck at VCC due to stuck port data_in                                        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|addr_byte_in[6]                   ; Stuck at GND due to stuck port data_in                                        ;
+; buzzer:UTT_buzzer|CONT3[1..10]                                           ; Lost fanout                                                                   ;
+; buzzer:UTT_buzzer|CONT4[9..19]                                           ; Lost fanout                                                                   ;
+; buzzer:UTT_buzzer|CONT[0]                                                ; Lost fanout                                                                   ;
+; buzzer:UTT_buzzer|CONT4[1..8]                                            ; Lost fanout                                                                   ;
+; buzzer:UTT_buzzer|CONT5[11..19]                                          ; Lost fanout                                                                   ;
+; buzzer:UTT_buzzer|CONT2[0]                                               ; Lost fanout                                                                   ;
+; buzzer:UTT_buzzer|CONT5[4..10]                                           ; Lost fanout                                                                   ;
+; buzzer:UTT_buzzer|CONT3[0]                                               ; Lost fanout                                                                   ;
+; buzzer:UTT_buzzer|CONT5[1..3]                                            ; Lost fanout                                                                   ;
+; buzzer:UTT_buzzer|CONT6[15..19]                                          ; Lost fanout                                                                   ;
+; buzzer:UTT_buzzer|CONT4[0]                                               ; Lost fanout                                                                   ;
+; buzzer:UTT_buzzer|CONT6[5..14]                                           ; Lost fanout                                                                   ;
+; buzzer:UTT_buzzer|CONT5[0]                                               ; Lost fanout                                                                   ;
+; buzzer:UTT_buzzer|CONT6[0..4]                                            ; Lost fanout                                                                   ;
+; buzzer:UTT_buzzer|CONT3[11..19]                                          ; Lost fanout                                                                   ;
+; buzzer:UTT_buzzer|CONT2[1..19]                                           ; Lost fanout                                                                   ;
+; buzzer:UTT_buzzer|CONT[1..19]                                            ; Lost fanout                                                                   ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_HEAL[106][0]               ; Stuck at GND due to stuck port data_in                                        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_HEAL[106][1]               ; Stuck at GND due to stuck port data_in                                        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_HEAL[106][2]               ; Stuck at GND due to stuck port data_in                                        ;
@@ -1666,6 +1686,118 @@ Encoding Type:  One-Hot
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[156][2]               ; Stuck at GND due to stuck port data_in                                        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[157][2]               ; Stuck at GND due to stuck port data_in                                        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[158][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[184][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[184][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[184][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[184][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[184][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[184][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[184][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[185][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[185][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[185][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[185][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[185][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[185][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[185][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[186][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[186][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[186][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[186][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[186][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[186][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[186][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[187][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[187][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[187][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[187][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[187][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[187][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[187][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[189][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[189][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[189][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[189][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[189][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[189][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[190][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[190][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[190][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[190][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[190][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[190][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[191][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[191][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[191][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[191][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[191][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[191][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[192][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[192][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[192][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[192][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[192][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[192][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[193][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[193][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[193][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[193][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[193][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[193][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[194][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[194][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[194][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[194][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[194][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[194][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[195][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[195][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[195][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[195][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[195][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[195][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[195][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[196][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[196][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[196][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[196][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[196][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[196][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[196][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[197][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[197][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[197][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[197][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[197][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[197][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[197][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[198][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[198][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[198][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[198][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[198][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[198][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[198][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[199][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[199][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[199][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[199][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[199][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[199][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[199][7]               ; Stuck at GND due to stuck port data_in                                        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[223][2]               ; Stuck at GND due to stuck port data_in                                        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[224][2]               ; Stuck at GND due to stuck port data_in                                        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[225][2]               ; Stuck at GND due to stuck port data_in                                        ;
@@ -1688,6 +1820,195 @@ Encoding Type:  One-Hot
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[253][2]               ; Stuck at GND due to stuck port data_in                                        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[254][2]               ; Stuck at GND due to stuck port data_in                                        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[255][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[311][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[311][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[311][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[311][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[311][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[311][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[312][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[312][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[312][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[312][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[312][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[313][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[313][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[313][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[313][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[313][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[314][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[314][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[314][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[314][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[314][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[315][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[315][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[315][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[315][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[317][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[317][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[317][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[317][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[317][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[319][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[319][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[319][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[319][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[319][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[320][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[320][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[320][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[320][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[320][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[320][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[321][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[321][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[321][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[321][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[321][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[321][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[321][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[321][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[322][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[322][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[322][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[322][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[322][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[322][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[322][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[323][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[323][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[323][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[323][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[323][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[323][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[323][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[324][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[324][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[324][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[324][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[325][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[325][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[325][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[325][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[325][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[326][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[326][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[326][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[326][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[326][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[326][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[326][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[326][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[327][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[327][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[327][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[327][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[327][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[327][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[327][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[327][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[439][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[439][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[439][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[439][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[439][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[439][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[439][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[439][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[440][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[440][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[440][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[440][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[440][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[440][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[440][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[440][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[441][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[441][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[441][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[441][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[441][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[441][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[442][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[442][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[442][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[442][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[443][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[443][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[443][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[443][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[444][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[444][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[444][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[445][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[445][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[445][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[445][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[445][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[446][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[446][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[446][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[446][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[447][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[447][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[447][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[447][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[447][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[447][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[447][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[448][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[448][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[448][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[448][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[448][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[448][6]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[448][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[449][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[449][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[449][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[450][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[450][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[450][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[450][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[450][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[450][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[451][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[451][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[451][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[451][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[452][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[452][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[452][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[452][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[452][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[452][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[452][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[453][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[453][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[453][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[454][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[454][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[454][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[454][5]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[454][7]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[455][0]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[455][1]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[455][2]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[455][3]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[455][4]               ; Stuck at GND due to stuck port data_in                                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[455][7]               ; Stuck at GND due to stuck port data_in                                        ;
 ; top_ads1115:UTT_joystick|ads1115_master:UUT_setup|data_byte_in[1..5]     ; Stuck at GND due to stuck port data_in                                        ;
 ; top_ads1115:UTT_joystick|ads1115_master:UUT_setup|register_byte_in[2..7] ; Stuck at GND due to stuck port data_in                                        ;
 ; top_ads1115:UTT_joystick|ads1115_master:UUT_setup|addr_byte_in[0..2]     ; Stuck at GND due to stuck port data_in                                        ;
@@ -4131,287 +4452,6 @@ Encoding Type:  One-Hot
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[507][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[483][0]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[507][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[483][0]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[507][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[483][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[184][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[184][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[184][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[184][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[184][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[184][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[184][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[185][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[185][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[185][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[185][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[185][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[185][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[185][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[186][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[186][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[186][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[186][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[186][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[186][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[186][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[187][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[187][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[187][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[187][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[187][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[187][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[187][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[189][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[189][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[189][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[189][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[189][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[189][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[190][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[190][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[190][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[190][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[190][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[190][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[191][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[191][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[191][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[191][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[191][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[191][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[192][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[192][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[192][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[192][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[192][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[192][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[193][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[193][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[193][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[193][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[193][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[193][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[194][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[194][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[194][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[194][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[194][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[194][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[195][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[195][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[195][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[195][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[195][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[195][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[195][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[196][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[196][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[196][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[196][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[196][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[196][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[196][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[197][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[197][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[197][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[197][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[197][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[197][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[197][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[198][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[198][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[198][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[198][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[198][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[198][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[198][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[199][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[199][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[199][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[199][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[199][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[199][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[199][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[311][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[311][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[311][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[311][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[311][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[311][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[312][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[312][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[312][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[312][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[312][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[313][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[313][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[313][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[313][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[313][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[314][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[314][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[314][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[314][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[314][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[315][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[315][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[315][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[315][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[317][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[317][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[317][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[317][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[317][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[319][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[319][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[319][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[319][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[320][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[320][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[320][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[320][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[320][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[321][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[321][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[321][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[321][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[321][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[321][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[321][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[322][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[322][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[322][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[322][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[322][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[322][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[323][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[323][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[323][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[323][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[323][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[323][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[323][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[324][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[324][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[324][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[324][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[325][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[325][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[325][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[325][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[325][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[326][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[326][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[326][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[326][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[326][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[326][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[326][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[326][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[327][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[327][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[327][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[327][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[327][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[327][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[327][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[327][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[439][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[439][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[439][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[439][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[439][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[439][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[439][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[439][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[440][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[440][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[440][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[440][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[440][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[440][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[440][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[440][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[441][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[441][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[441][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[441][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[441][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[441][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[442][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[442][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[443][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[443][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[443][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[444][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[444][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[444][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[445][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[445][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[445][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[445][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[446][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[446][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[446][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[446][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[447][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[447][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[447][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[447][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[447][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[448][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[448][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[448][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[448][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[448][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[449][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[449][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[450][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[450][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[450][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[450][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[450][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[450][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[451][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[451][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[451][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[452][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[452][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[452][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[453][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[453][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[453][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[454][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[454][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[454][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[454][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[454][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[455][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[455][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[455][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[455][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[455][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[455][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[189][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[190][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[191][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
@@ -4433,8 +4473,11 @@ Encoding Type:  One-Hot
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[315][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[315][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[315][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[317][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[317][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[317][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
@@ -4443,6 +4486,7 @@ Encoding Type:  One-Hot
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[319][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[320][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[320][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[322][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[323][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[324][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[324][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
@@ -4454,25 +4498,37 @@ Encoding Type:  One-Hot
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[441][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[441][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[442][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[442][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[442][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[442][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[443][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[443][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[443][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[443][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[444][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[444][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[444][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[444][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[444][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[445][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[445][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[445][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[446][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[446][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[446][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[446][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[447][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[448][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[449][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[449][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[449][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[449][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[449][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[450][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[450][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[451][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[451][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[451][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[451][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[452][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[453][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
@@ -4485,39 +4541,6 @@ Encoding Type:  One-Hot
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[454][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[455][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[455][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][6]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[317][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][6]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[322][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][6]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[442][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][6]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[442][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][6]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[443][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][6]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[444][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][6]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[445][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][6]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[445][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][6]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[446][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][6]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[446][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][6]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[449][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][6]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[449][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][6]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[450][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][6]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[451][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][6]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[319][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][7]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[320][7]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][7]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[321][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][7]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[322][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][7]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[442][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][7]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[442][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][7]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[443][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][7]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[445][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][7]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[447][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][7]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[447][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][7]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[448][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][7]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[448][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][7]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[449][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][7]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[451][0]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][7]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[452][1]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][7]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[452][2]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][7]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[452][3]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][7]        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[452][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[318][7]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[106][4]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[106][3]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[106][5]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[106][3]        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[106][6]               ; Merged with top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[106][3]        ;
@@ -5212,7 +5235,6 @@ Encoding Type:  One-Hot
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[12][0]                ; Stuck at GND due to stuck port data_in                                        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[31][0]                ; Stuck at GND due to stuck port data_in                                        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[67][0]                ; Stuck at GND due to stuck port data_in                                        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][0]               ; Stuck at GND due to stuck port data_in                                        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[186][2]               ; Stuck at GND due to stuck port data_in                                        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[483][0]               ; Stuck at GND due to stuck port data_in                                        ;
 ; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|addr_byte_out[1]            ; Stuck at GND due to stuck port data_in                                        ;
@@ -5222,20 +5244,31 @@ Encoding Type:  One-Hot
 ; top_oled:UUT_oled|master_i2c_oled:i2c|bus_timing~3                       ; Lost fanout                                                                   ;
 ; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|bus_timing~2                ; Lost fanout                                                                   ;
 ; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|bus_timing~3                ; Lost fanout                                                                   ;
-; Total Number of Removed Registers = 4985                                 ;                                                                               ;
+; Total Number of Removed Registers = 5107                                 ;                                                                               ;
 +--------------------------------------------------------------------------+-------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                   ;
-+-------------------------------------------------------------------+---------------------------+---------------------------------------------------------------+
-; Register name                                                     ; Reason for Removal        ; Registers Removed due to This Register                        ;
-+-------------------------------------------------------------------+---------------------------+---------------------------------------------------------------+
-; top_oled:UUT_oled|ssd1306_master:setup|read_write                 ; Stuck at GND              ; top_oled:UUT_oled|master_i2c_oled:i2c|addr_byte_out[0]        ;
-;                                                                   ; due to stuck port data_in ;                                                               ;
-; top_ads1115:UTT_joystick|ads1115_master:UUT_setup|addr_byte_in[0] ; Stuck at GND              ; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|addr_byte_out[1] ;
-;                                                                   ; due to stuck port data_in ;                                                               ;
-+-------------------------------------------------------------------+---------------------------+---------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                           ;
++-------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------+
+; Register name                                                     ; Reason for Removal        ; Registers Removed due to This Register                                                ;
++-------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------+
+; buzzer:UTT_buzzer|CONT3[10]                                       ; Lost Fanouts              ; buzzer:UTT_buzzer|CONT3[9], buzzer:UTT_buzzer|CONT3[12], buzzer:UTT_buzzer|CONT3[13], ;
+;                                                                   ;                           ; buzzer:UTT_buzzer|CONT3[14], buzzer:UTT_buzzer|CONT3[15],                             ;
+;                                                                   ;                           ; buzzer:UTT_buzzer|CONT3[16]                                                           ;
+; buzzer:UTT_buzzer|CONT4[19]                                       ; Lost Fanouts              ; buzzer:UTT_buzzer|CONT4[15], buzzer:UTT_buzzer|CONT4[13],                             ;
+;                                                                   ;                           ; buzzer:UTT_buzzer|CONT4[10], buzzer:UTT_buzzer|CONT4[9], buzzer:UTT_buzzer|CONT4[6],  ;
+;                                                                   ;                           ; buzzer:UTT_buzzer|CONT4[2]                                                            ;
+; buzzer:UTT_buzzer|CONT5[19]                                       ; Lost Fanouts              ; buzzer:UTT_buzzer|CONT5[15], buzzer:UTT_buzzer|CONT5[11], buzzer:UTT_buzzer|CONT5[9], ;
+;                                                                   ;                           ; buzzer:UTT_buzzer|CONT5[8], buzzer:UTT_buzzer|CONT5[7], buzzer:UTT_buzzer|CONT5[6]    ;
+; buzzer:UTT_buzzer|CONT6[19]                                       ; Lost Fanouts              ; buzzer:UTT_buzzer|CONT6[15], buzzer:UTT_buzzer|CONT6[14],                             ;
+;                                                                   ;                           ; buzzer:UTT_buzzer|CONT6[10], buzzer:UTT_buzzer|CONT6[8], buzzer:UTT_buzzer|CONT6[7],  ;
+;                                                                   ;                           ; buzzer:UTT_buzzer|CONT6[5]                                                            ;
+; top_oled:UUT_oled|ssd1306_master:setup|read_write                 ; Stuck at GND              ; top_oled:UUT_oled|master_i2c_oled:i2c|addr_byte_out[0]                                ;
+;                                                                   ; due to stuck port data_in ;                                                                                       ;
+; top_ads1115:UTT_joystick|ads1115_master:UUT_setup|addr_byte_in[0] ; Stuck at GND              ; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|addr_byte_out[1]                         ;
+;                                                                   ; due to stuck port data_in ;                                                                                       ;
++-------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -5243,12 +5276,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 476   ;
+; Total registers                              ; 494   ;
 ; Number of registers using Synchronous Clear  ; 53    ;
 ; Number of registers using Synchronous Load   ; 3     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 312   ;
+; Number of registers using Clock Enable       ; 309   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -5271,11 +5304,11 @@ Encoding Type:  One-Hot
 ; cont_reset[25]                                                        ; 2       ;
 ; cont_reset[26]                                                        ; 2       ;
 ; cont_reset[27]                                                        ; 2       ;
-; life[2]                                                               ; 8       ;
-; life[6]                                                               ; 14      ;
-; life[5]                                                               ; 14      ;
+; life[2]                                                               ; 9       ;
 ; food[5]                                                               ; 7       ;
 ; food[6]                                                               ; 13      ;
+; life[5]                                                               ; 13      ;
+; life[6]                                                               ; 13      ;
 ; food[2]                                                               ; 7       ;
 ; fun[5]                                                                ; 12      ;
 ; fun[6]                                                                ; 13      ;
@@ -5320,32 +5353,31 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
 ; 3:1                ; 5 bits    ; 10 LEs        ; 0 LEs                ; 10 LEs                 ; Yes        ; |top_fsm|top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|addr_byte_out[0] ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |top_fsm|cont_reset[19]                                                ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[316][6]    ;
-; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|SCREEN_EAT[12][7]      ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|SCREEN_HEAL[77][3]     ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|SCREEN_EAT[41][4]      ;
-; 16:1               ; 3 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; Yes        ; |top_fsm|led_s2~reg0                                                   ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |top_fsm|cont_reset[14]                                                ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|SCREEN_HEAL[13][6]     ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|SCREEN_PLAY[77][3]     ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|SCREEN_HEAL[51][4]     ;
+; 16:1               ; 3 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; Yes        ; |top_fsm|led_s3~reg0                                                   ;
 ; 16:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[200][2]    ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_fsm|top_hcsr04:UTT_ultrasonido|level2                             ;
-; 18:1               ; 2 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |top_fsm|top_oled:UUT_oled|master_i2c_oled:i2c|addr_byte_out[0]        ;
-; 18:1               ; 9 bits    ; 108 LEs       ; 0 LEs                ; 108 LEs                ; Yes        ; |top_fsm|top_oled:UUT_oled|master_i2c_oled:i2c|data_byte_out[1]        ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |top_fsm|ind_select[2]                                                 ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[195][2]    ;
-; 7:1                ; 6 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[487][0]    ;
-; 16:1               ; 27 bits   ; 270 LEs       ; 54 LEs               ; 216 LEs                ; Yes        ; |top_fsm|cont_actions[0]                                               ;
-; 19:1               ; 10 bits   ; 120 LEs       ; 20 LEs               ; 100 LEs                ; Yes        ; |top_fsm|top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|data_counter[1]  ;
-; 18:1               ; 5 bits    ; 60 LEs        ; 5 LEs                ; 55 LEs                 ; Yes        ; |top_fsm|top_oled:UUT_oled|master_i2c_oled:i2c|bit_counter[0]          ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_fsm|food[4]                                                       ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_fsm|fun[4]                                                        ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_fsm|rest[3]                                                       ;
-; 20:1               ; 3 bits    ; 39 LEs        ; 3 LEs                ; 36 LEs                 ; Yes        ; |top_fsm|top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|bit_counter[0]   ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][2]    ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |top_fsm|top_oled:UUT_oled|master_i2c_oled:i2c|addr_byte_out[3]        ;
+; 18:1               ; 9 bits    ; 108 LEs       ; 0 LEs                ; 108 LEs                ; Yes        ; |top_fsm|top_oled:UUT_oled|master_i2c_oled:i2c|data_byte_out[0]        ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |top_fsm|ind_select[3]                                                 ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[501][1]    ;
+; 16:1               ; 27 bits   ; 270 LEs       ; 54 LEs               ; 216 LEs                ; Yes        ; |top_fsm|cont_actions[20]                                              ;
+; 19:1               ; 10 bits   ; 120 LEs       ; 20 LEs               ; 100 LEs                ; Yes        ; |top_fsm|top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|data_counter[0]  ;
+; 18:1               ; 5 bits    ; 60 LEs        ; 5 LEs                ; 55 LEs                 ; Yes        ; |top_fsm|top_oled:UUT_oled|master_i2c_oled:i2c|bit_counter[2]          ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_fsm|food[1]                                                       ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_fsm|fun[3]                                                        ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_fsm|rest[4]                                                       ;
+; 20:1               ; 3 bits    ; 39 LEs        ; 3 LEs                ; 36 LEs                 ; Yes        ; |top_fsm|top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|bit_counter[2]   ;
 ; 9:1                ; 4 bits    ; 24 LEs        ; 20 LEs               ; 4 LEs                  ; Yes        ; |top_fsm|state[0]                                                      ;
-; 24:1               ; 2 bits    ; 32 LEs        ; 4 LEs                ; 28 LEs                 ; Yes        ; |top_fsm|top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|bit_counter[3]   ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |top_fsm|cont_reset[18]                                                ;
+; 24:1               ; 2 bits    ; 32 LEs        ; 4 LEs                ; 28 LEs                 ; Yes        ; |top_fsm|top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|bit_counter[4]   ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |top_fsm|cont_reset[23]                                                ;
 ; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_fsm|food[6]                                                       ;
 ; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_fsm|fun[6]                                                        ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_fsm|rest[6]                                                       ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_fsm|rest[2]                                                       ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|Mux9                   ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|Mux9                   ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|Mux9                   ;
@@ -5354,7 +5386,6 @@ Encoding Type:  One-Hot
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|Mux8                   ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|Mux0                   ;
 ; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |top_fsm|life                                                          ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|Mux0                   ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|Mux8                   ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|Mux0                   ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |top_fsm|top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|bus_timing       ;
@@ -5374,31 +5405,45 @@ Encoding Type:  One-Hot
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "buzzer:UTT_buzzer"                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; LA   ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; MI   ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; SOL  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; RE   ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; FA   ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; SI   ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 24                          ;
-; cycloneiii_ff         ; 476                         ;
-;     ENA               ; 303                         ;
+; boundary_port         ; 25                          ;
+; cycloneiii_ff         ; 494                         ;
+;     ENA               ; 300                         ;
 ;     ENA SCLR          ; 6                           ;
 ;     ENA SLD           ; 3                           ;
 ;     SCLR              ; 47                          ;
-;     plain             ; 117                         ;
+;     plain             ; 138                         ;
 ; cycloneiii_io_obuf    ; 4                           ;
-; cycloneiii_lcell_comb ; 3878                        ;
-;     arith             ; 269                         ;
-;         2 data inputs ; 212                         ;
+; cycloneiii_lcell_comb ; 3861                        ;
+;     arith             ; 288                         ;
+;         2 data inputs ; 231                         ;
 ;         3 data inputs ; 57                          ;
-;     normal            ; 3609                        ;
+;     normal            ; 3573                        ;
 ;         1 data inputs ; 56                          ;
-;         2 data inputs ; 256                         ;
-;         3 data inputs ; 467                         ;
-;         4 data inputs ; 2830                        ;
+;         2 data inputs ; 265                         ;
+;         3 data inputs ; 435                         ;
+;         4 data inputs ; 2817                        ;
 ;                       ;                             ;
 ; Max LUT depth         ; 27.60                       ;
-; Average LUT depth     ; 8.52                        ;
+; Average LUT depth     ; 8.42                        ;
 +-----------------------+-----------------------------+
 
 
@@ -5417,7 +5462,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Wed Sep 18 20:43:02 2024
+    Info: Processing started: Wed Sep 18 22:30:17 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_fsm -c top_fsm
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -5431,21 +5476,21 @@ Info (12021): Found 1 design units, including 1 entities, in source file ads1115
     Info (12023): Found entity 1: ads1115_master File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/ads1115_master.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at top_ads1115.v(52): created implicit net for "only_register" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_ads1115.v Line: 52
 Info (12127): Elaborating entity "top_fsm" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at top_fsm.v(66): object "death" assigned a value but never read File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_fsm.v Line: 66
-Warning (10230): Verilog HDL assignment warning at top_fsm.v(274): truncated value with size 32 to match size of target (27) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_fsm.v Line: 274
-Info (12128): Elaborating entity "top_ads1115" for hierarchy "top_ads1115:UTT_joystick" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_fsm.v Line: 39
+Warning (10036): Verilog HDL or VHDL warning at top_fsm.v(73): object "death" assigned a value but never read File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_fsm.v Line: 73
+Warning (10230): Verilog HDL assignment warning at top_fsm.v(281): truncated value with size 32 to match size of target (27) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_fsm.v Line: 281
+Info (12128): Elaborating entity "top_ads1115" for hierarchy "top_ads1115:UTT_joystick" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_fsm.v Line: 40
 Info (12128): Elaborating entity "i2c_ads1115" for hierarchy "top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_ads1115.v Line: 56
 Warning (10036): Verilog HDL or VHDL warning at i2c_ads1115.v(70): object "band" assigned a value but never read File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/i2c_ads1115.v Line: 70
 Info (12128): Elaborating entity "ads1115_master" for hierarchy "top_ads1115:UTT_joystick|ads1115_master:UUT_setup" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_ads1115.v Line: 68
 Warning (10036): Verilog HDL or VHDL warning at ads1115_master.v(28): object "block_sep" assigned a value but never read File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/ads1115_master.v Line: 28
 Warning (12125): Using design file top_hcsr04.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: top_hcsr04 File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_hcsr04.v Line: 1
-Info (12128): Elaborating entity "top_hcsr04" for hierarchy "top_hcsr04:UTT_ultrasonido" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_fsm.v Line: 48
+Info (12128): Elaborating entity "top_hcsr04" for hierarchy "top_hcsr04:UTT_ultrasonido" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_fsm.v Line: 49
 Warning (10230): Verilog HDL assignment warning at top_hcsr04.v(19): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_hcsr04.v Line: 19
 Warning (10230): Verilog HDL assignment warning at top_hcsr04.v(30): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_hcsr04.v Line: 30
 Warning (12125): Using design file top_oled.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: top_oled File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_oled.v Line: 3
-Info (12128): Elaborating entity "top_oled" for hierarchy "top_oled:UUT_oled" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_fsm.v Line: 59
+Info (12128): Elaborating entity "top_oled" for hierarchy "top_oled:UUT_oled" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_fsm.v Line: 60
 Warning (12125): Using design file master_i2c_oled.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: master_i2c_oled File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/master_i2c_oled.v Line: 3
 Info (12128): Elaborating entity "master_i2c_oled" for hierarchy "top_oled:UUT_oled|master_i2c_oled:i2c" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_oled.v Line: 30
@@ -5458,24 +5503,35 @@ Warning (10030): Net "SCREEN_DEATH.data_a" at ssd1306_master.v(63) has no driver
 Warning (10030): Net "SCREEN_DEATH.waddr_a" at ssd1306_master.v(63) has no driver or initial value, using a default initial value '0' File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/ssd1306_master.v Line: 63
 Warning (10030): Net "SCREEN_START.we_a" at ssd1306_master.v(57) has no driver or initial value, using a default initial value '0' File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/ssd1306_master.v Line: 57
 Warning (10030): Net "SCREEN_DEATH.we_a" at ssd1306_master.v(63) has no driver or initial value, using a default initial value '0' File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/ssd1306_master.v Line: 63
+Warning (12125): Using design file buzzer.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: buzzer File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/buzzer.v Line: 1
+Info (12128): Elaborating entity "buzzer" for hierarchy "buzzer:UTT_buzzer" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_fsm.v Line: 66
+Warning (10230): Verilog HDL assignment warning at buzzer.v(35): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/buzzer.v Line: 35
+Warning (10230): Verilog HDL assignment warning at buzzer.v(43): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/buzzer.v Line: 43
+Warning (10230): Verilog HDL assignment warning at buzzer.v(51): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/buzzer.v Line: 51
+Warning (10230): Verilog HDL assignment warning at buzzer.v(59): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/buzzer.v Line: 59
+Warning (10230): Verilog HDL assignment warning at buzzer.v(67): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/buzzer.v Line: 67
+Warning (10230): Verilog HDL assignment warning at buzzer.v(75): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/buzzer.v Line: 75
+Warning (10230): Verilog HDL assignment warning at buzzer.v(83): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/buzzer.v Line: 83
 Info (276014): Found 2 instances of uninferred RAM logic
     Info (276007): RAM logic "top_oled:UUT_oled|ssd1306_master:setup|SCREEN_START" is uninferred due to asynchronous read logic File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/ssd1306_master.v Line: 57
     Info (276007): RAM logic "top_oled:UUT_oled|ssd1306_master:setup|SCREEN_DEATH" is uninferred due to asynchronous read logic File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/ssd1306_master.v Line: 63
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (17049): 124 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/output_files/top_fsm.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3996 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3978 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 13 output pins
+    Info (21059): Implemented 14 output pins
     Info (21060): Implemented 4 bidirectional pins
-    Info (21061): Implemented 3972 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4864 megabytes
-    Info: Processing ended: Wed Sep 18 20:43:19 2024
+    Info (21061): Implemented 3953 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 4866 megabytes
+    Info: Processing ended: Wed Sep 18 22:30:34 2024
     Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Total CPU time (on all processors): 00:00:05
 
 
 +------------------------------------------+

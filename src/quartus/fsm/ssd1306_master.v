@@ -385,7 +385,7 @@ module ssd1306_master (
 									
 								//setting character aspect
 									
-								if (life > 7'd33 && life <= 7'd100) begin
+								if (life >= 7'd0 && life <= 7'd100) begin
 									SCREEN_MAIN[183] = 8'h0;
 									SCREEN_MAIN[184] = 8'h0;
 									SCREEN_MAIN[185] = 8'h0;
@@ -439,62 +439,6 @@ module ssd1306_master (
 									SCREEN_MAIN[453] = 8'h67;
 									SCREEN_MAIN[454] = 8'h58;
 									SCREEN_MAIN[455] = 8'h60;
-								end
-								
-								else if (life > 7'd0 && life <= 7'd33) begin
-									SCREEN_MAIN[183] = 8'h0;
-									SCREEN_MAIN[184] = 8'h0;
-									SCREEN_MAIN[185] = 8'h0;
-									SCREEN_MAIN[186] = 8'h0;
-									SCREEN_MAIN[187] = 8'h0;
-									SCREEN_MAIN[188] = 8'h0;
-									SCREEN_MAIN[189] = 8'h0;
-									SCREEN_MAIN[190] = 8'h0;
-									SCREEN_MAIN[191] = 8'h0;
-									SCREEN_MAIN[192] = 8'h0;
-									SCREEN_MAIN[193] = 8'h0;
-									SCREEN_MAIN[194] = 8'h0;
-									SCREEN_MAIN[195] = 8'h0;
-									SCREEN_MAIN[196] = 8'h0;
-									SCREEN_MAIN[197] = 8'h0;
-									SCREEN_MAIN[198] = 8'h0;
-									SCREEN_MAIN[199] = 8'h0;
-									
-									SCREEN_MAIN[311] = 8'h0;
-									SCREEN_MAIN[312] = 8'h0;
-									SCREEN_MAIN[313] = 8'h0;
-									SCREEN_MAIN[314] = 8'h0;
-									SCREEN_MAIN[315] = 8'h0;
-									SCREEN_MAIN[316] = 8'hC0;
-									SCREEN_MAIN[317] = 8'h40;
-									SCREEN_MAIN[318] = 8'h80;
-									SCREEN_MAIN[319] = 8'h80;
-									SCREEN_MAIN[320] = 8'h80;
-									SCREEN_MAIN[321] = 8'h40;
-									SCREEN_MAIN[322] = 8'hC0;
-									SCREEN_MAIN[323] = 8'h0;
-									SCREEN_MAIN[324] = 8'h0;
-									SCREEN_MAIN[325] = 8'h0;
-									SCREEN_MAIN[326] = 8'h0;
-									SCREEN_MAIN[327] = 8'h0;
-
-									SCREEN_MAIN[439] = 8'h0;
-									SCREEN_MAIN[440] = 8'h0;
-									SCREEN_MAIN[441] = 8'h0;
-									SCREEN_MAIN[442] = 8'h1E;
-									SCREEN_MAIN[443] = 8'h21;
-									SCREEN_MAIN[444] = 8'h40;
-									SCREEN_MAIN[445] = 8'h46;
-									SCREEN_MAIN[446] = 8'h48;
-									SCREEN_MAIN[447] = 8'h48;
-									SCREEN_MAIN[448] = 8'h48;
-									SCREEN_MAIN[449] = 8'h46;
-									SCREEN_MAIN[450] = 8'h40;
-									SCREEN_MAIN[451] = 8'h21;
-									SCREEN_MAIN[452] = 8'h1E;
-									SCREEN_MAIN[453] = 8'h0;
-									SCREEN_MAIN[454] = 8'h0;
-									SCREEN_MAIN[455] = 8'h0;
 								end
 
 								//setting life indicator

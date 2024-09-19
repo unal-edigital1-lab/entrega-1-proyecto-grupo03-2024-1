@@ -24,7 +24,8 @@ module top_fsm (
     output level2,
 	output reg led_s1,
 	output reg led_s2,
-	output reg led_s3
+	output reg led_s3,
+    output SONIDO
 );
 
 top_ads1115 UTT_joystick (
@@ -56,6 +57,12 @@ top_oled UUT_oled (
 	.needs_values(needs_values),
 	.sda(sda_display), 
 	.scl(scl_display)
+);
+
+buzzer UTT_buzzer (
+    .clk(clk),
+    .DO(btn_cancel),
+    .SONIDO(SONIDO)
 );
 
 reg [6:0] life = 7'd100;
