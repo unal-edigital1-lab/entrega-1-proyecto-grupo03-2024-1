@@ -1,15 +1,19 @@
-# Entrega #1 - Proyecto Electrónica Digital I 👾
+# Proyecto Electrónica Digital I - Tamagotchi👾
 
 ## Contenido
-  
-- [Entrega #1 - Proyecto Electrónica Digital I 👾](#entrega-1---proyecto-electrónica-digital-i-)
+
+- [Proyecto Electrónica Digital I - Tamagotchi👾](#proyecto-electrónica-digital-i---tamagotchi)
   - [Contenido](#contenido)
   - [Integrantes](#integrantes)
   - [Diseño de Interfaz y Transiciones ✏️](#diseño-de-interfaz-y-transiciones-️)
   - [Especificaciones](#especificaciones)
-  - [Descripción del Hardware](#descripción-de-Hardware)
-  - [Diagramas de Flujo](#diagramas-de-flujo)
-  - [Maquina de estados finitos](#máquina-de-estados-finitos)
+    - [a. Sistema de botones](#a-sistema-de-botones)
+    - [b. Sistema de sensado](#b-sistema-de-sensado)
+    - [c. Sistema de visualización](#c-sistema-de-visualización)
+    - [d. Manejo de necesidades e indicadores](#d--manejo-de-necesidades-e-indicadores)
+  - [Descripción de Hardware](#descripción-de-hardware)
+  - [Diagramas de flujo](#diagramas-de-flujo)
+  - [Máquina de estados finitos](#máquina-de-estados-finitos)
   - [Diagrama del sistema](#diagrama-del-sistema)
 
 ## Integrantes
@@ -20,11 +24,17 @@
 
 ## Diseño de Interfaz y Transiciones ✏️
 
+Para la interfaz de usuario y la visualización, se diseñaron dstintos personajes, así como sus respectivas animaciones dependiendo de la acción que esté realizando (dormir, curar, comer, jugar).
+
+![fotos](https://github.com/user-attachments/assets/f4d3d39e-40fe-48ad-a81a-ddfed951acd3)
+
+Por otro lado, se diseñó una pantalla principal, así como 
 Se planea diseñar una interfaz de usuario y mostrar la información acerca del tamagochi en una pantalla OLED, incluyendo su estado actual, necesidades y demás detalles.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/5be8157f-a5f7-46c7-aeb2-2d29e8df4f79">
 </p>
+
 
 La interfaz de usuario del Tamagotchi será un componente esencial para la interacción efectiva entre el usuario y la mascota virtual. Por otro lado, incorporará botones físicos intuitivos para permitir al usuario navegar entre las opciones y modos de interacción, como alimentación, dormir, curar y juego, así como seleccionar acciones específicas para cuidar de la mascota. También se puede agregar retroalimentación visual a través de luces LED y sonidos mediante un altavoz para alertar al usuario sobre las necesidades y actividades de la mascota, facilitando así una experiencia de juego envolvente y fácil de usar.
 
@@ -52,53 +62,52 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
   
   - **Test**: Activa el modo de prueba al mantenerlo pulsado por al menos 5 segundos, permitiendo al usuario navegar entre los diferentes estados del Tamagotchi con cada pulsación.
 
-  - **Select**: Permite al usuario desplezarse por los diferentes indicadores del modo de interacción.
-  
-  - **Action**: Permite al usuario luego de desplazarse por los indicadores decidir cual de las acciones realizar o repetir.
-  
-  - **Cancel**: Permite al usuario salir de las opciones y modos de interacción, retornandolo al menu principal.
-  
-  ### b. Sistema de sensado
-  
-  Para integrar al Tamagotchi con el entorno real y enriquecer la experiencia de interacción, se incorporará al menos un sensor que modifique el comportamiento de la mascota virtual en respuesta a estímulos externos. Los sensores permitirán simular condiciones ambientales y actividades que afecten directamente el bienestar de la mascota.
-  
-  - **Giroscopio/Acelerómetro**: Permitirá al usuario luego de seleccionar la interacción juego (Fun) activarlo mediante la agitación del tamagochi.
+- **Select**: Permite al usuario desplezarse por los diferentes indicadores del modo de interacción.
 
-  - **Sensor de ultrasonido**: Permitirá al usuario luego de seleccionar la interacción dormir (Rest) despertar al tamagochi acercandose a el.
-  
-  ### c. Sistema de visualización
-  
-  Para visualizar todas las interacciones y estados del dispositivo se utilizara únicamente un módulo display LCD OLED SPI
+- **Action**: Permite al usuario luego de desplazarse por los indicadores decidir cual de las acciones realizar o repetir.
 
-  - Voltaje de Operación DC: 3V ~ 5V
-  - Controlador: SSD1306
-  - Resolución: 128 x 32
+- **Cancel**: Permite al usuario salir de las opciones y modos de interacción, retornandolo al menu principal.
 
-  ### d.  Manejo de necesidades e indicadores
+### b. Sistema de sensado
 
-  Se tendra una serie de atributos los cuales estaran asociados a diferentes valores, y según dichos valores y algún limite establecido se definirán las necesidades de la mascota. 
+Para integrar al Tamagotchi con el entorno real y enriquecer la experiencia de interacción, se incorporará al menos un sensor que modifique el comportamiento de la mascota virtual en respuesta a estímulos externos. Los sensores permitirán simular condiciones ambientales y actividades que afecten directamente el bienestar de la mascota.
 
-  | **Atributos** | **Valores** |
-  |:-------------:|:-----------:|
-  | Hambre        | 0 - 100     |
-  | Fatiga        | 0 - 100     |
-  | Tristeza      | 0 - 100     |
-  | Enfermedad    | 0 - 1       |
-  | Muerte        | 0 - 1       |
-  | Medicina      | 0 - 100     |
-  | Vida          | 0 - 100     |
+- **Giroscopio/Acelerómetro**: Permitirá al usuario luego de seleccionar la interacción juego (Fun) activarlo mediante la agitación del tamagochi.
 
-  |  **Indicador**  | **Necesidad** |
-  |:---------------:|:-------------:|
-  |       Pan       |     Hambre    |
-  | Bate de beisbol |    Tristeza   |
-  |    Bostesando   |     Fatiga    |
-  |     Calavera    |   Enfermedad  |
+- **Sensor de ultrasonido**: Permitirá al usuario luego de seleccionar la interacción dormir (Rest) despertar al tamagochi acercandose a el.
+
+### c. Sistema de visualización
+
+Para visualizar todas las interacciones y estados del dispositivo se utilizara únicamente un módulo display LCD OLED SPI
+
+- Voltaje de Operación DC: 3V ~ 5V
+- Controlador: SSD1306
+- Resolución: 128 x 32
+
+### d. Manejo de necesidades e indicadores
+
+Se tendra una serie de atributos los cuales estaran asociados a diferentes valores, y según dichos valores y algún limite establecido se definirán las necesidades de la mascota.
+
+| **Atributos** | **Valores** |
+| :-----------: | :---------: |
+|    Hambre     |   0 - 100   |
+|    Fatiga     |   0 - 100   |
+|   Tristeza    |   0 - 100   |
+|  Enfermedad   |    0 - 1    |
+|    Muerte     |    0 - 1    |
+|   Medicina    |   0 - 100   |
+|     Vida      |   0 - 100   |
+
+|  **Indicador**  | **Necesidad** |
+| :-------------: | :-----------: |
+|       Pan       |    Hambre     |
+| Bate de beisbol |   Tristeza    |
+|   Bostesando    |    Fatiga     |
+|    Calavera     |  Enfermedad   |
 
   <p align="center">
     <img src=https://github.com/user-attachments/assets/7a5ef0f4-ab13-4f3d-933e-77acfc9b5c2a width="500" height="100">
   </p>
-
 
 ## Descripción de Hardware
 
@@ -129,35 +138,33 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
   </p>
 
   - Sadness:
-    
+
   <p align="center">
     <img src=https://github.com/user-attachments/assets/0e12d205-7ec6-4831-8b12-de2cc9f72591>
   </p>
 
   - Fatigue:
-  
+
   <p align="center">
     <img src=https://github.com/user-attachments/assets/eca3294f-3177-4347-add5-e9ff4e2e4641>
   </p>
- - **_Casos de interacción_**:
-  - Heal:
+
+- **_Casos de interacción_**:
+- Heal:
 
 ![diagrama base, heal drawio (1)](https://github.com/user-attachments/assets/421e729a-14e2-4d26-a697-44cfc3ad2a26)
 
-  - Feed:
+- Feed:
 
 ![diagrama feed drawio](https://github.com/user-attachments/assets/9e91d889-d7e1-44a3-b621-c4f044939f1b)
 
-
-  - Rest:
+- Rest:
 
 ![DIAGRAMA rest drawio](https://github.com/user-attachments/assets/ec6fb1d5-8c69-4f53-a8d6-bfdf28c7f16d)
 
-  
-  - Fun:
+- Fun:
 
 ![JUGAR drawio](https://github.com/user-attachments/assets/41cc9234-9be6-427f-9d0f-47a14367f266)
-
 
 ## Máquina de estados finitos
 
@@ -176,25 +183,25 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
 - **_Necesidades_**:
 
   - Hungry:
- 
+
   <p align="center">
     <img src=https://github.com/user-attachments/assets/8fcfdf29-5f84-413b-b039-03f66fe6767d>
   </p>
 
   - Sadness:
-    
+
   <p align="center">
     <img src=https://github.com/user-attachments/assets/f411b84a-6bb9-4f6f-bb61-b4ac3158de2a>
   </p>
 
   - Fatigue:
- 
+
   <p align="center">
     <img src=https://github.com/user-attachments/assets/d094b43a-279b-4b5c-be75-babe642f5d7f>
   </p>
 
 - **_Casos de interacción_**:
-  
+
   - Heal:
 
   <p align="center">
@@ -212,7 +219,7 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
   <p align="center">
     <img src=https://github.com/user-attachments/assets/00490f80-3bb5-4e0c-818e-efb52796665e>
   </p>
-  
+
   - Fun:
 
   <p align="center">
@@ -224,5 +231,3 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
 <p align="center">
   <img src=https://github.com/user-attachments/assets/d4aaa4b8-a69b-4f43-bcde-eee6af9c3386>
 </p>
-
-
