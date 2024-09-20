@@ -47,7 +47,7 @@ top_hcsr04 UTT_ultrasonido (
     .level2(level2)
 );
 
-wire [7:0] screen_param = {act_eat, act_heal, act_play, act_sleep, state};
+wire [8:0] screen_param = {test, act_eat, act_heal, act_play, act_sleep, state};
 wire [32:0] needs_values = {disease, life, food, fun, rest, ind_select};
 
 top_oled UUT_oled (
@@ -82,17 +82,17 @@ reg [5:0] cont_rest = 0;
 // verify disease and death
 
 always @(posedge clk) begin 
-    if (life <= 20 && test == 0) begin
+    if (life <= 16) begin
         disease <= 1;
     end
-    else if (test == 0) begin
+    else begin
         disease <= 0;
     end
 
-    if (life == 0 && test == 0) begin
+    if (life == 0) begin
         death = 1;
     end
-    else if (test == 0) begin
+    else begin
         death = 0;
     end
 end
@@ -126,8 +126,10 @@ localparam IND_HEAL = 4'd3;
 
 localparam DELAY_TIME_BUTTONS = 26'd25000000;
 localparam DELAY_SCREEN_PAUSE = 30'd100000000;
+localparam DELAY_0_1_SEG = 30'd5000000;
+localparam DELAY_1SEG = 30'd50000000;
+localparam DELAY_2SEG = 30'd100000000;
 localparam DELAY_5SEG = 30'd250000000;
-localparam DELAY_3SEG = 30'd150000000;
 
 integer i;
 reg [3:0] ind_select = IND_PLAY;
@@ -157,7 +159,7 @@ reg act_heal = 0;
 
 always @(posedge clk) begin
 
-    if (cont_pulse_1s == 26'd50000000/10) begin
+    if (cont_pulse_1s == 26'd40000000) begin
         pulse_1s <= 1;
         cont_pulse_1s <= 0;
     end
@@ -166,7 +168,7 @@ always @(posedge clk) begin
         cont_pulse_1s <= cont_pulse_1s + 1'd1;
     end
 
-    if (pulse_1s && state != START && test == 0) begin
+    if (pulse_1s && state != START && test == 0 && btn_reset == 0 && btn_test == 0) begin
         cont_food = cont_food + 1'b1;
         cont_fun = cont_fun + 1'b1;
         cont_rest = cont_rest + 1'b1;
@@ -186,40 +188,11 @@ always @(posedge clk) begin
             cont_rest <= 0;
         end
 
-        //life minus
+        //life setup
 
-        if (food <= LIFE_MINUS && life > 0) begin
-            life = life - 1'b1;
-        end
-
-        if (fun <= LIFE_MINUS && life > 0) begin
-            life = life - 1'b1;
-        end
-
-        if (rest <= LIFE_MINUS && life > 0) begin
-            life = life - 1'b1;
-        end
-
-        //life plus
-
-        if (food >= LIFE_PLUS && life < 100) begin
-            life = life + 1'b1;
-        end
-
-        if (fun >= LIFE_PLUS && life < 100) begin
-            life = life + 1'b1;
-        end
-
-        if (rest >= LIFE_PLUS && life < 100) begin
-            life = life + 1'b1;
-        end
+        life = (rest + fun + food)/3;
     end
 	
-	if (btn_cancel == 1 && test == 0) begin
-		state <= MAIN;
-        cont_actions = 0;
-	end
-
     if (btn_reset == 1) begin
         if (cont_reset == 0) begin
                 state <= START;
@@ -228,9 +201,12 @@ always @(posedge clk) begin
                 rest <= 7'd100;
                 food <= 7'd100;
                 test <= 0;
-                death <= 0;
                 ind_select <=  IND_PLAY;
+                state_test <= MAIN_REVIEW;
                 cont_reset <=  DELAY_5SEG;
+                test_timing <= 0;
+
+                cont_reset <= DELAY_5SEG;
             end
             else begin
                 cont_reset <= cont_reset - 1'b1;
@@ -243,7 +219,6 @@ always @(posedge clk) begin
     if (btn_test == 1 && test == 0) begin
         if (cont_test == 0) begin
             test <= 1;
-            cont_test <= DELAY_3SEG;
         end
         else begin
             cont_test <= cont_test - 1'b1;
@@ -253,12 +228,21 @@ always @(posedge clk) begin
         cont_test <= DELAY_5SEG;
     end
 
-    if (life >= 30 && state == HEAL && test == 0) begin
-        state <= MAIN;
-        ind_select <= IND_PLAY;
-    end
+    if (test == 0 && btn_reset == 0) begin
 
-    if (test == 0) begin
+        if (btn_cancel == 1 && death == 0) begin
+            state <= MAIN;
+            cont_actions = 0;
+	    end
+
+        if (life >= 30 && state == HEAL) begin
+            state <= MAIN;
+        end
+
+        if (death == 1) begin
+            state <= DEATH;
+        end
+
         case (state)
             START: begin
                 if (cont_screen_pause == 0) begin
@@ -333,8 +317,8 @@ always @(posedge clk) begin
                     if (cont_actions == 26'd50000000) begin
                         cont_actions <= 0;
 
-                        if (fun + 7'd30 < 7'd100) begin
-                            fun <= fun + 7'd30;
+                        if (fun + 7'd10 < 7'd100) begin
+                            fun <= fun + 7'd10;
                         end
                         else begin
                             fun <= 7'd100;
@@ -360,8 +344,8 @@ always @(posedge clk) begin
                     if (cont_actions == 26'd50000000) begin
                         cont_actions <= 0;
 
-                        if (rest + 7'd30 < 7'd100) begin
-                            rest <= rest + 7'd30;
+                        if (rest + 7'd10 < 7'd100) begin
+                            rest <= rest + 7'd10;
                         end
                         else begin
                             rest <= 7'd100;
@@ -387,8 +371,8 @@ always @(posedge clk) begin
                     if (cont_actions == 26'd50000000) begin
                         cont_actions <= 0;
 
-                        if (food + 7'd30 < 7'd100) begin
-                            food <= food + 7'd30;
+                        if (food + 7'd10 < 7'd100) begin
+                            food <= food + 7'd10;
                         end
                         else begin
                             food <= 7'd100;
@@ -415,9 +399,9 @@ always @(posedge clk) begin
                     if (cont_actions == 26'd50000000) begin
                         cont_actions <= 0;
 
-                        food <= 7'd100;
-                        fun <= 7'd100;
-                        rest <= 7'd100;
+                        food <= 7'd50;
+                        fun <= 7'd50;
+                        rest <= 7'd50;
                     end
                     else begin
                         cont_actions <= cont_actions + 1'd1;
@@ -436,32 +420,36 @@ always @(posedge clk) begin
             end
         endcase
     end
-    else begin
+    else if (test == 1 && btn_reset == 0) begin
 
-        if (btn_test == 1 && state_test != SLEEP_REVIEW) begin
-            if (cont_test == 0) begin
+        if (!enable_joystick) begin
+                    if (cont_enable_joystick == DELAY_TIME_BUTTONS) begin
+                        enable_joystick <= 1;
+                        cont_enable_joystick <= 0;
+                    end
+                    else begin
+                        cont_enable_joystick <= cont_enable_joystick + 1;
+                    end
+                end
+
+        if (btn_right == 1 && enable_joystick && state_test != SLEEP_REVIEW) begin
+            if (state_test != DEATH_REVIEW) begin
                 test_timing <= test_timing + 1'd1;
-                cont_test <= DELAY_3SEG;
-            end
-            else begin
-                cont_test <= cont_test - 1'b1;
+                enable_joystick <= 0;
             end
         end
-        else if (state_test != SLEEP_REVIEW) begin
-            cont_test <= DELAY_3SEG;
-        end
 
-        if (level2 == 0 && state_test == SLEEP_REVIEW) begin
+        if (level1 == 0 && state_test == SLEEP_REVIEW) begin
             if (cont_test == 0) begin
                 test_timing <= test_timing + 1'd1;
-                cont_actions <= DELAY_3SEG;
+                cont_test <= DELAY_1SEG;
             end
             else begin
                 cont_test <= cont_test - 1'b1;
             end
         end
         else if (state_test == SLEEP_REVIEW) begin
-            cont_test <= DELAY_3SEG;
+            cont_test <= DELAY_1SEG;
         end
 
         case (state_test)
@@ -469,31 +457,31 @@ always @(posedge clk) begin
                 state <= MAIN;
                 case (test_timing)
                     0: begin
-                        fun <= 7'd33;
-                        rest <= 7'd33;
-                        food <= 7'd33;
-                        life <= 7'd16;
+                        fun <= 7'd100;
+                        rest <= 7'd100;
+                        food <= 7'd100;
+                        life <= 7'd100;
                     end
                     1: begin
-                        life <= 7'd33;
+                        life <= 7'd83;
                     end
                     2: begin
                         fun <= 7'd67;
                         rest <= 7'd67;
                         food <= 7'd67;
-                        life <= 7'd50;
-                    end
-                    3: begin
                         life <= 7'd67;
                     end
+                    3: begin
+                        life <= 7'd50;
+                    end
                     4: begin
-                        fun <= 7'd100;
-                        rest <= 7'd100;
-                        food <= 7'd100;
-                        life <= 7'd83;
+                        fun <= 7'd33;
+                        rest <= 7'd33;
+                        food <= 7'd33;
+                        life <= 7'd33;
                     end
                     5: begin
-                        life <= 7'd100;
+                        life <= 7'd16;
                     end
                     6: begin
                         test_timing <= 4'd0;
@@ -506,10 +494,10 @@ always @(posedge clk) begin
                 state <= PLAY;
                 case (test_timing)
                     0: begin
-                        act_play <= 1;
+                        act_play <= 0;
                     end
                     1: begin
-                        fun <= 7'd33;
+                        act_play <= 1;
                     end
                     2: begin
                         fun <= 7'd67;
@@ -531,10 +519,10 @@ always @(posedge clk) begin
                 state <= EAT;
                 case (test_timing)
                     0: begin
-                        act_eat <= 1;
+                        act_eat <= 0;
                     end
                     1: begin
-                        food <= 7'd33;
+                        act_eat <= 1;
                     end
                     2: begin
                         food <= 7'd67;
@@ -548,6 +536,7 @@ always @(posedge clk) begin
                     5: begin
                         test_timing <= 4'd0;
                         state_test <= SLEEP_REVIEW;
+                        cont_test <= DELAY_1SEG;
                     end
                 endcase
             end
@@ -556,10 +545,10 @@ always @(posedge clk) begin
                 state <= SLEEP;
                 case (test_timing)
                     0: begin
-                        act_sleep <= 1;
+                        act_sleep <= 0;
                     end
                     1: begin
-                        rest <= 7'd33;
+                        act_sleep <= 1;
                     end
                     2: begin
                         rest <= 7'd67;
@@ -573,6 +562,9 @@ always @(posedge clk) begin
                     5: begin
                         test_timing <= 4'd0;
                         state_test <= HEAL_REVIEW;
+                        fun <= 7'd33;
+                        food <= 7'd33;
+                        rest <= 7'd33;
                     end
                 endcase
             end
@@ -581,12 +573,10 @@ always @(posedge clk) begin
                 state <= HEAL;
                 case (test_timing)
                     0: begin
-                        act_heal <= 1;
+                        act_heal <= 0;
                     end
                     1: begin
-                        fun <= 7'd33;
-                        food <= 7'd33;
-                        rest <= 7'd33;
+                        act_heal <= 1;
                     end
                     2: begin
                         fun <= 7'd67;
@@ -610,8 +600,7 @@ always @(posedge clk) begin
 
             DEATH_REVIEW: begin
                 state <= DEATH;
-                death <= 1;
-                test <= 0;
+                cont_test <= DELAY_5SEG;
             end
         endcase
     end

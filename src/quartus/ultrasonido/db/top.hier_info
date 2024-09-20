@@ -1,4 +1,4 @@
-|hcsr04
+|top_hcsr04
 clk => level2~reg0.CLK
 clk => level1~reg0.CLK
 clk => contEcho[0].CLK

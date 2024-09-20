@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module top_fsm copy(
+module top_fsm_copy(
     input clk,
     input btn_reset,
     input btn_cancel,

@@ -11,7 +11,7 @@ module top_hcsr04 (
 	reg [19:0] contEcho;	
 	parameter PULSE_TRIGGER = 20'd500000;
 	
-	parameter DM = 20'd3000;	
+	parameter DM = 20'd2000;	
 	parameter D = 20'd30000;
 
 	always @(posedge clk) begin
@@ -49,6 +49,5 @@ module top_hcsr04 (
 				contEcho <= 0;
 		end
 	end
-
   
 endmodule

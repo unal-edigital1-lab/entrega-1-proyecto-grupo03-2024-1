@@ -1,4 +1,4 @@
-module hcsr04 (
+module top_hcsr04 (
 	input clk,
 	input echo,
 	input enable,
@@ -11,7 +11,7 @@ module hcsr04 (
 	reg [19:0] contEcho;	
 	parameter PULSE_TRIGGER = 20'd500000;
 	
-	parameter DM = 20'd3000;	
+	parameter DM = 20'd2000;	
 	parameter D = 20'd30000;
 
 	always @(posedge clk) begin

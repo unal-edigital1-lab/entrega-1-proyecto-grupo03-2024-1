@@ -3,10 +3,10 @@ clk => clk.IN2
 sw => led4~reg0.DATAIN
 sda <> i2c_ads1115:UTT_i2c.sda
 scl <> i2c_ads1115:UTT_i2c.scl
-led1 <= led1~reg0.DB_MAX_OUTPUT_PORT_TYPE
-led2 <= led2~reg0.DB_MAX_OUTPUT_PORT_TYPE
-led3 <= led3~reg0.DB_MAX_OUTPUT_PORT_TYPE
-led4 <= led4~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led1 << led1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led2 << led2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led3 << led3~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led4 << led4~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_ads1115|i2c_ads1115:UTT_i2c

@@ -2,7 +2,7 @@ module ssd1306_master (
     input clk,
     input [3:0] state,
     input [9:0] data_counter,
-	input [7:0] screen_param,
+	input [8:0] screen_param,
 	input [32:0] needs_values,
     output reg [6:0] addr_byte_in,
     output reg read_write,
@@ -26,6 +26,9 @@ module ssd1306_master (
 
 	wire [3:0] state_fsm;
 	assign state_fsm = screen_param[3:0];
+
+	wire test;
+	assign test = screen_param[8];
 
 	wire act_eat;
 	assign act_eat = screen_param[7];
@@ -382,7 +385,44 @@ module ssd1306_master (
 							end
 							else if (state_fsm == 1) begin
 								data_byte_in = SCREEN_MAIN[data_counter-32];
-									
+
+								if (test == 1) begin
+									SCREEN_MAIN[386] = 8'h1;
+									SCREEN_MAIN[387] = 8'h1;
+									SCREEN_MAIN[388] = 8'h7F;
+									SCREEN_MAIN[389] = 8'h1;
+									SCREEN_MAIN[390] = 8'h1;
+									SCREEN_MAIN[391] = 8'h7C;
+									SCREEN_MAIN[392] = 8'h54;
+									SCREEN_MAIN[393] = 8'h5C;
+									SCREEN_MAIN[394] = 8'h0;
+									SCREEN_MAIN[395] = 8'h5C;
+									SCREEN_MAIN[396] = 8'h54;
+									SCREEN_MAIN[397] = 8'h74;
+									SCREEN_MAIN[398] = 8'h0;
+									SCREEN_MAIN[399] = 8'h4;
+									SCREEN_MAIN[400] = 8'h7E;
+									SCREEN_MAIN[401] = 8'h44;
+								end
+								else begin
+									SCREEN_MAIN[386] = 8'h0;
+									SCREEN_MAIN[387] = 8'h0;
+									SCREEN_MAIN[388] = 8'h0;
+									SCREEN_MAIN[389] = 8'h0;
+									SCREEN_MAIN[390] = 8'h0;
+									SCREEN_MAIN[391] = 8'h0;
+									SCREEN_MAIN[392] = 8'h0;
+									SCREEN_MAIN[393] = 8'h0;
+									SCREEN_MAIN[394] = 8'h0;
+									SCREEN_MAIN[395] = 8'h0;
+									SCREEN_MAIN[396] = 8'h0;
+									SCREEN_MAIN[397] = 8'h0;
+									SCREEN_MAIN[398] = 8'h0;
+									SCREEN_MAIN[399] = 8'h0;
+									SCREEN_MAIN[400] = 8'h0;
+									SCREEN_MAIN[401] = 8'h0;
+								end
+
 								//setting character aspect
 									
 								if (life >= 7'd0 && life <= 7'd100) begin
@@ -819,56 +859,62 @@ module ssd1306_master (
 								end
 
 								//setting ind select
-
-								case (needs_values[3:0]) 
+								if (test == 0) begin
+									case (needs_values[3:0]) 
 										0: begin
-										for (i=128; i<138; i=i+1) begin
-											SCREEN_MAIN[i][2] = 0;
-										end
-										for (i=138; i<149; i=i+1) begin
-											SCREEN_MAIN[i][2] = 1;
-										end
-										for (i=149; i<256; i=i+1) begin
-											SCREEN_MAIN[i][2] = 0;
-										end
+											for (i=128; i<138; i=i+1) begin
+												SCREEN_MAIN[i][2] = 0;
+											end
+											for (i=138; i<149; i=i+1) begin
+												SCREEN_MAIN[i][2] = 1;
+											end
+											for (i=149; i<256; i=i+1) begin
+												SCREEN_MAIN[i][2] = 0;
+											end
 										end
 										
 										1: begin
-										for (i=128; i<159; i=i+1) begin
-											SCREEN_MAIN[i][2] = 0;
-										end
-										for (i=159; i<186; i=i+1) begin
-											SCREEN_MAIN[i][2] = 1;
-										end
-										for (i=186; i<256; i=i+1) begin
-											SCREEN_MAIN[i][2] = 0;
-										end
+											for (i=128; i<159; i=i+1) begin
+												SCREEN_MAIN[i][2] = 0;
+											end
+											for (i=159; i<186; i=i+1) begin
+												SCREEN_MAIN[i][2] = 1;
+											end
+											for (i=186; i<256; i=i+1) begin
+												SCREEN_MAIN[i][2] = 0;
+											end
 										end
 										
 										2: begin
-										for (i=128; i<195; i=i+1) begin
-											SCREEN_MAIN[i][2] = 0;
-										end
-										for (i=195; i<223; i=i+1) begin
-											SCREEN_MAIN[i][2] = 1;
-										end
-										for (i=223; i<256; i=i+1) begin
-											SCREEN_MAIN[i][2] = 0;
-										end
+											for (i=128; i<195; i=i+1) begin
+												SCREEN_MAIN[i][2] = 0;
+											end
+											for (i=195; i<223; i=i+1) begin
+												SCREEN_MAIN[i][2] = 1;
+											end
+											for (i=223; i<256; i=i+1) begin
+												SCREEN_MAIN[i][2] = 0;
+											end
 										end
 										
 										3: begin
-										for (i=128; i<234; i=i+1) begin
-											SCREEN_MAIN[i][2] = 0;
+											for (i=128; i<234; i=i+1) begin
+												SCREEN_MAIN[i][2] = 0;
+											end
+											for (i=234; i<245; i=i+1) begin
+												SCREEN_MAIN[i][2] = 1;
+											end
+											for (i=245; i<256; i=i+1) begin
+												SCREEN_MAIN[i][2] = 0;
+											end
 										end
-										for (i=234; i<245; i=i+1) begin
-											SCREEN_MAIN[i][2] = 1;
-										end
-										for (i=245; i<256; i=i+1) begin
-											SCREEN_MAIN[i][2] = 0;
-										end
-										end
-								endcase
+									endcase
+								end
+								else begin
+									for (i=128; i<256; i=i+1) begin
+										SCREEN_MAIN[i][2] = 0;
+									end
+								end
 							end
 							else if (state_fsm == 2) begin
 								data_byte_in = SCREEN_PLAY[data_counter-32];

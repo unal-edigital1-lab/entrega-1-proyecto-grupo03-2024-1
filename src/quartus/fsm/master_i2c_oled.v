@@ -17,7 +17,7 @@ module master_i2c_oled (
     reg [6:0] timer = 0;
 
     always @ (posedge clk) begin
-        if (timer > 7'd30)
+        if (timer > 7'd40)
             timer <= 7'd0;
         else
             timer <= timer + 1'b1;

@@ -1,6 +1,3 @@
-`include "src/ads1115/i2c_ads1115.v"
-`include "src/ads1115/ads1115_master.v"
-
 `timescale 1ns / 1ps // time scale - temporal precision
 
 module top_ads1115 (

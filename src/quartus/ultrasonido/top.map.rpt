@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Tue Sep 10 18:46:26 2024
+Thu Sep 19 23:31:02 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -15,7 +15,7 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |hcsr04
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |top_hcsr04
  11. Post-Synthesis Netlist Statistics for Top Partition
  12. Elapsed Time Per Partition
  13. Analysis & Synthesis Messages
@@ -46,13 +46,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Sep 10 18:46:26 2024          ;
+; Analysis & Synthesis Status        ; Successful - Thu Sep 19 23:31:02 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; top                                            ;
-; Top-level Entity Name              ; hcsr04                                         ;
+; Top-level Entity Name              ; top_hcsr04                                     ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 66                                             ;
-;     Total combinational functions  ; 66                                             ;
+; Total logic elements               ; 63                                             ;
+;     Total combinational functions  ; 63                                             ;
 ;     Dedicated logic registers      ; 43                                             ;
 ; Total registers                    ; 43                                             ;
 ; Total pins                         ; 6                                              ;
@@ -69,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE6E22C8        ;                    ;
-; Top-level entity name                                            ; hcsr04             ; top                ;
+; Top-level entity name                                            ; top_hcsr04         ; top                ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -166,13 +166,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                          ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                      ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+---------+
-; hcsr04.v                         ; yes             ; Auto-Found Verilog HDL File  ; D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/ultrasonido/hcsr04.v ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                              ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                          ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+---------+
+; top_hcsr04.v                     ; yes             ; Auto-Found Verilog HDL File  ; D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/ultrasonido/top_hcsr04.v ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -180,16 +180,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 66        ;
+; Estimated Total logic elements              ; 63        ;
 ;                                             ;           ;
-; Total combinational functions               ; 66        ;
+; Total combinational functions               ; 63        ;
 ; Logic element usage by number of LUT inputs ;           ;
 ;     -- 4 input functions                    ; 21        ;
-;     -- 3 input functions                    ; 2         ;
-;     -- <=2 input functions                  ; 43        ;
+;     -- 3 input functions                    ; 1         ;
+;     -- <=2 input functions                  ; 41        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 28        ;
+;     -- normal mode                          ; 25        ;
 ;     -- arithmetic mode                      ; 38        ;
 ;                                             ;           ;
 ; Total registers                             ; 43        ;
@@ -202,8 +202,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 43        ;
-; Total fan-out                               ; 311       ;
-; Average fan-out                             ; 2.57      ;
+; Total fan-out                               ; 304       ;
+; Average fan-out                             ; 2.58      ;
 +---------------------------------------------+-----------+
 
 
@@ -212,7 +212,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |hcsr04                    ; 66 (66)             ; 43 (43)                   ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |hcsr04             ; hcsr04      ; work         ;
+; |top_hcsr04                ; 63 (63)             ; 43 (43)                   ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |top_hcsr04         ; top_hcsr04  ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -237,19 +237,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |hcsr04|level1~reg0        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_hcsr04|level1~reg0    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |hcsr04 ;
-+----------------+----------------------+--------------------------------+
-; Parameter Name ; Value                ; Type                           ;
-+----------------+----------------------+--------------------------------+
-; PULSE_TRIGGER  ; 01111010000100100000 ; Unsigned Binary                ;
-; DM             ; 00000000101110111000 ; Unsigned Binary                ;
-; D              ; 00000111010100110000 ; Unsigned Binary                ;
-+----------------+----------------------+--------------------------------+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |top_hcsr04 ;
++----------------+----------------------+------------------------------------+
+; Parameter Name ; Value                ; Type                               ;
++----------------+----------------------+------------------------------------+
+; PULSE_TRIGGER  ; 01111010000100100000 ; Unsigned Binary                    ;
+; DM             ; 00000000011111010000 ; Unsigned Binary                    ;
+; D              ; 00000111010100110000 ; Unsigned Binary                    ;
++----------------+----------------------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -263,17 +263,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA               ; 2                           ;
 ;     SCLR              ; 40                          ;
 ;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 66                          ;
+; cycloneiii_lcell_comb ; 63                          ;
 ;     arith             ; 38                          ;
 ;         2 data inputs ; 38                          ;
-;     normal            ; 28                          ;
+;     normal            ; 25                          ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 2                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 1                           ;
 ;         4 data inputs ; 21                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.87                        ;
+; Average LUT depth     ; 2.92                        ;
 +-----------------------+-----------------------------+
 
 
@@ -292,28 +292,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Tue Sep 10 18:46:20 2024
+    Info: Processing started: Thu Sep 19 23:30:56 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off hcsr04 -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
-Warning (12125): Using design file hcsr04.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: hcsr04 File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/ultrasonido/hcsr04.v Line: 1
-Info (12127): Elaborating entity "hcsr04" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at hcsr04.v(19): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/ultrasonido/hcsr04.v Line: 19
-Warning (10230): Verilog HDL assignment warning at hcsr04.v(30): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/ultrasonido/hcsr04.v Line: 30
+Warning (12125): Using design file top_hcsr04.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: top_hcsr04 File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/ultrasonido/top_hcsr04.v Line: 1
+Info (12127): Elaborating entity "top_hcsr04" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at top_hcsr04.v(19): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/ultrasonido/top_hcsr04.v Line: 19
+Warning (10230): Verilog HDL assignment warning at top_hcsr04.v(30): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/ultrasonido/top_hcsr04.v Line: 30
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/ultrasonido/top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 74 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 71 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 68 logic cells
+    Info (21061): Implemented 65 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4822 megabytes
-    Info: Processing ended: Tue Sep 10 18:46:26 2024
+    Info: Peak virtual memory: 4823 megabytes
+    Info: Processing ended: Thu Sep 19 23:31:02 2024
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:05
 
 
 +------------------------------------------+

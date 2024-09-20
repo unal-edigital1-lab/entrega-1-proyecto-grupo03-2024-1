@@ -19,13 +19,13 @@ module i2c_ads1115 (
     reg [6:0] timer = 0;
 
     always @ (posedge clk) begin
-        if (timer > 7'd30)
+        if (timer > 7'd40)
             timer <= 7'd0;
         else
             timer <= timer + 1'b1;
     end
 
-    assign clk_pulse = (timer == 30) ? 1'b1 : 1'b0;
+    assign clk_pulse = (timer == 40) ? 1'b1 : 1'b0;
 
     reg wdata_context = 0;
     reg read_register = 0;

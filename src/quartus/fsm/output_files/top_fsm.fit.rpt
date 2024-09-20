@@ -1,5 +1,5 @@
 Fitter report for top_fsm
-Thu Sep 19 20:39:30 2024
+Fri Sep 20 02:45:59 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -10,41 +10,40 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   2. Fitter Summary
   3. Fitter Settings
   4. Parallel Compilation
-  5. Ignored Assignments
-  6. Incremental Compilation Preservation Summary
-  7. Incremental Compilation Partition Settings
-  8. Incremental Compilation Placement Preservation
-  9. Pin-Out File
- 10. Fitter Resource Usage Summary
- 11. Fitter Partition Statistics
- 12. Input Pins
- 13. Output Pins
- 14. Bidir Pins
- 15. Dual Purpose and Dedicated Pins
- 16. I/O Bank Usage
- 17. All Package Pins
- 18. I/O Assignment Warnings
- 19. Fitter Resource Utilization by Entity
- 20. Delay Chain Summary
- 21. Pad To Core Delay Chain Fanout
- 22. Control Signals
- 23. Global & Other Fast Signals
- 24. Non-Global High Fan-Out Signals
- 25. Routing Usage Summary
- 26. LAB Logic Elements
- 27. LAB-wide Signals
- 28. LAB Signals Sourced
- 29. LAB Signals Sourced Out
- 30. LAB Distinct Inputs
- 31. I/O Rules Summary
- 32. I/O Rules Details
- 33. I/O Rules Matrix
- 34. Fitter Device Options
- 35. Operating Settings and Conditions
- 36. Estimated Delay Added for Hold Timing Summary
- 37. Estimated Delay Added for Hold Timing Details
- 38. Fitter Messages
- 39. Fitter Suppressed Messages
+  5. Incremental Compilation Preservation Summary
+  6. Incremental Compilation Partition Settings
+  7. Incremental Compilation Placement Preservation
+  8. Pin-Out File
+  9. Fitter Resource Usage Summary
+ 10. Fitter Partition Statistics
+ 11. Input Pins
+ 12. Output Pins
+ 13. Bidir Pins
+ 14. Dual Purpose and Dedicated Pins
+ 15. I/O Bank Usage
+ 16. All Package Pins
+ 17. I/O Assignment Warnings
+ 18. Fitter Resource Utilization by Entity
+ 19. Delay Chain Summary
+ 20. Pad To Core Delay Chain Fanout
+ 21. Control Signals
+ 22. Global & Other Fast Signals
+ 23. Non-Global High Fan-Out Signals
+ 24. Routing Usage Summary
+ 25. LAB Logic Elements
+ 26. LAB-wide Signals
+ 27. LAB Signals Sourced
+ 28. LAB Signals Sourced Out
+ 29. LAB Distinct Inputs
+ 30. I/O Rules Summary
+ 31. I/O Rules Details
+ 32. I/O Rules Matrix
+ 33. Fitter Device Options
+ 34. Operating Settings and Conditions
+ 35. Estimated Delay Added for Hold Timing Summary
+ 36. Estimated Delay Added for Hold Timing Details
+ 37. Fitter Messages
+ 38. Fitter Suppressed Messages
 
 
 
@@ -71,17 +70,17 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Thu Sep 19 20:39:30 2024          ;
+; Fitter Status                      ; Successful - Fri Sep 20 02:45:59 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; top_fsm                                        ;
 ; Top-level Entity Name              ; top_fsm                                        ;
 ; Family                             ; Cyclone IV E                                   ;
 ; Device                             ; EP4CE6E22C8                                    ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 4,212 / 6,272 ( 67 % )                         ;
-;     Total combinational functions  ; 4,190 / 6,272 ( 67 % )                         ;
-;     Dedicated logic registers      ; 515 / 6,272 ( 8 % )                            ;
-; Total registers                    ; 515                                            ;
+; Total logic elements               ; 4,309 / 6,272 ( 69 % )                         ;
+;     Total combinational functions  ; 4,284 / 6,272 ( 68 % )                         ;
+;     Dedicated logic registers      ; 517 / 6,272 ( 8 % )                            ;
+; Total registers                    ; 517                                            ;
 ; Total pins                         ; 24 / 92 ( 26 % )                               ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0 / 276,480 ( 0 % )                            ;
@@ -164,8 +163,8 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   3.5%      ;
-;     Processor 3            ;   3.1%      ;
-;     Processor 4            ;   3.0%      ;
+;     Processor 3            ;   3.2%      ;
+;     Processor 4            ;   3.1%      ;
 ;     Processor 5            ;   2.9%      ;
 ;     Processor 6            ;   2.8%      ;
 ;     Processor 7            ;   2.7%      ;
@@ -174,23 +173,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Ignored Assignments                                                                    ;
-+----------+----------------+--------------+------------+---------------+----------------+
-; Name     ; Ignored Entity ; Ignored From ; Ignored To ; Ignored Value ; Ignored Source ;
-+----------+----------------+--------------+------------+---------------+----------------+
-; Location ;                ;              ; SONIDO     ; PIN_52        ; QSF Assignment ;
-+----------+----------------+--------------+------------+---------------+----------------+
-
-
 +---------------------------------------------------------------------------------------------------+
 ; Incremental Compilation Preservation Summary                                                      ;
 +---------------------+---------------------+----------------------------+--------------------------+
 ; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+---------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                     ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 4747 ) ; 0.00 % ( 0 / 4747 )        ; 0.00 % ( 0 / 4747 )      ;
-;     -- Achieved     ; 0.00 % ( 0 / 4747 ) ; 0.00 % ( 0 / 4747 )        ; 0.00 % ( 0 / 4747 )      ;
+;     -- Requested    ; 0.00 % ( 0 / 4844 ) ; 0.00 % ( 0 / 4844 )        ; 0.00 % ( 0 / 4844 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 4844 ) ; 0.00 % ( 0 / 4844 )        ; 0.00 % ( 0 / 4844 )      ;
 ;                     ;                     ;                            ;                          ;
 ; Routing (by net)    ;                     ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -213,7 +203,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 4737 )   ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 4834 )   ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -229,26 +219,26 @@ The pin-out file can be found in D:/Personal/1-Universidad nacional/Semestre 6/D
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 4,212 / 6,272 ( 67 % ) ;
-;     -- Combinational with no register       ; 3697                   ;
-;     -- Register only                        ; 22                     ;
-;     -- Combinational with a register        ; 493                    ;
+; Total logic elements                        ; 4,309 / 6,272 ( 69 % ) ;
+;     -- Combinational with no register       ; 3792                   ;
+;     -- Register only                        ; 25                     ;
+;     -- Combinational with a register        ; 492                    ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 3002                   ;
-;     -- 3 input functions                    ; 611                    ;
-;     -- <=2 input functions                  ; 577                    ;
-;     -- Register only                        ; 22                     ;
+;     -- 4 input functions                    ; 3109                   ;
+;     -- 3 input functions                    ; 592                    ;
+;     -- <=2 input functions                  ; 583                    ;
+;     -- Register only                        ; 25                     ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 3892                   ;
-;     -- arithmetic mode                      ; 298                    ;
+;     -- normal mode                          ; 3987                   ;
+;     -- arithmetic mode                      ; 297                    ;
 ;                                             ;                        ;
-; Total registers*                            ; 515 / 6,684 ( 8 % )    ;
-;     -- Dedicated logic registers            ; 515 / 6,272 ( 8 % )    ;
+; Total registers*                            ; 517 / 6,684 ( 8 % )    ;
+;     -- Dedicated logic registers            ; 517 / 6,272 ( 8 % )    ;
 ;     -- I/O registers                        ; 0 / 412 ( 0 % )        ;
 ;                                             ;                        ;
-; Total LABs:  partially or completely used   ; 295 / 392 ( 75 % )     ;
+; Total LABs:  partially or completely used   ; 298 / 392 ( 76 % )     ;
 ; Virtual pins                                ; 0                      ;
 ; I/O pins                                    ; 24 / 92 ( 26 % )       ;
 ;     -- Clock pins                           ; 1 / 3 ( 33 % )         ;
@@ -266,12 +256,12 @@ The pin-out file can be found in D:/Personal/1-Universidad nacional/Semestre 6/D
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )          ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )          ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )          ;
-; Average interconnect usage (total/H/V)      ; 9.1% / 8.5% / 9.9%     ;
-; Peak interconnect usage (total/H/V)         ; 21.0% / 18.3% / 24.7%  ;
-; Maximum fan-out                             ; 903                    ;
-; Highest non-global fan-out                  ; 903                    ;
-; Total fan-out                               ; 16376                  ;
-; Average fan-out                             ; 3.42                   ;
+; Average interconnect usage (total/H/V)      ; 9.6% / 8.8% / 10.7%    ;
+; Peak interconnect usage (total/H/V)         ; 18.6% / 17.2% / 20.6%  ;
+; Maximum fan-out                             ; 909                    ;
+; Highest non-global fan-out                  ; 909                    ;
+; Total fan-out                               ; 16808                  ;
+; Average fan-out                             ; 3.44                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -284,26 +274,26 @@ The pin-out file can be found in D:/Personal/1-Universidad nacional/Semestre 6/D
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 4212 / 6272 ( 67 % ) ; 0 / 6272 ( 0 % )               ;
-;     -- Combinational with no register       ; 3697                 ; 0                              ;
-;     -- Register only                        ; 22                   ; 0                              ;
-;     -- Combinational with a register        ; 493                  ; 0                              ;
+; Total logic elements                        ; 4309 / 6272 ( 69 % ) ; 0 / 6272 ( 0 % )               ;
+;     -- Combinational with no register       ; 3792                 ; 0                              ;
+;     -- Register only                        ; 25                   ; 0                              ;
+;     -- Combinational with a register        ; 492                  ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 3002                 ; 0                              ;
-;     -- 3 input functions                    ; 611                  ; 0                              ;
-;     -- <=2 input functions                  ; 577                  ; 0                              ;
-;     -- Register only                        ; 22                   ; 0                              ;
+;     -- 4 input functions                    ; 3109                 ; 0                              ;
+;     -- 3 input functions                    ; 592                  ; 0                              ;
+;     -- <=2 input functions                  ; 583                  ; 0                              ;
+;     -- Register only                        ; 25                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 3892                 ; 0                              ;
-;     -- arithmetic mode                      ; 298                  ; 0                              ;
+;     -- normal mode                          ; 3987                 ; 0                              ;
+;     -- arithmetic mode                      ; 297                  ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total registers                             ; 515                  ; 0                              ;
-;     -- Dedicated logic registers            ; 515 / 6272 ( 8 % )   ; 0 / 6272 ( 0 % )               ;
+; Total registers                             ; 517                  ; 0                              ;
+;     -- Dedicated logic registers            ; 517 / 6272 ( 8 % )   ; 0 / 6272 ( 0 % )               ;
 ;     -- I/O registers                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 295 / 392 ( 75 % )   ; 0 / 392 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 298 / 392 ( 76 % )   ; 0 / 392 ( 0 % )                ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
 ; I/O pins                                    ; 24                   ; 0                              ;
@@ -319,8 +309,8 @@ The pin-out file can be found in D:/Personal/1-Universidad nacional/Semestre 6/D
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 16371                ; 5                              ;
-;     -- Registered Connections               ; 7424                 ; 0                              ;
+;     -- Total Connections                    ; 16803                ; 5                              ;
+;     -- Registered Connections               ; 7598                 ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 8                    ; 0                              ;
@@ -352,11 +342,11 @@ The pin-out file can be found in D:/Personal/1-Universidad nacional/Semestre 6/D
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name       ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; btn_action ; 42    ; 3        ; 3            ; 0            ; 0            ; 21                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; btn_cancel ; 33    ; 2        ; 0            ; 6            ; 21           ; 15                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; btn_reset  ; 31    ; 2        ; 0            ; 7            ; 0            ; 45                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; btn_test   ; 38    ; 3        ; 1            ; 0            ; 21           ; 9                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; clk        ; 23    ; 1        ; 0            ; 11           ; 7            ; 515                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; btn_action ; 42    ; 3        ; 3            ; 0            ; 0            ; 14                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; btn_cancel ; 33    ; 2        ; 0            ; 6            ; 21           ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; btn_reset  ; 31    ; 2        ; 0            ; 7            ; 0            ; 88                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; btn_test   ; 38    ; 3        ; 1            ; 0            ; 21           ; 16                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; clk        ; 23    ; 1        ; 0            ; 11           ; 7            ; 517                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; echo       ; 49    ; 3        ; 13           ; 0            ; 14           ; 22                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; enable     ; 58    ; 4        ; 21           ; 0            ; 7            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
@@ -619,20 +609,24 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------+-------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                          ;
-+----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node       ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                        ; Entity Name     ; Library Name ;
-+----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------+-----------------+--------------+
-; |top_fsm                         ; 4212 (877)  ; 515 (244)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 24   ; 0            ; 3697 (632)   ; 22 (0)            ; 493 (244)        ; |top_fsm                                                   ; top_fsm         ; work         ;
-;    |top_ads1115:UTT_joystick|    ; 249 (9)     ; 87 (4)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 162 (5)      ; 7 (2)             ; 80 (10)          ; |top_fsm|top_ads1115:UTT_joystick                          ; top_ads1115     ; work         ;
-;       |ads1115_master:UUT_setup| ; 20 (20)     ; 7 (7)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 7 (7)            ; |top_fsm|top_ads1115:UTT_joystick|ads1115_master:UUT_setup ; ads1115_master  ; work         ;
-;       |i2c_ads1115:UTT_i2c|      ; 220 (220)   ; 76 (76)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 144 (144)    ; 5 (5)             ; 71 (71)          ; |top_fsm|top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c      ; i2c_ads1115     ; work         ;
-;    |top_hcsr04:UTT_ultrasonido|  ; 65 (65)     ; 43 (43)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (21)      ; 1 (1)             ; 43 (43)          ; |top_fsm|top_hcsr04:UTT_ultrasonido                        ; top_hcsr04      ; work         ;
-;    |top_oled:UUT_oled|           ; 3023 (0)    ; 141 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2882 (0)     ; 14 (0)            ; 127 (0)          ; |top_fsm|top_oled:UUT_oled                                 ; top_oled        ; work         ;
-;       |master_i2c_oled:i2c|      ; 127 (127)   ; 41 (41)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 86 (86)      ; 0 (0)             ; 41 (41)          ; |top_fsm|top_oled:UUT_oled|master_i2c_oled:i2c             ; master_i2c_oled ; work         ;
-;       |ssd1306_master:setup|     ; 2897 (2897) ; 100 (100)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2796 (2796)  ; 14 (14)           ; 87 (87)          ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup            ; ssd1306_master  ; work         ;
-+----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------+-----------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                  ;
++----------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node             ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                      ; Entity Name         ; Library Name ;
++----------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |top_fsm                               ; 4309 (893)  ; 517 (245)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 24   ; 0            ; 3792 (651)   ; 25 (1)            ; 492 (239)        ; |top_fsm                                                                                                 ; top_fsm             ; work         ;
+;    |lpm_divide:Div0|                   ; 52 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 46 (0)       ; 0 (0)             ; 6 (0)            ; |top_fsm|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_ihm:auto_generated|  ; 52 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 46 (0)       ; 0 (0)             ; 6 (0)            ; |top_fsm|lpm_divide:Div0|lpm_divide_ihm:auto_generated                                                   ; lpm_divide_ihm      ; work         ;
+;          |sign_div_unsign_akh:divider| ; 52 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 46 (0)       ; 0 (0)             ; 6 (0)            ; |top_fsm|lpm_divide:Div0|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh ; work         ;
+;             |alt_u_div_84f:divider|    ; 52 (52)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 46 (46)      ; 0 (0)             ; 6 (6)            ; |top_fsm|lpm_divide:Div0|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider ; alt_u_div_84f       ; work         ;
+;    |top_ads1115:UTT_joystick|          ; 245 (4)     ; 87 (4)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 158 (0)      ; 4 (2)             ; 83 (14)          ; |top_fsm|top_ads1115:UTT_joystick                                                                        ; top_ads1115         ; work         ;
+;       |ads1115_master:UUT_setup|       ; 20 (20)     ; 7 (7)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 7 (7)            ; |top_fsm|top_ads1115:UTT_joystick|ads1115_master:UUT_setup                                               ; ads1115_master      ; work         ;
+;       |i2c_ads1115:UTT_i2c|            ; 221 (221)   ; 76 (76)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 145 (145)    ; 2 (2)             ; 74 (74)          ; |top_fsm|top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c                                                    ; i2c_ads1115         ; work         ;
+;    |top_hcsr04:UTT_ultrasonido|        ; 63 (63)     ; 43 (43)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 20 (20)      ; 1 (1)             ; 42 (42)          ; |top_fsm|top_hcsr04:UTT_ultrasonido                                                                      ; top_hcsr04          ; work         ;
+;    |top_oled:UUT_oled|                 ; 3059 (0)    ; 142 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2917 (0)     ; 19 (0)            ; 123 (0)          ; |top_fsm|top_oled:UUT_oled                                                                               ; top_oled            ; work         ;
+;       |master_i2c_oled:i2c|            ; 126 (126)   ; 41 (41)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 85 (85)      ; 0 (0)             ; 41 (41)          ; |top_fsm|top_oled:UUT_oled|master_i2c_oled:i2c                                                           ; master_i2c_oled     ; work         ;
+;       |ssd1306_master:setup|           ; 2933 (2933) ; 101 (101)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2832 (2832)  ; 19 (19)           ; 82 (82)          ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup                                                          ; ssd1306_master      ; work         ;
++----------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -655,14 +649,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; led_s2        ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; led_s3        ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; scl_display   ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; sda_display   ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; scl_converter ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; sda_converter ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; sda_display   ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; scl_converter ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; sda_converter ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; btn_reset     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; btn_cancel    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; btn_test      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; clk           ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; btn_action    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; btn_action    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; echo          ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; enable        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 +---------------+----------+---------------+---------------+-----------------------+-----+------+
@@ -674,126 +668,163 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                                                   ; Pad To Core Index ; Setting ;
 +-----------------------------------------------------------------------+-------------------+---------+
 ; scl_display                                                           ;                   ;         ;
-;      - top_oled:UUT_oled|master_i2c_oled:i2c|Mux7~0                   ; 1                 ; 6       ;
+;      - top_oled:UUT_oled|master_i2c_oled:i2c|Mux7~3                   ; 1                 ; 6       ;
 ;      - top_oled:UUT_oled|master_i2c_oled:i2c|Mux6~1                   ; 1                 ; 6       ;
 ; sda_display                                                           ;                   ;         ;
-;      - top_oled:UUT_oled|master_i2c_oled:i2c|data_counter[0]~0        ; 1                 ; 6       ;
+;      - top_oled:UUT_oled|master_i2c_oled:i2c|data_counter[0]~0        ; 0                 ; 6       ;
 ; scl_converter                                                         ;                   ;         ;
-;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|Mux5~0            ; 0                 ; 6       ;
-;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|Mux6~0            ; 0                 ; 6       ;
+;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|Mux5~0            ; 1                 ; 6       ;
+;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|Mux6~0            ; 1                 ; 6       ;
 ; sda_converter                                                         ;                   ;         ;
-;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[6]~0   ; 0                 ; 6       ;
-;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[5]~1   ; 0                 ; 6       ;
-;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[8]~2   ; 0                 ; 6       ;
-;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[7]~3   ; 0                 ; 6       ;
-;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[9]~4   ; 0                 ; 6       ;
-;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[10]~5  ; 0                 ; 6       ;
-;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[11]~6  ; 0                 ; 6       ;
-;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[12]~7  ; 0                 ; 6       ;
-;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[14]~8  ; 0                 ; 6       ;
-;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[13]~9  ; 0                 ; 6       ;
-;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[3]~10  ; 0                 ; 6       ;
-;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[4]~11  ; 0                 ; 6       ;
-;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[2]~12  ; 0                 ; 6       ;
-;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[1]~13  ; 0                 ; 6       ;
-;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[0]~14  ; 0                 ; 6       ;
-;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[15]~15 ; 0                 ; 6       ;
+;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[9]~0   ; 1                 ; 6       ;
+;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[8]~1   ; 1                 ; 6       ;
+;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[3]~2   ; 1                 ; 6       ;
+;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[4]~3   ; 1                 ; 6       ;
+;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[1]~4   ; 1                 ; 6       ;
+;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[0]~5   ; 1                 ; 6       ;
+;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[6]~6   ; 1                 ; 6       ;
+;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[5]~7   ; 1                 ; 6       ;
+;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[2]~8   ; 1                 ; 6       ;
+;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[7]~9   ; 1                 ; 6       ;
+;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[15]~10 ; 1                 ; 6       ;
+;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[14]~11 ; 1                 ; 6       ;
+;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[11]~12 ; 1                 ; 6       ;
+;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[10]~13 ; 1                 ; 6       ;
+;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[13]~14 ; 1                 ; 6       ;
+;      - top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytes[12]~15 ; 1                 ; 6       ;
 ; btn_reset                                                             ;                   ;         ;
-;      - test~2                                                         ; 0                 ; 6       ;
-;      - Add13~2                                                        ; 0                 ; 6       ;
-;      - Add13~5                                                        ; 0                 ; 6       ;
-;      - Add13~8                                                        ; 0                 ; 6       ;
-;      - Add13~11                                                       ; 0                 ; 6       ;
-;      - Add13~14                                                       ; 0                 ; 6       ;
-;      - Add13~17                                                       ; 0                 ; 6       ;
-;      - Add13~20                                                       ; 0                 ; 6       ;
-;      - Add13~23                                                       ; 0                 ; 6       ;
-;      - Add13~26                                                       ; 0                 ; 6       ;
-;      - Add13~31                                                       ; 0                 ; 6       ;
-;      - Add13~34                                                       ; 0                 ; 6       ;
-;      - Add13~35                                                       ; 0                 ; 6       ;
-;      - Add13~42                                                       ; 0                 ; 6       ;
-;      - Add13~43                                                       ; 0                 ; 6       ;
-;      - Add13~44                                                       ; 0                 ; 6       ;
-;      - Add13~47                                                       ; 0                 ; 6       ;
-;      - Add13~50                                                       ; 0                 ; 6       ;
-;      - Add13~57                                                       ; 0                 ; 6       ;
-;      - Add13~58                                                       ; 0                 ; 6       ;
-;      - Add13~59                                                       ; 0                 ; 6       ;
-;      - Add13~62                                                       ; 0                 ; 6       ;
-;      - Add13~65                                                       ; 0                 ; 6       ;
-;      - Add13~68                                                       ; 0                 ; 6       ;
-;      - Add13~71                                                       ; 0                 ; 6       ;
-;      - Add13~74                                                       ; 0                 ; 6       ;
-;      - Add13~77                                                       ; 0                 ; 6       ;
-;      - Add13~80                                                       ; 0                 ; 6       ;
-;      - Add13~83                                                       ; 0                 ; 6       ;
-;      - Add13~86                                                       ; 0                 ; 6       ;
-;      - Add13~89                                                       ; 0                 ; 6       ;
-;      - food~13                                                        ; 0                 ; 6       ;
-;      - Mux44~0                                                        ; 0                 ; 6       ;
-;      - Mux43~0                                                        ; 0                 ; 6       ;
-;      - Mux43~3                                                        ; 0                 ; 6       ;
-;      - Mux43~5                                                        ; 0                 ; 6       ;
-;      - Mux62~0                                                        ; 0                 ; 6       ;
-;      - Mux43~6                                                        ; 0                 ; 6       ;
-;      - always1~33                                                     ; 0                 ; 6       ;
-;      - state[2]~24                                                    ; 0                 ; 6       ;
-;      - ind_select[3]~21                                               ; 0                 ; 6       ;
-;      - life~12                                                        ; 0                 ; 6       ;
-;      - food[4]~57                                                     ; 0                 ; 6       ;
-;      - rest~48                                                        ; 0                 ; 6       ;
+;      - state[0]                                                       ; 0                 ; 6       ;
+;      - state[2]                                                       ; 0                 ; 6       ;
+;      - state[1]                                                       ; 0                 ; 6       ;
+;      - food[1]                                                        ; 0                 ; 6       ;
+;      - food[0]                                                        ; 0                 ; 6       ;
+;      - fun[1]                                                         ; 0                 ; 6       ;
+;      - rest[1]                                                        ; 0                 ; 6       ;
+;      - fun[0]                                                         ; 0                 ; 6       ;
+;      - rest[0]                                                        ; 0                 ; 6       ;
+;      - always1~0                                                      ; 0                 ; 6       ;
+;      - always1~2                                                      ; 0                 ; 6       ;
+;      - state~15                                                       ; 0                 ; 6       ;
+;      - ind_select[2]~13                                               ; 0                 ; 6       ;
+;      - ind_select~16                                                  ; 0                 ; 6       ;
+;      - state_test~24                                                  ; 0                 ; 6       ;
+;      - state_test.MAIN_REVIEW~0                                       ; 0                 ; 6       ;
+;      - state_test~26                                                  ; 0                 ; 6       ;
+;      - fun~25                                                         ; 0                 ; 6       ;
+;      - rest~28                                                        ; 0                 ; 6       ;
+;      - Mux37~0                                                        ; 0                 ; 6       ;
+;      - fun~36                                                         ; 0                 ; 6       ;
+;      - fun~39                                                         ; 0                 ; 6       ;
+;      - rest~41                                                        ; 0                 ; 6       ;
+;      - rest[3]~44                                                     ; 0                 ; 6       ;
+;      - Mux37~2                                                        ; 0                 ; 6       ;
+;      - fun~62                                                         ; 0                 ; 6       ;
+;      - rest~57                                                        ; 0                 ; 6       ;
+;      - rest~65                                                        ; 0                 ; 6       ;
+;      - Selector59~3                                                   ; 0                 ; 6       ;
+;      - food~21                                                        ; 0                 ; 6       ;
+;      - food~32                                                        ; 0                 ; 6       ;
+;      - food[3]~34                                                     ; 0                 ; 6       ;
+;      - food~50                                                        ; 0                 ; 6       ;
+;      - Add9~2                                                         ; 0                 ; 6       ;
+;      - Add9~5                                                         ; 0                 ; 6       ;
+;      - Add9~8                                                         ; 0                 ; 6       ;
+;      - Add9~11                                                        ; 0                 ; 6       ;
+;      - Add9~14                                                        ; 0                 ; 6       ;
+;      - Add9~17                                                        ; 0                 ; 6       ;
+;      - Add9~20                                                        ; 0                 ; 6       ;
+;      - Add9~23                                                        ; 0                 ; 6       ;
+;      - Add9~26                                                        ; 0                 ; 6       ;
+;      - Add9~31                                                        ; 0                 ; 6       ;
+;      - Add9~34                                                        ; 0                 ; 6       ;
+;      - Add9~35                                                        ; 0                 ; 6       ;
+;      - Add9~42                                                        ; 0                 ; 6       ;
+;      - Add9~43                                                        ; 0                 ; 6       ;
+;      - Add9~44                                                        ; 0                 ; 6       ;
+;      - Add9~47                                                        ; 0                 ; 6       ;
+;      - Add9~50                                                        ; 0                 ; 6       ;
+;      - Add9~57                                                        ; 0                 ; 6       ;
+;      - Add9~58                                                        ; 0                 ; 6       ;
+;      - Add9~59                                                        ; 0                 ; 6       ;
+;      - Add9~62                                                        ; 0                 ; 6       ;
+;      - Add9~65                                                        ; 0                 ; 6       ;
+;      - Add9~68                                                        ; 0                 ; 6       ;
+;      - Add9~71                                                        ; 0                 ; 6       ;
+;      - Add9~74                                                        ; 0                 ; 6       ;
+;      - Add9~77                                                        ; 0                 ; 6       ;
+;      - Add9~80                                                        ; 0                 ; 6       ;
+;      - Add9~83                                                        ; 0                 ; 6       ;
+;      - Add9~86                                                        ; 0                 ; 6       ;
+;      - Add9~89                                                        ; 0                 ; 6       ;
+;      - Mux32~2                                                        ; 0                 ; 6       ;
+;      - life~11                                                        ; 0                 ; 6       ;
+;      - state_test~28                                                  ; 0                 ; 6       ;
+;      - state_test~29                                                  ; 0                 ; 6       ;
+;      - cont_test~40                                                   ; 0                 ; 6       ;
+;      - cont_test[13]~42                                               ; 0                 ; 6       ;
+;      - enable_joystick~0                                              ; 0                 ; 6       ;
+;      - enable_joystick~1                                              ; 0                 ; 6       ;
+;      - act_heal~1                                                     ; 0                 ; 6       ;
+;      - act_eat~1                                                      ; 0                 ; 6       ;
+;      - act_play~0                                                     ; 0                 ; 6       ;
+;      - act_sleep~1                                                    ; 0                 ; 6       ;
+;      - state_test~31                                                  ; 0                 ; 6       ;
+;      - state_test~32                                                  ; 0                 ; 6       ;
+;      - fun~69                                                         ; 0                 ; 6       ;
+;      - fun[4]~70                                                      ; 0                 ; 6       ;
+;      - rest[3]~70                                                     ; 0                 ; 6       ;
+;      - rest[3]~71                                                     ; 0                 ; 6       ;
+;      - rest[3]~72                                                     ; 0                 ; 6       ;
+;      - food~57                                                        ; 0                 ; 6       ;
+;      - food[3]~58                                                     ; 0                 ; 6       ;
+;      - food[3]~59                                                     ; 0                 ; 6       ;
+;      - test_timing[0]~12                                              ; 0                 ; 6       ;
+;      - state[0]~30                                                    ; 0                 ; 6       ;
 ;      - led_reset~output                                               ; 0                 ; 6       ;
 ; btn_cancel                                                            ;                   ;         ;
-;      - always1~3                                                      ; 1                 ; 6       ;
-;      - cont_actions~11                                                ; 1                 ; 6       ;
-;      - cont_actions~12                                                ; 1                 ; 6       ;
-;      - cont_actions~13                                                ; 1                 ; 6       ;
-;      - cont_actions~14                                                ; 1                 ; 6       ;
-;      - Equal10~2                                                      ; 1                 ; 6       ;
-;      - Equal10~6                                                      ; 1                 ; 6       ;
-;      - cont_actions~15                                                ; 1                 ; 6       ;
-;      - cont_actions~16                                                ; 1                 ; 6       ;
-;      - cont_actions~26                                                ; 1                 ; 6       ;
-;      - cont_actions~35                                                ; 1                 ; 6       ;
-;      - cont_actions~36                                                ; 1                 ; 6       ;
-;      - state[2]~23                                                    ; 1                 ; 6       ;
-;      - cont_actions~41                                                ; 1                 ; 6       ;
+;      - always1~10                                                     ; 1                 ; 6       ;
+;      - Mux3~0                                                         ; 1                 ; 6       ;
+;      - state~28                                                       ; 1                 ; 6       ;
+;      - state[0]~29                                                    ; 1                 ; 6       ;
 ;      - led_cancel~output                                              ; 1                 ; 6       ;
 ; btn_test                                                              ;                   ;         ;
-;      - cont_test[24]~4                                                ; 0                 ; 6       ;
-;      - cont_test[13]~5                                                ; 0                 ; 6       ;
-;      - cont_test~6                                                    ; 0                 ; 6       ;
-;      - cont_test~14                                                   ; 0                 ; 6       ;
-;      - test_timing[3]~1                                               ; 0                 ; 6       ;
-;      - test~4                                                         ; 0                 ; 6       ;
-;      - cont_test[7]~46                                                ; 0                 ; 6       ;
-;      - cont_test[8]~47                                                ; 0                 ; 6       ;
+;      - always1~2                                                      ; 0                 ; 6       ;
+;      - always1~11                                                     ; 0                 ; 6       ;
+;      - cont_test~40                                                   ; 0                 ; 6       ;
+;      - test~2                                                         ; 0                 ; 6       ;
+;      - cont_test[13]~61                                               ; 0                 ; 6       ;
+;      - cont_test~62                                                   ; 0                 ; 6       ;
+;      - cont_test~63                                                   ; 0                 ; 6       ;
+;      - cont_test~64                                                   ; 0                 ; 6       ;
+;      - cont_test~65                                                   ; 0                 ; 6       ;
+;      - cont_test[13]~66                                               ; 0                 ; 6       ;
+;      - cont_test~67                                                   ; 0                 ; 6       ;
+;      - cont_test~68                                                   ; 0                 ; 6       ;
+;      - cont_test~69                                                   ; 0                 ; 6       ;
+;      - cont_test~70                                                   ; 0                 ; 6       ;
+;      - cont_test~71                                                   ; 0                 ; 6       ;
 ;      - led_test~output                                                ; 0                 ; 6       ;
 ; clk                                                                   ;                   ;         ;
 ; btn_action                                                            ;                   ;         ;
-;      - state[2]~4                                                     ; 0                 ; 6       ;
-;      - state[2]~8                                                     ; 0                 ; 6       ;
-;      - state[0]~12                                                    ; 0                 ; 6       ;
-;      - state[1]~17                                                    ; 0                 ; 6       ;
-;      - food~10                                                        ; 0                 ; 6       ;
-;      - food~11                                                        ; 0                 ; 6       ;
-;      - food~13                                                        ; 0                 ; 6       ;
-;      - food~23                                                        ; 0                 ; 6       ;
-;      - fun~4                                                          ; 0                 ; 6       ;
-;      - Selector9~1                                                    ; 0                 ; 6       ;
-;      - food[4]~46                                                     ; 0                 ; 6       ;
-;      - fun~7                                                          ; 0                 ; 6       ;
-;      - fun~10                                                         ; 0                 ; 6       ;
-;      - fun~18                                                         ; 0                 ; 6       ;
-;      - Selector16~1                                                   ; 0                 ; 6       ;
-;      - Selector15~1                                                   ; 0                 ; 6       ;
-;      - Selector23~1                                                   ; 0                 ; 6       ;
-;      - rest~30                                                        ; 0                 ; 6       ;
-;      - cont_actions[20]~17                                            ; 0                 ; 6       ;
-;      - btn_action~_wirecell                                           ; 0                 ; 6       ;
-;      - top_ads1115:UTT_joystick|led4~feeder                           ; 0                 ; 6       ;
+;      - top_ads1115:UTT_joystick|led4                                  ; 1                 ; 6       ;
+;      - state[0]~10                                                    ; 1                 ; 6       ;
+;      - state~12                                                       ; 1                 ; 6       ;
+;      - state~17                                                       ; 1                 ; 6       ;
+;      - state~22                                                       ; 1                 ; 6       ;
+;      - fun~17                                                         ; 1                 ; 6       ;
+;      - fun~35                                                         ; 1                 ; 6       ;
+;      - fun~36                                                         ; 1                 ; 6       ;
+;      - fun[4]~41                                                      ; 1                 ; 6       ;
+;      - rest[3]~46                                                     ; 1                 ; 6       ;
+;      - food[3]~33                                                     ; 1                 ; 6       ;
+;      - food~41                                                        ; 1                 ; 6       ;
+;      - Mux3~1                                                         ; 1                 ; 6       ;
+;      - act_eat~0                                                      ; 1                 ; 6       ;
 ; echo                                                                  ;                   ;         ;
+;      - top_hcsr04:UTT_ultrasonido|contEcho[0]                         ; 1                 ; 6       ;
+;      - top_hcsr04:UTT_ultrasonido|contEcho[1]                         ; 1                 ; 6       ;
+;      - top_hcsr04:UTT_ultrasonido|contEcho[2]                         ; 1                 ; 6       ;
+;      - top_hcsr04:UTT_ultrasonido|contEcho[3]                         ; 1                 ; 6       ;
 ;      - top_hcsr04:UTT_ultrasonido|contEcho[4]                         ; 1                 ; 6       ;
 ;      - top_hcsr04:UTT_ultrasonido|contEcho[5]                         ; 1                 ; 6       ;
 ;      - top_hcsr04:UTT_ultrasonido|contEcho[6]                         ; 1                 ; 6       ;
@@ -805,94 +836,91 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - top_hcsr04:UTT_ultrasonido|contEcho[12]                        ; 1                 ; 6       ;
 ;      - top_hcsr04:UTT_ultrasonido|contEcho[13]                        ; 1                 ; 6       ;
 ;      - top_hcsr04:UTT_ultrasonido|contEcho[14]                        ; 1                 ; 6       ;
-;      - top_hcsr04:UTT_ultrasonido|contEcho[0]                         ; 1                 ; 6       ;
-;      - top_hcsr04:UTT_ultrasonido|contEcho[1]                         ; 1                 ; 6       ;
-;      - top_hcsr04:UTT_ultrasonido|contEcho[2]                         ; 1                 ; 6       ;
-;      - top_hcsr04:UTT_ultrasonido|contEcho[3]                         ; 1                 ; 6       ;
 ;      - top_hcsr04:UTT_ultrasonido|contEcho[15]                        ; 1                 ; 6       ;
 ;      - top_hcsr04:UTT_ultrasonido|contEcho[16]                        ; 1                 ; 6       ;
 ;      - top_hcsr04:UTT_ultrasonido|contEcho[17]                        ; 1                 ; 6       ;
 ;      - top_hcsr04:UTT_ultrasonido|contEcho[18]                        ; 1                 ; 6       ;
 ;      - top_hcsr04:UTT_ultrasonido|contEcho[19]                        ; 1                 ; 6       ;
-;      - top_hcsr04:UTT_ultrasonido|level1~5                            ; 1                 ; 6       ;
-;      - top_hcsr04:UTT_ultrasonido|level1~6                            ; 1                 ; 6       ;
+;      - top_hcsr04:UTT_ultrasonido|level1~0                            ; 1                 ; 6       ;
+;      - top_hcsr04:UTT_ultrasonido|level2~5                            ; 1                 ; 6       ;
 ; enable                                                                ;                   ;         ;
-;      - top_hcsr04:UTT_ultrasonido|level1~5                            ; 0                 ; 6       ;
-;      - top_hcsr04:UTT_ultrasonido|level1~6                            ; 0                 ; 6       ;
+;      - top_hcsr04:UTT_ultrasonido|level1~0                            ; 0                 ; 6       ;
+;      - top_hcsr04:UTT_ultrasonido|level2~5                            ; 0                 ; 6       ;
 +-----------------------------------------------------------------------+-------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                                          ;
-+-----------------------------------------------------------------+--------------------+---------+--------------------------+--------+----------------------+------------------+---------------------------+
-; Name                                                            ; Location           ; Fan-Out ; Usage                    ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-----------------------------------------------------------------+--------------------+---------+--------------------------+--------+----------------------+------------------+---------------------------+
-; act_eat~0                                                       ; LCCOMB_X19_Y8_N2   ; 1       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; act_heal~1                                                      ; LCCOMB_X19_Y8_N12  ; 1       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; act_play~3                                                      ; LCCOMB_X23_Y5_N8   ; 1       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; act_sleep~0                                                     ; LCCOMB_X19_Y9_N28  ; 1       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; always1~4                                                       ; LCCOMB_X19_Y8_N0   ; 30      ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; clk                                                             ; PIN_23             ; 515     ; Clock                    ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; cont_actions[20]~19                                             ; LCCOMB_X18_Y5_N16  ; 28      ; Sync. load               ; no     ; --                   ; --               ; --                        ;
-; cont_enable_joystick[0]~0                                       ; LCCOMB_X23_Y5_N28  ; 28      ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; cont_screen_pause[23]~0                                         ; LCCOMB_X24_Y5_N18  ; 30      ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; echo                                                            ; PIN_49             ; 22      ; Sync. clear              ; no     ; --                   ; --               ; --                        ;
-; food[4]~57                                                      ; LCCOMB_X26_Y7_N6   ; 2       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; fun[4]~46                                                       ; LCCOMB_X22_Y6_N8   ; 2       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; ind_select[3]~15                                                ; LCCOMB_X19_Y8_N26  ; 5       ; Sync. clear              ; no     ; --                   ; --               ; --                        ;
-; ind_select[3]~16                                                ; LCCOMB_X19_Y8_N4   ; 3       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; led_s1~1                                                        ; LCCOMB_X24_Y5_N26  ; 3       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; rest[3]~46                                                      ; LCCOMB_X23_Y9_N6   ; 2       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; state[2]                                                        ; FF_X18_Y8_N5       ; 39      ; Sync. clear, Sync. load  ; no     ; --                   ; --               ; --                        ;
-; state_test~19                                                   ; LCCOMB_X19_Y6_N16  ; 2       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; state_test~20                                                   ; LCCOMB_X18_Y6_N10  ; 3       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; test                                                            ; FF_X19_Y6_N29      ; 94      ; Clock enable, Sync. load ; no     ; --                   ; --               ; --                        ;
-; test_timing[3]~2                                                ; LCCOMB_X18_Y6_N28  ; 4       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_ads1115:UTT_joystick|ads1115_master:UUT_setup|always0~0     ; LCCOMB_X6_Y6_N6    ; 7       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|Equal1~0           ; LCCOMB_X6_Y6_N0    ; 1       ; Output enable            ; no     ; --                   ; --               ; --                        ;
-; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|LessThan0~0        ; LCCOMB_X4_Y10_N26  ; 7       ; Sync. clear              ; no     ; --                   ; --               ; --                        ;
-; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|addr_byte_out[0]~1 ; LCCOMB_X6_Y7_N24   ; 5       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|bit_counter[0]~20  ; LCCOMB_X5_Y7_N2    ; 3       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|bit_counter[3]~14  ; LCCOMB_X6_Y7_N26   ; 2       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|bus_timing~11      ; LCCOMB_X5_Y7_N16   ; 2       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|data_counter[0]~2  ; LCCOMB_X6_Y5_N6    ; 10      ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytesA0[15]~3 ; LCCOMB_X7_Y7_N6    ; 16      ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|sda_out_en~0       ; LCCOMB_X4_Y5_N12   ; 1       ; Output enable            ; no     ; --                   ; --               ; --                        ;
-; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|state[2]           ; FF_X4_Y5_N9        ; 50      ; Sync. load               ; no     ; --                   ; --               ; --                        ;
-; top_hcsr04:UTT_ultrasonido|LessThan0~4                          ; LCCOMB_X5_Y3_N30   ; 21      ; Sync. clear              ; no     ; --                   ; --               ; --                        ;
-; top_hcsr04:UTT_ultrasonido|level1~7                             ; LCCOMB_X14_Y4_N10  ; 2       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|master_i2c_oled:i2c|Equal0~1                  ; LCCOMB_X4_Y10_N2   ; 39      ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|master_i2c_oled:i2c|Equal1~0                  ; LCCOMB_X4_Y11_N4   ; 1       ; Output enable            ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|master_i2c_oled:i2c|Equal3~1                  ; LCCOMB_X7_Y10_N16  ; 16      ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|master_i2c_oled:i2c|addr_byte_out[3]~2        ; LCCOMB_X6_Y11_N6   ; 10      ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|master_i2c_oled:i2c|bus_timing~11             ; LCCOMB_X7_Y10_N0   ; 2       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|master_i2c_oled:i2c|data_counter[0]~2         ; LCCOMB_X7_Y10_N20  ; 10      ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|master_i2c_oled:i2c|next_state[3]~18          ; LCCOMB_X6_Y11_N26  ; 3       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|master_i2c_oled:i2c|sda_out_en~0              ; LCCOMB_X4_Y11_N0   ; 1       ; Output enable            ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|master_i2c_oled:i2c|state[0]                  ; FF_X6_Y10_N17      ; 29      ; Sync. clear              ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_EAT[12][7]~1      ; LCCOMB_X21_Y12_N24 ; 6       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_EAT[312][1]~0     ; LCCOMB_X21_Y11_N24 ; 7       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_EAT[31][4]~2      ; LCCOMB_X23_Y10_N30 ; 3       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_EAT[67][3]~3      ; LCCOMB_X23_Y10_N0  ; 3       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_HEAL[12][7]~4     ; LCCOMB_X21_Y12_N2  ; 6       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_HEAL[311][1]~1    ; LCCOMB_X21_Y11_N30 ; 7       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_HEAL[31][4]~2     ; LCCOMB_X23_Y10_N28 ; 3       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_HEAL[67][3]~6     ; LCCOMB_X23_Y10_N18 ; 3       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[12][4]~14    ; LCCOMB_X21_Y12_N16 ; 6       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[159][2]~27   ; LCCOMB_X18_Y7_N30  ; 4       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]~16   ; LCCOMB_X16_Y8_N6   ; 6       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[195][2]~28   ; LCCOMB_X18_Y7_N24  ; 2       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[31][4]~15    ; LCCOMB_X23_Y10_N24 ; 3       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[67][3]~13    ; LCCOMB_X23_Y10_N2  ; 3       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_PLAY[12][7]~2     ; LCCOMB_X21_Y12_N30 ; 6       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_PLAY[188][7]~1    ; LCCOMB_X21_Y10_N22 ; 7       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_PLAY[31][4]~4     ; LCCOMB_X23_Y10_N12 ; 3       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_PLAY[67][3]~3     ; LCCOMB_X23_Y10_N6  ; 3       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_SLEEP[12][7]~3    ; LCCOMB_X21_Y12_N14 ; 6       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_SLEEP[198][6]~0   ; LCCOMB_X21_Y11_N26 ; 7       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_SLEEP[31][4]~1    ; LCCOMB_X25_Y10_N24 ; 3       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_SLEEP[67][3]~2    ; LCCOMB_X23_Y10_N26 ; 3       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-+-----------------------------------------------------------------+--------------------+---------+--------------------------+--------+----------------------+------------------+---------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                         ;
++-----------------------------------------------------------------+--------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
+; Name                                                            ; Location           ; Fan-Out ; Usage                   ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------------------------------------------------+--------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
+; always1~0                                                       ; LCCOMB_X22_Y16_N28 ; 55      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; always1~2                                                       ; LCCOMB_X22_Y16_N16 ; 33      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; btn_reset                                                       ; PIN_31             ; 88      ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
+; clk                                                             ; PIN_23             ; 517     ; Clock                   ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; cont_screen_pause[14]~22                                        ; LCCOMB_X28_Y12_N8  ; 30      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; cont_test[13]~61                                                ; LCCOMB_X29_Y17_N6  ; 13      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; echo                                                            ; PIN_49             ; 22      ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
+; enable_joystick~0                                               ; LCCOMB_X26_Y12_N24 ; 28      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; food[3]~37                                                      ; LCCOMB_X23_Y15_N8  ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; fun[4]~49                                                       ; LCCOMB_X25_Y13_N8  ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; ind_select[2]~13                                                ; LCCOMB_X26_Y12_N18 ; 3       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; ind_select~12                                                   ; LCCOMB_X26_Y12_N28 ; 5       ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
+; led_s1~1                                                        ; LCCOMB_X28_Y13_N22 ; 3       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; rest[3]~72                                                      ; LCCOMB_X23_Y15_N2  ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; state[0]~30                                                     ; LCCOMB_X24_Y17_N26 ; 3       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; state[2]                                                        ; FF_X24_Y17_N25     ; 45      ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
+; state_test~24                                                   ; LCCOMB_X25_Y13_N10 ; 22      ; Sync. load              ; no     ; --                   ; --               ; --                        ;
+; state_test~32                                                   ; LCCOMB_X28_Y14_N4  ; 3       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; test                                                            ; FF_X29_Y17_N9      ; 49      ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
+; test_timing[0]~12                                               ; LCCOMB_X26_Y17_N22 ; 4       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_ads1115:UTT_joystick|ads1115_master:UUT_setup|always0~0     ; LCCOMB_X22_Y4_N22  ; 7       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|Equal0~1           ; LCCOMB_X3_Y7_N26   ; 25      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|Equal1~0           ; LCCOMB_X24_Y3_N24  ; 1       ; Output enable           ; no     ; --                   ; --               ; --                        ;
+; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|LessThan0~1        ; LCCOMB_X3_Y7_N10   ; 7       ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
+; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|addr_byte_out[0]~1 ; LCCOMB_X21_Y3_N4   ; 5       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|bit_counter[0]~21  ; LCCOMB_X22_Y4_N26  ; 3       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|bit_counter[3]~16  ; LCCOMB_X24_Y4_N30  ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|bus_timing~11      ; LCCOMB_X24_Y4_N12  ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|data_counter[0]~2  ; LCCOMB_X23_Y3_N30  ; 10      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytesA0[15]~1 ; LCCOMB_X25_Y4_N4   ; 16      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|sda_out_en~0       ; LCCOMB_X21_Y3_N6   ; 1       ; Output enable           ; no     ; --                   ; --               ; --                        ;
+; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|state[2]           ; FF_X21_Y3_N21      ; 46      ; Sync. load              ; no     ; --                   ; --               ; --                        ;
+; top_hcsr04:UTT_ultrasonido|LessThan0~4                          ; LCCOMB_X1_Y10_N30  ; 21      ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
+; top_hcsr04:UTT_ultrasonido|level2~6                             ; LCCOMB_X14_Y3_N28  ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|master_i2c_oled:i2c|Equal0~1                  ; LCCOMB_X3_Y7_N30   ; 15      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|master_i2c_oled:i2c|Equal1~0                  ; LCCOMB_X1_Y8_N16   ; 1       ; Output enable           ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|master_i2c_oled:i2c|Equal3~1                  ; LCCOMB_X1_Y8_N4    ; 17      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|master_i2c_oled:i2c|addr_byte_out[3]~2        ; LCCOMB_X2_Y8_N6    ; 10      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|master_i2c_oled:i2c|bus_timing~11             ; LCCOMB_X2_Y9_N26   ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|master_i2c_oled:i2c|data_counter[0]~1         ; LCCOMB_X1_Y8_N10   ; 10      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|master_i2c_oled:i2c|next_state[3]~6           ; LCCOMB_X2_Y8_N4    ; 3       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|master_i2c_oled:i2c|sda_out_en~0              ; LCCOMB_X1_Y9_N16   ; 1       ; Output enable           ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|master_i2c_oled:i2c|state[0]                  ; FF_X1_Y8_N27       ; 29      ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_EAT[12][7]~2      ; LCCOMB_X19_Y13_N0  ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_EAT[312][1]~1     ; LCCOMB_X19_Y14_N22 ; 7       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_EAT[31][4]~3      ; LCCOMB_X21_Y14_N10 ; 3       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_EAT[67][3]~4      ; LCCOMB_X19_Y16_N20 ; 3       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_HEAL[12][7]~1     ; LCCOMB_X19_Y13_N18 ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_HEAL[311][1]~0    ; LCCOMB_X19_Y14_N10 ; 7       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_HEAL[31][4]~2     ; LCCOMB_X19_Y14_N20 ; 3       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_HEAL[67][3]~3     ; LCCOMB_X19_Y11_N6  ; 3       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[12][4]~13    ; LCCOMB_X19_Y13_N28 ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[159][2]~33   ; LCCOMB_X25_Y12_N22 ; 4       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[188][7]~15   ; LCCOMB_X19_Y14_N30 ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[195][2]~29   ; LCCOMB_X25_Y12_N16 ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[31][4]~14    ; LCCOMB_X21_Y14_N28 ; 3       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[67][3]~12    ; LCCOMB_X19_Y11_N28 ; 3       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[87][3]~10    ; LCCOMB_X19_Y14_N4  ; 8       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_PLAY[12][7]~3     ; LCCOMB_X19_Y13_N6  ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_PLAY[188][7]~1    ; LCCOMB_X19_Y14_N8  ; 7       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_PLAY[31][4]~4     ; LCCOMB_X19_Y14_N18 ; 3       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_PLAY[67][3]~2     ; LCCOMB_X19_Y11_N14 ; 3       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_SLEEP[12][7]~5    ; LCCOMB_X19_Y13_N26 ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_SLEEP[198][6]~4   ; LCCOMB_X19_Y14_N2  ; 7       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_SLEEP[31][4]~6    ; LCCOMB_X21_Y14_N2  ; 3       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_SLEEP[67][3]~7    ; LCCOMB_X19_Y11_N22 ; 3       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
++-----------------------------------------------------------------+--------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------+
@@ -900,7 +928,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clk  ; PIN_23   ; 515     ; 9                                    ; Global Clock         ; GCLK2            ; --                        ;
+; clk  ; PIN_23   ; 517     ; 10                                   ; Global Clock         ; GCLK2            ; --                        ;
 +------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -909,9 +937,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------+---------+
 ; Name                                                  ; Fan-Out ;
 +-------------------------------------------------------+---------+
-; top_oled:UUT_oled|master_i2c_oled:i2c|data_counter[5] ; 903     ;
-; top_oled:UUT_oled|master_i2c_oled:i2c|data_counter[0] ; 780     ;
-; top_oled:UUT_oled|master_i2c_oled:i2c|data_counter[1] ; 757     ;
+; top_oled:UUT_oled|master_i2c_oled:i2c|data_counter[5] ; 909     ;
+; top_oled:UUT_oled|master_i2c_oled:i2c|data_counter[0] ; 772     ;
+; top_oled:UUT_oled|master_i2c_oled:i2c|data_counter[1] ; 742     ;
 +-------------------------------------------------------+---------+
 
 
@@ -920,49 +948,49 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 5,471 / 32,401 ( 17 % ) ;
-; C16 interconnects     ; 35 / 1,326 ( 3 % )      ;
-; C4 interconnects      ; 2,163 / 21,816 ( 10 % ) ;
-; Direct links          ; 993 / 32,401 ( 3 % )    ;
+; Block interconnects   ; 5,634 / 32,401 ( 17 % ) ;
+; C16 interconnects     ; 50 / 1,326 ( 4 % )      ;
+; C4 interconnects      ; 2,237 / 21,816 ( 10 % ) ;
+; Direct links          ; 963 / 32,401 ( 3 % )    ;
 ; Global clocks         ; 1 / 10 ( 10 % )         ;
-; Local interconnects   ; 2,615 / 10,320 ( 25 % ) ;
-; R24 interconnects     ; 63 / 1,289 ( 5 % )      ;
-; R4 interconnects      ; 2,291 / 28,186 ( 8 % )  ;
+; Local interconnects   ; 2,685 / 10,320 ( 26 % ) ;
+; R24 interconnects     ; 77 / 1,289 ( 6 % )      ;
+; R4 interconnects      ; 2,312 / 28,186 ( 8 % )  ;
 +-----------------------+-------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                          ;
 +---------------------------------------------+-------------------------------+
-; Number of Logic Elements  (Average = 14.28) ; Number of LABs  (Total = 295) ;
+; Number of Logic Elements  (Average = 14.46) ; Number of LABs  (Total = 298) ;
 +---------------------------------------------+-------------------------------+
-; 1                                           ; 7                             ;
-; 2                                           ; 1                             ;
-; 3                                           ; 1                             ;
-; 4                                           ; 2                             ;
-; 5                                           ; 2                             ;
-; 6                                           ; 6                             ;
+; 1                                           ; 6                             ;
+; 2                                           ; 0                             ;
+; 3                                           ; 2                             ;
+; 4                                           ; 0                             ;
+; 5                                           ; 5                             ;
+; 6                                           ; 4                             ;
 ; 7                                           ; 2                             ;
-; 8                                           ; 5                             ;
-; 9                                           ; 4                             ;
-; 10                                          ; 3                             ;
-; 11                                          ; 4                             ;
-; 12                                          ; 11                            ;
-; 13                                          ; 7                             ;
-; 14                                          ; 23                            ;
-; 15                                          ; 35                            ;
-; 16                                          ; 182                           ;
+; 8                                           ; 0                             ;
+; 9                                           ; 3                             ;
+; 10                                          ; 4                             ;
+; 11                                          ; 9                             ;
+; 12                                          ; 7                             ;
+; 13                                          ; 16                            ;
+; 14                                          ; 14                            ;
+; 15                                          ; 36                            ;
+; 16                                          ; 190                           ;
 +---------------------------------------------+-------------------------------+
 
 
 +--------------------------------------------------------------------+
 ; LAB-wide Signals                                                   ;
 +------------------------------------+-------------------------------+
-; LAB-wide Signals  (Average = 0.68) ; Number of LABs  (Total = 295) ;
+; LAB-wide Signals  (Average = 0.67) ; Number of LABs  (Total = 298) ;
 +------------------------------------+-------------------------------+
-; 1 Clock                            ; 120                           ;
-; 1 Clock enable                     ; 60                            ;
-; 1 Sync. clear                      ; 4                             ;
+; 1 Clock                            ; 119                           ;
+; 1 Clock enable                     ; 58                            ;
+; 1 Sync. clear                      ; 6                             ;
 ; 1 Sync. load                       ; 7                             ;
 ; 2 Clock enables                    ; 9                             ;
 +------------------------------------+-------------------------------+
@@ -971,39 +999,39 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Signals Sourced  (Average = 16.01) ; Number of LABs  (Total = 295) ;
+; Number of Signals Sourced  (Average = 16.15) ; Number of LABs  (Total = 298) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
-; 1                                            ; 5                             ;
+; 1                                            ; 4                             ;
 ; 2                                            ; 2                             ;
-; 3                                            ; 1                             ;
-; 4                                            ; 1                             ;
-; 5                                            ; 1                             ;
-; 6                                            ; 3                             ;
-; 7                                            ; 3                             ;
-; 8                                            ; 3                             ;
-; 9                                            ; 3                             ;
+; 3                                            ; 0                             ;
+; 4                                            ; 0                             ;
+; 5                                            ; 2                             ;
+; 6                                            ; 4                             ;
+; 7                                            ; 0                             ;
+; 8                                            ; 2                             ;
+; 9                                            ; 5                             ;
 ; 10                                           ; 4                             ;
-; 11                                           ; 4                             ;
-; 12                                           ; 6                             ;
-; 13                                           ; 8                             ;
-; 14                                           ; 17                            ;
-; 15                                           ; 24                            ;
-; 16                                           ; 119                           ;
-; 17                                           ; 17                            ;
-; 18                                           ; 22                            ;
-; 19                                           ; 10                            ;
-; 20                                           ; 9                             ;
-; 21                                           ; 8                             ;
+; 11                                           ; 5                             ;
+; 12                                           ; 8                             ;
+; 13                                           ; 10                            ;
+; 14                                           ; 11                            ;
+; 15                                           ; 28                            ;
+; 16                                           ; 128                           ;
+; 17                                           ; 18                            ;
+; 18                                           ; 10                            ;
+; 19                                           ; 12                            ;
+; 20                                           ; 12                            ;
+; 21                                           ; 5                             ;
 ; 22                                           ; 5                             ;
 ; 23                                           ; 2                             ;
-; 24                                           ; 1                             ;
-; 25                                           ; 6                             ;
-; 26                                           ; 6                             ;
-; 27                                           ; 3                             ;
-; 28                                           ; 1                             ;
+; 24                                           ; 6                             ;
+; 25                                           ; 3                             ;
+; 26                                           ; 3                             ;
+; 27                                           ; 1                             ;
+; 28                                           ; 6                             ;
 ; 29                                           ; 0                             ;
-; 30                                           ; 0                             ;
+; 30                                           ; 1                             ;
 ; 31                                           ; 1                             ;
 +----------------------------------------------+-------------------------------+
 
@@ -1011,25 +1039,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                         ;
 +-------------------------------------------------+-------------------------------+
-; Number of Signals Sourced Out  (Average = 7.39) ; Number of LABs  (Total = 295) ;
+; Number of Signals Sourced Out  (Average = 7.24) ; Number of LABs  (Total = 298) ;
 +-------------------------------------------------+-------------------------------+
 ; 0                                               ; 0                             ;
-; 1                                               ; 11                            ;
-; 2                                               ; 8                             ;
+; 1                                               ; 7                             ;
+; 2                                               ; 14                            ;
 ; 3                                               ; 17                            ;
-; 4                                               ; 19                            ;
-; 5                                               ; 36                            ;
-; 6                                               ; 32                            ;
+; 4                                               ; 22                            ;
+; 5                                               ; 39                            ;
+; 6                                               ; 37                            ;
 ; 7                                               ; 39                            ;
-; 8                                               ; 38                            ;
-; 9                                               ; 20                            ;
-; 10                                              ; 21                            ;
-; 11                                              ; 16                            ;
-; 12                                              ; 15                            ;
-; 13                                              ; 9                             ;
-; 14                                              ; 5                             ;
-; 15                                              ; 2                             ;
-; 16                                              ; 6                             ;
+; 8                                               ; 23                            ;
+; 9                                               ; 32                            ;
+; 10                                              ; 23                            ;
+; 11                                              ; 10                            ;
+; 12                                              ; 6                             ;
+; 13                                              ; 13                            ;
+; 14                                              ; 7                             ;
+; 15                                              ; 1                             ;
+; 16                                              ; 7                             ;
 ; 17                                              ; 1                             ;
 +-------------------------------------------------+-------------------------------+
 
@@ -1037,45 +1065,46 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Distinct Inputs  (Average = 17.67) ; Number of LABs  (Total = 295) ;
+; Number of Distinct Inputs  (Average = 17.77) ; Number of LABs  (Total = 298) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
 ; 1                                            ; 1                             ;
-; 2                                            ; 5                             ;
-; 3                                            ; 6                             ;
-; 4                                            ; 3                             ;
-; 5                                            ; 1                             ;
+; 2                                            ; 4                             ;
+; 3                                            ; 5                             ;
+; 4                                            ; 5                             ;
+; 5                                            ; 0                             ;
 ; 6                                            ; 4                             ;
-; 7                                            ; 7                             ;
-; 8                                            ; 3                             ;
-; 9                                            ; 6                             ;
-; 10                                           ; 10                            ;
-; 11                                           ; 15                            ;
-; 12                                           ; 9                             ;
-; 13                                           ; 10                            ;
-; 14                                           ; 12                            ;
-; 15                                           ; 16                            ;
-; 16                                           ; 26                            ;
-; 17                                           ; 20                            ;
-; 18                                           ; 20                            ;
-; 19                                           ; 9                             ;
+; 7                                            ; 2                             ;
+; 8                                            ; 8                             ;
+; 9                                            ; 4                             ;
+; 10                                           ; 5                             ;
+; 11                                           ; 8                             ;
+; 12                                           ; 12                            ;
+; 13                                           ; 18                            ;
+; 14                                           ; 13                            ;
+; 15                                           ; 25                            ;
+; 16                                           ; 16                            ;
+; 17                                           ; 17                            ;
+; 18                                           ; 18                            ;
+; 19                                           ; 21                            ;
 ; 20                                           ; 18                            ;
-; 21                                           ; 16                            ;
+; 21                                           ; 11                            ;
 ; 22                                           ; 8                             ;
-; 23                                           ; 6                             ;
+; 23                                           ; 14                            ;
 ; 24                                           ; 8                             ;
-; 25                                           ; 9                             ;
-; 26                                           ; 11                            ;
-; 27                                           ; 8                             ;
-; 28                                           ; 4                             ;
-; 29                                           ; 2                             ;
-; 30                                           ; 5                             ;
-; 31                                           ; 2                             ;
-; 32                                           ; 1                             ;
-; 33                                           ; 6                             ;
-; 34                                           ; 4                             ;
-; 35                                           ; 2                             ;
-; 36                                           ; 2                             ;
+; 25                                           ; 13                            ;
+; 26                                           ; 9                             ;
+; 27                                           ; 4                             ;
+; 28                                           ; 6                             ;
+; 29                                           ; 8                             ;
+; 30                                           ; 1                             ;
+; 31                                           ; 5                             ;
+; 32                                           ; 2                             ;
+; 33                                           ; 0                             ;
+; 34                                           ; 1                             ;
+; 35                                           ; 3                             ;
+; 36                                           ; 0                             ;
+; 37                                           ; 1                             ;
 +----------------------------------------------+-------------------------------+
 
 
@@ -1212,16 +1241,14 @@ Note: For more information on problematic transfers, consider running the Fitter
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                                                  ;
-+---------------------------------------------------------------+------------------------------------------------------------+-------------------+
-; Source Register                                               ; Destination Register                                       ; Delay Added in ns ;
-+---------------------------------------------------------------+------------------------------------------------------------+-------------------+
-; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|bus_timing.01    ; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|bus_timing.10 ; 0.075             ;
-; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytesA0[13] ; top_ads1115:UTT_joystick|led2                              ; 0.019             ;
-; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|read_bytesA0[14] ; top_ads1115:UTT_joystick|led2                              ; 0.017             ;
-+---------------------------------------------------------------+------------------------------------------------------------+-------------------+
-Note: This table only shows the top 3 path(s) that have the largest delay added for hold.
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                          ;
++------------------------------------------------------------+-------------------------------------------------------+-------------------+
+; Source Register                                            ; Destination Register                                  ; Delay Added in ns ;
++------------------------------------------------------------+-------------------------------------------------------+-------------------+
+; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|next_state[0] ; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|state[0] ; 0.056             ;
++------------------------------------------------------------+-------------------------------------------------------+-------------------+
+Note: This table only shows the top 1 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1255,9 +1282,7 @@ Info (176353): Automatically promoted node clk~input (placed in PIN 23 (CLK1, DI
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Warning (15705): Ignored locations or region assignments to the following nodes
-    Warning (15706): Node "SONIDO" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1266,22 +1291,21 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:04
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 8% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 19% of the available device resources in the region that extends from location X11_Y12 to location X22_Y24
+    Info (170196): Router estimated peak interconnect usage is 17% of the available device resources in the region that extends from location X11_Y0 to location X22_Y11
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
-Info (11888): Total time spent on timing analysis during the Fitter is 1.35 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 1.39 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
-Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info (144001): Generated suppressed messages file D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/output_files/top_fsm.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 6172 megabytes
-    Info: Processing ended: Thu Sep 19 20:39:31 2024
-    Info: Elapsed time: 00:00:14
+Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 6173 megabytes
+    Info: Processing ended: Fri Sep 20 02:46:00 2024
+    Info: Elapsed time: 00:00:13
     Info: Total CPU time (on all processors): 00:00:04
 
 

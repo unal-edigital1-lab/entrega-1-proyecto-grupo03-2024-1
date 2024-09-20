@@ -20,7 +20,7 @@ module top_ads1115 (
 			led2 <= 1;
 			led3 <= 1;
 		end
-		else if (read_bytesA0 > 15'h59D8) begin
+		else if (read_bytesA0 > 15'h57E4) begin
 			led1 <= 1;
 			led2 <= 1;
 			led3 <= 0;
