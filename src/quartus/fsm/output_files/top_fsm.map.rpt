@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_fsm
-Wed Sep 18 22:30:34 2024
+Thu Sep 19 20:39:16 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -13,15 +13,15 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |top_fsm|top_oled:UUT_oled|master_i2c_oled:i2c|bus_timing
-  9. State Machine - |top_fsm|top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|bus_timing
- 10. Registers Removed During Synthesis
- 11. Removed Registers Triggering Further Register Optimizations
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Parameter Settings for User Entity Instance: top_hcsr04:UTT_ultrasonido
- 16. Port Connectivity Checks: "buzzer:UTT_buzzer"
+  8. State Machine - |top_fsm|state_test
+  9. State Machine - |top_fsm|top_oled:UUT_oled|master_i2c_oled:i2c|bus_timing
+ 10. State Machine - |top_fsm|top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|bus_timing
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Parameter Settings for User Entity Instance: top_hcsr04:UTT_ultrasonido
  17. Post-Synthesis Netlist Statistics for Top Partition
  18. Elapsed Time Per Partition
  19. Analysis & Synthesis Messages
@@ -52,16 +52,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Sep 18 22:30:34 2024          ;
+; Analysis & Synthesis Status        ; Successful - Thu Sep 19 20:39:16 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; top_fsm                                        ;
 ; Top-level Entity Name              ; top_fsm                                        ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 3,938                                          ;
-;     Total combinational functions  ; 3,858                                          ;
-;     Dedicated logic registers      ; 494                                            ;
-; Total registers                    ; 494                                            ;
-; Total pins                         ; 25                                             ;
+; Total logic elements               ; 4,252                                          ;
+;     Total combinational functions  ; 4,168                                          ;
+;     Dedicated logic registers      ; 515                                            ;
+; Total registers                    ; 515                                            ;
+; Total pins                         ; 24                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -163,7 +163,7 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 1.01        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
@@ -199,7 +199,6 @@ https://fpgasoftware.intel.com/eula.
 ; screen_eat.men                   ; yes             ; Auto-Found Unspecified File  ; D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/screen_eat.men    ;         ;
 ; screen_sleep.men                 ; yes             ; Auto-Found Unspecified File  ; D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/screen_sleep.men  ;         ;
 ; screen_main.men                  ; yes             ; Auto-Found Unspecified File  ; D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/screen_main.men   ;         ;
-; buzzer.v                         ; yes             ; Auto-Found Verilog HDL File  ; D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/buzzer.v          ;         ;
 +----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -208,30 +207,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------------------------------------------------+
 ; Resource                                    ; Usage                                                 ;
 +---------------------------------------------+-------------------------------------------------------+
-; Estimated Total logic elements              ; 3,938                                                 ;
+; Estimated Total logic elements              ; 4,252                                                 ;
 ;                                             ;                                                       ;
-; Total combinational functions               ; 3858                                                  ;
+; Total combinational functions               ; 4168                                                  ;
 ; Logic element usage by number of LUT inputs ;                                                       ;
-;     -- 4 input functions                    ; 2817                                                  ;
-;     -- 3 input functions                    ; 492                                                   ;
-;     -- <=2 input functions                  ; 549                                                   ;
+;     -- 4 input functions                    ; 3002                                                  ;
+;     -- 3 input functions                    ; 611                                                   ;
+;     -- <=2 input functions                  ; 555                                                   ;
 ;                                             ;                                                       ;
 ; Logic elements by mode                      ;                                                       ;
-;     -- normal mode                          ; 3570                                                  ;
-;     -- arithmetic mode                      ; 288                                                   ;
+;     -- normal mode                          ; 3870                                                  ;
+;     -- arithmetic mode                      ; 298                                                   ;
 ;                                             ;                                                       ;
-; Total registers                             ; 494                                                   ;
-;     -- Dedicated logic registers            ; 494                                                   ;
+; Total registers                             ; 515                                                   ;
+;     -- Dedicated logic registers            ; 515                                                   ;
 ;     -- I/O registers                        ; 0                                                     ;
 ;                                             ;                                                       ;
-; I/O pins                                    ; 25                                                    ;
+; I/O pins                                    ; 24                                                    ;
 ;                                             ;                                                       ;
 ; Embedded Multiplier 9-bit elements          ; 0                                                     ;
 ;                                             ;                                                       ;
 ; Maximum fan-out node                        ; top_oled:UUT_oled|master_i2c_oled:i2c|data_counter[5] ;
-; Maximum fan-out                             ; 890                                                   ;
-; Total fan-out                               ; 15175                                                 ;
-; Average fan-out                             ; 3.44                                                  ;
+; Maximum fan-out                             ; 903                                                   ;
+; Total fan-out                               ; 16330                                                 ;
+; Average fan-out                             ; 3.45                                                  ;
 +---------------------------------------------+-------------------------------------------------------+
 
 
@@ -240,17 +239,31 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                        ; Entity Name     ; Library Name ;
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------+-----------------+--------------+
-; |top_fsm                         ; 3858 (551)          ; 494 (203)                 ; 0           ; 0            ; 0       ; 0         ; 25   ; 0            ; |top_fsm                                                   ; top_fsm         ; work         ;
-;    |buzzer:UTT_buzzer|           ; 38 (38)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_fsm|buzzer:UTT_buzzer                                 ; buzzer          ; work         ;
+; |top_fsm                         ; 4168 (875)          ; 515 (244)                 ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |top_fsm                                                   ; top_fsm         ; work         ;
 ;    |top_ads1115:UTT_joystick|    ; 242 (15)            ; 87 (4)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_fsm|top_ads1115:UTT_joystick                          ; top_ads1115     ; work         ;
 ;       |ads1115_master:UUT_setup| ; 20 (20)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_fsm|top_ads1115:UTT_joystick|ads1115_master:UUT_setup ; ads1115_master  ; work         ;
 ;       |i2c_ads1115:UTT_i2c|      ; 207 (207)           ; 76 (76)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_fsm|top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c      ; i2c_ads1115     ; work         ;
-;    |top_hcsr04:UTT_ultrasonido|  ; 63 (63)             ; 43 (43)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_fsm|top_hcsr04:UTT_ultrasonido                        ; top_hcsr04      ; work         ;
-;    |top_oled:UUT_oled|           ; 2964 (0)            ; 141 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_fsm|top_oled:UUT_oled                                 ; top_oled        ; work         ;
+;    |top_hcsr04:UTT_ultrasonido|  ; 64 (64)             ; 43 (43)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_fsm|top_hcsr04:UTT_ultrasonido                        ; top_hcsr04      ; work         ;
+;    |top_oled:UUT_oled|           ; 2987 (0)            ; 141 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_fsm|top_oled:UUT_oled                                 ; top_oled        ; work         ;
 ;       |master_i2c_oled:i2c|      ; 125 (125)           ; 41 (41)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_fsm|top_oled:UUT_oled|master_i2c_oled:i2c             ; master_i2c_oled ; work         ;
-;       |ssd1306_master:setup|     ; 2839 (2839)         ; 100 (100)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup            ; ssd1306_master  ; work         ;
+;       |ssd1306_master:setup|     ; 2862 (2862)         ; 100 (100)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup            ; ssd1306_master  ; work         ;
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_fsm|state_test                                                                                                                                            ;
++-------------------------+-------------------------+------------------------+-------------------------+-----------------------+------------------------+------------------------+
+; Name                    ; state_test.DEATH_REVIEW ; state_test.HEAL_REVIEW ; state_test.SLEEP_REVIEW ; state_test.EAT_REVIEW ; state_test.PLAY_REVIEW ; state_test.MAIN_REVIEW ;
++-------------------------+-------------------------+------------------------+-------------------------+-----------------------+------------------------+------------------------+
+; state_test.MAIN_REVIEW  ; 0                       ; 0                      ; 0                       ; 0                     ; 0                      ; 0                      ;
+; state_test.PLAY_REVIEW  ; 0                       ; 0                      ; 0                       ; 0                     ; 1                      ; 1                      ;
+; state_test.EAT_REVIEW   ; 0                       ; 0                      ; 0                       ; 1                     ; 0                      ; 1                      ;
+; state_test.SLEEP_REVIEW ; 0                       ; 0                      ; 1                       ; 0                     ; 0                      ; 1                      ;
+; state_test.HEAL_REVIEW  ; 0                       ; 1                      ; 0                       ; 0                     ; 0                      ; 1                      ;
+; state_test.DEATH_REVIEW ; 1                       ; 0                      ; 0                       ; 0                     ; 0                      ; 1                      ;
++-------------------------+-------------------------+------------------------+-------------------------+-----------------------+------------------------+------------------------+
 
 
 Encoding Type:  One-Hot
@@ -289,23 +302,6 @@ Encoding Type:  One-Hot
 ; top_oled:UUT_oled|ssd1306_master:setup|addr_byte_in[0,1]                 ; Stuck at GND due to stuck port data_in                                        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|addr_byte_in[2..5]                ; Stuck at VCC due to stuck port data_in                                        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|addr_byte_in[6]                   ; Stuck at GND due to stuck port data_in                                        ;
-; buzzer:UTT_buzzer|CONT3[1..10]                                           ; Lost fanout                                                                   ;
-; buzzer:UTT_buzzer|CONT4[9..19]                                           ; Lost fanout                                                                   ;
-; buzzer:UTT_buzzer|CONT[0]                                                ; Lost fanout                                                                   ;
-; buzzer:UTT_buzzer|CONT4[1..8]                                            ; Lost fanout                                                                   ;
-; buzzer:UTT_buzzer|CONT5[11..19]                                          ; Lost fanout                                                                   ;
-; buzzer:UTT_buzzer|CONT2[0]                                               ; Lost fanout                                                                   ;
-; buzzer:UTT_buzzer|CONT5[4..10]                                           ; Lost fanout                                                                   ;
-; buzzer:UTT_buzzer|CONT3[0]                                               ; Lost fanout                                                                   ;
-; buzzer:UTT_buzzer|CONT5[1..3]                                            ; Lost fanout                                                                   ;
-; buzzer:UTT_buzzer|CONT6[15..19]                                          ; Lost fanout                                                                   ;
-; buzzer:UTT_buzzer|CONT4[0]                                               ; Lost fanout                                                                   ;
-; buzzer:UTT_buzzer|CONT6[5..14]                                           ; Lost fanout                                                                   ;
-; buzzer:UTT_buzzer|CONT5[0]                                               ; Lost fanout                                                                   ;
-; buzzer:UTT_buzzer|CONT6[0..4]                                            ; Lost fanout                                                                   ;
-; buzzer:UTT_buzzer|CONT3[11..19]                                          ; Lost fanout                                                                   ;
-; buzzer:UTT_buzzer|CONT2[1..19]                                           ; Lost fanout                                                                   ;
-; buzzer:UTT_buzzer|CONT[1..19]                                            ; Lost fanout                                                                   ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_HEAL[106][0]               ; Stuck at GND due to stuck port data_in                                        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_HEAL[106][1]               ; Stuck at GND due to stuck port data_in                                        ;
 ; top_oled:UUT_oled|ssd1306_master:setup|SCREEN_HEAL[106][2]               ; Stuck at GND due to stuck port data_in                                        ;
@@ -5240,35 +5236,28 @@ Encoding Type:  One-Hot
 ; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|addr_byte_out[1]            ; Stuck at GND due to stuck port data_in                                        ;
 ; top_oled:UUT_oled|master_i2c_oled:i2c|addr_byte_out[0]                   ; Stuck at GND due to stuck port data_in                                        ;
 ; state[3]                                                                 ; Stuck at GND due to stuck port data_in                                        ;
+; state_test~7                                                             ; Lost fanout                                                                   ;
+; state_test~8                                                             ; Lost fanout                                                                   ;
+; state_test~9                                                             ; Lost fanout                                                                   ;
+; state_test~10                                                            ; Lost fanout                                                                   ;
 ; top_oled:UUT_oled|master_i2c_oled:i2c|bus_timing~2                       ; Lost fanout                                                                   ;
 ; top_oled:UUT_oled|master_i2c_oled:i2c|bus_timing~3                       ; Lost fanout                                                                   ;
 ; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|bus_timing~2                ; Lost fanout                                                                   ;
 ; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|bus_timing~3                ; Lost fanout                                                                   ;
-; Total Number of Removed Registers = 5107                                 ;                                                                               ;
+; Total Number of Removed Registers = 4991                                 ;                                                                               ;
 +--------------------------------------------------------------------------+-------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                           ;
-+-------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------+
-; Register name                                                     ; Reason for Removal        ; Registers Removed due to This Register                                                ;
-+-------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------+
-; buzzer:UTT_buzzer|CONT3[10]                                       ; Lost Fanouts              ; buzzer:UTT_buzzer|CONT3[9], buzzer:UTT_buzzer|CONT3[12], buzzer:UTT_buzzer|CONT3[13], ;
-;                                                                   ;                           ; buzzer:UTT_buzzer|CONT3[14], buzzer:UTT_buzzer|CONT3[15],                             ;
-;                                                                   ;                           ; buzzer:UTT_buzzer|CONT3[16]                                                           ;
-; buzzer:UTT_buzzer|CONT4[19]                                       ; Lost Fanouts              ; buzzer:UTT_buzzer|CONT4[15], buzzer:UTT_buzzer|CONT4[13],                             ;
-;                                                                   ;                           ; buzzer:UTT_buzzer|CONT4[10], buzzer:UTT_buzzer|CONT4[9], buzzer:UTT_buzzer|CONT4[6],  ;
-;                                                                   ;                           ; buzzer:UTT_buzzer|CONT4[2]                                                            ;
-; buzzer:UTT_buzzer|CONT5[19]                                       ; Lost Fanouts              ; buzzer:UTT_buzzer|CONT5[15], buzzer:UTT_buzzer|CONT5[11], buzzer:UTT_buzzer|CONT5[9], ;
-;                                                                   ;                           ; buzzer:UTT_buzzer|CONT5[8], buzzer:UTT_buzzer|CONT5[7], buzzer:UTT_buzzer|CONT5[6]    ;
-; buzzer:UTT_buzzer|CONT6[19]                                       ; Lost Fanouts              ; buzzer:UTT_buzzer|CONT6[15], buzzer:UTT_buzzer|CONT6[14],                             ;
-;                                                                   ;                           ; buzzer:UTT_buzzer|CONT6[10], buzzer:UTT_buzzer|CONT6[8], buzzer:UTT_buzzer|CONT6[7],  ;
-;                                                                   ;                           ; buzzer:UTT_buzzer|CONT6[5]                                                            ;
-; top_oled:UUT_oled|ssd1306_master:setup|read_write                 ; Stuck at GND              ; top_oled:UUT_oled|master_i2c_oled:i2c|addr_byte_out[0]                                ;
-;                                                                   ; due to stuck port data_in ;                                                                                       ;
-; top_ads1115:UTT_joystick|ads1115_master:UUT_setup|addr_byte_in[0] ; Stuck at GND              ; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|addr_byte_out[1]                         ;
-;                                                                   ; due to stuck port data_in ;                                                                                       ;
-+-------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                   ;
++-------------------------------------------------------------------+---------------------------+---------------------------------------------------------------+
+; Register name                                                     ; Reason for Removal        ; Registers Removed due to This Register                        ;
++-------------------------------------------------------------------+---------------------------+---------------------------------------------------------------+
+; top_oled:UUT_oled|ssd1306_master:setup|read_write                 ; Stuck at GND              ; top_oled:UUT_oled|master_i2c_oled:i2c|addr_byte_out[0]        ;
+;                                                                   ; due to stuck port data_in ;                                                               ;
+; top_ads1115:UTT_joystick|ads1115_master:UUT_setup|addr_byte_in[0] ; Stuck at GND              ; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|addr_byte_out[1] ;
+;                                                                   ; due to stuck port data_in ;                                                               ;
++-------------------------------------------------------------------+---------------------------+---------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -5276,12 +5265,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 494   ;
+; Total registers                              ; 515   ;
 ; Number of registers using Synchronous Clear  ; 53    ;
-; Number of registers using Synchronous Load   ; 3     ;
+; Number of registers using Synchronous Load   ; 22    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 309   ;
+; Number of registers using Clock Enable       ; 281   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -5291,6 +5280,18 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------------------------+---------+
 ; Inverted Register                                                     ; Fan out ;
 +-----------------------------------------------------------------------+---------+
+; cont_screen_pause[23]                                                 ; 2       ;
+; cont_screen_pause[22]                                                 ; 2       ;
+; cont_screen_pause[21]                                                 ; 2       ;
+; cont_screen_pause[20]                                                 ; 2       ;
+; cont_screen_pause[18]                                                 ; 2       ;
+; cont_screen_pause[16]                                                 ; 2       ;
+; cont_screen_pause[15]                                                 ; 2       ;
+; cont_screen_pause[14]                                                 ; 2       ;
+; cont_screen_pause[13]                                                 ; 2       ;
+; cont_screen_pause[8]                                                  ; 2       ;
+; cont_screen_pause[24]                                                 ; 2       ;
+; cont_screen_pause[26]                                                 ; 2       ;
 ; cont_reset[7]                                                         ; 2       ;
 ; cont_reset[9]                                                         ; 2       ;
 ; cont_reset[12]                                                        ; 2       ;
@@ -5304,30 +5305,31 @@ Encoding Type:  One-Hot
 ; cont_reset[25]                                                        ; 2       ;
 ; cont_reset[26]                                                        ; 2       ;
 ; cont_reset[27]                                                        ; 2       ;
-; life[2]                                                               ; 9       ;
-; food[5]                                                               ; 7       ;
-; food[6]                                                               ; 13      ;
-; life[5]                                                               ; 13      ;
 ; life[6]                                                               ; 13      ;
-; food[2]                                                               ; 7       ;
-; fun[5]                                                                ; 12      ;
-; fun[6]                                                                ; 13      ;
-; fun[2]                                                                ; 6       ;
-; rest[5]                                                               ; 7       ;
-; rest[6]                                                               ; 13      ;
-; rest[2]                                                               ; 6       ;
-; cont_screen_pause[8]                                                  ; 2       ;
-; cont_screen_pause[26]                                                 ; 2       ;
-; cont_screen_pause[24]                                                 ; 2       ;
-; cont_screen_pause[23]                                                 ; 2       ;
-; cont_screen_pause[22]                                                 ; 2       ;
-; cont_screen_pause[21]                                                 ; 2       ;
-; cont_screen_pause[20]                                                 ; 2       ;
-; cont_screen_pause[18]                                                 ; 2       ;
-; cont_screen_pause[16]                                                 ; 2       ;
-; cont_screen_pause[15]                                                 ; 2       ;
-; cont_screen_pause[14]                                                 ; 2       ;
-; cont_screen_pause[13]                                                 ; 2       ;
+; food[5]                                                               ; 9       ;
+; food[6]                                                               ; 15      ;
+; life[2]                                                               ; 8       ;
+; life[5]                                                               ; 13      ;
+; food[2]                                                               ; 8       ;
+; fun[5]                                                                ; 14      ;
+; fun[6]                                                                ; 14      ;
+; fun[2]                                                                ; 9       ;
+; rest[5]                                                               ; 9       ;
+; rest[6]                                                               ; 15      ;
+; rest[2]                                                               ; 8       ;
+; cont_test[7]                                                          ; 2       ;
+; cont_test[9]                                                          ; 2       ;
+; cont_test[12]                                                         ; 2       ;
+; cont_test[13]                                                         ; 2       ;
+; cont_test[15]                                                         ; 2       ;
+; cont_test[17]                                                         ; 2       ;
+; cont_test[18]                                                         ; 2       ;
+; cont_test[21]                                                         ; 2       ;
+; cont_test[22]                                                         ; 2       ;
+; cont_test[23]                                                         ; 2       ;
+; cont_test[25]                                                         ; 2       ;
+; cont_test[26]                                                         ; 2       ;
+; cont_test[27]                                                         ; 2       ;
 ; top_oled:UUT_oled|master_i2c_oled:i2c|scl_high                        ; 4       ;
 ; top_oled:UUT_oled|master_i2c_oled:i2c|sda_high                        ; 7       ;
 ; top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|scl_value                ; 3       ;
@@ -5343,7 +5345,7 @@ Encoding Type:  One-Hot
 ; top_ads1115:UTT_joystick|ads1115_master:UUT_setup|data_byte_in[0]     ; 2       ;
 ; top_ads1115:UTT_joystick|ads1115_master:UUT_setup|data_byte_in[7]     ; 2       ;
 ; top_ads1115:UTT_joystick|ads1115_master:UUT_setup|register_byte_in[0] ; 2       ;
-; Total number of inverted registers = 52                               ;         ;
+; Total number of inverted registers = 65                               ;         ;
 +-----------------------------------------------------------------------+---------+
 
 
@@ -5352,32 +5354,34 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
-; 3:1                ; 5 bits    ; 10 LEs        ; 0 LEs                ; 10 LEs                 ; Yes        ; |top_fsm|top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|addr_byte_out[0] ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |top_fsm|cont_reset[14]                                                ;
-; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|SCREEN_HEAL[13][6]     ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|SCREEN_PLAY[77][3]     ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|SCREEN_HEAL[51][4]     ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 0 LEs                ; 10 LEs                 ; Yes        ; |top_fsm|top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|data_byte_out[7] ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |top_fsm|cont_reset[29]                                                ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|SCREEN_HEAL[12][4]     ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|SCREEN_HEAL[87][3]     ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|SCREEN_PLAY[41][4]     ;
 ; 16:1               ; 3 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; Yes        ; |top_fsm|led_s3~reg0                                                   ;
 ; 16:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[200][2]    ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_fsm|top_hcsr04:UTT_ultrasonido|level2                             ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[183][2]    ;
-; 18:1               ; 2 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |top_fsm|top_oled:UUT_oled|master_i2c_oled:i2c|addr_byte_out[3]        ;
-; 18:1               ; 9 bits    ; 108 LEs       ; 0 LEs                ; 108 LEs                ; Yes        ; |top_fsm|top_oled:UUT_oled|master_i2c_oled:i2c|data_byte_out[0]        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_fsm|top_hcsr04:UTT_ultrasonido|level1                             ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 8 LEs                ; 14 LEs                 ; Yes        ; |top_fsm|life[4]                                                       ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[195][2]    ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |top_fsm|top_oled:UUT_oled|master_i2c_oled:i2c|addr_byte_out[0]        ;
+; 18:1               ; 9 bits    ; 108 LEs       ; 0 LEs                ; 108 LEs                ; Yes        ; |top_fsm|top_oled:UUT_oled|master_i2c_oled:i2c|data_byte_out[4]        ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |top_fsm|ind_select[3]                                                 ;
-; 7:1                ; 6 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[501][1]    ;
-; 16:1               ; 27 bits   ; 270 LEs       ; 54 LEs               ; 216 LEs                ; Yes        ; |top_fsm|cont_actions[20]                                              ;
-; 19:1               ; 10 bits   ; 120 LEs       ; 20 LEs               ; 100 LEs                ; Yes        ; |top_fsm|top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|data_counter[0]  ;
-; 18:1               ; 5 bits    ; 60 LEs        ; 5 LEs                ; 55 LEs                 ; Yes        ; |top_fsm|top_oled:UUT_oled|master_i2c_oled:i2c|bit_counter[2]          ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_fsm|food[1]                                                       ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_fsm|fun[3]                                                        ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_fsm|rest[4]                                                       ;
-; 20:1               ; 3 bits    ; 39 LEs        ; 3 LEs                ; 36 LEs                 ; Yes        ; |top_fsm|top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|bit_counter[2]   ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 20 LEs               ; 4 LEs                  ; Yes        ; |top_fsm|state[0]                                                      ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|SCREEN_MAIN[487][0]    ;
+; 7:1                ; 17 bits   ; 68 LEs        ; 51 LEs               ; 17 LEs                 ; Yes        ; |top_fsm|cont_test[24]                                                 ;
+; 19:1               ; 10 bits   ; 120 LEs       ; 20 LEs               ; 100 LEs                ; Yes        ; |top_fsm|top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|data_counter[4]  ;
+; 18:1               ; 5 bits    ; 60 LEs        ; 5 LEs                ; 55 LEs                 ; Yes        ; |top_fsm|top_oled:UUT_oled|master_i2c_oled:i2c|bit_counter[0]          ;
+; 18:1               ; 27 bits   ; 324 LEs       ; 54 LEs               ; 270 LEs                ; Yes        ; |top_fsm|cont_actions[20]                                              ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top_fsm|test_timing[3]                                                ;
+; 20:1               ; 3 bits    ; 39 LEs        ; 3 LEs                ; 36 LEs                 ; Yes        ; |top_fsm|top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|bit_counter[0]   ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |top_fsm|state[2]                                                      ;
 ; 24:1               ; 2 bits    ; 32 LEs        ; 4 LEs                ; 28 LEs                 ; Yes        ; |top_fsm|top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|bit_counter[4]   ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |top_fsm|cont_reset[23]                                                ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_fsm|food[6]                                                       ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_fsm|fun[6]                                                        ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_fsm|rest[2]                                                       ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |top_fsm|food[4]                                                       ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |top_fsm|fun[4]                                                        ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |top_fsm|rest[3]                                                       ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |top_fsm|cont_reset[13]                                                ;
+; 17:1               ; 3 bits    ; 33 LEs        ; 12 LEs               ; 21 LEs                 ; Yes        ; |top_fsm|life[6]                                                       ;
+; 7:1                ; 13 bits   ; 52 LEs        ; 39 LEs               ; 13 LEs                 ; Yes        ; |top_fsm|cont_test[27]                                                 ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|Mux9                   ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|Mux9                   ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|Mux9                   ;
@@ -5390,6 +5394,7 @@ Encoding Type:  One-Hot
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_fsm|top_oled:UUT_oled|ssd1306_master:setup|Mux0                   ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |top_fsm|top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c|bus_timing       ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |top_fsm|top_oled:UUT_oled|master_i2c_oled:i2c|bus_timing              ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |top_fsm|state_test                                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
 
 
@@ -5405,45 +5410,32 @@ Encoding Type:  One-Hot
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "buzzer:UTT_buzzer"                                                                                                                          ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; LA   ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; MI   ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; SOL  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; RE   ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; FA   ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; SI   ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 25                          ;
-; cycloneiii_ff         ; 494                         ;
-;     ENA               ; 300                         ;
+; boundary_port         ; 24                          ;
+; cycloneiii_ff         ; 515                         ;
+;     ENA               ; 268                         ;
 ;     ENA SCLR          ; 6                           ;
-;     ENA SLD           ; 3                           ;
+;     ENA SLD           ; 7                           ;
 ;     SCLR              ; 47                          ;
-;     plain             ; 138                         ;
+;     SLD               ; 15                          ;
+;     plain             ; 172                         ;
 ; cycloneiii_io_obuf    ; 4                           ;
-; cycloneiii_lcell_comb ; 3861                        ;
-;     arith             ; 288                         ;
-;         2 data inputs ; 231                         ;
+; cycloneiii_lcell_comb ; 4171                        ;
+;     arith             ; 298                         ;
+;         2 data inputs ; 241                         ;
 ;         3 data inputs ; 57                          ;
-;     normal            ; 3573                        ;
-;         1 data inputs ; 56                          ;
-;         2 data inputs ; 265                         ;
-;         3 data inputs ; 435                         ;
-;         4 data inputs ; 2817                        ;
+;     normal            ; 3873                        ;
+;         1 data inputs ; 59                          ;
+;         2 data inputs ; 258                         ;
+;         3 data inputs ; 554                         ;
+;         4 data inputs ; 3002                        ;
 ;                       ;                             ;
-; Max LUT depth         ; 27.60                       ;
-; Average LUT depth     ; 8.42                        ;
+; Max LUT depth         ; 29.80                       ;
+; Average LUT depth     ; 8.43                        ;
 +-----------------------+-----------------------------+
 
 
@@ -5462,7 +5454,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Wed Sep 18 22:30:17 2024
+    Info: Processing started: Thu Sep 19 20:38:59 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_fsm -c top_fsm
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -5476,21 +5468,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file ads1115
     Info (12023): Found entity 1: ads1115_master File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/ads1115_master.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at top_ads1115.v(52): created implicit net for "only_register" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_ads1115.v Line: 52
 Info (12127): Elaborating entity "top_fsm" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at top_fsm.v(73): object "death" assigned a value but never read File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_fsm.v Line: 73
-Warning (10230): Verilog HDL assignment warning at top_fsm.v(281): truncated value with size 32 to match size of target (27) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_fsm.v Line: 281
-Info (12128): Elaborating entity "top_ads1115" for hierarchy "top_ads1115:UTT_joystick" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_fsm.v Line: 40
+Warning (10036): Verilog HDL or VHDL warning at top_fsm.v(66): object "death" assigned a value but never read File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_fsm.v Line: 66
+Warning (10230): Verilog HDL assignment warning at top_fsm.v(304): truncated value with size 32 to match size of target (27) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_fsm.v Line: 304
+Warning (10230): Verilog HDL assignment warning at top_fsm.v(457): truncated value with size 30 to match size of target (27) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_fsm.v Line: 457
+Info (12128): Elaborating entity "top_ads1115" for hierarchy "top_ads1115:UTT_joystick" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_fsm.v Line: 39
 Info (12128): Elaborating entity "i2c_ads1115" for hierarchy "top_ads1115:UTT_joystick|i2c_ads1115:UTT_i2c" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_ads1115.v Line: 56
 Warning (10036): Verilog HDL or VHDL warning at i2c_ads1115.v(70): object "band" assigned a value but never read File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/i2c_ads1115.v Line: 70
 Info (12128): Elaborating entity "ads1115_master" for hierarchy "top_ads1115:UTT_joystick|ads1115_master:UUT_setup" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_ads1115.v Line: 68
 Warning (10036): Verilog HDL or VHDL warning at ads1115_master.v(28): object "block_sep" assigned a value but never read File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/ads1115_master.v Line: 28
 Warning (12125): Using design file top_hcsr04.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: top_hcsr04 File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_hcsr04.v Line: 1
-Info (12128): Elaborating entity "top_hcsr04" for hierarchy "top_hcsr04:UTT_ultrasonido" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_fsm.v Line: 49
+Info (12128): Elaborating entity "top_hcsr04" for hierarchy "top_hcsr04:UTT_ultrasonido" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_fsm.v Line: 48
 Warning (10230): Verilog HDL assignment warning at top_hcsr04.v(19): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_hcsr04.v Line: 19
 Warning (10230): Verilog HDL assignment warning at top_hcsr04.v(30): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_hcsr04.v Line: 30
 Warning (12125): Using design file top_oled.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: top_oled File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_oled.v Line: 3
-Info (12128): Elaborating entity "top_oled" for hierarchy "top_oled:UUT_oled" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_fsm.v Line: 60
+Info (12128): Elaborating entity "top_oled" for hierarchy "top_oled:UUT_oled" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_fsm.v Line: 59
 Warning (12125): Using design file master_i2c_oled.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: master_i2c_oled File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/master_i2c_oled.v Line: 3
 Info (12128): Elaborating entity "master_i2c_oled" for hierarchy "top_oled:UUT_oled|master_i2c_oled:i2c" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_oled.v Line: 30
@@ -5503,35 +5496,24 @@ Warning (10030): Net "SCREEN_DEATH.data_a" at ssd1306_master.v(63) has no driver
 Warning (10030): Net "SCREEN_DEATH.waddr_a" at ssd1306_master.v(63) has no driver or initial value, using a default initial value '0' File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/ssd1306_master.v Line: 63
 Warning (10030): Net "SCREEN_START.we_a" at ssd1306_master.v(57) has no driver or initial value, using a default initial value '0' File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/ssd1306_master.v Line: 57
 Warning (10030): Net "SCREEN_DEATH.we_a" at ssd1306_master.v(63) has no driver or initial value, using a default initial value '0' File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/ssd1306_master.v Line: 63
-Warning (12125): Using design file buzzer.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: buzzer File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/buzzer.v Line: 1
-Info (12128): Elaborating entity "buzzer" for hierarchy "buzzer:UTT_buzzer" File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/top_fsm.v Line: 66
-Warning (10230): Verilog HDL assignment warning at buzzer.v(35): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/buzzer.v Line: 35
-Warning (10230): Verilog HDL assignment warning at buzzer.v(43): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/buzzer.v Line: 43
-Warning (10230): Verilog HDL assignment warning at buzzer.v(51): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/buzzer.v Line: 51
-Warning (10230): Verilog HDL assignment warning at buzzer.v(59): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/buzzer.v Line: 59
-Warning (10230): Verilog HDL assignment warning at buzzer.v(67): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/buzzer.v Line: 67
-Warning (10230): Verilog HDL assignment warning at buzzer.v(75): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/buzzer.v Line: 75
-Warning (10230): Verilog HDL assignment warning at buzzer.v(83): truncated value with size 32 to match size of target (20) File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/buzzer.v Line: 83
 Info (276014): Found 2 instances of uninferred RAM logic
     Info (276007): RAM logic "top_oled:UUT_oled|ssd1306_master:setup|SCREEN_START" is uninferred due to asynchronous read logic File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/ssd1306_master.v Line: 57
     Info (276007): RAM logic "top_oled:UUT_oled|ssd1306_master:setup|SCREEN_DEATH" is uninferred due to asynchronous read logic File: D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/ssd1306_master.v Line: 63
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 124 registers lost all their fanouts during netlist optimizations.
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file D:/Personal/1-Universidad nacional/Semestre 6/Digital 1/Github/entrega-1-proyecto-grupo03-2024-1/src/quartus/fsm/output_files/top_fsm.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3978 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4291 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 14 output pins
+    Info (21059): Implemented 13 output pins
     Info (21060): Implemented 4 bidirectional pins
-    Info (21061): Implemented 3953 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4866 megabytes
-    Info: Processing ended: Wed Sep 18 22:30:34 2024
+    Info (21061): Implemented 4267 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 4862 megabytes
+    Info: Processing ended: Thu Sep 19 20:39:16 2024
     Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Total CPU time (on all processors): 00:00:10
 
 
 +------------------------------------------+

@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Sep 18 22:30:34 2024
+Analysis & Synthesis Status : Successful - Thu Sep 19 20:39:16 2024
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : top_fsm
 Top-level Entity Name : top_fsm
 Family : Cyclone IV E
-Total logic elements : 3,938
-    Total combinational functions : 3,858
-    Dedicated logic registers : 494
-Total registers : 494
-Total pins : 25
+Total logic elements : 4,252
+    Total combinational functions : 4,168
+    Dedicated logic registers : 515
+Total registers : 515
+Total pins : 24
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

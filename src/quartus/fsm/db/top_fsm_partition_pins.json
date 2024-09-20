@@ -56,10 +56,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "SONIDO",
-					"strict" : false
-				},
-				{
 					"name" : "scl_display",
 					"strict" : false
 				},
