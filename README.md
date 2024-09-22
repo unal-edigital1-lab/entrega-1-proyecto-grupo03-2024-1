@@ -297,3 +297,7 @@ Gtkwave:
 <p align="center">
   <img src=https://github.com/user-attachments/assets/17ee4299-b1ab-4849-bed9-4ab149788957>
 </p>
+
+En el diagrama del datasheet del HCSR04, se describe cómo el sensor emite un pulso de "trigger" para iniciar la medición de distancia, seguido por la espera de un pulso de "echo" que indica la recepción de la señal reflejada. Este proceso fue replicado en la simulación: tras enviar el pulso de trigger, el sistema empieza a contar el tiempo hasta que se recibe el pulso de echo, lo que permite calcular la distancia en función del tiempo transcurrido.
+
+En la simulación, se observa cómo el contador comienza justo después del trigger y continúa hasta que el pulso de echo es recibido. La distancia calculada, una vez determinada, se clasifica en dos niveles: nivel1 y nivel2, que corresponden a diferentes rangos de distancia según qué tan lejos esté el objeto detectado. Aunque la simulación no ilustra el cálculo exacto de la distancia, se enfoca en mostrar el proceso de emisión del trigger y la recepción del echo, y cómo los niveles resultantes se asignan de acuerdo con la distancia medida.
