@@ -312,3 +312,7 @@ En la simulación, se observa cómo el contador comienza justo después del trig
 </p>
 
 - Conversor A/D (Joystick)
+
+<p align="center">
+  <img src=https://github.com/user-attachments/assets/fa526531-874a-4bdf-84da-58099ecc2e05>
+</p>
