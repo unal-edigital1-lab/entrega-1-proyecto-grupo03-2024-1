@@ -304,3 +304,7 @@ En el diagrama del datasheet del HCSR04, se describe cómo el sensor emite un pu
 En la simulación, se observa cómo el contador comienza justo después del trigger y continúa hasta que el pulso de echo es recibido. La distancia calculada, una vez determinada, se clasifica en dos niveles: nivel1 y nivel2, que corresponden a diferentes rangos de distancia según qué tan lejos esté el objeto detectado. Aunque la simulación no ilustra el cálculo exacto de la distancia, se enfoca en mostrar el proceso de emisión del trigger y la recepción del echo, y cómo los niveles resultantes se asignan de acuerdo con la distancia medida.
 
 ## Analizador lógico
+
+- Pantalla oled
+
+- Conversor A/D (Joystick)
