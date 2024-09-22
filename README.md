@@ -200,6 +200,7 @@ El diagrama también destaca que, si no se gestionan adecuadamente las necesidad
   </p>
 
 - **_Casos de interacción_**:
+
 - Heal:
 
 ![diagrama base, heal drawio (1)](https://github.com/user-attachments/assets/421e729a-14e2-4d26-a697-44cfc3ad2a26)
@@ -244,7 +245,7 @@ El diagrama muestra el sistema del Tamagotchi compuesto por varios módulos que 
 
 ## Simulaciones
 
-- ssd1306_master
+- **_ssd1306_master_**
 
 I2C-bus Write data:
 
@@ -264,7 +265,7 @@ En la simulación, también se pueden ver claramente las señales de reconocimie
 
 Además, la simulación refleja cómo la comunicación pasa por diferentes estados del protocolo. Estos estados coinciden con los que describe el datasheet para la transmisión de bytes, gestionando cada fase de la comunicación I2C. Desde la dirección del esclavo hasta la escritura de comandos o datos, la simulación sigue el flujo de manera precisa, mostrando un ciclo completo de escritura en la pantalla OLED, tal como lo detalla el datasheet del SSD1306.
 
-- ads1115_master
+- **_ads1115_master_**
 
 Two-Wire Timing Diagram for Read Word Format
 
@@ -288,10 +289,9 @@ En el diagrama del datasheet del ADS1115, se describe cómo se realiza el proces
 
 Durante la simulación, se observa claramente cómo se generan las señales de reconocimiento (ACK) tras la transmisión de cada byte, lo que confirma que el dispositivo ADS1115 está recibiendo correctamente los datos, como lo dicta el protocolo I2C. Esta validación es crucial para asegurar que cada paso, desde la dirección hasta los datos de configuración, se está llevando a cabo sin errores.
 
-
 La simulación también refleja la transición a los diferentes estados del protocolo I2C, tal como se describe en el datasheet. Aunque el proceso de selección del registro de conversión y la lectura de los dos bytes correspondientes al valor convertido fue programado, debido a la complejidad de replicar el comportamiento exacto del convertidor ADC, esta parte no se ilustra completamente en la simulación.
 
-- top_hcsr04
+- **_top_hcsr04_**
 
 Gtkwave:
 
@@ -305,7 +305,7 @@ En la simulación, se observa cómo el contador comienza justo después del trig
 
 ## Analizador lógico
 
-- Pantalla oled
+- **_Pantalla oled_**
 
 <p align="center">
   <img src=https://github.com/user-attachments/assets/22058cd4-fc61-4a19-8c4a-3677f1a79c24>
@@ -313,7 +313,7 @@ En la simulación, se observa cómo el contador comienza justo después del trig
 
 En la evaluación del funcionamiento del código para la pantalla OLED 128x32 (SSD1306), se utilizó un analizador lógico para capturar y analizar las señales en el bus I2C. Los resultados confirmaron que la pantalla estaba operando correctamente. El analizador mostró la secuencia adecuada de la dirección del esclavo, seguida de los bytes de control y los datos necesarios para inicializar la pantalla y dibujar gráficos. Las señales de reconocimiento (ACK) generadas después de cada byte transmitido indicaron que el OLED estaba recibiendo los datos sin errores, validando así la correcta implementación del protocolo I2C en el código.
 
-- Conversor A/D (Joystick)
+- **_Conversor A/D (Joystick)_**
 
 <p align="center">
   <img src=https://github.com/user-attachments/assets/fa526531-874a-4bdf-84da-58099ecc2e05>
