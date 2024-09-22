@@ -183,64 +183,6 @@ Se tendra una serie de atributos los cuales estaran asociados a diferentes valor
 
 ## Máquina de estados finitos
 
-- **_General_**:
-
-  <p align="center">
-    <img src=https://github.com/user-attachments/assets/f5ac48e6-5699-487c-95c5-23c7887cfb1e>
-  </p>
-
-- **_Indicadores_**:
-
-  <p align="center">
-    <img src=https://github.com/user-attachments/assets/9368eeff-3645-43cf-9c70-fc470060c4f9>
-  </p>
-
-- **_Necesidades_**:
-
-  - Hungry:
-
-  <p align="center">
-    <img src=https://github.com/user-attachments/assets/8fcfdf29-5f84-413b-b039-03f66fe6767d>
-  </p>
-
-  - Sadness:
-
-  <p align="center">
-    <img src=https://github.com/user-attachments/assets/f411b84a-6bb9-4f6f-bb61-b4ac3158de2a>
-  </p>
-
-  - Fatigue:
-
-  <p align="center">
-    <img src=https://github.com/user-attachments/assets/d094b43a-279b-4b5c-be75-babe642f5d7f>
-  </p>
-
-- **_Casos de interacción_**:
-
-  - Heal:
-
-  <p align="center">
-    <img src=https://github.com/user-attachments/assets/9b95d0d1-227c-42b9-8564-efe27ffefb82>
-  </p>
-
-  - Feed:
-
-  <p align="center">
-    <img src=https://github.com/user-attachments/assets/fb8444c9-3259-409a-b078-e899e0c64850>
-  </p>
-
-  - Rest:
-
-  <p align="center">
-    <img src=https://github.com/user-attachments/assets/00490f80-3bb5-4e0c-818e-efb52796665e>
-  </p>
-
-  - Fun:
-
-  <p align="center">
-    <img src=https://github.com/user-attachments/assets/32177f78-8a1b-4c0e-a901-3ef62578f27c>
-  </p>
-
 ## Diagrama del sistema
 
 <p align="center">
