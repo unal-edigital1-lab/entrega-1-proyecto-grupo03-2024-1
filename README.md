@@ -120,7 +120,7 @@ Se tendra una serie de atributos los cuales estaran asociados a diferentes valor
 - **_General_**:
 
   <p align="center">
-    <img src=https://github.com/user-attachments/assets/7e2f38d4-e526-45f2-9adb-b15c06d68c6b>
+    <img src=https://github.com/user-attachments/assets/5595cfec-08e1-4089-92e7-a13279ab8587>
   </p>
 
 - **_Indicadores_**:
