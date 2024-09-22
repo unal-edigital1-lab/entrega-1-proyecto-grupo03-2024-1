@@ -252,5 +252,5 @@ El diagrama muestra el sistema del Tamagotchi compuesto por varios módulos que 
 - ads1115_master
 
 <p align="center">
-  <img src=https://github.com/user-attachments/assets/e2f785a5-b5b0-4813-a406-e947d6c3f571>
+  <img src=https://github.com/user-attachments/assets/73a67eb5-0e6c-448a-9601-68c9ef36c5a8>
 </p>
