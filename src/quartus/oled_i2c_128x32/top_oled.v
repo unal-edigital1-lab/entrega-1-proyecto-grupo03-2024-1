@@ -14,7 +14,7 @@ module top_oled (
     wire [3:0] state;
 	wire [9:0] data_counter;
 
-    master_i2c i2c (
+    master_i2c_oled i2c (
 		.clk(clk),
 		.addr_byte_in(addr_byte_in),
 		.read_write(read_write),

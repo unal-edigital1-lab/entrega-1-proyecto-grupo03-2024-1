@@ -1,0 +1,45 @@
+`timescale 1ns / 1ps // time scale - temporal precision
+
+module top_oled (
+    input clk,
+	input [8:0] screen_param,
+	input [32:0] needs_values,
+    inout wire sda,
+    inout wire scl
+);
+
+	wire [6:0] addr_byte_in;
+    wire read_write;
+    wire [7:0] control_byte_in;
+    wire [7:0] data_byte_in;
+	wire continue_bit;
+    wire [3:0] state;
+	wire [9:0] data_counter;
+
+    master_i2c_oled i2c (
+		.clk(clk),
+		.addr_byte_in(addr_byte_in),
+		.read_write(read_write),
+		.control_byte_in(control_byte_in),
+		.data_byte_in(data_byte_in),
+		.continue_bit(continue_bit),
+		.sda(sda), 
+		.scl(scl),
+		.state(state),
+		.data_counter(data_counter)
+	);
+
+    ssd1306_master setup (
+        .clk(clk),
+        .state(state),
+		.data_counter(data_counter),
+		.screen_param(screen_param),
+		.needs_values(needs_values),
+        .addr_byte_in(addr_byte_in),
+		.read_write(read_write),
+		.control_byte_in(control_byte_in),
+		.data_byte_in(data_byte_in),
+		.continue_bit(continue_bit)
+    );
+
+endmodule

@@ -1,0 +1,7 @@
+
+State Machine - |top_ads1115|i2c_ads1115:UTT_i2c|bus_timing
+Name bus_timing.11 bus_timing.10 bus_timing.01 bus_timing.00 
+bus_timing.00 0 0 0 0 
+bus_timing.01 0 0 1 1 
+bus_timing.10 0 1 0 1 
+bus_timing.11 1 0 0 1 

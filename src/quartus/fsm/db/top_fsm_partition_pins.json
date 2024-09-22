@@ -1,0 +1,105 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "led_left",
+					"strict" : false
+				},
+				{
+					"name" : "led_middle",
+					"strict" : false
+				},
+				{
+					"name" : "led_right",
+					"strict" : false
+				},
+				{
+					"name" : "led_action",
+					"strict" : false
+				},
+				{
+					"name" : "led_reset",
+					"strict" : false
+				},
+				{
+					"name" : "led_cancel",
+					"strict" : false
+				},
+				{
+					"name" : "led_test",
+					"strict" : false
+				},
+				{
+					"name" : "trigger",
+					"strict" : false
+				},
+				{
+					"name" : "level1",
+					"strict" : false
+				},
+				{
+					"name" : "level2",
+					"strict" : false
+				},
+				{
+					"name" : "led_s1",
+					"strict" : false
+				},
+				{
+					"name" : "led_s2",
+					"strict" : false
+				},
+				{
+					"name" : "led_s3",
+					"strict" : false
+				},
+				{
+					"name" : "scl_display",
+					"strict" : false
+				},
+				{
+					"name" : "sda_display",
+					"strict" : false
+				},
+				{
+					"name" : "scl_converter",
+					"strict" : false
+				},
+				{
+					"name" : "sda_converter",
+					"strict" : false
+				},
+				{
+					"name" : "btn_reset",
+					"strict" : false
+				},
+				{
+					"name" : "btn_cancel",
+					"strict" : false
+				},
+				{
+					"name" : "btn_test",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "btn_action",
+					"strict" : false
+				},
+				{
+					"name" : "echo",
+					"strict" : false
+				},
+				{
+					"name" : "enable",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
