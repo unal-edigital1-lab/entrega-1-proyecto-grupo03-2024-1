@@ -217,6 +217,12 @@ Se tendra una serie de atributos los cuales estaran asociados a diferentes valor
   <img src=https://github.com/user-attachments/assets/3f63bbfb-6ce2-4bee-94b3-160a88e32143>
 </p>
 
+- Modo test
+
+<p align="center">
+  <img src=https://github.com/user-attachments/assets/f8db5d38-5732-4cd2-b7d2-543f118f3359>
+</p>
+
 ## Diagrama del sistema
 
 <p align="center">
