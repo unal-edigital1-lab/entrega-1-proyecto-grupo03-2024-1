@@ -237,5 +237,5 @@ Esta FSM implementa el modo de prueba del simulador Tamagotchi, donde se revisan
 ## Diagrama del sistema
 
 <p align="center">
-  <img src=https://github.com/user-attachments/assets/d4aaa4b8-a69b-4f43-bcde-eee6af9c3386>
+  <img src=https://github.com/user-attachments/assets/ed58eb04-efe6-4d46-8d82-c19883ee6816>
 </p>
