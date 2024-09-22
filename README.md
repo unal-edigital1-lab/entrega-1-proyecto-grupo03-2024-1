@@ -213,6 +213,10 @@ Se tendra una serie de atributos los cuales estaran asociados a diferentes valor
 
 ## Máquina de estados finitos
 
+<p align="center">
+  <img src=https://github.com/user-attachments/assets/3f63bbfb-6ce2-4bee-94b3-160a88e32143>
+</p>
+
 ## Diagrama del sistema
 
 <p align="center">
