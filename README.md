@@ -14,8 +14,8 @@
   - [Diagramas de flujo](#diagramas-de-flujo)
   - [Máquina de estados finitos](#máquina-de-estados-finitos)
   - [Diagrama del sistema](#diagrama-del-sistema)
-  - [Simulaciones](#simulaciones)}
-  - [Analizador lógico](#analizador-lógico)}
+  - [Simulaciones](#simulaciones)
+  - [Analizador lógico](#analizador-lógico)
 ****
 ## Integrantes
 
