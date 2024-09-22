@@ -287,6 +287,9 @@ En el diagrama del datasheet del ADS1115, se describe cómo se realiza el proces
 
 Durante la simulación, se observa claramente cómo se generan las señales de reconocimiento (ACK) tras la transmisión de cada byte, lo que confirma que el dispositivo ADS1115 está recibiendo correctamente los datos, como lo dicta el protocolo I2C. Esta validación es crucial para asegurar que cada paso, desde la dirección hasta los datos de configuración, se está llevando a cabo sin errores.
 
+
+La simulación también refleja la transición a los diferentes estados del protocolo I2C, tal como se describe en el datasheet. Aunque el proceso de selección del registro de conversión y la lectura de los dos bytes correspondientes al valor convertido fue programado, debido a la complejidad de replicar el comportamiento exacto del convertidor ADC, esta parte no se ilustra completamente en la simulación.
+
 - top_hcsr04
 
 Gtkwave:
