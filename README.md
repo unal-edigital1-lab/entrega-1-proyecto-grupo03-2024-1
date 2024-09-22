@@ -307,4 +307,8 @@ En la simulación, se observa cómo el contador comienza justo después del trig
 
 - Pantalla oled
 
+<p align="center">
+  <img src=https://github.com/user-attachments/assets/22058cd4-fc61-4a19-8c4a-3677f1a79c24>
+</p>
+
 - Conversor A/D (Joystick)
