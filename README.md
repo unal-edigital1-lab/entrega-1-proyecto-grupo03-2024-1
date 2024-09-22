@@ -172,12 +172,6 @@ El diagrama también destaca que, si no se gestionan adecuadamente las necesidad
     <img src=https://github.com/user-attachments/assets/f5ac48e6-5699-487c-95c5-23c7887cfb1e>
   </p>
 
-- **_Indicadores_**:
-
-  <p align="center">
-    <img src=https://github.com/user-attachments/assets/9368eeff-3645-43cf-9c70-fc470060c4f9>
-  </p>
-
 - **_Necesidades_**:
 
   - Hungry:
