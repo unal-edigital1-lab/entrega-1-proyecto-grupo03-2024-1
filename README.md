@@ -246,7 +246,7 @@ El diagrama muestra el sistema del Tamagotchi compuesto por varios módulos que 
 - ssd1306_master
 
 <p align="center">
-  <img src=https://github.com/user-attachments/assets/bf5d99f1-5b91-45c0-b57b-5f4a44be33d3>
+  <img src=https://github.com/user-attachments/assets/e21a4aa7-6525-4379-8b15-c063cef69f97>
 </p>
 
 <p align="center">
