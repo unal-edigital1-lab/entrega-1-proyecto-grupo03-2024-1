@@ -311,8 +311,12 @@ En la simulación, se observa cómo el contador comienza justo después del trig
   <img src=https://github.com/user-attachments/assets/22058cd4-fc61-4a19-8c4a-3677f1a79c24>
 </p>
 
+En la evaluación del funcionamiento del código para la pantalla OLED 128x32 (SSD1306), se utilizó un analizador lógico para capturar y analizar las señales en el bus I2C. Los resultados confirmaron que la pantalla estaba operando correctamente. El analizador mostró la secuencia adecuada de la dirección del esclavo, seguida de los bytes de control y los datos necesarios para inicializar la pantalla y dibujar gráficos. Las señales de reconocimiento (ACK) generadas después de cada byte transmitido indicaron que el OLED estaba recibiendo los datos sin errores, validando así la correcta implementación del protocolo I2C en el código.
+
 - Conversor A/D (Joystick)
 
 <p align="center">
   <img src=https://github.com/user-attachments/assets/fa526531-874a-4bdf-84da-58099ecc2e05>
 </p>
+
+En la evaluación del código para el conversor A/D (ADS1115), el analizador lógico se utilizó para registrar y analizar las señales en el bus I2C durante el proceso de configuración y lectura. Los resultados mostraron que el ADS1115 estaba respondiendo adecuadamente a las instrucciones enviadas. Se observaron las transiciones correctas en el bus I2C al seleccionar el registro de configuración y al leer el valor digitalizado, lo que confirma que el dispositivo estaba operando según lo esperado. Además, se registró la emisión del pulso de trigger y la recepción de los datos de conversión, indicando que el ADC estaba funcionando de manera efectiva.
