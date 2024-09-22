@@ -245,13 +245,13 @@ El diagrama muestra el sistema del Tamagotchi compuesto por varios módulos que 
 
 - ssd1306_master
 
-I2C-bus Write data
+I2C-bus Write data:
 
 <p align="center">
   <img src=https://github.com/user-attachments/assets/e21a4aa7-6525-4379-8b15-c063cef69f97>
 </p>
 
-Gtkwave
+Gtkwave:
 
 <p align="center">
   <img src=https://github.com/user-attachments/assets/665b2729-0e32-46bf-84dd-f93b46437e35>
@@ -259,7 +259,7 @@ Gtkwave
 
 - ads1115_master
 
-Gtkwave
+Gtkwave:
 
 <p align="center">
   <img src=https://github.com/user-attachments/assets/439314e4-0a78-4442-b77c-c30e80e179a2>
@@ -267,7 +267,7 @@ Gtkwave
 
 - top_hcsr04
 
-Gtkwave
+Gtkwave:
 
 <p align="center">
   <img src=https://github.com/user-attachments/assets/17ee4299-b1ab-4849-bed9-4ab149788957>
