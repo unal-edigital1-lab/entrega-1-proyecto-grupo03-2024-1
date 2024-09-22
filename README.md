@@ -245,6 +245,8 @@ El diagrama muestra el sistema del Tamagotchi compuesto por varios módulos que 
 
 - ssd1306_master
 
+I2C-bus Write data
+
 <p align="center">
   <img src=https://github.com/user-attachments/assets/e21a4aa7-6525-4379-8b15-c063cef69f97>
 </p>
