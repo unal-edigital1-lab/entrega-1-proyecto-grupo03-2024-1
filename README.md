@@ -35,7 +35,6 @@ Se planea diseñar una interfaz de usuario y mostrar la información acerca del 
   <img src="https://github.com/user-attachments/assets/5be8157f-a5f7-46c7-aeb2-2d29e8df4f79">
 </p>
 
-
 La interfaz de usuario del Tamagotchi será un componente esencial para la interacción efectiva entre el usuario y la mascota virtual. Por otro lado, incorporará botones físicos intuitivos para permitir al usuario navegar entre las opciones y modos de interacción, como alimentación, dormir, curar y juego, así como seleccionar acciones específicas para cuidar de la mascota. También se puede agregar retroalimentación visual a través de luces LED y sonidos mediante un altavoz para alertar al usuario sobre las necesidades y actividades de la mascota, facilitando así una experiencia de juego envolvente y fácil de usar.
 
 Asimismo, en la pantalla OLED se podrá mostrar gráficos simples y amigables, así como iconos o símbolos que representen las distintas acciones o estados de la mascota, facilitando la comprensión del usuario.
@@ -120,13 +119,7 @@ Se tendra una serie de atributos los cuales estaran asociados a diferentes valor
 - **_General_**:
 
   <p align="center">
-    <img src=https://github.com/user-attachments/assets/5595cfec-08e1-4089-92e7-a13279ab8587>
-  </p>
-
-- **_Indicadores_**:
-
-  <p align="center">
-    <img src=https://github.com/user-attachments/assets/e127bd8d-2397-4231-8100-e8da54c9553f>
+    <img src=https://github.com/user-attachments/assets/2979ded5-2604-4803-91e0-faa72705e21f>
   </p>
 
 - **_Necesidades_**:
@@ -150,6 +143,7 @@ Se tendra una serie de atributos los cuales estaran asociados a diferentes valor
   </p>
 
 - **_Casos de interacción_**:
+  
 - Heal:
 
 ![diagrama base, heal drawio (1)](https://github.com/user-attachments/assets/421e729a-14e2-4d26-a697-44cfc3ad2a26)
