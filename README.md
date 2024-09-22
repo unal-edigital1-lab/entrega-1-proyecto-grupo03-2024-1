@@ -259,6 +259,18 @@ Gtkwave:
 
 - ads1115_master
 
+Two-Wire Timing Diagram for Read Word Format
+
+<p align="center">
+  <img src=https://github.com/user-attachments/assets/8ae2c961-3bf6-4f1a-a26e-9a292503c055>
+</p>
+
+Two-Wire Timing Diagram for Write Word Format:
+
+<p align="center">
+  <img src=https://github.com/user-attachments/assets/d5b27520-49f2-437e-88b5-1ff434722237>
+</p>
+
 Gtkwave:
 
 <p align="center">
