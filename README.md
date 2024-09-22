@@ -15,7 +15,7 @@
   - [Diagramas de flujo](#diagramas-de-flujo)
   - [Máquina de estados finitos](#máquina-de-estados-finitos)
   - [Diagrama del sistema](#diagrama-del-sistema)
-
+****
 ## Integrantes
 
 - Andres Santiago Cañon Porras
@@ -24,25 +24,41 @@
 
 ## Diseño de Interfaz y Transiciones ✏️
 
-Para la interfaz de usuario y la visualización, se diseñaron dstintos personajes, así como sus respectivas animaciones dependiendo de la acción que esté realizando (dormir, curar, comer, jugar).
+El diseño de la interfaz de nuestro Tamagotchi está centrado en brindar una interacción fluida y clara para el usuario. Para esto, se han definido los diferentes estados del Tamagotchi, las transiciones entre ellos y cómo se representarán visualmente. A continuación se describen los elementos principales:
 
-![fotos](https://github.com/user-attachments/assets/f4d3d39e-40fe-48ad-a81a-ddfed951acd3)
+- **Pantalla Principal**:
 
-Por otro lado, se diseñó una pantalla principal, así como 
-Se planea diseñar una interfaz de usuario y mostrar la información acerca del tamagochi en una pantalla OLED, incluyendo su estado actual, necesidades y demás detalles.
+En esta pantalla se muestra el estado general de la mascota virtual, tales como el estado de ánimo, hambre, sueño, cura y vida de nuestra mascota.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/5be8157f-a5f7-46c7-aeb2-2d29e8df4f79">
+  <img src=https://github.com/user-attachments/assets/d1d8d0df-3d96-45fb-be85-b7963a24cf73>
 </p>
 
-La interfaz de usuario del Tamagotchi será un componente esencial para la interacción efectiva entre el usuario y la mascota virtual. Por otro lado, incorporará botones físicos intuitivos para permitir al usuario navegar entre las opciones y modos de interacción, como alimentación, dormir, curar y juego, así como seleccionar acciones específicas para cuidar de la mascota. También se puede agregar retroalimentación visual a través de luces LED y sonidos mediante un altavoz para alertar al usuario sobre las necesidades y actividades de la mascota, facilitando así una experiencia de juego envolvente y fácil de usar.
-
-Asimismo, en la pantalla OLED se podrá mostrar gráficos simples y amigables, así como iconos o símbolos que representen las distintas acciones o estados de la mascota, facilitando la comprensión del usuario.
-
-Otras características adicionales que podrían incluirse en la interfaz son animaciones ligeras para mejorar la interacción visual con la mascota y la opción de ajustar configuraciones personalizables como el volumen del sonido o el brillo de la pantalla. En general, la interfaz de usuario se centra en ofrecer un acceso rápido a las funciones principales, transiciones suaves entre modos y una experiencia de juego atractiva y fácil de usar para mantener al usuario interesado y comprometido con el cuidado de la mascota virtual.
+Por otra parte, se diseñaron distintas animaciones de la mascota que describen la acción que está realizando en el momento (dormir, curar, comer, jugar), esto con el objetivo de que sea claro para el usuario que actividad está ejecutando la mascota.
 
 <p align="center">
-  <img src="https://i.ytimg.com/vi/S9QTScMz8w4/maxresdefault.jpg" alt="A beautiful sunset" width="640" height="360">
+  <img src=https://github.com/user-attachments/assets/fad87c38-b790-432d-9429-f0f37beb3559>
+</p>
+
+- **Transiciones de Estado**:
+  
+  - Los estados principales que gestionan el comportamiento de la mascota son:
+    
+    - **Felicidad**: refleja cuán contenta está la mascota. Disminuye si no se juega con ella.
+    - **Hambre**: indica cuán hambrienta está la mascota. Aumenta si no es alimentada.
+    - **Sueño**: muestra el nivel de cansancio. Aumenta con el tiempo y se reduce cuando la mascota descansa.
+    - **Cura (enfermedad)**: se activa cuando la mascota ha sido descuidada, indicando que está enferma y necesita atención médica.
+
+- **Interfaz de Usuario**:
+
+La interfaz se implementó mediante un soporte impreso en 3D, una pantalla OLED de 0,91 pulgadas (128 x 32 pixeles), una serie de botones físicos que permiten al usuario interactuar con la mascota, reiniciar el juego, cancelar alguna acción o ejecutar el *test*, así como un joystick que permite desplazarse por los distintos indicadores para que la mascota realice la respectiva acción.
+  
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4789069b-5219-4b77-96df-a0ebcad8e81c">
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1831e325-d094-49d5-a2fb-e53f3b6f33d7">
 </p>
 
 ## Especificaciones
@@ -61,11 +77,11 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
   
   - **Test**: Activa el modo de prueba al mantenerlo pulsado por al menos 5 segundos, permitiendo al usuario navegar entre los diferentes estados del Tamagotchi con cada pulsación.
 
-- **Select**: Permite al usuario desplezarse por los diferentes indicadores del modo de interacción.
+  - **Select**: Permite al usuario desplazarse por los diferentes indicadores del modo de interacción.
 
-- **Action**: Permite al usuario luego de desplazarse por los indicadores decidir cual de las acciones realizar o repetir.
+  - **Action**: Permite al usuario luego de desplazarse por los indicadores decidir cual de las acciones realizar o repetir.
 
-- **Cancel**: Permite al usuario salir de las opciones y modos de interacción, retornandolo al menu principal.
+  - **Cancel**: Permite al usuario salir de las opciones y modos de interacción, retornandolo al menu principal.
 
 ### b. Sistema de sensado
 
@@ -118,12 +134,14 @@ Se tendra una serie de atributos los cuales estaran asociados a diferentes valor
 
 - **_General_**:
 
-Este diagrama muestra cómo el sistema responde a las variaciones en las necesidades del Tamagotchi a lo largo del tiempo y cómo permite al usuario interactuar con él. A medida que el tiempo avanza, se activan diferentes estados como hambre, sueño o fatiga, representados en los bloques centrales del flujo. El usuario puede elegir entre acciones como jugar, alimentar, curar o dejar que descanse, lo que influye directamente en los valores de las variables life, disease y death. Estas variables cambian en función de cómo se atienden las necesidades del Tamagotchi.
+  <p align="center">
+    <img src=https://github.com/user-attachments/assets/7e2f38d4-e526-45f2-9adb-b15c06d68c6b>
+  </p>
 
-El diagrama también destaca que, si no se gestionan adecuadamente las necesidades, la variable disease se podria activar, lo que podría llevar al estado de death si no se toman medidas a tiempo. Adicionalmente, se incluyen rutas alternativas como reset, que reinicia el ciclo, y la opción de realizar un test, un mecanismo que permite verificar ciertos estados del Tamagotchi antes de continuar.
+- **_Indicadores_**:
 
   <p align="center">
-    <img src=https://github.com/user-attachments/assets/9937a5e1-bea1-4278-879e-2af4862d37d4>
+    <img src=https://github.com/user-attachments/assets/e127bd8d-2397-4231-8100-e8da54c9553f>
   </p>
 
 - **_Necesidades_**:
@@ -147,7 +165,6 @@ El diagrama también destaca que, si no se gestionan adecuadamente las necesidad
   </p>
 
 - **_Casos de interacción_**:
-  
 - Heal:
 
 ![diagrama base, heal drawio (1)](https://github.com/user-attachments/assets/421e729a-14e2-4d26-a697-44cfc3ad2a26)
@@ -170,6 +187,12 @@ El diagrama también destaca que, si no se gestionan adecuadamente las necesidad
 
   <p align="center">
     <img src=https://github.com/user-attachments/assets/f5ac48e6-5699-487c-95c5-23c7887cfb1e>
+  </p>
+
+- **_Indicadores_**:
+
+  <p align="center">
+    <img src=https://github.com/user-attachments/assets/9368eeff-3645-43cf-9c70-fc470060c4f9>
   </p>
 
 - **_Necesidades_**:
