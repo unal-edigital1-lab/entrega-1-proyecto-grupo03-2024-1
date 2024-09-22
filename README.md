@@ -116,11 +116,11 @@ Se tendra una serie de atributos los cuales estaran asociados a diferentes valor
 
 ## Diagramas de flujo
 
+- **_General_**:
+
 Este diagrama muestra cómo el sistema responde a las variaciones en las necesidades del Tamagotchi a lo largo del tiempo y cómo permite al usuario interactuar con él. A medida que el tiempo avanza, se activan diferentes estados como hambre, sueño o fatiga, representados en los bloques centrales del flujo. El usuario puede elegir entre acciones como jugar, alimentar, curar o dejar que descanse, lo que influye directamente en los valores de las variables life, disease y death. Estas variables cambian en función de cómo se atienden las necesidades del Tamagotchi.
 
 El diagrama también destaca que, si no se gestionan adecuadamente las necesidades, la variable disease se podria activar, lo que podría llevar al estado de death si no se toman medidas a tiempo. Adicionalmente, se incluyen rutas alternativas como reset, que reinicia el ciclo, y la opción de realizar un test, un mecanismo que permite verificar ciertos estados del Tamagotchi antes de continuar.
-
-- **_General_**:
 
   <p align="center">
     <img src=https://github.com/user-attachments/assets/2979ded5-2604-4803-91e0-faa72705e21f>
