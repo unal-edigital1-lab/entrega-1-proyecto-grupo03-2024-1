@@ -1,7 +1,6 @@
 # Proyecto Electrónica Digital I - Tamagotchi👾
 
 ## Contenido
-
 - [Proyecto Electrónica Digital I - Tamagotchi👾](#proyecto-electrónica-digital-i---tamagotchi)
   - [Contenido](#contenido)
   - [Integrantes](#integrantes)
