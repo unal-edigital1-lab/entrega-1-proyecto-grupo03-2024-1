@@ -228,6 +228,8 @@ Cuando el Tamagotchi tiene hambre, pasa al estado EAT para alimentarse, y al igu
 
 - Modo test
 
+Esta FSM implementa el modo de prueba del simulador Tamagotchi, donde se revisan los estados principales de la máquina de estados original. El modo de prueba comienza en el estado MAIN_REVIEW, y si el valor de prueba (test = 1) está activo, el sistema entra en un ciclo de revisión de los estados. A partir de ahí, transiciona a PLAY_REVIEW cuando el temporizador de prueba (test_timing) alcanza 6, permitiendo verificar el estado de juego. Luego, pasa a EAT_REVIEW para comprobar el comportamiento del estado de comer cuando test_timing = 5, y de forma similar avanza a SLEEP_REVIEW, donde se revisa el estado de dormir. Después, el sistema transita a HEAL_REVIEW, donde se verifica el proceso de curación, y posteriormente a DEATH_REVIEW para comprobar el estado de muerte del Tamagotchi. Tras completar la revisión en este último estado, la FSM retorna a MAIN_REVIEW para continuar el ciclo de pruebas. Este diseño permite verificar el correcto funcionamiento de cada estado clave del Tamagotchi bajo condiciones controladas.
+
 <p align="center">
   <img src=https://github.com/user-attachments/assets/2051398f-ba6d-4f86-a562-6030697d5557>
 </p>
