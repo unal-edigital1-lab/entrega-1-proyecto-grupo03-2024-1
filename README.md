@@ -61,6 +61,36 @@ La interfaz se implementó mediante un soporte impreso en 3D, una pantalla OLED 
   <img src="https://github.com/user-attachments/assets/1831e325-d094-49d5-a2fb-e53f3b6f33d7">
 </p>
 
+- **Pantalla Secundaria**:
+  
+  Así mismo, se diseñaron ambientes para cada acción que esté ejecutando la mascota, esto con el fin de que la interacción usuario-mascota se sienta más amigable:
+  
+  - *Jugar*:
+    
+    ![jugar](https://github.com/user-attachments/assets/d84804cd-8418-4474-b0eb-433c0f1dba5e)
+    
+  - *Comer*:
+    
+    ![comer](https://github.com/user-attachments/assets/56670c4b-b048-47e9-9302-db2868d4f294)
+
+  - *Dormir*:
+    
+    ![dormir](https://github.com/user-attachments/assets/e3552f65-322e-4d32-902d-74ac77d30048)
+  
+  - *Curar*:
+
+    ![curar](https://github.com/user-attachments/assets/6645d3d7-13d1-42b5-ba7b-ddf4793689f8)
+    
+- Por otra parte, se diseñaron pantallas de inicio y de muerte:
+  
+  - *Inicio*:
+    
+    ![inicio](https://github.com/user-attachments/assets/d67b9ab3-c57f-4d45-af5e-4eebab1c18dd)
+
+  - *Muerte*:
+
+    ![muerte](https://github.com/user-attachments/assets/690b99cc-a86b-4352-b148-fd9144adbb24)
+
 ## Especificaciones
 
 La FPGA está programada para simular distintos estados de la mascota, basándose en el comportamiento y la interacción con el usuario a través de al menos tres sistemas principales:
