@@ -242,3 +242,7 @@ El diagrama muestra el sistema del Tamagotchi compuesto por varios módulos que 
 </p>
 
 ## Simulaciones
+
+
+
+
