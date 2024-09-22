@@ -220,7 +220,7 @@ Se tendra una serie de atributos los cuales estaran asociados a diferentes valor
 - Modo test
 
 <p align="center">
-  <img src=https://github.com/user-attachments/assets/f8db5d38-5732-4cd2-b7d2-543f118f3359>
+  <img src=https://github.com/user-attachments/assets/2051398f-ba6d-4f86-a562-6030697d5557>
 </p>
 
 ## Diagrama del sistema
