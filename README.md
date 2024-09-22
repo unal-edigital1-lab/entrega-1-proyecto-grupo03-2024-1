@@ -257,6 +257,12 @@ Gtkwave:
   <img src=https://github.com/user-attachments/assets/665b2729-0e32-46bf-84dd-f93b46437e35>
 </p>
 
+En el diagrama del datasheet, se describe cómo se envía una secuencia de bytes, comenzando por la dirección del esclavo, seguida de un byte de control y posteriormente varios bytes de datos o comandos. Este proceso es exactamente lo que se observa en la simulación: la comunicación I2C se inicia con el envío de la dirección del esclavo, luego se transmite el byte de control, y finalmente, los datos o comandos necesarios para la configuración de la pantalla.
+
+En la simulación, también se pueden ver claramente las señales de reconocimiento (ACK) que ocurren después de cada byte transmitido, confirmando que el esclavo está recibiendo los datos como lo dicta el protocolo I2C. Esto asegura que cada paso del proceso de comunicación, desde la dirección hasta los datos, está siendo aceptado correctamente por el dispositivo esclavo.
+
+Además, la simulación refleja cómo la comunicación pasa por diferentes estados del protocolo. Estos estados coinciden con los que describe el datasheet para la transmisión de bytes, gestionando cada fase de la comunicación I2C. Desde la dirección del esclavo hasta la escritura de comandos o datos, la simulación sigue el flujo de manera precisa, mostrando un ciclo completo de escritura en la pantalla OLED, tal como lo detalla el datasheet del SSD1306.
+
 - ads1115_master
 
 Two-Wire Timing Diagram for Read Word Format
