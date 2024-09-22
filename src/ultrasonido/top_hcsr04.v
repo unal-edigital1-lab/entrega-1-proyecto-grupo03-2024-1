@@ -1,0 +1,53 @@
+module top_hcsr04 (
+	input clk,
+	input echo,
+	input enable,
+	output reg trigger,
+	output reg level1 = 1,
+	output reg level2 = 0
+);
+	
+	reg [19:0] contTrigger = 0;
+	reg [19:0] contEcho = 0;	
+	parameter PULSE_TRIGGER = 20'd500000;
+	
+	parameter DM = 20'd2000;	
+	parameter D = 20'd30000;
+
+	always @(posedge clk) begin
+		 if (contTrigger < PULSE_TRIGGER) begin
+			  contTrigger <= contTrigger + 1;
+			  trigger <= 0;
+		 end else begin
+			  contTrigger = 0;
+			  trigger = 1;
+		 end
+	end
+	
+	always @(posedge clk) 
+		begin
+			if(echo == 0) begin
+				contEcho <= contEcho + 1;
+				if (contEcho > D) begin
+					level1 <= 1;
+					level2 <= 0;
+				end
+			end
+			else begin
+				if (!enable) begin
+					level1 = 1;
+					level2 = 1;
+					end
+				else if (contEcho > DM && contEcho < D) begin
+					level1 <= 0;
+					level2 <= 1;
+					end
+				else if (contEcho > D) begin
+					level1 <= 1;
+					level2 <= 0;
+				end
+				contEcho <= 0;
+		end
+	end
+
+endmodule
