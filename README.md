@@ -123,7 +123,7 @@ Este diagrama muestra cómo el sistema responde a las variaciones en las necesid
 El diagrama también destaca que, si no se gestionan adecuadamente las necesidades, la variable disease se podria activar, lo que podría llevar al estado de death si no se toman medidas a tiempo. Adicionalmente, se incluyen rutas alternativas como reset, que reinicia el ciclo, y la opción de realizar un test, un mecanismo que permite verificar ciertos estados del Tamagotchi antes de continuar.
 
   <p align="center">
-    <img src=https://github.com/user-attachments/assets/2979ded5-2604-4803-91e0-faa72705e21f>
+    <img src=https://github.com/user-attachments/assets/9937a5e1-bea1-4278-879e-2af4862d37d4>
   </p>
 
 - **_Necesidades_**:
