@@ -283,6 +283,10 @@ Gtkwave:
   <img src=https://github.com/user-attachments/assets/439314e4-0a78-4442-b77c-c30e80e179a2>
 </p>
 
+En el diagrama del datasheet del ADS1115, se describe cómo se realiza el proceso de comunicación I2C, comenzando por el envío de la dirección del esclavo, seguida de la selección de un registro y posteriormente los datos de configuración o conversión. Este proceso es replicado fielmente en la simulación: la secuencia inicia con la transmisión de la dirección del ADS1115, seguida del byte que indica el registro que se va a configurar, y luego se envían los bytes de configuración necesarios para establecer parámetros como la ganancia y la velocidad de muestreo del ADC.
+
+Durante la simulación, se observa claramente cómo se generan las señales de reconocimiento (ACK) tras la transmisión de cada byte, lo que confirma que el dispositivo ADS1115 está recibiendo correctamente los datos, como lo dicta el protocolo I2C. Esta validación es crucial para asegurar que cada paso, desde la dirección hasta los datos de configuración, se está llevando a cabo sin errores.
+
 - top_hcsr04
 
 Gtkwave:
