@@ -181,7 +181,7 @@ El diagrama también destaca que, si no se gestionan adecuadamente las necesidad
 
 - **_Necesidades_**:
 
-El diagrama de flujo siguiente muestra el ciclo de vida de nuestra mascota que tiene atributos de vida, comida, diversión y descanso. Cada 0.8 segundos, estos valores disminuyen, lo que afecta el estado de vida. Si la vida llega a 0, se activa la muerte. Si la vida es menor que 16, se activa la variable, que influye directamente en la vida de la mascota.
+El diagrama de flujo siguiente muestra el ciclo de vida de nuestra mascota que tiene atributos de vida, comida, diversión y descanso. Cada 0.8 segundos, estos valores disminuyen, lo que afecta el estado de vida. Si la vida llega a 0, se activa la muerte. Si la vida es menor que 16, se activa la variable disease, que influye directamente en la vida de la mascota.
 
 
   <p align="center">
