@@ -59,10 +59,6 @@ La interfaz se implementó mediante un soporte impreso en 3D, una pantalla OLED 
   <img src="https://github.com/user-attachments/assets/4789069b-5219-4b77-96df-a0ebcad8e81c">
 </p>
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/1831e325-d094-49d5-a2fb-e53f3b6f33d7">
-</p>
-
 - **Pantallas Secundarias**:
   
   Así mismo, se diseñaron ambientes para cada acción que esté ejecutando la mascota, esto con el fin de que la interacción usuario-mascota se sienta más amigable:
