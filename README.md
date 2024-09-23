@@ -181,22 +181,8 @@ El diagrama también destaca que, si no se gestionan adecuadamente las necesidad
 
 - **_Necesidades_**:
 
-  - Hungry:
-
   <p align="center">
-    <img src=https://github.com/user-attachments/assets/af49c016-3f4e-40a1-9307-d28b70e1e94d>
-  </p>
-
-  - Sadness:
-
-  <p align="center">
-    <img src=https://github.com/user-attachments/assets/0e12d205-7ec6-4831-8b12-de2cc9f72591>
-  </p>
-
-  - Fatigue:
-
-  <p align="center">
-    <img src=https://github.com/user-attachments/assets/eca3294f-3177-4347-add5-e9ff4e2e4641>
+    <img src=https://github.com/user-attachments/assets/2aaac5ae-2807-4d9c-bbcc-0b18ad60a5a6>
   </p>
 
 - **_Casos de interacción_**:
