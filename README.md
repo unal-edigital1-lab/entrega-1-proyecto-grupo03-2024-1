@@ -14,6 +14,7 @@
   - [Diagramas de flujo](#diagramas-de-flujo)
   - [Máquina de estados finitos](#máquina-de-estados-finitos)
   - [Diagrama del sistema](#diagrama-del-sistema)
+  - [Descripción del código](#descripción-del-código)
   - [Simulaciones](#simulaciones)
   - [Analizador lógico](#analizador-lógico)
 ****
@@ -226,6 +227,133 @@ El diagrama muestra el sistema del Tamagotchi compuesto por varios módulos que 
   <img src=https://github.com/user-attachments/assets/ed58eb04-efe6-4d46-8d82-c19883ee6816>
 </p>
 
+## Descripción del código 
+
+Para el manejo de los módulos del tamagotchi, se usa un módulo llamado top en el que también esta la Finite State Machine del juego.
+A continuación se pueden ver los módulos llamados hacia el módulo top:
+
+```ruby
+top_ads1115 UTT_joystick (
+    .clk(clk),
+	.sw(btn_action),
+    .sda(sda_converter),
+    .scl(scl_converter),
+    .led1(led_left),
+    .led2(led_middle),
+    .led3(led_right),
+	.led4(led_action)
+);
+
+top_hcsr04 UTT_ultrasonido (
+    .clk(clk),
+    .echo(echo),
+    .enable(enable),
+    .trigger(trigger),
+    .level1(level1),
+    .level2(level2)
+);
+
+top_oled UUT_oled (
+	.clk(clk),
+	.screen_param(screen_param),
+	.needs_values(needs_values),
+	.sda(sda_display), 
+	.scl(scl_display)
+);
+```
+Se llama el "top_ads1115" joystick para usar las activaciones del joystick para moverse a través de los indicadores, tambien el "top_hcsr04" para recibir las confirmaciones del sensor ultra sonido, y por ultimo el "top_oled" para el manejo de la pantalla.
+
+Se usan dos registros para almacenar el control de la pantalla, para controlar los niveles de las necesidades y para el indicador que tiene seleccionado.
+
+```ruby
+wire [8:0] screen_param = {test, act_eat, act_heal, act_play, act_sleep, state};
+wire [32:0] needs_values = {disease, life, food, fun, rest, ind_select};
+```
+En el registro "screen_param" se guarda la configuración de pantalla que debe mostrar cuando se genere la acción determinada, en "needs_values" se guardan los valores actuales de las necesidades y también el indicador actual.
+
+Luego, se definen registros de 7 bits para los valores actuales como life, fun, food y rest, además de crear registros de 1 bit para indicar si el tamagotchi esta enfermo (disease) , muerto (death) o en modo test.
+
+Se crea un always para determinar el estado general del tamagotchi, "disease" o "death":
+```ruby
+always @(posedge clk) begin 
+    if (life <= 16) begin
+        disease <= 1;
+    end
+    else begin
+        disease <= 0;
+    end
+
+    if (life == 0) begin
+        death = 1;
+    end
+    else begin
+        death = 0;
+    end
+end
+```
+Asi se establece que si la vida es menor o igual a 16 se active el estado de enfermedad para a su vez, activar el indice de heal. Y si la vida llega a 0 se active el estado muerte.
+Posteriormente para la fsm se crean los estados de la maquina finita:
+
+
+```ruby
+localparam START = 4'd0;
+localparam MAIN = 4'd1;
+localparam PLAY = 4'd2;
+localparam SLEEP = 4'd3;
+localparam EAT = 4'd4;
+localparam HEAL = 4'd5;
+localparam DEATH = 4'd6;
+
+reg [3:0] state = START;
+```
+y el "state" un registro que indica el estado actual. También se generan múltiples localparam para los delays requeridos, para los estados del botón test y también se crean varios contadores para controlar el clk en segundos.
+
+Luego se crea un always que es donde irá toda la máquina de estados finita. En este always se crea un pulso para controlar las bajadas de cada necesidad, se establece que cada segundo baje 1 en cada una de las necesidades de la siguiente manera.
+
+```ruby
+if (cont_food >= 5'd1 && food > 0) begin
+            food <= food - 1'b1;
+            cont_food <= 0;
+        end
+
+        if (cont_fun >= 5'd1 && fun > 0) begin
+            fun <= fun - 1'b1;
+            cont_fun <= 0;
+        end
+
+        if (cont_rest >= 5'd1 && rest > 0) begin
+            rest <= rest - 1'b1;
+            cont_rest <= 0;
+        end
+```
+
+Para tener en cuenta las tres necesidades en el cálculo general de la vida, se utiliza la siguiente relación:
+```ruby
+   life = (rest + fun + food)/3;
+```
+Se programa el botón reset.
+```ruby
+if (btn_reset == 1) begin
+        if (cont_reset == 0) begin
+                state <= START;
+                life = 7'd100;
+                fun <= 7'd100;
+                rest <= 7'd100;
+                food <= 7'd100;
+                test <= 0;
+                ind_select <=  IND_PLAY;
+                state_test <= MAIN_REVIEW;
+                cont_reset <=  DELAY_5SEG;
+                test_timing <= 0;
+
+                cont_reset <= DELAY_5SEG;
+            end
+            else begin
+                cont_reset <= cont_reset - 1'b1;
+            end
+        end
+```
+El botón de cancel se usa para volver a el main estando en cualquiera de los menús de las necesidades tales como heal, eat y sleep.
 ## Simulaciones
 
 - **_ssd1306_master_**
