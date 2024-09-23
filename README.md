@@ -189,6 +189,7 @@ El diagrama de flujo siguiente muestra el ciclo de vida de nuestra mascota que t
   </p>
 
 - **_Casos de interacción_**:
+
 Los siguientes diagramas representan los casos de interacción a los que el usuario puede acceder dependiendo el menú/estado que se seleccione, es de suma importancia tener presente como funciona cada uno de estos menús para conocer el funcionamiento del tamagotchi y estar al tanto de como suben y bajan los indicadores conforme el tiempo avanza.
 
 ![diagrama necesidades1 drawio](https://github.com/user-attachments/assets/6b863574-c685-40da-a53f-f07a1133f6a3)
