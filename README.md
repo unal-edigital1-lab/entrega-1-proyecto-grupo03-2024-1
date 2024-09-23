@@ -359,6 +359,238 @@ if (btn_reset == 1) begin
         end
 ```
 El botón de cancel se usa para volver a el main estando en cualquiera de los menús de las necesidades tales como heal, eat y sleep.
+La parte central del tamagotchi es la máquina de estados finita que indica en cúal menú se encuentra el usuario, para ello se realiza un "case" el cúal dependa del estado actual del registro "state".
+El primer estado es el estado "START", el cúal se encarga de mostrar la imagen de inicio y mandar al siguiente estado.
+ruby
+case (state)
+            START: begin
+                if (cont_screen_pause == 0) begin
+                    state <= MAIN;
+                    cont_screen_pause = DELAY_SCREEN_PAUSE;
+                end
+                else begin
+                    cont_screen_pause <= cont_screen_pause - 1'b1;
+                end
+
+
+El siguiente estado es "MAIN" como su nombre lo dice, es el menú principal del tamagotchi, en el salen los distintos indicadores que tiene el tamagotchi y su estado actual, además de los indicadores de cada menú en la parte superior de la pantalla.
+
+ruby
+MAIN: begin
+                led_s1 = 1;
+                led_s2 = 0;
+                led_s3 = 1;
+
+                if (btn_action== 0 && ind_select == IND_PLAY) begin
+                    state <= PLAY;
+                end
+                
+                if (btn_action == 0 && ind_select == IND_EAT) begin
+                    state <= EAT;
+                end
+                
+                if (btn_action == 0 && ind_select == IND_SLEEP) begin
+                    state <= SLEEP;
+                end
+                
+                if (btn_action == 0 && ind_select == IND_HEAL) begin
+                    state <= HEAL;
+                end
+
+En esta parte se verifica el lugar en donde este ubicado el indicador, y si se presiona el botón sw del joystick, le dice que cambie de estado al estado seleccionado, en este mismo estado también se programa como debe funcionar el movimiento entre los indicadores, puesto que debe estar al tanto de si el tamagotchi tiene activado el registro de enfermedad o no, para mostrarle respectivamente el menú de curación.
+
+Estado PLAY:
+ruby
+PLAY: begin
+                led_s1 = 1;
+                led_s2 = 1;
+                led_s3 = 0;
+
+                if (btn_action == 0) begin
+                    act_play = 1;
+                    if (cont_actions == 26'd50000000) begin
+                        cont_actions <= 0;
+
+                        if (fun + 7'd10 < 7'd100) begin
+                            fun <= fun + 7'd10;
+                        end
+                        else begin
+                            fun <= 7'd100;
+                        end
+                    end
+                    else begin
+                        cont_actions <= cont_actions + 1'd1;
+                    end
+                end
+                else begin
+                    cont_actions = 0;
+                    act_play = 0;
+                end
+            end
+
+Estado SLEEP:
+ruby
+SLEEP: begin
+                led_s1 = 0;
+                led_s2 = 0;
+                led_s3 = 1;
+                
+                if (level2 == 0) begin
+                    act_sleep = 1;
+                    if (cont_actions == 26'd50000000) begin
+                        cont_actions <= 0;
+
+                        if (rest + 7'd10 < 7'd100) begin
+                            rest <= rest + 7'd10;
+                        end
+                        else begin
+                            rest <= 7'd100;
+                        end
+                    end
+                    else begin
+                        cont_actions <= cont_actions + 1'd1;
+                    end
+                end
+                else begin
+                    cont_actions = 0;
+                    act_sleep = 0;
+                end
+            end
+
+Estado EAT:
+ruby
+EAT: begin
+                led_s1 = 1;
+                led_s2 = 0;
+                led_s3 = 0;
+
+                if (btn_action == 0) begin
+                    act_eat = 1;
+                    if (cont_actions == 26'd50000000) begin
+                        cont_actions <= 0;
+
+                        if (food + 7'd10 < 7'd100) begin
+                            food <= food + 7'd10;
+                        end
+                        else begin
+                            food <= 7'd100;
+                        end
+                    end
+                    else begin
+                        cont_actions <= cont_actions + 1'd1;
+                    end
+                end
+                else begin
+                    cont_actions = 0;
+                    act_eat = 0;
+                end
+
+            end
+
+Como se puede observar el funcionamiento de estos tres estados es bastante similar, después de la activación del botón, se da la orden a la pantalla de mostrar la pantalla de acción y se suman los indicadores siempre que estos no sean igual a 90, el unico que cambia es el menú de SLEEP, pues este no recibe la activación del botón, sino la señal que le manda el ultrasonido para despertar al tamagotchi.
+
+Por último, está el estado de HEAL, cuando el tamagotchi esta enfermo:
+ruby
+HEAL: begin
+                led_s1 = 0;
+                led_s2 = 1;
+                led_s3 = 0;
+
+                if (btn_action == 0) begin
+                    act_heal = 1;
+                    if (cont_actions == 26'd50000000) begin
+                        cont_actions <= 0;
+
+                        food <= 7'd50;
+                        fun <= 7'd50;
+                        rest <= 7'd50;
+                    end
+                    else begin
+                        cont_actions <= cont_actions + 1'd1;
+                    end
+                end
+                else begin
+                    cont_actions = 0;
+                    act_heal = 0;
+                end
+            end
+
+            DEATH: begin
+                led_s1 = 0;
+                led_s2 = 0;
+                led_s3 = 0;
+            end
+
+Al detectar el botón de acción, pone todos las necesidades en 50, lo que indicaría que la vida también sube a 50 puntos ya que si tiene este menú disponible, significa que el tamagotchi está debajo de los 50 puntos de vida debido a la fórmula.
+
+El último elemento del código es el botón test, el cúal funciona en otra máquina de estados, se accede a ella mediante pulsar el botón test por 5 segundos, la manera en la que funciona, es que mediamente el usuario va usando el joystick hacia la derecha, el tamagotchi va a estar mostrando todas sus funcionalidades una por una, por ejemplo, en el primer review, main:
+ruby
+MAIN_REVIEW: begin
+                state <= MAIN;
+                case (test_timing)
+                    0: begin
+                        fun <= 7'd100;
+                        rest <= 7'd100;
+                        food <= 7'd100;
+                        life <= 7'd100;
+                    end
+                    1: begin
+                        life <= 7'd83;
+                    end
+                    2: begin
+                        fun <= 7'd67;
+                        rest <= 7'd67;
+                        food <= 7'd67;
+                        life <= 7'd67;
+                    end
+                    3: begin
+                        life <= 7'd50;
+                    end
+                    4: begin
+                        fun <= 7'd33;
+                        rest <= 7'd33;
+                        food <= 7'd33;
+                        life <= 7'd33;
+                    end
+                    5: begin
+                        life <= 7'd16;
+                    end
+                    6: begin
+                        test_timing <= 4'd0;
+                        state_test <= PLAY_REVIEW;
+                    end
+
+Como en el menú principal lo que se muestra es en general todos los indicadores y la vida, lo que se empieza a variar con el joystick es eso mismo, entonces con la primera activación del joystick la vida bajara a 83, mostrando como se quita medio corazón en su indicador, y así con todos los indicadores, una vez finalizado se reinicia el test_timing para manejar la máquina de estados y se lleva al otro estado de review, play.
+
+Los siguientes funcionan de la siguiente manera:
+ruby
+PLAY_REVIEW: begin
+                state <= PLAY;
+                case (test_timing)
+                    0: begin
+                        act_play <= 0;
+                    end
+                    1: begin
+                        act_play <= 1;
+                    end
+                    2: begin
+                        fun <= 7'd67;
+                    end
+                    3: begin
+                        fun <= 7'd100;
+                    end
+                    4: begin
+                        act_play <= 0;
+                    end
+                    5: begin
+                        test_timing <= 4'd0;
+                        state_test <= EAT_REVIEW;
+                    end
+
+Como se mencionó anteriormente, va mostrando como el tamagotchi juega y como va subiendo y bajando el indicador del estado actual, para posteriormente cambiar al siguiente, así se repite de igual manera hasta llegar al HEAL y luego, mostrar la muerte del tamagothci y esperar a que el usuario presione el botón reiniciar para iniciar nuevamente el juego.
+
+
+Es importante recalcar que el módulo "ssd1306_master.v", se encarga de según los estados actuales del tamagotchi y de algunas otras variables tales como si se presionan o no los botones, cambiar adecuadamente la información y los valores que se le envían a la pantalla para mostrar adecuadamente lo que se requiere.
 ## Simulaciones
 
 - **_ssd1306_master_**
