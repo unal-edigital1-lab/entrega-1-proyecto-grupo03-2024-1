@@ -194,22 +194,10 @@ El diagrama también destaca que, si no se gestionan adecuadamente las necesidad
   </p>
 
 - **_Casos de interacción_**:
+Los siguientes diagramas representan los casos de interacción a los que el usuario puede acceder dependiendo el menú/estado que se seleccione, es de suma importancia tener presente como funciona cada uno de estos menús para conocer el funcionamiento del tamagotchi y estar al tanto de como suben y bajan los indicadores conforme el tiempo avanza.
 
-- Heal:
+![diagrama necesidades drawio](https://github.com/user-attachments/assets/7dcd9240-6b1b-4858-9918-8e2541e80987)
 
-![diagrama base, heal drawio (1)](https://github.com/user-attachments/assets/421e729a-14e2-4d26-a697-44cfc3ad2a26)
-
-- Feed:
-
-![diagrama feed drawio](https://github.com/user-attachments/assets/9e91d889-d7e1-44a3-b621-c4f044939f1b)
-
-- Rest:
-
-![DIAGRAMA rest drawio](https://github.com/user-attachments/assets/ec6fb1d5-8c69-4f53-a8d6-bfdf28c7f16d)
-
-- Fun:
-
-![JUGAR drawio](https://github.com/user-attachments/assets/41cc9234-9be6-427f-9d0f-47a14367f266)
 
 ## Máquina de estados finitos
 
