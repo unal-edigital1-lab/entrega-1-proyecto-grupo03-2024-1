@@ -196,7 +196,8 @@ El diagrama también destaca que, si no se gestionan adecuadamente las necesidad
 - **_Casos de interacción_**:
 Los siguientes diagramas representan los casos de interacción a los que el usuario puede acceder dependiendo el menú/estado que se seleccione, es de suma importancia tener presente como funciona cada uno de estos menús para conocer el funcionamiento del tamagotchi y estar al tanto de como suben y bajan los indicadores conforme el tiempo avanza.
 
-![diagrama necesidades drawio](https://github.com/user-attachments/assets/7dcd9240-6b1b-4858-9918-8e2541e80987)
+![diagrama necesidades1 drawio](https://github.com/user-attachments/assets/6b863574-c685-40da-a53f-f07a1133f6a3)
+
 
 
 ## Máquina de estados finitos
