@@ -99,29 +99,31 @@ La FPGA está programada para simular distintos estados de la mascota, basándos
 
 ### a. Sistema de botones
 
-  <p align="center">
-  <img src=https://github.com/user-attachments/assets/2d1d6765-d4a8-40a1-896d-239d0eb33831>
-  </p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1831e325-d094-49d5-a2fb-e53f3b6f33d7">
+</p>
   
   La interacción usuario-sistema se realizará mediante los siguientes botones configurados:
   
   - **Reset**: Reestablece el Tamagotchi a un estado inicial conocido al mantener pulsado el botón durante al menos 5 segundos. Este estado inicial simula el despertar de la mascota con salud óptima.
+
+  - **Cancel**: Permite al usuario salir de las opciones y modos de interacción, retornándolo al menu principal.
   
   - **Test**: Activa el modo de prueba al mantenerlo pulsado por al menos 5 segundos, permitiendo al usuario navegar entre los diferentes estados del Tamagotchi con cada pulsación.
 
-  - **Select**: Permite al usuario desplazarse por los diferentes indicadores del modo de interacción.
+  - **Select (Joystick)**: Permite al usuario desplazarse por los diferentes indicadores del modo de interacción.
 
-  - **Action**: Permite al usuario luego de desplazarse por los indicadores decidir cual de las acciones realizar o repetir.
+  - **Action (Joystick)**: Permite al usuario luego de desplazarse por los indicadores decidir cual de las acciones realizar o repetir.
 
-  - **Cancel**: Permite al usuario salir de las opciones y modos de interacción, retornandolo al menu principal.
+  
 
-### b. Sistema de sensado
+### b. Sistema de Sensores
 
 Para integrar al Tamagotchi con el entorno real y enriquecer la experiencia de interacción, se incorporará al menos un sensor que modifique el comportamiento de la mascota virtual en respuesta a estímulos externos. Los sensores permitirán simular condiciones ambientales y actividades que afecten directamente el bienestar de la mascota.
 
-- **Giroscopio/Acelerómetro**: Permitirá al usuario luego de seleccionar la interacción juego (Fun) activarlo mediante la agitación del tamagochi.
+- **Conversor de Voltaje (Joystick)**: El conversor de voltaje se utiliza para asegurar que la señal esté dentro de un rango adecuado, permitiendo su correcta interpretación y detección del movimiento.
 
-- **Sensor de ultrasonido**: Permitirá al usuario luego de seleccionar la interacción dormir (Rest) despertar al tamagochi acercandose a el.
+- **Sensor Ultrasonido**: Permitirá al usuario luego de seleccionar la interacción dormir, despertar a la mascota si el usuario se acerca a el sensor.
 
 ### c. Sistema de visualización
 
@@ -131,36 +133,43 @@ Para visualizar todas las interacciones y estados del dispositivo se utilizara �
 - Controlador: SSD1306
 - Resolución: 128 x 32
 
+  <p align="center">
+    <img src=https://github.com/user-attachments/assets/70f14481-869c-4089-9578-7f43465e5de7>
+  </p>
+
 ### d. Manejo de necesidades e indicadores
 
 Se tendra una serie de atributos los cuales estaran asociados a diferentes valores, y según dichos valores y algún limite establecido se definirán las necesidades de la mascota.
 
-| **Atributos** | **Valores** |
+<div align="center">
+
+| ***Atributos*** | ***Valores*** |
 | :-----------: | :---------: |
 |    Hambre     |   0 - 100   |
-|    Fatiga     |   0 - 100   |
-|   Tristeza    |   0 - 100   |
-|  Enfermedad   |    0 - 1    |
-|    Muerte     |    0 - 1    |
-|   Medicina    |   0 - 100   |
+|     Sueño     |   0 - 100   |
+|   Diversión   |   0 - 100   |
+|     Vida      |   0 - 100   |
 |     Vida      |   0 - 100   |
 
-|  **Indicador**  | **Necesidad** |
-| :-------------: | :-----------: |
-|       Pan       |    Hambre     |
-| Bate de beisbol |   Tristeza    |
-|   Bostesando    |    Fatiga     |
-|    Calavera     |  Enfermedad   |
 
-  <p align="center">
-    <img src=https://github.com/user-attachments/assets/7a5ef0f4-ab13-4f3d-933e-77acfc9b5c2a width="500" height="100">
-  </p>
+</div>
+
+<p align="center">
+    <img src=https://github.com/user-attachments/assets/7b86d0e1-7cbc-4aae-8779-bf5c758d76e9>
+</p>
 
 ## Descripción de Hardware
 
-<p align="center">
-    <img src=https://github.com/user-attachments/assets/f7974ce2-26d0-40d5-a00b-80fcbdf70a39>
-</p>
+<div align="center">
+
+| ***Nombre***        |  ***Referencia***                             |   ***Imagen***                                                                                   |***Descripción*** |  ***Datasheet*** |
+| :-----------:       | :---------:                                   | :---------:                                                                                      | :---------:      | :---------:      |
+| Pantalla OLED       |   OLED Display 0.91"                          |   ![oled (2)](https://github.com/user-attachments/assets/50b60b46-4207-4c44-9626-d0c27bb06b46)   |   <br>La pantalla OLED de 0.91" es un display compacto de tipo OLED (Diodo Orgánico Emisor de Luz), tiene un tamaño de 0.91 pulgadas, generalmente con una resolución de 128x32 píxeles, y se caracteriza por su alto contraste, brillo, y amplio ángulo de visión.<br> |  [Link](https://www.mouser.com/datasheet/2/1398/Soldered_333099-3395096.pdf?srsltid=AfmBOoo5bUd1WoCjdW1fZ1VeLbQNWvZDJ6bIlV0nHVNKU_7DObRNdJ8L)        |
+|     FPGA            |   ALTERA Cyclone IV EP4CE6E22C8N              |   ![FPGA (1)](https://github.com/user-attachments/assets/b95f1e59-8a16-4553-98f7-a312b09973e3)   |  <br> Es un dispositivo programable de lógica avanzada (FPGA) de la familia Cyclone IV, desarrollada por Altera (ahora parte de Intel). Esta FPGA está diseñada para aplicaciones de bajo costo y bajo consumo de energía, ideal para proyectos de electrónica digital y sistemas embebidos. <br>        |   [Link](https://www.mouser.com/datasheet/2/612/cyiv_51001-1299459.pdf)        |
+|  Sensor Ultrasonido |  HCSR04                                       |   ![A1 (1)](https://github.com/user-attachments/assets/02ab6477-c7b0-459d-a84b-a35ad791daf9)     |   <br> El sensor ultrasónico HC-SR04 es un dispositivo ampliamente utilizado para medir distancias a través de ondas de ultrasonido. Funciona emitiendo un pulso ultrasónico y midiendo el tiempo que tarda en regresar tras reflejarse en un objeto. Este tiempo se convierte en una medida de distancia, generalmente en centímetros. <br>        |   [Link](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf)        |
+|     Joystick        |   DUAL XY ANALOGO CON PULSADOR                |   ![3-17 (1)](https://github.com/user-attachments/assets/63f6a59f-dd0d-45a1-9dee-e4200c51cf87)   |   <br> Es un joystick analógico que detecta movimientos en dos ejes (X e Y) y cuenta con un botón integrado (pulsador). Los ejes X e Y corresponden al movimiento horizontal y vertical, respectivamente, y cada uno genera una señal analógica que varía según la inclinación del joystick. <br>       |   [Link](https://naylampmechatronics.com/img/cms/Datasheets/000036%20-%20datasheet%20KY-023-Joy-IT.pdf)        |
+
+</div>
 
 ## Diagramas de flujo
 
