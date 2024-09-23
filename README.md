@@ -655,3 +655,9 @@ En la evaluación del funcionamiento del código para la pantalla OLED 128x32 (S
 </p>
 
 En la evaluación del código para el conversor A/D (ADS1115), el analizador lógico se utilizó para registrar y analizar las señales en el bus I2C durante el proceso de configuración y lectura. Los resultados mostraron que el ADS1115 estaba respondiendo adecuadamente a las instrucciones enviadas. Se observaron las transiciones correctas en el bus I2C al seleccionar el registro de configuración y al leer el valor digitalizado, lo que confirma que el dispositivo estaba operando según lo esperado. Además, se registró la emisión del pulso de trigger y la recepción de los datos de conversión, indicando que el ADC estaba funcionando de manera efectiva.
+
+## Video prueba
+
+<p align="center">
+  <video src="https://github.com/user-attachments/assets/cbe0fcec-eda6-44f3-8e6a-52cdbb66d697">
+<p/>
