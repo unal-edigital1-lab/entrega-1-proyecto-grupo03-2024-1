@@ -313,7 +313,7 @@ reg [3:0] state = START;
 ```
 y el "state" un registro que indica el estado actual. También se generan múltiples localparam para los delays requeridos, para los estados del botón test y también se crean varios contadores para controlar el clk en segundos.
 
-Luego se crea un always que es donde irá toda la máquina de estados finita. En este always se crea un pulso para controlar las bajadas de cada necesidad, se establece que cada segundo baje 1 en cada una de las necesidades de la siguiente manera.
+Luego se crea un always que es donde irá toda la máquina de estados finita. En este always se crea un pulso para controlar el descenso de cada necesidad, se establece que cada 0.8 segundos baje en cada una de las necesidades de la siguiente manera.
 
 ```ruby
 if (cont_food >= 5'd1 && food > 0) begin
