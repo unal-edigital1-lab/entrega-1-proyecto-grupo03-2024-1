@@ -145,8 +145,6 @@ Se tendra una serie de atributos los cuales estaran asociados a diferentes valor
 |     Sueño     |   0 - 100   |
 |   Diversión   |   0 - 100   |
 |     Vida      |   0 - 100   |
-|     Vida      |   0 - 100   |
-
 
 </div>
 
